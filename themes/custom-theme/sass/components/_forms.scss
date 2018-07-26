@@ -1,0 +1,24 @@
+// Forms
+// ==========================================================================
+
+input:not([type="submit"]),
+textarea {
+	background-color: $light-color;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	padding: 0 10px;
+	border: 0px;
+	line-height: 30px;
+	width: 100%;
+	max-width: 100%;
+	outline: none;
+}
+textarea {
+	height: 100px;
+}
+input[type="submit"] {
+    display: block;
+    color: $light-color;
+    background-color: $primary-color;  
+    cursor: pointer;
+}

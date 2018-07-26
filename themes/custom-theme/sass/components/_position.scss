@@ -1,0 +1,66 @@
+// Position
+// ==========================================================================
+
+.absolute 					{ position: absolute; }
+.relative 					{ position: relative; }
+
+.top-0          			{ top: 0; }
+.bottom-0          			{ bottom: 0; }
+.right-0          			{ right: 0; }
+.left-0          			{ left: 0; }
+
+
+// Align
+// ==========================================================================
+.alight-middle 				{ vertical-align: middle; }
+
+
+
+// Display
+// ==========================================================================
+
+.hide 						{ display: none; }
+.block 						{ display: block; }
+.inline-block 				{ display: inline-block; }
+.flex 						{ display: flex; }
+
+@media #{$small-and-down} 		{ .hide-on-small 			{ display: none; } }
+@media #{$sm-and-down} 			{ .hide-on-sm-and-down 		{ display: none; } }
+@media #{$sm-only} 				{ .hide-on-sm 				{ display: none; } }
+@media #{$sm-and-up} 			{ .hide-on-sm-and-up 		{ display: none; } }
+@media #{$medium-and-down} 		{ .hide-on-med-and-down 	{ display: none; } }
+@media #{$medium-only} 			{ .hide-on-med 				{ display: none; } }
+@media #{$medium-and-up} 		{ .hide-on-med-and-up 		{ display: none; } }
+@media #{$large-and-down} 		{ .hide-on-large-and-down 	{ display: none; } }
+@media #{$large-only} 			{ .hide-on-large 			{ display: none; } }
+@media #{$large-and-up} 		{ .hide-on-large-and-up 	{ display: none; } }
+@media #{$extra-large-and-up} 	{ .hide-on-extra-large 		{ display: none; } }
+
+@media #{$small-and-down} 		{ .show-on-small 			{ display: block; } }
+@media #{$sm-and-down} 			{ .show-on-sm-and-down 		{ display: block; } }
+@media #{$sm-only} 				{ .show-on-sm 				{ display: block; } }
+@media #{$sm-and-up} 			{ .show-on-sm-and-up 		{ display: block; } }
+@media #{$medium-and-down} 		{ .show-on-med-and-down 	{ display: block; } }
+@media #{$medium-only} 			{ .show-on-med 				{ display: block; } }
+@media #{$medium-and-up} 		{ .show-on-med-and-up 		{ display: block; } }
+@media #{$large-and-down} 		{ .show-on-large-and-down 	{ display: block; } }
+@media #{$large-only} 			{ .show-on-large 			{ display: block; } }
+@media #{$large-and-up} 		{ .show-on-large-and-up 	{ display: block; } }
+@media #{$extra-large-and-up} 	{ .show-on-extra-large 		{ display: block; } }
+
+
+// Visibility
+// ==========================================================================
+
+.overflow-hide 				{ overflow: hidden;}
+.overflow-x-hide 			{ overflow: hidden;}
+.overflow-y-hide 			{ overflow: hidden;}
+
+.z-index-1 					{ z-index: 1; }
+.z-index--1 				{ z-index: -1; }
+
+
+// Transform
+// ==========================================================================
+
+.transform-x-50 { transform: translateX(50%); }
