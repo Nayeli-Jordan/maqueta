@@ -1,25 +1,22 @@
 <?php get_header(); ?>
 	<section class="[ container container-large ]">
-		<div class="table-clients shadow">
-			<div class="content-clients">
-				<div id="head-table-clients" class="row hide-on-sm-and-down">
+		<div class="table-proveedores shadow">
+			<div class="content-proveedores">
+				<div id="head-table-proveedores" class="row hide-on-sm-and-down">
         			<div class="col col-number color-purple ">
         				<p>No.</p>
         			</div>
-        			<div class="col col-title color-purple">
-        				<p>Cliente</p>
-        			</div>
-        			<div class="col col-razon_social">
+        			<div class="col col-razon_social color-purple">
         				<p>Razón Social</p>
         			</div>
-        			<div class="col col-rfc">
-        				<p>RFC</p>
+        			<div class="col col-ruc">
+        				<p>RUC</p>
         			</div>
         			<div class="col col-direction">
         				<p>Dirección</p>
         			</div>
-        			<div class="col col-proyectos">
-        				<p>Proyectos</p>
+        			<div class="col col-producto_servicio">
+        				<p>Producto/Servicio</p>
         			</div>
         			<div class="col col-actividad">
         				<p>Actividad</p>
@@ -33,13 +30,13 @@
         			<div class="col col-email">
         				<p>Email</p>
         			</div>
-        			<div class="col col-cumpleanos">
-        				<p>Cumpleaños</p>
+        			<div class="col col-fecha_ingreso">
+        				<p>Fecha de ingreso</p>
         			</div>    
         		</div>  
 			<?php
 		        $args = array(
-		            'post_type' 		=> 'qo_clientes',
+		            'post_type' 		=> 'qo_proveedores',
 		            'posts_per_page' 	=> -1,
 		            'orderby' 			=> 'title',
 		            'order' 			=> 'ASC'
@@ -52,39 +49,36 @@
 						$custom_fields 	= get_post_custom();
 						$post_id 		= get_the_ID();
 
-						$razon_social    	= get_post_meta( $post_id, 'qo_clientes_razon_social', true );    
-						$rfc          		= get_post_meta( $post_id, 'qo_clientes_rfc', true );    
-						$direction       	= get_post_meta( $post_id, 'qo_clientes_direction', true );    
-						$proyectos       	= get_post_meta( $post_id, 'qo_clientes_proyectos', true );    
-						$actividad       	= get_post_meta( $post_id, 'qo_clientes_actividad', true ); 
-						$contactComercial 	= get_post_meta( $post_id, 'qo_clientes_contactComercial', true ); 
-						$telefono  			= get_post_meta( $post_id, 'qo_clientes_telefono', true ); 
-						$email   			= get_post_meta( $post_id, 'qo_clientes_email', true ); 
-						$cumpleanos  		= get_post_meta( $post_id, 'qo_clientes_cumpleanos', true ); 
+						$razon_social    	= get_post_meta( $post_id, 'qo_proveedores_razon_social', true );    
+						$ruc          		= get_post_meta( $post_id, 'qo_proveedores_ruc', true );    
+						$direction       	= get_post_meta( $post_id, 'qo_proveedores_direction', true );    
+						$producto_servicio  = get_post_meta( $post_id, 'qo_proveedores_producto_servicio', true );    
+						$actividad       	= get_post_meta( $post_id, 'qo_proveedores_actividad', true ); 
+						$contactComercial 	= get_post_meta( $post_id, 'qo_proveedores_contactComercial', true ); 
+						$telefono  			= get_post_meta( $post_id, 'qo_proveedores_telefono', true ); 
+						$email   			= get_post_meta( $post_id, 'qo_proveedores_email', true ); 
+						$fecha_ingreso  	= get_post_meta( $post_id, 'qo_proveedores_fecha_ingreso', true ); 
 		            	?>		
 
 		        		<div class="row">
 		        			<div class="col col-number color-purple ">
 		        				<strong><?php echo $i; ?></strong>
 		        			</div>
-		        			<div class="col col-title color-purple">
-		        				<?php the_title(); ?>
-		        			</div>
-		        			<div class="col col-razon_social">
+		        			<div class="col col-razon_social color-purple">
 		        				<p class="hide-on-med-and-up inline-block">Razón Social: </p>
 		        				<?php if( $razon_social != "" ) : ?><?php echo $razon_social; ?><?php endif; ?>
 		        			</div>
-		        			<div class="col col-rfc">
-		        				<p class="hide-on-med-and-up inline-block">RFC: </p>
-		        				<?php if( $rfc != "" ) : ?><?php echo $rfc; ?><?php endif; ?>
+		        			<div class="col col-ruc">
+		        				<p class="hide-on-med-and-up inline-block">RUC: </p>
+		        				<?php if( $ruc != "" ) : ?><?php echo $ruc; ?><?php endif; ?>
 		        			</div>
 		        			<div class="col col-direction">
 		        				<p class="hide-on-med-and-up inline-block">Dirección: </p>
 		        				<?php if( $direction != "" ) : ?><?php echo $direction; ?><?php endif; ?>
 		        			</div>
-		        			<div class="col col-proyectos">
-		        				<p class="hide-on-med-and-up inline-block">Proyectos: </p>
-		        				<?php if( $proyectos != "" ) : ?><?php echo $proyectos; ?><?php endif; ?>
+		        			<div class="col col-producto_servicio">
+		        				<p class="hide-on-med-and-up inline-block">Producto/Servicio: </p>
+		        				<?php if( $producto_servicio != "" ) : ?><?php echo $producto_servicio; ?><?php endif; ?>
 		        			</div>
 		        			<div class="col col-actividad">
 		        				<p class="hide-on-med-and-up inline-block">Actividad: </p>
@@ -102,9 +96,9 @@
 		        				<p class="hide-on-med-and-up inline-block">Email: </p>
 		        				<?php if( $email != "" ) : ?><?php echo $email; ?><?php endif; ?>
 		        			</div>
-		        			<div class="col col-cumpleanos">
-		        				<p class="hide-on-med-and-up inline-block">Cumpleaños: </p>
-		        				<?php if( $cumpleanos != "" ) : ?><?php echo $cumpleanos; ?><?php endif; ?>
+		        			<div class="col col-fecha_ingreso">
+		        				<p class="hide-on-med-and-up inline-block">Fecha de ingreso: </p>
+		        				<?php if( $fecha_ingreso != "" ) : ?><?php echo $fecha_ingreso; ?><?php endif; ?>
 		        			</div>    
 		        		</div>  	        		
 

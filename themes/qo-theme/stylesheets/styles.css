@@ -2565,108 +2565,95 @@ ul li {
   }
 }
 
-/* line 162, ../sass/components/_grid.scss */
-.col-number {
+/* line 163, ../sass/components/_grid.scss */
+.table-clients .col-number {
   width: 10px;
 }
-
-/* line 163, ../sass/components/_grid.scss */
-.col-title {
+/* line 164, ../sass/components/_grid.scss */
+.table-clients .col-title {
   width: calc(11% - 10px);
 }
-
-/* line 164, ../sass/components/_grid.scss */
-.col-razon_social {
+/* line 165, ../sass/components/_grid.scss */
+.table-clients .col-razon_social {
   width: 12%;
 }
-
-/* line 165, ../sass/components/_grid.scss */
-.col-rfc {
+/* line 166, ../sass/components/_grid.scss */
+.table-clients .col-rfc {
   width: 7%;
 }
-
-/* line 166, ../sass/components/_grid.scss */
-.col-direction {
+/* line 167, ../sass/components/_grid.scss */
+.table-clients .col-direction {
   width: 15%;
 }
-
-/* line 167, ../sass/components/_grid.scss */
-.col-proyectos {
+/* line 168, ../sass/components/_grid.scss */
+.table-clients .col-proyectos {
   width: 6%;
 }
-
-/* line 168, ../sass/components/_grid.scss */
-.col-actividad {
-  width: 9%;
-}
-
 /* line 169, ../sass/components/_grid.scss */
-.col-contactComercial {
+.table-clients .col-actividad {
   width: 9%;
 }
-
 /* line 170, ../sass/components/_grid.scss */
-.col-telefono {
+.table-clients .col-contactComercial {
+  width: 9%;
+}
+/* line 171, ../sass/components/_grid.scss */
+.table-clients .col-telefono {
   width: 7%;
 }
-
-/* line 171, ../sass/components/_grid.scss */
-.col-email {
+/* line 172, ../sass/components/_grid.scss */
+.table-clients .col-email {
   width: 13%;
 }
-
-/* line 172, ../sass/components/_grid.scss */
-.col-cumpleanos {
+/* line 173, ../sass/components/_grid.scss */
+.table-clients .col-cumpleanos {
   width: 10%;
 }
-
 @media only screen and (max-width: 600px) {
-  /* line 175, ../sass/components/_grid.scss */
-  .col-number {
+  /* line 176, ../sass/components/_grid.scss */
+  .table-clients .col-number {
     width: 10px;
   }
-
-  /* line 176, ../sass/components/_grid.scss */
-  .col-title {
+  /* line 177, ../sass/components/_grid.scss */
+  .table-clients .col-title {
     width: calc(100% - 25px);
   }
-
-  /* line 177, ../sass/components/_grid.scss */
-  .col-razon_social,
-  .col-rfc,
-  .col-direction,
-  .col-proyectos,
-  .col-actividad,
-  .col-contactComercial,
-  .col-telefono,
-  .col-email,
-  .col-cumpleanos {
+  /* line 178, ../sass/components/_grid.scss */
+  .table-clients .col-razon_social,
+  .table-clients .col-rfc,
+  .table-clients .col-direction,
+  .table-clients .col-proyectos,
+  .table-clients .col-actividad,
+  .table-clients .col-contactComercial,
+  .table-clients .col-telefono,
+  .table-clients .col-email,
+  .table-clients .col-cumpleanos {
     width: 100%;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
   }
-  /* line 189, ../sass/components/_grid.scss */
-  .col-razon_social p,
-  .col-rfc p,
-  .col-direction p,
-  .col-proyectos p,
-  .col-actividad p,
-  .col-contactComercial p,
-  .col-telefono p,
-  .col-email p,
-  .col-cumpleanos p {
+  /* line 190, ../sass/components/_grid.scss */
+  .table-clients .col-razon_social p,
+  .table-clients .col-rfc p,
+  .table-clients .col-direction p,
+  .table-clients .col-proyectos p,
+  .table-clients .col-actividad p,
+  .table-clients .col-contactComercial p,
+  .table-clients .col-telefono p,
+  .table-clients .col-email p,
+  .table-clients .col-cumpleanos p {
     margin-right: 5px;
   }
-  /* line 191, ../sass/components/_grid.scss */
-  .col-razon_social p:before,
-  .col-rfc p:before,
-  .col-direction p:before,
-  .col-proyectos p:before,
-  .col-actividad p:before,
-  .col-contactComercial p:before,
-  .col-telefono p:before,
-  .col-email p:before,
-  .col-cumpleanos p:before {
+  /* line 192, ../sass/components/_grid.scss */
+  .table-clients .col-razon_social p:before,
+  .table-clients .col-rfc p:before,
+  .table-clients .col-direction p:before,
+  .table-clients .col-proyectos p:before,
+  .table-clients .col-actividad p:before,
+  .table-clients .col-contactComercial p:before,
+  .table-clients .col-telefono p:before,
+  .table-clients .col-email p:before,
+  .table-clients .col-cumpleanos p:before {
     content: '';
     width: 3px;
     height: 3px;
@@ -2676,6 +2663,99 @@ ul li {
     margin-bottom: 3px;
   }
 }
+
+/* line 206, ../sass/components/_grid.scss */
+.table-proveedores .col-number {
+  width: 10px;
+}
+/* line 207, ../sass/components/_grid.scss */
+.table-proveedores .col-razon_social {
+  width: 12%;
+}
+/* line 208, ../sass/components/_grid.scss */
+.table-proveedores .col-ruc {
+  width: 5%;
+}
+/* line 209, ../sass/components/_grid.scss */
+.table-proveedores .col-direction {
+  width: 15%;
+}
+/* line 210, ../sass/components/_grid.scss */
+.table-proveedores .col-producto_servicio {
+  width: 9%;
+}
+/* line 211, ../sass/components/_grid.scss */
+.table-proveedores .col-actividad {
+  width: 11%;
+}
+/* line 212, ../sass/components/_grid.scss */
+.table-proveedores .col-contactComercial {
+  width: 10%;
+}
+/* line 213, ../sass/components/_grid.scss */
+.table-proveedores .col-telefono {
+  width: 9%;
+}
+/* line 214, ../sass/components/_grid.scss */
+.table-proveedores .col-email {
+  width: 17%;
+}
+/* line 215, ../sass/components/_grid.scss */
+.table-proveedores .col-fecha_ingreso {
+  width: 10%;
+}
+@media only screen and (max-width: 600px) {
+  /* line 218, ../sass/components/_grid.scss */
+  .table-proveedores .col-number {
+    width: 10px;
+  }
+  /* line 219, ../sass/components/_grid.scss */
+  .table-proveedores .col-razon_social {
+    width: calc(100% - 25px);
+  }
+  /* line 220, ../sass/components/_grid.scss */
+  .table-proveedores .col-ruc,
+  .table-proveedores .col-direction,
+  .table-proveedores .col-producto_servicio,
+  .table-proveedores .col-actividad,
+  .table-proveedores .col-contactComercial,
+  .table-proveedores .col-telefono,
+  .table-proveedores .col-email,
+  .table-proveedores .col-fecha_ingreso {
+    width: 100%;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+  /* line 231, ../sass/components/_grid.scss */
+  .table-proveedores .col-ruc p,
+  .table-proveedores .col-direction p,
+  .table-proveedores .col-producto_servicio p,
+  .table-proveedores .col-actividad p,
+  .table-proveedores .col-contactComercial p,
+  .table-proveedores .col-telefono p,
+  .table-proveedores .col-email p,
+  .table-proveedores .col-fecha_ingreso p {
+    margin-right: 5px;
+  }
+  /* line 233, ../sass/components/_grid.scss */
+  .table-proveedores .col-ruc p:before,
+  .table-proveedores .col-direction p:before,
+  .table-proveedores .col-producto_servicio p:before,
+  .table-proveedores .col-actividad p:before,
+  .table-proveedores .col-contactComercial p:before,
+  .table-proveedores .col-telefono p:before,
+  .table-proveedores .col-email p:before,
+  .table-proveedores .col-fecha_ingreso p:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background-color: #6f2383;
+    display: inline-block;
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+}
+
 /* line 4, ../sass/components/_media.scss */
 img.responsive-img,
 video.responsive-video {
@@ -3085,7 +3165,7 @@ small {
   margin-top: 10px;
   color: #6f2383;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
   /* line 56, ../sass/components/_typography.scss */
   .title-archive {
     font-size: 22px;
@@ -3095,36 +3175,57 @@ small {
 }
 
 /* line 5, ../sass/components/_utilities.scss */
-.table-clients {
+.table-clients,
+.table-proveedores {
   font-size: 12px;
 }
 @media only screen and (min-width: 601px) {
   /* line 5, ../sass/components/_utilities.scss */
-  .table-clients {
+  .table-clients,
+  .table-proveedores {
     width: 100%;
-    max-height: calc(100vh - 225px);
+    max-height: calc(100vh - 170px);
     overflow-x: scroll;
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 12, ../sass/components/_utilities.scss */
-  .table-clients .content-clients {
+  /* line 13, ../sass/components/_utilities.scss */
+  .table-clients .content-clients,
+  .table-clients .content-proveedores,
+  .table-proveedores .content-clients,
+  .table-proveedores .content-proveedores {
     min-width: 1500px;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 12, ../sass/components/_utilities.scss */
-  .table-clients .content-clients {
+  /* line 13, ../sass/components/_utilities.scss */
+  .table-clients .content-clients,
+  .table-clients .content-proveedores,
+  .table-proveedores .content-clients,
+  .table-proveedores .content-proveedores {
     max-width: 100%;
   }
 }
-/* line 15, ../sass/components/_utilities.scss */
-.table-clients .content-clients .row {
+/* line 17, ../sass/components/_utilities.scss */
+.table-clients .content-clients .row,
+.table-clients .content-proveedores .row,
+.table-proveedores .content-clients .row,
+.table-proveedores .content-proveedores .row {
   padding: 10px 0;
 }
-/* line 17, ../sass/components/_utilities.scss */
-.table-clients .content-clients .row:nth-child(odd) {
+/* line 19, ../sass/components/_utilities.scss */
+.table-clients .content-clients .row:nth-child(odd),
+.table-clients .content-proveedores .row:nth-child(odd),
+.table-proveedores .content-clients .row:nth-child(odd),
+.table-proveedores .content-proveedores .row:nth-child(odd) {
   background-color: #eee;
+}
+@media only screen and (min-width: 601px) {
+  /* line 24, ../sass/components/_utilities.scss */
+  .table-clients .content-proveedores,
+  .table-proveedores .content-proveedores {
+    min-width: 1300px;
+  }
 }
 
 /* line 3, ../sass/components/_header.scss */
@@ -3135,12 +3236,11 @@ header ul li {
 header.archive-header {
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 600px) {
   /* line 10, ../sass/components/_header.scss */
   header.archive-header {
-    margin-bottom: 20px;
     padding-bottom: 0px;
   }
 }
@@ -3157,19 +3257,19 @@ footer {
   }
 
   /* line 5, ../sass/components/_print.scss */
-  .table-clients #head-table-clients {
+  .table-clients #head-table-clients, .table-clients #head-table-proveedores, .table-proveedores #head-table-clients, .table-proveedores #head-table-proveedores {
     display: none;
   }
   /* line 7, ../sass/components/_print.scss */
-  .table-clients .col:nth-child(odd) {
+  .table-clients .col:nth-child(odd), .table-proveedores .col:nth-child(odd) {
     clear: both;
   }
   /* line 9, ../sass/components/_print.scss */
-  .table-clients .col-number {
+  .table-clients .col-number, .table-proveedores .col-number {
     width: 10px;
   }
   /* line 10, ../sass/components/_print.scss */
-  .table-clients .col-title {
+  .table-clients .col-title, .table-proveedores .col-title {
     width: calc(100% - 25px);
   }
   /* line 11, ../sass/components/_print.scss */
@@ -3181,9 +3281,22 @@ footer {
   .table-clients .col-contactComercial,
   .table-clients .col-telefono,
   .table-clients .col-email,
-  .table-clients .col-cumpleanos {
+  .table-clients .col-cumpleanos, .table-proveedores .col-razon_social,
+  .table-proveedores .col-rfc,
+  .table-proveedores .col-direction,
+  .table-proveedores .col-proyectos,
+  .table-proveedores .col-actividad,
+  .table-proveedores .col-contactComercial,
+  .table-proveedores .col-telefono,
+  .table-proveedores .col-email,
+  .table-proveedores .col-cumpleanos {
     width: 50%;
     padding-top: 2px !important;
     padding-bottom: 2px !important;
+  }
+
+  /* line 26, ../sass/components/_print.scss */
+  #head-table-proveedores .col-razon_social {
+    width: calc(100% - 25px);
   }
 }

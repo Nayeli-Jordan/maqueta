@@ -159,43 +159,86 @@
   }
 }
 
-.col-number           { width: 10px ; }    
-.col-title            { width: calc(11% - 10px); }    
-.col-razon_social     { width: 12% ; }    
-.col-rfc              { width: 7% ; }
-.col-direction        { width: 15% ; }   
-.col-proyectos        { width: 6% ; }   
-.col-actividad        { width: 9% ; } 
-.col-contactComercial { width: 9% ; }
-.col-telefono         { width: 7% ; }
-.col-email            { width: 13% ; }
-.col-cumpleanos       { width: 10% ; }
+.table-clients {
+  .col-number           { width: 10px ; }    
+  .col-title            { width: calc(11% - 10px); }    
+  .col-razon_social     { width: 12% ; }    
+  .col-rfc              { width: 7% ; }
+  .col-direction        { width: 15% ; }   
+  .col-proyectos        { width: 6% ; }   
+  .col-actividad        { width: 9% ; } 
+  .col-contactComercial { width: 9% ; }
+  .col-telefono         { width: 7% ; }
+  .col-email            { width: 13% ; }
+  .col-cumpleanos       { width: 10% ; }
 
-@media #{$sm-and-down} {
-  .col-number           { width: 10px; }    
-  .col-title            { width: calc(100% - 25px);; }    
-  .col-razon_social, 
-  .col-rfc, 
-  .col-direction, 
-  .col-proyectos, 
-  .col-actividad,
-  .col-contactComercial, 
-  .col-telefono,
-  .col-email,
-  .col-cumpleanos { 
-    width: 100%;
-    padding-top: 2px!important;
-    padding-bottom: 2px!important;
-    p {
-      margin-right: 5px;
-      &:before {
-        content: '';
-        width: 3px;
-        height: 3px;
-        background-color: $purple-color;
-        display: inline-block;
-        margin-right: 3px;
-        margin-bottom: 3px;
+  @media #{$sm-and-down} {
+    .col-number           { width: 10px; }    
+    .col-title            { width: calc(100% - 25px);; }    
+    .col-razon_social, 
+    .col-rfc, 
+    .col-direction, 
+    .col-proyectos, 
+    .col-actividad,
+    .col-contactComercial, 
+    .col-telefono,
+    .col-email,
+    .col-cumpleanos { 
+      width: 100%;
+      padding-top: 2px!important;
+      padding-bottom: 2px!important;
+      p {
+        margin-right: 5px;
+        &:before {
+          content: '';
+          width: 3px;
+          height: 3px;
+          background-color: $purple-color;
+          display: inline-block;
+          margin-right: 3px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+}
+.table-proveedores {
+  .col-number           { width: 10px ; }
+  .col-razon_social     { width: 12% ; }    
+  .col-ruc              { width: 5% ; }
+  .col-direction        { width: 15% ; }   
+  .col-producto_servicio{ width: 9% ; }   
+  .col-actividad        { width: 11% ; } 
+  .col-contactComercial { width: 10% ; }
+  .col-telefono         { width: 9% ; }
+  .col-email            { width: 17% ; }
+  .col-fecha_ingreso    { width: 10% ; }
+
+  @media #{$sm-and-down} {
+    .col-number           { width: 10px; }    
+    .col-razon_social     { width: calc(100% - 25px);; }    
+    .col-ruc, 
+    .col-direction, 
+    .col-producto_servicio, 
+    .col-actividad,
+    .col-contactComercial, 
+    .col-telefono,
+    .col-email,
+    .col-fecha_ingreso { 
+      width: 100%;
+      padding-top: 2px!important;
+      padding-bottom: 2px!important;
+      p {
+        margin-right: 5px;
+        &:before {
+          content: '';
+          width: 3px;
+          height: 3px;
+          background-color: $purple-color;
+          display: inline-block;
+          margin-right: 3px;
+          margin-bottom: 3px;
+        }
       }
     }
   }

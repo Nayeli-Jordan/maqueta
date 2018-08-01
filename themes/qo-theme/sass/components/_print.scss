@@ -1,8 +1,8 @@
 @media print {
 	.archive-header { display: none; }
 	
-	.table-clients {
-		#head-table-clients { display: none; }
+	.table-clients, .table-proveedores {
+		#head-table-clients, #head-table-proveedores { display: none; }
 		.col {
 			&:nth-child(odd) { clear: both; }
 		}
@@ -22,5 +22,7 @@
 			padding-bottom: 2px!important;
 		}		
 	}
-
+	#head-table-proveedores {
+		.col-razon_social		{ width: calc(100% - 25px);; } 
+	}
 }

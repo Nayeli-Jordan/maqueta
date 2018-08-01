@@ -10,9 +10,8 @@ header {
 	&.archive-header {
 		padding-top: 20px;
 		padding-bottom: 20px;
-		margin-bottom: 50px;
+		margin-bottom: 20px;
 		@media #{$sm-and-down} {
-			margin-bottom: 20px;
 			padding-bottom: 0px;
 		}
 	}

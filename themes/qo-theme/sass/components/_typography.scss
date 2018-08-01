@@ -57,7 +57,7 @@ small                         { font-size: 75%; }
     font-size: 40px;
     margin-top: 10px;
     color: $purple-color;
-    @media #{$sm-and-down} {
+    @media #{$medium-and-down} {
       font-size: 22px;
       margin-top: 10px;
       text-align: center;

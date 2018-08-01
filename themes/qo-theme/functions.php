@@ -283,3 +283,100 @@ function qo_clientes_save_metas( $idqo_clientes, $qo_clientes ){
         }
 	}
 }
+
+
+//qo_proveedores
+add_action( 'add_meta_boxes', 'qo_proveedores_custom_metabox' );
+
+function qo_proveedores_custom_metabox(){
+	add_meta_box( 'qo_proveedores_meta', 'Información Proveedor', 'display_qo_proveedores_atributos', 'qo_proveedores', 'advanced', 'default');
+}
+
+function display_qo_proveedores_atributos( $qo_proveedores ){
+    $razon_social       = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_razon_social', true ) );    
+    $ruc            	= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_ruc', true ) );    
+    $direction          = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_direction', true ) );    
+    $producto_servicio  = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_producto_servicio', true ) );
+    $actividad          = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_actividad', true ) ); 
+    $contactComercial   = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_contactComercial', true ) ); 
+    $telefono   		= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_telefono', true ) ); 
+    $email   			= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_email', true ) ); 
+    $fecha_ingreso   	= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_fecha_ingreso', true ) ); 
+?>
+
+<div>
+	<div class="row">
+		<label>Razón social</label>
+		<input type="text" name="qo_proveedores_razon_social" value="<?php echo $razon_social; ?>">
+	</div>
+	<div class="row">
+		<label>RUC</label>
+		<input type="text" name="qo_proveedores_ruc" value="<?php echo $ruc; ?>">
+	</div>
+	<div class="row">
+		<label>Dirección</label>
+		<input type="text" name="qo_proveedores_direction" value="<?php echo $direction; ?>">
+	</div>
+	<div class="row">
+		<label>Producto/Servicio</label>
+		<input type="text" name="qo_proveedores_producto_servicio" value="<?php echo $producto_servicio; ?>">
+	</div>
+	<div class="row">
+		<label>Actividad</label>
+		<input type="text" name="qo_proveedores_actividad" value="<?php echo $actividad; ?>">
+	</div>
+	<div class="row">
+		<label>Contacto Comercial</label>
+		<input type="text" name="qo_proveedores_contactComercial" value="<?php echo $contactComercial; ?>">
+	</div>
+	<div class="row">
+		<label>Teléfono</label>
+		<input type="text" name="qo_proveedores_telefono" value="<?php echo $telefono; ?>">
+	</div>
+	<div class="row">
+		<label>Email</label>
+		<input type="text" name="qo_proveedores_email" value="<?php echo $email; ?>">
+	</div>
+	<div class="row">
+		<label>Fecha de Ingreso</label>
+		<input type="text" name="qo_proveedores_fecha_ingreso" value="<?php echo $fecha_ingreso; ?>">
+	</div>
+</div>
+<?php
+
+}
+
+add_action( 'save_post', 'qo_proveedores_save_metas', 10, 2 );
+function qo_proveedores_save_metas( $idqo_proveedores, $qo_proveedores ){
+	//Comprobamos que es del tipo que nos interesa
+	if ( $qo_proveedores->post_type == 'qo_proveedores' ){
+	//Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['qo_proveedores_razon_social'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_razon_social', $_POST['qo_proveedores_razon_social'] );
+        }
+        if ( isset( $_POST['qo_proveedores_ruc'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_ruc', $_POST['qo_proveedores_ruc'] );
+        }
+        if ( isset( $_POST['qo_proveedores_direction'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_direction', $_POST['qo_proveedores_direction'] );
+        } 
+        if ( isset( $_POST['qo_proveedores_producto_servicio'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_producto_servicio', $_POST['qo_proveedores_producto_servicio'] );
+        } 
+        if ( isset( $_POST['qo_proveedores_actividad'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_actividad', $_POST['qo_proveedores_actividad'] );
+        }
+        if ( isset( $_POST['qo_proveedores_contactComercial'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_contactComercial', $_POST['qo_proveedores_contactComercial'] );
+        }
+        if ( isset( $_POST['qo_proveedores_telefono'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_telefono', $_POST['qo_proveedores_telefono'] );
+        }
+        if ( isset( $_POST['qo_proveedores_email'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_email', $_POST['qo_proveedores_email'] );
+        }
+        if ( isset( $_POST['qo_proveedores_fecha_ingreso'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_fecha_ingreso', $_POST['qo_proveedores_fecha_ingreso'] );
+        }
+	}
+}

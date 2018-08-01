@@ -223,5 +223,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'qo_clientes', $args );	
 
+	$labels = array(
+		'name'          => 'Proveedor',
+		'Singular_name' => 'Proveedor',
+		'add_new'       => 'Nuevo Proveedor',
+		'add_new_item'  => 'Nuevo Proveedor',
+		'edit_item'     => 'Editar Proveedor',
+		'new_item'      => 'Nuevo Proveedor',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Proveedor',
+		'search_items'  => 'Buscar Proveedor',
+		'not_found'     => 'No hay Proveedor.',
+		'menu_name'     => 'QO Proveedores'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'qo_proveedores' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title' ),
+		'menu_icon' 		 => 'dashicons-list-view'
+	);
+	register_post_type( 'qo_proveedores', $args );		
+
 
 });
