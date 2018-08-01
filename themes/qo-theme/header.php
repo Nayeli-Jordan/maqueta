@@ -44,7 +44,7 @@
 		<!-- <link href="https://fonts.googleapis.com/css?family=Rancho|Open+Sans:400" rel="stylesheet"> -->
 
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection" />
+		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection, print" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="<?php echo site_url(); ?>" />
@@ -55,38 +55,53 @@
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
+		<?php flush(); ?>
 	</head>
 	<body>
-		<header class="js-header">			
-			<nav>
-				<ul class="mb-nav" itemscope>
-					<!-- <?php
-						$menu_name = 'top_menu';
+		<?php if (is_page('qo-clientes')) : ?>
+			<header class="container container-large archive-header">
+				<div class="row">
+					<div class="col s12 m4">
+						<div class="bg-image bg-contain bg-qo-logo" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png)"></div>
+					</div>
+					<div class="col s12 m8 title-archive">
+						<?php the_title(); ?>
+					</div>
+				</div>				
+			</header>
+		<?php else: ?>
+			<header class="js-header">			
+				<nav>
+					<ul class="mb-nav" itemscope>
+						<!-- <?php
+							$menu_name = 'top_menu';
 
-						if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
-							$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
-							$menu_items = wp_get_nav_menu_items( $menu->term_id );
-							$menu_list = '';
-							foreach ( (array) $menu_items as $key => $menu_item) {
+							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
+								$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
+								$menu_items = wp_get_nav_menu_items( $menu->term_id );
+								$menu_list = '';
+								foreach ( (array) $menu_items as $key => $menu_item) {
 
-								$url 				= $menu_item->url;
-								$title 				= $menu_item->title;
-								$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+									$url 				= $menu_item->url;
+									$title 				= $menu_item->title;
+									$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
 
-								//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-								//$id 				= $menu_item->ID;
-								//$attr_title 		= $menu_item->attr_title;
-								//$description		= $menu_item->description;
-								//$xfn 				= $menu_item->xfn;
-								//$type 			= $menu_item->type;		taxonomy, page...
-								//$type_label		= $menu_item->type_label;		página, categoría...
+									//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
+									//$id 				= $menu_item->ID;
+									//$attr_title 		= $menu_item->attr_title;
+									//$description		= $menu_item->description;
+									//$xfn 				= $menu_item->xfn;
+									//$type 			= $menu_item->type;		taxonomy, page...
+									//$type_label		= $menu_item->type_label;		página, categoría...
 
-								$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+								}
 							}
-						}
-						echo $menu_list;
-					?>	 -->					
-				</ul>
-			</nav>
-		</header>
+							echo $menu_list;
+						?>	 -->					
+					</ul>
+				</nav>
+			</header>
+		<?php endif; ?>
+		
 		<div class="[ main-body ]">

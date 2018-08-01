@@ -161,5 +161,67 @@ add_action('init', function(){
 	);
 	register_post_type( 'reconocimientos', $args );	
 
+	$labels = array(
+		'name'          => 'Sistema',
+		'Singular_name' => 'Sistema',
+		'add_new'       => 'Nuevo Sistema',
+		'add_new_item'  => 'Nuevo Sistema',
+		'edit_item'     => 'Editar Sistema',
+		'new_item'      => 'Nuevo Sistema',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Sistema',
+		'search_items'  => 'Buscar Sistema',
+		'not_found'     => 'No hay Sistema.',
+		'menu_name'     => 'Sistema'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'sistema' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail', 'editor' ),
+		'menu_icon' 		 => 'dashicons-id-alt'
+	);
+	register_post_type( 'sistema', $args );	
+
+	$labels = array(
+		'name'          => 'Cliente',
+		'Singular_name' => 'Cliente',
+		'add_new'       => 'Nuevo Cliente',
+		'add_new_item'  => 'Nuevo Cliente',
+		'edit_item'     => 'Editar Cliente',
+		'new_item'      => 'Nuevo Cliente',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Cliente',
+		'search_items'  => 'Buscar Cliente',
+		'not_found'     => 'No hay Cliente.',
+		'menu_name'     => 'QO Clientes'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'qo_clientes' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title' ),
+		'menu_icon' 		 => 'dashicons-list-view'
+	);
+	register_post_type( 'qo_clientes', $args );	
+
 
 });

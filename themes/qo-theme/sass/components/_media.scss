@@ -36,3 +36,15 @@ video.responsive-video {
 	right: 0; 
 	left: 0; 
 }
+
+
+.bg-qo-logo {
+	width: 100%;
+	max-width: 200px;
+	padding-bottom: 25%;
+	@media #{$sm-and-down} {
+		max-width: 150px;
+		padding-bottom: 15%;
+		margin: auto;
+	}
+}

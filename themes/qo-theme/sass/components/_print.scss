@@ -1,0 +1,26 @@
+@media print {
+	.archive-header { display: none; }
+	
+	.table-clients {
+		#head-table-clients { display: none; }
+		.col {
+			&:nth-child(odd) { clear: both; }
+		}
+		.col-number           { width: 10px; }    
+		.col-title            { width: calc(100% - 25px);; }    
+		.col-razon_social, 
+		.col-rfc, 
+		.col-direction, 
+		.col-proyectos, 
+		.col-actividad,
+		.col-contactComercial, 
+		.col-telefono,
+		.col-email,
+		.col-cumpleanos { 
+			width: 50%;
+			padding-top: 2px!important;
+			padding-bottom: 2px!important;
+		}		
+	}
+
+}
