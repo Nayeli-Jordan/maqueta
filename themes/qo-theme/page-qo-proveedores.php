@@ -15,7 +15,7 @@
         			<div class="col col-direction">
         				<p>Dirección</p>
         			</div>
-        			<div class="col col-producto_servicio">
+        			<div class="col col-prod_serv">
         				<p>Producto/Servicio</p>
         			</div>
         			<div class="col col-actividad">
@@ -38,7 +38,7 @@
 		        $args = array(
 		            'post_type' 		=> 'qo_proveedores',
 		            'posts_per_page' 	=> -1,
-		            'orderby' 			=> 'title',
+		            'orderby' 			=> 'date',
 		            'order' 			=> 'ASC'
 		            );
 		        $loop = new WP_Query( $args );
@@ -52,7 +52,7 @@
 						$razon_social    	= get_post_meta( $post_id, 'qo_proveedores_razon_social', true );    
 						$ruc          		= get_post_meta( $post_id, 'qo_proveedores_ruc', true );    
 						$direction       	= get_post_meta( $post_id, 'qo_proveedores_direction', true );    
-						$producto_servicio  = get_post_meta( $post_id, 'qo_proveedores_producto_servicio', true );    
+						$prod_serv  = get_post_meta( $post_id, 'qo_proveedores_prod_serv', true );    
 						$actividad       	= get_post_meta( $post_id, 'qo_proveedores_actividad', true ); 
 						$contactComercial 	= get_post_meta( $post_id, 'qo_proveedores_contactComercial', true ); 
 						$telefono  			= get_post_meta( $post_id, 'qo_proveedores_telefono', true ); 
@@ -76,9 +76,9 @@
 		        				<p class="hide-on-med-and-up inline-block">Dirección: </p>
 		        				<?php if( $direction != "" ) : ?><?php echo $direction; ?><?php endif; ?>
 		        			</div>
-		        			<div class="col col-producto_servicio">
+		        			<div class="col col-prod_serv">
 		        				<p class="hide-on-med-and-up inline-block">Producto/Servicio: </p>
-		        				<?php if( $producto_servicio != "" ) : ?><?php echo $producto_servicio; ?><?php endif; ?>
+		        				<?php if( $prod_serv != "" ) : ?><?php echo $prod_serv; ?><?php endif; ?>
 		        			</div>
 		        			<div class="col col-actividad">
 		        				<p class="hide-on-med-and-up inline-block">Actividad: </p>

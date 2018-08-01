@@ -296,7 +296,7 @@ function display_qo_proveedores_atributos( $qo_proveedores ){
     $razon_social       = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_razon_social', true ) );    
     $ruc            	= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_ruc', true ) );    
     $direction          = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_direction', true ) );    
-    $producto_servicio  = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_producto_servicio', true ) );
+    $prod_serv 			= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_prod_serv', true ) );
     $actividad          = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_actividad', true ) ); 
     $contactComercial   = esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_contactComercial', true ) ); 
     $telefono   		= esc_html( get_post_meta( $qo_proveedores->ID, 'qo_proveedores_telefono', true ) ); 
@@ -319,7 +319,11 @@ function display_qo_proveedores_atributos( $qo_proveedores ){
 	</div>
 	<div class="row">
 		<label>Producto/Servicio</label>
-		<input type="text" name="qo_proveedores_producto_servicio" value="<?php echo $producto_servicio; ?>">
+		<select name="qo_proveedores_prod_serv">
+			<option value="">Seleccionar</option>
+			<option value="Producto" <?php selected($prod_serv, 'Producto'); ?>>Producto</option>
+			<option value="Servicio" <?php selected($prod_serv, 'Servicio'); ?>>Servicio</option>
+		</select>
 	</div>
 	<div class="row">
 		<label>Actividad</label>
@@ -360,9 +364,9 @@ function qo_proveedores_save_metas( $idqo_proveedores, $qo_proveedores ){
         if ( isset( $_POST['qo_proveedores_direction'] ) ){
             update_post_meta( $idqo_proveedores, 'qo_proveedores_direction', $_POST['qo_proveedores_direction'] );
         } 
-        if ( isset( $_POST['qo_proveedores_producto_servicio'] ) ){
-            update_post_meta( $idqo_proveedores, 'qo_proveedores_producto_servicio', $_POST['qo_proveedores_producto_servicio'] );
-        } 
+        if ( isset( $_POST['qo_proveedores_prod_serv'] ) ){
+            update_post_meta( $idqo_proveedores, 'qo_proveedores_prod_serv', $_POST['qo_proveedores_prod_serv'] );
+        }
         if ( isset( $_POST['qo_proveedores_actividad'] ) ){
             update_post_meta( $idqo_proveedores, 'qo_proveedores_actividad', $_POST['qo_proveedores_actividad'] );
         }

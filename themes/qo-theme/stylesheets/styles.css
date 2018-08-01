@@ -2681,7 +2681,7 @@ ul li {
   width: 15%;
 }
 /* line 210, ../sass/components/_grid.scss */
-.table-proveedores .col-producto_servicio {
+.table-proveedores .col-prod_serv {
   width: 9%;
 }
 /* line 211, ../sass/components/_grid.scss */
@@ -2716,7 +2716,7 @@ ul li {
   /* line 220, ../sass/components/_grid.scss */
   .table-proveedores .col-ruc,
   .table-proveedores .col-direction,
-  .table-proveedores .col-producto_servicio,
+  .table-proveedores .col-prod_serv,
   .table-proveedores .col-actividad,
   .table-proveedores .col-contactComercial,
   .table-proveedores .col-telefono,
@@ -2729,7 +2729,7 @@ ul li {
   /* line 231, ../sass/components/_grid.scss */
   .table-proveedores .col-ruc p,
   .table-proveedores .col-direction p,
-  .table-proveedores .col-producto_servicio p,
+  .table-proveedores .col-prod_serv p,
   .table-proveedores .col-actividad p,
   .table-proveedores .col-contactComercial p,
   .table-proveedores .col-telefono p,
@@ -2740,7 +2740,7 @@ ul li {
   /* line 233, ../sass/components/_grid.scss */
   .table-proveedores .col-ruc p:before,
   .table-proveedores .col-direction p:before,
-  .table-proveedores .col-producto_servicio p:before,
+  .table-proveedores .col-prod_serv p:before,
   .table-proveedores .col-actividad p:before,
   .table-proveedores .col-contactComercial p:before,
   .table-proveedores .col-telefono p:before,
@@ -3172,6 +3172,11 @@ small {
     margin-top: 10px;
     text-align: center;
   }
+}
+
+/* line 67, ../sass/components/_typography.scss */
+.col-prod_serv {
+  text-transform: capitalize;
 }
 
 /* line 5, ../sass/components/_utilities.scss */
