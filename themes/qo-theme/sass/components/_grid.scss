@@ -245,10 +245,12 @@
 }
 
 .content-cotizacion {
-  //width: 595px;
+  /* //width: 595px;
   width: 612px;
-  //height: 842px;
-  height: 792px;
+  //height: 842px;*/
+  position: relative;
+  height: 992px;   
+  width: 912px;
   padding-top: 35px;
   padding-bottom: 35px;
   margin: 30px auto;

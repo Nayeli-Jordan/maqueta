@@ -96,8 +96,7 @@
 	<?php if( $muestra != "" ) : ?>
 		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
 	<?php endif; ?>
-
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 
-?>	
+?>

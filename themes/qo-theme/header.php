@@ -70,7 +70,7 @@
 				</div>				
 			</header>
 		<?php elseif (is_singular('qo_cotizaciones')): ?>
-			<!-- not header -->
+			<!-- Not header -->
 		<?php else: ?>
 			<header class="js-header">			
 				<nav>

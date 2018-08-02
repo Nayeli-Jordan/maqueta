@@ -3,7 +3,7 @@
 	* Template Name: Estilo con Descripción
 	* Template Post Type: qo_cotizaciones
 */
-	get_header(); 
+	get_header();
 	global $post;
 	
 	while ( have_posts() ) : the_post();
@@ -82,8 +82,7 @@
 	<?php if( $muestra != "" ) : ?>
 		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
 	<?php endif; ?>
-
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 
-?>	
+?>
