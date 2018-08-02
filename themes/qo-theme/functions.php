@@ -48,8 +48,8 @@ function load_custom_files_wp_admin() {
         wp_register_style( 'qo_wp_admin_css', THEMEPATH . '/admin/admin-style.css', false, '1.0.0' );
         wp_enqueue_style( 'qo_wp_admin_css' );
 
-        /*wp_register_script( 'qo_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
-        wp_enqueue_script( 'qo_wp_admin_js' ); */       
+        wp_register_script( 'qo_wp_admin_js', THEMEPATH . 'admin/admin-script.js', false, '1.0.0' );
+        wp_enqueue_script( 'qo_wp_admin_js' );       
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_files_wp_admin' );
 
@@ -403,13 +403,14 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
     $nota3         = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_nota3', true ) );    
     $nota4         = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_nota4', true ) );    
     $piezas       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas', true ) );    
-    $piezas2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas2', true ) );    
-    $piezas3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas3', true ) );    
-    $piezas4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas4', true ) );    
+    $piezas2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas2', true ) );   
+    $piezas3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas3', true ) );   
+    $piezas4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_piezas4', true ) );   
     $precio       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_precio', true ) );
     $precio2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_precio2', true ) );
     $precio3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_precio3', true ) );
     $precio4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_precio4', true ) );
+    $muestra       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra', true ) );
     $iva_inc      = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_iva_inc', true ) );
 ?>
 
@@ -456,6 +457,16 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
 	</div>
 	<div class="row margin-bottom-large">
 		<p>*Los ultimos dos renglones sólo se mostrarán en la "Plantilla predeterminada"*</p>
+	</div>	
+	<div class="row margin-bottom-large">
+		<div class="input-image">
+            <label for="qo_cotizaciones_muestra">Muestra</label><br>
+            <input type="text" name="qo_cotizaciones_muestra" id="qo_cotizaciones_muestra" class="meta-image regular-text" value="<?php echo $muestra; ?>">
+            <input type="button" class="button image-upload" value="Seleccionar">
+        </div>
+        <div class="image-preview">
+            <img src="<?php echo $muestra; ?>">
+        </div>
 	</div>
 	<div class="row">
 		<label>¿Esta cotización incluirá IVA?*</label>
@@ -521,6 +532,9 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
         }
         if ( isset( $_POST['qo_cotizaciones_precio4'] ) ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_precio4', $_POST['qo_cotizaciones_precio4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra', $_POST['qo_cotizaciones_muestra'] );
         }
         if ( isset( $_POST['qo_cotizaciones_iva_inc'] ) ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_iva_inc', $_POST['qo_cotizaciones_iva_inc'] );

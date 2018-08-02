@@ -36,3 +36,20 @@ select {
 
 
 #qo_cotizaciones p { margin: 0px; }
+
+
+.input-image,
+.image-preview {
+	display: inline-block;
+}
+.input-image {
+	width: 65%;
+}
+.image-upload {
+	display: block;
+	float: right;
+}
+.image-preview {
+	width: 30%;
+	float: right;
+}

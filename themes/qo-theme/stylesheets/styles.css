@@ -2852,7 +2852,11 @@ video.responsive-video {
   display: block;
   margin: 0 auto 20px;
 }
-/* line 60, ../sass/components/_media.scss */
+/* line 59, ../sass/components/_media.scss */
+.content-cotizacion .img-muestra {
+  max-height: 120px;
+}
+/* line 63, ../sass/components/_media.scss */
 .content-cotizacion .footer-cotizacion .bg-qo-logo {
   width: 50px;
   height: 30px;
