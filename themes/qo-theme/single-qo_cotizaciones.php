@@ -26,6 +26,7 @@
 	$precio4       = get_post_meta( $post_id, 'qo_cotizaciones_precio4', true );
 	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
+	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
 	<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">
 	<div class="container container-large">
 		<p class="date"><?php echo get_the_date(); ?></p>
