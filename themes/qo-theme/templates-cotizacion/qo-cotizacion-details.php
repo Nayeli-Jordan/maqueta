@@ -3,9 +3,6 @@
 	* Template Name: Estilo con Descripción
 	* Template Post Type: qo_cotizaciones
 */
- ?>
-<div class="content-cotizacion relative template-details">
-<?php 
 	get_header();
 	global $post;
 	
@@ -20,6 +17,8 @@
 	$precio       = get_post_meta( $post_id, 'qo_cotizaciones_precio', true );
 	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
+<div class="content-cotizacion template-details">
+	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header-cotizacion.php'); ?>
 	<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">
 	<div class="container container-large">
 		<p class="date"><?php echo get_the_date(); ?></p>
@@ -76,22 +75,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer-cotizacion">
-			<?php if( $iva_inc == "Sí" ) : ?>
-				<p class="inline-block">Precio cotizado con IVA</p>
-			<?php else: ?>
-				<p class="inline-block">Precio cotizado <strong>sin</strong> IVA</p>
-			<?php endif; ?>			
-			<p class="inline-block">Anticipo del 50%</p>
-			<p class="inline-block">Vigencia 15 días</p>
-			<br>
-			<div class="bg-image bg-contain bg-qo-logo" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
-			<p>Atentamente:<br>Control y administración<br>¿Qué Onda?</p>
-		</div>
+		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer-cotizacion.php'); ?>
 	</div>	
+</div> <!-- end content-cotizacion -->
 <?php 
 	endwhile; // end of the loop.
 	get_footer(); 
 ?>	
-</div> <!-- end content-cotizacion -->
+
 
