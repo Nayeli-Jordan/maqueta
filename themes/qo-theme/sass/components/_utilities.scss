@@ -29,7 +29,7 @@
 .content-cotizacion {
 	.info-general {
 		position: absolute;
-		top: 0px;
+		top: 40px;
 		right: 0px;
 		.num-tiket {
 			padding: 2px;
@@ -100,6 +100,13 @@
 				font-size: 14px; 
 				margin: 0 3px;
 			}
+		}
+	}
+
+	.content-muestra {
+		min-height: calc(100vh - 500px);
+		img {
+			@extend %center-full;
 		}
 	}
 }

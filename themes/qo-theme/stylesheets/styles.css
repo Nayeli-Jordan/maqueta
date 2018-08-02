@@ -2848,15 +2848,16 @@ video.responsive-video {
 }
 /* line 54, ../sass/components/_media.scss */
 .content-cotizacion .img-client {
-  width: 100px;
+  max-width: 100px;
+  max-height: 100px;
   display: block;
   margin: 0 auto 20px;
 }
-/* line 59, ../sass/components/_media.scss */
+/* line 60, ../sass/components/_media.scss */
 .content-cotizacion .img-muestra {
   max-height: 120px;
 }
-/* line 63, ../sass/components/_media.scss */
+/* line 64, ../sass/components/_media.scss */
 .content-cotizacion .footer-cotizacion .bg-qo-logo {
   width: 50px;
   height: 30px;
@@ -3083,7 +3084,7 @@ video.responsive-video {
 
 /* line 68, ../sass/components/_position.scss */
 .content-cotizacion .row .col .item-cotizacion div,
-.content-cotizacion .row .col .opt-cotizacion div {
+.content-cotizacion .row .col .opt-cotizacion div, .content-cotizacion .content-muestra img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3295,7 +3296,7 @@ small {
 /* line 30, ../sass/components/_utilities.scss */
 .content-cotizacion .info-general {
   position: absolute;
-  top: 0px;
+  top: 40px;
   right: 0px;
 }
 /* line 34, ../sass/components/_utilities.scss */
@@ -3385,6 +3386,10 @@ small {
   font-size: 14px;
   margin: 0 3px;
 }
+/* line 106, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra {
+  min-height: calc(100vh - 500px);
+}
 
 /* line 3, ../sass/components/_header.scss */
 header ul li {
@@ -3469,14 +3474,15 @@ footer {
 
   /* line 33, ../sass/components/_print.scss */
   .content-cotizacion {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     min-height: 100%;
     margin: 0px auto;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     top: 0px;
   }
-  /* line 41, ../sass/components/_print.scss */
+  /* line 42, ../sass/components/_print.scss */
   .content-cotizacion .opt-cotizacion {
     height: 120px;
   }

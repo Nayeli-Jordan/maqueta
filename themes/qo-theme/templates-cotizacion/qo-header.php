@@ -11,3 +11,4 @@
 		</div>
 	</div>	
 </header>
+<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">

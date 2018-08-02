@@ -52,7 +52,8 @@ video.responsive-video {
 .content-cotizacion {
 	.img-qo-logo { width: 200px; }
 	.img-client { 
-		width: 100px;
+		max-width: 100px;
+		max-height: 100px;
 		display: block;
 		margin: 0 auto 20px;
 	}
