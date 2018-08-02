@@ -25,3 +25,81 @@
 		@media #{$medium-and-up} { min-width: 1300px; }
 	}
 }
+
+.content-cotizacion {
+	.info-general {
+		position: absolute;
+		top: 35px;
+		right: 0px;
+		.num-tiket {
+			padding: 2px;
+			display: inline-block;
+			border-radius: 15px;
+			margin-bottom: 5px;
+			.bg-light {
+				padding: 0 30px;
+				border-radius: 15px;
+				p {
+					line-height: 32px;
+					font-size: 18px;
+				}
+			}
+		}
+		.title-tiket {
+			padding: 8px 30px;
+			color: $light-color;
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+			font-weight: 500;
+		}
+	}
+	.date { font-size: 14px; }
+
+	.row {
+		.col {
+			padding: 0 2px;
+			.item-cotizacion,
+			.opt-cotizacion {
+				margin-bottom: 3px;
+				border: 1px solid gray;
+				border-radius: 5px;
+				text-align: center;
+				position: relative;	
+				div {
+					@extend %center-full;
+					width: calc(100% - 10px);
+					&.modelo, &.nota {
+						font-size: 12px;
+						line-height: 14px;
+					}
+					
+				}
+				&.description {
+					min-height: 180px;
+					div { text-align: left; }
+				}		
+			}
+			.item-cotizacion {
+				p {
+					font-size: 16px;
+					line-height: 26px;
+				}
+			}
+			.opt-cotizacion {
+				min-height: 70px;
+				padding: 5px;
+			}
+		}
+	}
+
+	.footer-cotizacion {
+		text-align: center;
+		p {
+			font-size: 11px;
+			&.inline-block { 
+				font-size: 14px; 
+				margin: 0 3px;
+			}
+		}
+	}
+}

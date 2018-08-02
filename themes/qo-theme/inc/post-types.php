@@ -252,7 +252,38 @@ add_action('init', function(){
 		'supports'           => array( 'title' ),
 		'menu_icon' 		 => 'dashicons-list-view'
 	);
-	register_post_type( 'qo_proveedores', $args );		
+	register_post_type( 'qo_proveedores', $args );
+
+	$labels = array(
+		'name'          => 'Cotizacion',
+		'Singular_name' => 'Cotizacion',
+		'add_new'       => 'Nuevo Cotizacion',
+		'add_new_item'  => 'Nuevo Cotizacion',
+		'edit_item'     => 'Editar Cotizacion',
+		'new_item'      => 'Nuevo Cotizacion',
+		'all_items'     => 'Todo',
+		'view_item'     => 'Ver Cotizacion',
+		'search_items'  => 'Buscar Cotizacion',
+		'not_found'     => 'No hay Cotizacion.',
+		'menu_name'     => 'QO Cotizaciones'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'qo_cotizaciones' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail', 'editor' ),
+		'menu_icon' 		 => 'dashicons-list-view'
+	);
+	register_post_type( 'qo_cotizaciones', $args );		
 
 
 });

@@ -48,3 +48,20 @@ video.responsive-video {
 		margin: auto;
 	}
 }
+
+.content-cotizacion {
+	.img-qo-logo { width: 200px; }
+	.img-client { 
+		width: 100px;
+		display: block;
+		margin: 0 auto 20px;
+	}
+	.footer-cotizacion {
+		.bg-qo-logo {
+			width: 50px;
+			height: 30px;
+			padding-bottom: 0px;
+			margin: 0 auto 10px;
+		}
+	}
+}

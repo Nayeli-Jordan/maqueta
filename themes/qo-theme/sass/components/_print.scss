@@ -25,4 +25,25 @@
 	#head-table-proveedores {
 		.col-razon_social		{ width: calc(100% - 25px);; } 
 	}
+
+	//Cotización
+	html.single-cotizacion {
+		max-width: 612px;
+	}
+	.content-cotizacion {
+		width: 100%;
+		min-height: 100%;
+		margin: 0px auto;
+		overflow: hidden;
+		position: absolute;
+		top: 0px;
+		//box-shadow: none;
+		.opt-cotizacion {
+			height: 120px;
+		}
+	}
+
+	@page{
+		margin: 0;
+	}
 }

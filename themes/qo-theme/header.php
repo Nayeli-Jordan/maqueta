@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Importante agregar el prefijo para cuando dice que og no se está usando -->
-<html prefix="og: http://ogp.me/ns#">
+<html prefix="og: http://ogp.me/ns#" class="<?php if (is_singular('qo_cotizaciones')) :?> single-cotizacion <?php endif; ?>">
 	<head>
 		<meta charset="utf-8">
 		<title><?php bloginfo('name'); ?></title>
@@ -68,6 +68,20 @@
 						<?php the_title(); ?>
 					</div>
 				</div>				
+			</header>
+		<?php elseif (is_singular('qo_cotizaciones')): ?>
+			<header class="container container-large header-cotizacion">
+				<img class="img-qo-logo" src="<?php echo THEMEPATH; ?>images/identidad/qo-logo.png">
+				<div class="info-general">
+					<div class="num-tiket bg-gradient-qo">
+						<div class="bg-light">
+							<p>000<?php echo get_the_ID(); ?></p>
+						</div>						
+					</div>
+					<div class="title-tiket bg-gradient-qo">
+						<p>Proyecto: <?php the_title(); ?></p>
+					</div>
+				</div>	
 			</header>
 		<?php else: ?>
 			<header class="js-header">			

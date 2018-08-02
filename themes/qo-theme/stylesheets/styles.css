@@ -1,201 +1,201 @@
 /* line 4, ../sass/components/_box-model.scss */
 .margin-top-xsmall {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* line 5, ../sass/components/_box-model.scss */
 .margin-top-small {
-  margin-top: 22.5px;
+  margin-top: 15px;
 }
 
 /* line 6, ../sass/components/_box-model.scss */
 .margin-top {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* line 7, ../sass/components/_box-model.scss */
 .margin-top-large {
-  margin-top: 37.5px;
+  margin-top: 25px;
 }
 
 /* line 8, ../sass/components/_box-model.scss */
 .margin-top-xlarge {
-  margin-top: 45px;
+  margin-top: 30px;
 }
 
 /* line 10, ../sass/components/_box-model.scss */
 .margin-bottom-xsmall {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* line 11, ../sass/components/_box-model.scss */
 .margin-bottom-small {
-  margin-bottom: 22.5px;
+  margin-bottom: 15px;
 }
 
 /* line 12, ../sass/components/_box-model.scss */
 .margin-bottom {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* line 13, ../sass/components/_box-model.scss */
 .margin-bottom-large {
-  margin-bottom: 37.5px;
+  margin-bottom: 25px;
 }
 
 /* line 14, ../sass/components/_box-model.scss */
 .margin-bottom-xlarge {
-  margin-bottom: 45px;
+  margin-bottom: 30px;
 }
 
 /* line 16, ../sass/components/_box-model.scss */
 .margin-right-xsmall {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 /* line 17, ../sass/components/_box-model.scss */
 .margin-right-small {
-  margin-right: 22.5px;
+  margin-right: 15px;
 }
 
 /* line 18, ../sass/components/_box-model.scss */
 .margin-right {
-  margin-right: 30px;
+  margin-right: 20px;
 }
 
 /* line 19, ../sass/components/_box-model.scss */
 .margin-right-large {
-  margin-right: 37.5px;
+  margin-right: 25px;
 }
 
 /* line 20, ../sass/components/_box-model.scss */
 .margin-right-xlarge {
-  margin-right: 45px;
+  margin-right: 30px;
 }
 
 /* line 22, ../sass/components/_box-model.scss */
 .margin-left-xsmall {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 /* line 23, ../sass/components/_box-model.scss */
 .margin-left-small {
-  margin-left: 22.5px;
+  margin-left: 15px;
 }
 
 /* line 24, ../sass/components/_box-model.scss */
 .margin-left {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 /* line 25, ../sass/components/_box-model.scss */
 .margin-left-large {
-  margin-left: 37.5px;
+  margin-left: 25px;
 }
 
 /* line 26, ../sass/components/_box-model.scss */
 .margin-left-xlarge {
-  margin-left: 45px;
+  margin-left: 30px;
 }
 
 /* line 31, ../sass/components/_box-model.scss */
 .padding-top-xsmall {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 /* line 32, ../sass/components/_box-model.scss */
 .padding-top-small {
-  padding-top: 22.5px;
+  padding-top: 15px;
 }
 
 /* line 33, ../sass/components/_box-model.scss */
 .padding-top {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 /* line 34, ../sass/components/_box-model.scss */
 .padding-top-large {
-  padding-top: 37.5px;
+  padding-top: 25px;
 }
 
 /* line 35, ../sass/components/_box-model.scss */
 .padding-top-xlarge {
-  padding-top: 45px;
+  padding-top: 30px;
 }
 
 /* line 37, ../sass/components/_box-model.scss */
 .padding-bottom-xsmall {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 /* line 38, ../sass/components/_box-model.scss */
 .padding-bottom-small {
-  padding-bottom: 22.5px;
+  padding-bottom: 15px;
 }
 
 /* line 39, ../sass/components/_box-model.scss */
 .padding-bottom {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 /* line 40, ../sass/components/_box-model.scss */
 .padding-bottom-large {
-  padding-bottom: 37.5px;
+  padding-bottom: 25px;
 }
 
 /* line 41, ../sass/components/_box-model.scss */
 .padding-bottom-xlarge {
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 }
 
 /* line 43, ../sass/components/_box-model.scss */
 .padding-right-xsmall {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 /* line 44, ../sass/components/_box-model.scss */
 .padding-right-small {
-  padding-right: 22.5px;
+  padding-right: 15px;
 }
 
 /* line 45, ../sass/components/_box-model.scss */
 .padding-right {
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
 /* line 46, ../sass/components/_box-model.scss */
 .padding-right-large {
-  padding-right: 37.5px;
+  padding-right: 25px;
 }
 
 /* line 47, ../sass/components/_box-model.scss */
 .padding-right-xlarge {
-  padding-right: 45px;
+  padding-right: 30px;
 }
 
 /* line 49, ../sass/components/_box-model.scss */
 .padding-left-xsmall {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
 /* line 50, ../sass/components/_box-model.scss */
 .padding-left-small {
-  padding-left: 22.5px;
+  padding-left: 15px;
 }
 
 /* line 51, ../sass/components/_box-model.scss */
 .padding-left {
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 /* line 52, ../sass/components/_box-model.scss */
 .padding-left-large {
-  padding-left: 37.5px;
+  padding-left: 25px;
 }
 
 /* line 53, ../sass/components/_box-model.scss */
 .padding-left-xlarge {
-  padding-left: 45px;
+  padding-left: 30px;
 }
 
 /* line 55, ../sass/components/_box-model.scss */
@@ -1243,6 +1243,16 @@
 /* line 8, ../sass/components/_color.scss */
 .color-dark {
   color: #000;
+}
+
+/* line 14, ../sass/components/_color.scss */
+.bg-gradient-qo {
+  background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
+}
+
+/* line 15, ../sass/components/_color.scss */
+.bg-light {
+  background-color: #fff;
 }
 
 /* line 4, ../sass/components/_effects.scss */
@@ -2756,6 +2766,21 @@ ul li {
   }
 }
 
+/* line 247, ../sass/components/_grid.scss */
+.content-cotizacion {
+  width: 612px;
+  height: 792px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin: 30 auto;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 261, ../sass/components/_grid.scss */
+.col-1_5 {
+  width: 20%;
+}
+
 /* line 4, ../sass/components/_media.scss */
 img.responsive-img,
 video.responsive-video {
@@ -2815,6 +2840,24 @@ video.responsive-video {
     padding-bottom: 15%;
     margin: auto;
   }
+}
+
+/* line 53, ../sass/components/_media.scss */
+.content-cotizacion .img-qo-logo {
+  width: 200px;
+}
+/* line 54, ../sass/components/_media.scss */
+.content-cotizacion .img-client {
+  width: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+/* line 60, ../sass/components/_media.scss */
+.content-cotizacion .footer-cotizacion .bg-qo-logo {
+  width: 50px;
+  height: 30px;
+  padding-bottom: 0px;
+  margin: 0 auto 10px;
 }
 
 /* line 4, ../sass/components/_position.scss */
@@ -3034,6 +3077,18 @@ video.responsive-video {
   transform: translateX(50%);
 }
 
+/* line 68, ../sass/components/_position.scss */
+.content-cotizacion .row .col .item-cotizacion div,
+.content-cotizacion .row .col .opt-cotizacion div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* line 4, ../sass/components/_shape.scss */
 .circle {
   border-radius: 50%;
@@ -3233,6 +3288,100 @@ small {
   }
 }
 
+/* line 30, ../sass/components/_utilities.scss */
+.content-cotizacion .info-general {
+  position: absolute;
+  top: 35px;
+  right: 0px;
+}
+/* line 34, ../sass/components/_utilities.scss */
+.content-cotizacion .info-general .num-tiket {
+  padding: 2px;
+  display: inline-block;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+/* line 39, ../sass/components/_utilities.scss */
+.content-cotizacion .info-general .num-tiket .bg-light {
+  padding: 0 30px;
+  border-radius: 15px;
+}
+/* line 42, ../sass/components/_utilities.scss */
+.content-cotizacion .info-general .num-tiket .bg-light p {
+  line-height: 32px;
+  font-size: 18px;
+}
+/* line 48, ../sass/components/_utilities.scss */
+.content-cotizacion .info-general .title-tiket {
+  padding: 8px 30px;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-weight: 500;
+}
+/* line 56, ../sass/components/_utilities.scss */
+.content-cotizacion .date {
+  font-size: 14px;
+}
+/* line 59, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col {
+  padding: 0 2px;
+}
+/* line 61, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion,
+.content-cotizacion .row .col .opt-cotizacion {
+  margin-bottom: 3px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+/* line 68, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion div,
+.content-cotizacion .row .col .opt-cotizacion div {
+  width: calc(100% - 10px);
+}
+/* line 71, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion div.modelo, .content-cotizacion .row .col .item-cotizacion div.nota,
+.content-cotizacion .row .col .opt-cotizacion div.modelo,
+.content-cotizacion .row .col .opt-cotizacion div.nota {
+  font-size: 12px;
+  line-height: 14px;
+}
+/* line 77, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion.description,
+.content-cotizacion .row .col .opt-cotizacion.description {
+  min-height: 180px;
+}
+/* line 79, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion.description div,
+.content-cotizacion .row .col .opt-cotizacion.description div {
+  text-align: left;
+}
+/* line 83, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .item-cotizacion p {
+  font-size: 16px;
+  line-height: 26px;
+}
+/* line 88, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .opt-cotizacion {
+  min-height: 70px;
+  padding: 5px;
+}
+/* line 95, ../sass/components/_utilities.scss */
+.content-cotizacion .footer-cotizacion {
+  text-align: center;
+}
+/* line 97, ../sass/components/_utilities.scss */
+.content-cotizacion .footer-cotizacion p {
+  font-size: 11px;
+}
+/* line 99, ../sass/components/_utilities.scss */
+.content-cotizacion .footer-cotizacion p.inline-block {
+  font-size: 14px;
+  margin: 0 3px;
+}
+
 /* line 3, ../sass/components/_header.scss */
 header ul li {
   display: inline-block;
@@ -3248,6 +3397,10 @@ header.archive-header {
   header.archive-header {
     padding-bottom: 0px;
   }
+}
+/* line 18, ../sass/components/_header.scss */
+header.header-cotizacion {
+  margin-bottom: 15px;
 }
 
 /* line 1, ../sass/components/_footer.scss */
@@ -3303,5 +3456,28 @@ footer {
   /* line 26, ../sass/components/_print.scss */
   #head-table-proveedores .col-razon_social {
     width: calc(100% - 25px);
+  }
+
+  /* line 30, ../sass/components/_print.scss */
+  html.single-cotizacion {
+    max-width: 612px;
+  }
+
+  /* line 33, ../sass/components/_print.scss */
+  .content-cotizacion {
+    width: 100%;
+    min-height: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+  }
+  /* line 41, ../sass/components/_print.scss */
+  .content-cotizacion .opt-cotizacion {
+    height: 120px;
+  }
+
+  @page {
+    margin: 0;
   }
 }
