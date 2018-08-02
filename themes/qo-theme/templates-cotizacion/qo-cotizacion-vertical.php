@@ -3,9 +3,6 @@
 	* Template Name: Estilo Vertical c/imagen
 	* Template Post Type: qo_cotizaciones
 */
- ?>
-<div class="content-cotizacion relative template-vertical">
-<?php 
 	get_header();
 	global $post;
 	
@@ -33,6 +30,7 @@
 	$muestra       = get_post_meta( $post_id, 'qo_cotizaciones_muestra', true );
 	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
+	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
 	<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">
 	<div class="container container-large">
 		<p class="date margin-bottom-xlarge"><?php echo get_the_date(); ?></p>
@@ -107,6 +105,5 @@
 <?php 
 	endwhile; // end of the loop.
 	get_footer(); 
-?>	
-</div> <!-- end content-cotizacion -->
+?>
 

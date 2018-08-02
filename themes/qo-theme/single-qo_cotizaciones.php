@@ -1,4 +1,3 @@
-<div class="content-cotizacion relative">
 <?php 
 	get_header();
 	global $post;
@@ -158,9 +157,10 @@
 		</div>
 		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer.php'); ?>
 	</div>	
+
 <?php 
 	endwhile; // end of the loop.
 	get_footer(); 
 ?>	
-</div> <!-- end content-cotizacion -->
+
 

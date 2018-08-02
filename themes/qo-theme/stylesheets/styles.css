@@ -2772,7 +2772,7 @@ ul li {
   height: 792px;
   padding-top: 35px;
   padding-bottom: 35px;
-  margin: 30 auto;
+  margin: 30px auto;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -3295,7 +3295,7 @@ small {
 /* line 30, ../sass/components/_utilities.scss */
 .content-cotizacion .info-general {
   position: absolute;
-  top: 35px;
+  top: 0px;
   right: 0px;
 }
 /* line 34, ../sass/components/_utilities.scss */

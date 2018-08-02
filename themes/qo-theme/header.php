@@ -57,6 +57,9 @@
 		<?php wp_head(); ?>
 		<?php flush(); ?>
 	</head>
+<?php if (is_singular('qo_cotizaciones')) :?>
+	<div class="content-cotizacion relative">
+<?php endif; ?>	
 	<body>
 		<?php if (is_page( array('qo-clientes', 'qo-proveedores'))) : ?>
 			<header class="container container-large archive-header">
