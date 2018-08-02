@@ -4,7 +4,7 @@
 	* Template Post Type: qo_cotizaciones
 */
  ?>
-<div class="content-cotizacion relative">
+<div class="content-cotizacion relative template-vertical">
 <?php 
 	get_header();
 	global $post;
@@ -30,77 +30,27 @@
 	$precio2       = get_post_meta( $post_id, 'qo_cotizaciones_precio2', true );
 	$precio3       = get_post_meta( $post_id, 'qo_cotizaciones_precio3', true );
 	$precio4       = get_post_meta( $post_id, 'qo_cotizaciones_precio4', true );
+	$muestra       = get_post_meta( $post_id, 'qo_cotizaciones_muestra', true );
 	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
 	<img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">
 	<div class="container container-large">
-		<p class="date"><?php echo get_the_date(); ?></p>
-		<img class="img-client" src="<?php the_post_thumbnail_url('medium'); ?>">
-		<div class="row margin-bottom-xsmall">
-			<div class="col col-1_5">
-				<div class="item-cotizacion"><p>Modelo</p></div>
-				<div class="opt-cotizacion">
-					<div class="modelo"><?php if( $modelo != "" ) : ?><?php echo $modelo; ?><?php endif; ?></div>
+		<p class="date margin-bottom-xlarge"><?php echo get_the_date(); ?></p>
+		<div class="row margin-bottom-xlarge">
+			<div class="col s7">
+				<div class="col s4">
+					<div class="opt-cotizacion"><div>Modelo</div></div>
+					<div class="opt-cotizacion"><div>Nota</div></div>
+					<div class="opt-cotizacion"><div>Piezas</div></div>
+					<div class="opt-cotizacion"><div>Precio</div></div>
+					<div class="opt-cotizacion"><div>Total</div></div>
 				</div>
-				<div class="opt-cotizacion">
-					<div class="modelo"><?php if( $modelo2 != "" ) : ?><?php echo $modelo2; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div class="modelo"><?php if( $modelo3 != "" ) : ?><?php echo $modelo3; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div class="modelo"><?php if( $modelo4 != "" ) : ?><?php echo $modelo4; ?><?php endif; ?></div>
-				</div>
-			</div>
-			<div class="col col-1_5">
-				<div class="item-cotizacion"><p>Nota</p></div>
-				<div class="opt-cotizacion">
-					<div class="nota"><?php if( $nota != "" ) : ?><?php echo $nota; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div class="nota"><?php if( $nota2 != "" ) : ?><?php echo $nota2; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div class="nota"><?php if( $nota3 != "" ) : ?><?php echo $nota3; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div class="nota"><?php if( $nota4 != "" ) : ?><?php echo $nota4; ?><?php endif; ?></div>
-				</div>
-			</div>
-			<div class="col col-1_5">
-				<div class="item-cotizacion"><p>Piezas</p></div>
-				<div class="opt-cotizacion">
-					<div><?php if( $piezas != "" ) : ?><?php echo $piezas; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $piezas2 != "" ) : ?><?php echo $piezas2; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $piezas3 != "" ) : ?><?php echo $piezas3; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $piezas4 != "" ) : ?><?php echo $piezas4; ?><?php endif; ?></div>
-				</div>
-			</div>
-			<div class="col col-1_5">
-				<div class="item-cotizacion"><p>Precio</p></div>
-				<div class="opt-cotizacion">
-					<div><?php if( $precio != "" ) : ?>$<?php echo $precio; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $precio2 != "" ) : ?>$<?php echo $precio2; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $precio3 != "" ) : ?>$<?php echo $precio3; ?><?php endif; ?></div>
-				</div>
-				<div class="opt-cotizacion">
-					<div><?php if( $precio4 != "" ) : ?>$<?php echo $precio4; ?><?php endif; ?></div>
-				</div>
-			</div>
-			<div class="col col-1_5">
-				<div class="item-cotizacion"><p>Total</p></div>
-				<div class="opt-cotizacion">
-					<div>
+				<div class="col s4">
+					<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo != "" ) : ?><?php echo $modelo; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div class="nota"><?php if( $nota != "" ) : ?><?php echo $nota; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div><?php if( $piezas != "" ) : ?><?php echo $piezas; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div><?php if( $precio != "" ) : ?><?php echo $precio; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div>
 						<?php if( $piezas != "" && $precio != "") : 
 							$total_bruto 	= $piezas * $precio;
 							$iva 			= $total_bruto * .16;
@@ -112,10 +62,14 @@
 								$<?php echo $total_bruto; ?>
 							<?php endif; ?>						
 						<?php endif; ?>
-					</div>
+					</div></div>
 				</div>
-				<div class="opt-cotizacion">
-					<div>
+				<div class="col s4">
+					<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo2 != "" ) : ?><?php echo $modelo2; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div class="nota"><?php if( $nota2 != "" ) : ?><?php echo $nota2; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div><?php if( $piezas2 != "" ) : ?><?php echo $piezas2; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div><?php if( $precio2 != "" ) : ?><?php echo $precio2; ?><?php endif; ?></div></div>
+					<div class="opt-cotizacion"><div>
 						<?php if( $piezas2 != "" && $precio2 != "") : 
 							$total_bruto 	= $piezas2 * $precio2;
 							$iva 			= $total_bruto * .16;
@@ -127,38 +81,14 @@
 								$<?php echo $total_bruto; ?>
 							<?php endif; ?>						
 						<?php endif; ?>
-					</div>
+					</div></div>
 				</div>
-				<div class="opt-cotizacion">
-					<div>
-						<?php if( $piezas3 != "" && $precio3 != "") : 
-							$total_bruto 	= $piezas3 * $precio3;
-							$iva 			= $total_bruto * .16;
-							$total_neto 	= $total_bruto + $iva;
-							?>
-							<?php if( $iva_inc == "Sí" ) : ?>
-								$<?php echo $total_neto; ?>
-							<?php else: ?>
-								$<?php echo $total_bruto; ?>
-							<?php endif; ?>						
-						<?php endif; ?>
-					</div>
-				</div>
-				<div class="opt-cotizacion">
-					<div>
-						<?php if( $piezas4 != "" && $precio4 != "") : 
-							$total_bruto 	= $piezas4 * $precio4;
-							$iva 			= $total_bruto * .16;
-							$total_neto 	= $total_bruto + $iva;
-							?>
-							<?php if( $iva_inc == "Sí" ) : ?>
-								$<?php echo $total_neto; ?>
-							<?php else: ?>
-								$<?php echo $total_bruto; ?>
-							<?php endif; ?>						
-						<?php endif; ?>
-					</div>
-				</div>
+			</div>
+			<div class="col s5 text-center">
+				<img class="img-client mabot" src="<?php the_post_thumbnail_url('medium'); ?>">
+				<?php if( $muestra != "" ) : ?>
+					<img class="responsive-img inline-block margin-top-large" src="<?php echo $muestra; ?>">
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="footer-cotizacion">

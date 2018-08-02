@@ -4,7 +4,7 @@
 	* Template Post Type: qo_cotizaciones
 */
  ?>
-<div class="content-cotizacion relative">
+<div class="content-cotizacion relative template-horizontal">
 <?php 
 	get_header();
 	global $post;
