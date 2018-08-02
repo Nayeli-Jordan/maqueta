@@ -3388,7 +3388,11 @@ small {
 }
 /* line 106, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra {
-  min-height: calc(100vh - 500px);
+  min-height: calc(100vh - 490px);
+}
+/* line 108, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra img {
+  max-height: calc(100vh - 490px);
 }
 
 /* line 3, ../sass/components/_header.scss */

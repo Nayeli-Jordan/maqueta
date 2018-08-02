@@ -3,7 +3,7 @@
 	* Template Name: Estilo Vertical c/imagen
 	* Template Post Type: qo_cotizaciones
 */
-	get_header();
+	get_header(); 
 	global $post;
 	
 	while ( have_posts() ) : the_post();
@@ -30,68 +30,74 @@
 	$muestra       = get_post_meta( $post_id, 'qo_cotizaciones_muestra', true );
 	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
-	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
-	<div class="container container-large">
-		<p class="date margin-bottom-xlarge"><?php echo get_the_date(); ?></p>
-		<div class="row margin-bottom-xlarge">
-			<div class="col s7">
-				<div class="col s4">
-					<div class="opt-cotizacion"><div>Modelo</div></div>
-					<div class="opt-cotizacion"><div>Nota</div></div>
-					<div class="opt-cotizacion"><div>Piezas</div></div>
-					<div class="opt-cotizacion"><div>Precio</div></div>
-					<div class="opt-cotizacion"><div>Total</div></div>
+	<div class="content-cotizacion relative"  style="page-break-after: always;">
+		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
+		<div class="container container-large">
+			<p class="date margin-bottom-xlarge"><?php echo get_the_date(); ?></p>
+			<div class="row margin-bottom-xlarge">
+				<div class="col s7">
+					<div class="col s4">
+						<div class="opt-cotizacion"><div>Modelo</div></div>
+						<div class="opt-cotizacion"><div>Nota</div></div>
+						<div class="opt-cotizacion"><div>Piezas</div></div>
+						<div class="opt-cotizacion"><div>Precio</div></div>
+						<div class="opt-cotizacion"><div>Total</div></div>
+					</div>
+					<div class="col s4">
+						<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo != "" ) : ?><?php echo $modelo; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div class="nota"><?php if( $nota != "" ) : ?><?php echo $nota; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div><?php if( $piezas != "" ) : ?><?php echo $piezas; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div><?php if( $precio != "" ) : ?><?php echo $precio; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div>
+							<?php if( $piezas != "" && $precio != "") : 
+								$total_bruto 	= $piezas * $precio;
+								$iva 			= $total_bruto * .16;
+								$total_neto 	= $total_bruto + $iva;
+								?>
+								<?php if( $iva_inc == "Sí" ) : ?>
+									$<?php echo $total_neto; ?>
+								<?php else: ?>
+									$<?php echo $total_bruto; ?>
+								<?php endif; ?>						
+							<?php endif; ?>
+						</div></div>
+					</div>
+					<div class="col s4">
+						<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo2 != "" ) : ?><?php echo $modelo2; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div class="nota"><?php if( $nota2 != "" ) : ?><?php echo $nota2; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div><?php if( $piezas2 != "" ) : ?><?php echo $piezas2; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div><?php if( $precio2 != "" ) : ?><?php echo $precio2; ?><?php endif; ?></div></div>
+						<div class="opt-cotizacion"><div>
+							<?php if( $piezas2 != "" && $precio2 != "") : 
+								$total_bruto 	= $piezas2 * $precio2;
+								$iva 			= $total_bruto * .16;
+								$total_neto 	= $total_bruto + $iva;
+								?>
+								<?php if( $iva_inc == "Sí" ) : ?>
+									$<?php echo $total_neto; ?>
+								<?php else: ?>
+									$<?php echo $total_bruto; ?>
+								<?php endif; ?>						
+							<?php endif; ?>
+						</div></div>
+					</div>
 				</div>
-				<div class="col s4">
-					<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo != "" ) : ?><?php echo $modelo; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div class="nota"><?php if( $nota != "" ) : ?><?php echo $nota; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div><?php if( $piezas != "" ) : ?><?php echo $piezas; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div><?php if( $precio != "" ) : ?><?php echo $precio; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div>
-						<?php if( $piezas != "" && $precio != "") : 
-							$total_bruto 	= $piezas * $precio;
-							$iva 			= $total_bruto * .16;
-							$total_neto 	= $total_bruto + $iva;
-							?>
-							<?php if( $iva_inc == "Sí" ) : ?>
-								$<?php echo $total_neto; ?>
-							<?php else: ?>
-								$<?php echo $total_bruto; ?>
-							<?php endif; ?>						
-						<?php endif; ?>
-					</div></div>
-				</div>
-				<div class="col s4">
-					<div class="opt-cotizacion"><div class="modelo"><?php if( $modelo2 != "" ) : ?><?php echo $modelo2; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div class="nota"><?php if( $nota2 != "" ) : ?><?php echo $nota2; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div><?php if( $piezas2 != "" ) : ?><?php echo $piezas2; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div><?php if( $precio2 != "" ) : ?><?php echo $precio2; ?><?php endif; ?></div></div>
-					<div class="opt-cotizacion"><div>
-						<?php if( $piezas2 != "" && $precio2 != "") : 
-							$total_bruto 	= $piezas2 * $precio2;
-							$iva 			= $total_bruto * .16;
-							$total_neto 	= $total_bruto + $iva;
-							?>
-							<?php if( $iva_inc == "Sí" ) : ?>
-								$<?php echo $total_neto; ?>
-							<?php else: ?>
-								$<?php echo $total_bruto; ?>
-							<?php endif; ?>						
-						<?php endif; ?>
-					</div></div>
+				<div class="col s5 text-center">
+					<img class="img-client mabot" src="<?php the_post_thumbnail_url('medium'); ?>">
+					<?php if( $muestra != "" ) : ?>
+						<img class="responsive-img inline-block margin-top-large" src="<?php echo $muestra; ?>">
+					<?php endif; ?>
 				</div>
 			</div>
-			<div class="col s5 text-center">
-				<img class="img-client mabot" src="<?php the_post_thumbnail_url('medium'); ?>">
-				<?php if( $muestra != "" ) : ?>
-					<img class="responsive-img inline-block margin-top-large" src="<?php echo $muestra; ?>">
-				<?php endif; ?>
-			</div>
-		</div>
-		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer.php'); ?>
-	</div>	
-<?php 
-	endwhile; // end of the loop.
-	get_footer(); 
-?>
+			<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer.php'); ?>
+		</div>	
+	</div> <!-- end content-cotizacion -->
 
+	<?php if( $muestra != "" ) : ?>
+		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
+	<?php endif; ?>
+
+<?php 
+	endwhile; // end of the loop
+	get_footer(); 
+?>	

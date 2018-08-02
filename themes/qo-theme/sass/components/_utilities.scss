@@ -104,8 +104,9 @@
 	}
 
 	.content-muestra {
-		min-height: calc(100vh - 500px);
+		min-height: calc(100vh - 490px);
 		img {
+			max-height: calc(100vh - 490px);
 			@extend %center-full;
 		}
 	}
