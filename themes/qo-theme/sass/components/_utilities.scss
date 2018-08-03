@@ -26,33 +26,33 @@
 	}
 }
 
-.content-cotizacion {
-	.info-general {
-		position: absolute;
-		top: 40px;
-		right: 0px;
-		.num-tiket {
-			padding: 2px;
-			display: inline-block;
+.info-general {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	.num-tiket {
+		padding: 2px;
+		display: inline-block;
+		border-radius: 15px;
+		margin-bottom: 5px;
+		.bg-light {
+			padding: 0 30px;
 			border-radius: 15px;
-			margin-bottom: 5px;
-			.bg-light {
-				padding: 0 30px;
-				border-radius: 15px;
-				p {
-					line-height: 32px;
-					font-size: 18px;
-				}
+			p {
+				line-height: 32px;
+				font-size: 18px;
 			}
 		}
-		.title-tiket {
-			padding: 8px 30px;
-			color: $light-color;
-			border-top-left-radius: 15px;
-			border-bottom-left-radius: 15px;
-			font-weight: 500;
-		}
 	}
+	.title-tiket {
+		padding: 8px 30px;
+		color: $light-color;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+		font-weight: 500;
+	}
+}
+.content-cotizacion {
 	.date { font-size: 14px; }
 
 	.row {
@@ -109,5 +109,20 @@
 			max-height: calc(100vh - 490px);
 			@extend %center-full;
 		}
+	}
+}
+
+.card-cotizacion {
+	padding: 10px;
+	margin-bottom: 20px;
+	.info-general {
+		position: relative;
+		width: calc(100% + 10px);
+		top: 0px;
+		margin-bottom: 10px;
+	}
+	img {
+		max-width: 100px;
+		max-height: 100px;
 	}
 }

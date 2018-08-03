@@ -544,3 +544,17 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
         }
 	}
 }
+
+
+
+/**
+* CUSTOM POST Private
+*/
+
+function force_type_private($post)
+{
+    if ($post['post_type'] == 'qo_cotizaciones')
+    $post['post_status'] = 'private';
+    return $post;
+}
+add_filter('wp_insert_post_data', 'force_type_private');
