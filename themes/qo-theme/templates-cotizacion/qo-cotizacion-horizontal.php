@@ -99,9 +99,11 @@
 				</div>
 			</div>
 			<div class="row text-center">
-				<?php if( $muestra != "" ) : ?>
-					<img class="responsive-img img-muestra" src="<?php echo $muestra; ?>">
-				<?php endif; ?>
+				<div class="content-img-muestra">
+					<?php if( $muestra != "" ) : ?>
+						<img class="responsive-img img-muestra" src="<?php echo $muestra; ?>">
+					<?php endif; ?>					
+				</div>
 				<p><strong>Muestra</strong></p>
 			</div>
 			<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer.php'); ?>

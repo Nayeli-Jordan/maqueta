@@ -1,6 +1,8 @@
 @media print {
+	@page{ margin: 0; }
+
+	//Clientes / Proveedores
 	.archive-header { display: none; }
-	
 	.table-clients, .table-proveedores {
 		#head-table-clients, #head-table-proveedores { display: none; }
 		.col {
@@ -27,24 +29,33 @@
 	}
 
 	//Cotización
-	html.single-cotizacion {
-		max-width: 612px;
-	}
 	.content-cotizacion {
 		width: 100vw;
 		height: 100vh;
-		min-height: 100%;
 		margin: 0px auto;
 		overflow: hidden;
-		position: relative;
-		top: 0px;
-		//box-shadow: none;
+		box-shadow: none;
 		.opt-cotizacion {
 			height: 120px;
+			&.description {
+				height: 350px;
+			}
 		}
-	}
 
-	@page{
-		margin: 0;
+		//Horizontal
+		.content-img-muestra { 
+			min-height: 260px; 
+			position: relative;
+			img { 
+				display: block;
+				position:absolute;
+				top:50%;
+				left:50%;
+				-webkit-transform:translate(-50%, -50%);
+				-ms-transform:translate(-50%, -50%);
+				-o-transform:translate(-50%, -50%);
+				transform:translate(-50%, -50%);
+			}
+		}
 	}
 }

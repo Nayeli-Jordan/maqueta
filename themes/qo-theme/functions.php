@@ -468,12 +468,15 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
             <img src="<?php echo $muestra; ?>">
         </div>
 	</div>
-	<div class="row">
+	<div class="row margin-bottom-large">
 		<label>¿Esta cotización incluirá IVA?*</label>
 		<select name="qo_cotizaciones_iva_inc">
 			<option value="Sí" <?php selected($iva_inc, 'Sí'); ?>>Sí</option>
 			<option value="No" <?php selected($iva_inc, 'No'); ?>>No</option>
 		</select>	
+	</div>
+	<div class="row">
+		<p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p>
 	</div>
 </div>
 <?php
