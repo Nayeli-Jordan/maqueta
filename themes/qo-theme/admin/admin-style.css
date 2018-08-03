@@ -4,9 +4,12 @@ label {
 }
 
 input[type="text"],
-select {
+input[type="date"],
+select,
+textarea {
 	width: 100%;
 	margin-bottom: 10px;
+	line-height: 24px;
 }
 
 .row {
@@ -52,4 +55,43 @@ select {
 .image-preview {
 	width: 30%;
 	float: right;
+}
+
+.text-center { text-align: center; }
+.color-light { color: #fff; }
+.bg-destacade { background-color: #8c45c1!important; }
+.bg-destacade label { 
+	color: #fff!important; 
+	padding-left: 10px;
+}
+
+/*SISTEMA*/
+.table-sistema { width: 100%; }
+.table-sistema th { text-align: left; }
+.table-sistema label { color: purple; }
+.table-sistema h2 {
+	background-color: purple;
+    color: #fff;
+    font-weight: bold!important;
+    margin-top: 20px!important;
+}
+p.disabled {
+	font-size: 10px;
+	color: #b7b2b2;
+	text-align: center;
+	border: 1px solid #dddddd;
+	line-height: 30px;
+	margin: 0px;
+}
+.table-sistema label{
+	font-size: 12px;
+}
+.table-sistema input[type="text"],
+.table-sistema input[type="date"] {
+	margin-bottom: 0px;
+}
+.note { font-size: 10px; }
+
+textarea.textarea_row3 {
+	min-height: 120px;
 }

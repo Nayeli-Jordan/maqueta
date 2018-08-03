@@ -31,6 +31,60 @@ function custom_taxonomies_callback(){
 		register_taxonomy( 'subservicios', 'servicios', $args );
 	}	
 
+	/*
+		**SISTEMA**
+	*/
+
+	if( ! taxonomy_exists('solicitante')){
+
+		$labels = array(
+			'name'              => 'Solicitante',
+			'singular_name'     => 'Solicitante',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Solicitante',
+			'update_item'       => 'Actualizar Solicitante',
+			'add_new_item'      => 'Nueva Solicitante',
+			'menu_name'         => 'Solicitante'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'solicitante' ),
+		);
+
+		register_taxonomy( 'solicitante', 'sistema', $args );
+	}
+
+	if( ! taxonomy_exists('requerimiento')){
+
+		$labels = array(
+			'name'              => 'Requerimiento',
+			'singular_name'     => 'Requerimiento',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Requerimiento',
+			'update_item'       => 'Actualizar Requerimiento',
+			'add_new_item'      => 'Nueva Requerimiento',
+			'menu_name'         => 'Requerimiento'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'requerimiento' ),
+		);
+
+		register_taxonomy( 'requerimiento', 'sistema', $args );
+	}
+
 	if( ! taxonomy_exists('responsable')){
 
 		$labels = array(

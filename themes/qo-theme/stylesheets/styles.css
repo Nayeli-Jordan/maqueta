@@ -3062,37 +3062,42 @@ video.responsive-video {
     display: block;
   }
 }
-/* line 55, ../sass/components/_position.scss */
+/* line 53, ../sass/components/_position.scss */
+.clear {
+  clear: both;
+}
+
+/* line 58, ../sass/components/_position.scss */
 .overflow-hide {
   overflow: hidden;
 }
 
-/* line 56, ../sass/components/_position.scss */
+/* line 59, ../sass/components/_position.scss */
 .overflow-x-hide {
   overflow: hidden;
 }
 
-/* line 57, ../sass/components/_position.scss */
+/* line 60, ../sass/components/_position.scss */
 .overflow-y-hide {
   overflow: hidden;
 }
 
-/* line 59, ../sass/components/_position.scss */
+/* line 62, ../sass/components/_position.scss */
 .z-index-1 {
   z-index: 1;
 }
 
-/* line 60, ../sass/components/_position.scss */
+/* line 63, ../sass/components/_position.scss */
 .z-index--1 {
   z-index: -1;
 }
 
-/* line 66, ../sass/components/_position.scss */
+/* line 69, ../sass/components/_position.scss */
 .transform-x-50 {
   transform: translateX(50%);
 }
 
-/* line 68, ../sass/components/_position.scss */
+/* line 71, ../sass/components/_position.scss */
 .content-cotizacion .row .col .item-cotizacion div,
 .content-cotizacion .row .col .opt-cotizacion div, .content-cotizacion .content-muestra img {
   position: absolute;
@@ -3422,6 +3427,39 @@ small {
 .card-cotizacion img {
   max-width: 100px;
   max-height: 100px;
+}
+
+/* Sistema */
+/* line 133, ../sass/components/_utilities.scss */
+#container-brief .col {
+  border: 1px dotted gray;
+  min-height: 22px;
+}
+/* line 136, ../sass/components/_utilities.scss */
+#container-brief .col p {
+  font-weight: bold;
+  color: #6f2383;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* line 142, ../sass/components/_utilities.scss */
+#container-brief .col.header-area-brief {
+  background-color: #6f2383;
+  color: #fff;
+  font-size: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* line 150, ../sass/components/_utilities.scss */
+#container-brief .brief-general-info {
+  width: 40%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+/* line 155, ../sass/components/_utilities.scss */
+#container-brief .body-brief {
+  margin-bottom: 30px;
 }
 
 /* line 3, ../sass/components/_header.scss */

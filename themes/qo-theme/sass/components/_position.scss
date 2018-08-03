@@ -48,6 +48,9 @@
 @media #{$large-and-up} 		{ .show-on-large-and-up 	{ display: block; } }
 @media #{$extra-large-and-up} 	{ .show-on-extra-large 		{ display: block; } }
 
+// Clear
+// ==========================================================================
+.clear { clear: both; }
 
 // Visibility
 // ==========================================================================
