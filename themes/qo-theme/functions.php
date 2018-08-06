@@ -127,7 +127,6 @@ function display_sistema_atributos( $sistema ){
     $fechaRequerida    	= esc_html( get_post_meta( $sistema->ID, 'sistema_fechaRequerida', true ) );   
     $fechaEntrega    	= esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
 
-
     $tiempoCreativo_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_di', true ) );   
     $medioEntrada_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_di', true ) );   
     $requerimiento_di 	= esc_html( get_post_meta( $sistema->ID, 'sistema_requerimiento_di', true ) );   
