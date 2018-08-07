@@ -13,3 +13,20 @@
 
 .bg-gradient-qo 		{ background: linear-gradient(to right, rgb(74,114,178), rgb(112,169,186), rgb(88,30,127), rgb(186,0,124)); }
 .bg-light 				{ background-color: $light-color; }
+.bg-purple-clare		{ background-color: $purple-color-clare; }
+.bg-purple-light		{ background-color: $purple-color-light; }
+.bg-purple-xlight		{ background-color: $purple-color-xlight; }
+
+.border-purple-light 	{ border-color: $purple-color-light!important; }
+
+//Requerimiento / Área
+.bg-area-creativa 		{ background-color: #d00e5f; }
+.bg-area-industrial 	{ background-color: #002692; }
+.bg-area-social-media 	{ background-color: #006b48; }
+.bg-area-ui-ux 			{ background-color: #0d7ede; }
+
+//Prioridad
+.bg-Baja 				{ background-color: $baja-color; }
+.bg-Media 				{ background-color: $media-color; }
+.bg-Alta 				{ background-color: $alta-color; }
+.bg-Urgente 			{ background-color: $urgente-color; }

@@ -58,7 +58,7 @@
 		<?php flush(); ?>
 	</head>
 	<body>
-		<?php if (is_page( array('qo-clientes', 'qo-proveedores', 'qo-cotizaciones')) || is_singular('sistema')) : ?>
+		<?php if (is_page( array('qo-clientes', 'qo-proveedores', 'qo-cotizaciones', 'qo-sistemas')) || is_singular('sistema') || is_archive( array('responsable'))) : ?>
 			<header class="container container-large archive-header">
 				<div class="row">
 					<div class="col s12 m4">

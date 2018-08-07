@@ -10,10 +10,18 @@ $primary-color: 		#de0d88 !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$purple-color: #6f2383;
+$purple-color: 			#7b2183;
+$purple-color-clare: 	#9344a7 !default;
+$purple-color-light: 	#9c5eab !default;
+$purple-color-xlight: 	#e5ceea !default;
 
 $light-color: 			#fff !default;
 $dark-color: 			#000 !default;
+
+$baja-color:			#42c101 !default;
+$media-color:			#f7d52d !default;
+$alta-color:			#ff991b !default;
+$urgente-color:			#ec0505 !default;
 
 
 // Global

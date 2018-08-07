@@ -131,13 +131,16 @@
 /* Sistema */
 #container-brief {
 	.col {
-		border: 1px dotted gray;
-		min-height: 22px;
-		p {
+		border: 1px solid #eee;
+		min-height: 28px;
+		line-height: 26px;
+		font-size: 14px;
+		p:not(.not-style) {
 			font-weight: bold;
 			color: $purple-color;
 			font-size: 14px;
-			line-height: 20px;
+			line-height: 26px;
+			&.color-light { color: $light-color;}
 		}
 		&.header-area-brief {
 			background-color: $purple-color;
@@ -148,11 +151,117 @@
 		}
 	}
 	.brief-general-info {
-		width: 40%;
-	    position: absolute;
-	    top: 0px;right: 0px;
+	    @media #{$large-and-up} { 
+			width: 40%;
+		    position: absolute;
+		    top: 0px;right: 0px;
+		}
+		@media #{$medium-and-down} {
+			margin-top: 20px;
+		}
 	}
 	.body-brief {
 		margin-bottom: 30px;
 	}
+}
+
+.etiqueta-requerimiento,
+.etiqueta-prioridad {
+	display: inline-block;	
+	float: right;
+}
+.etiqueta-requerimiento {
+	width: 15px;
+	height: 15px;
+	margin-top: 6px;	
+	border-radius: 50%;
+}
+.etiqueta-prioridad {
+	width: 30px;
+	height: 10px;
+	margin-top: 8px;
+	border-radius: 3px;
+}
+
+.card-sistema {
+	border-radius: 5px 10px 10px 5px;
+	.card-head {
+		padding: 10px 20px;
+		.status { 
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top: 4px; right: 20px;
+			border-radius: 50%;
+			text-align: center;
+			background-color: $purple-color;
+			color: $light-color;
+			cursor: pointer;
+			&.bg-Reabierto {
+				span:not(.etiqueta-text):before { content:'\f513'; }				
+			}
+			&.bg-Enterado {
+				span:not(.etiqueta-text):before { content:'\f164'; }				
+			}
+			&.bg-Trabajando {				
+				span:not(.etiqueta-text):before { content:'\e800'; }
+			}
+			&.bg-Hecho {				
+				span:not(.etiqueta-text):before { content:''; }
+			}
+			&.bg-Cerrado {
+				span:not(.etiqueta-text):before { content:''; }				
+			}
+			span:not(.etiqueta-text) {
+				line-height: 30px;
+				font-size: 14px;
+			}
+			.etiqueta-text { 
+				color: $dark-color; 
+				top: -28px;
+    			right: -30px;
+			}
+			&:hover .etiqueta-text {
+				display: inline-block;
+			}
+		}
+		h2 { 
+			text-transform: uppercase;
+			max-width: calc(100% - 30px); 
+			font-size: 14px;
+			font-weight: bold;
+			color: $purple-color;
+		}
+	}
+	.card-body {
+		padding: 10px 20px;
+		font-size: 14px;
+		.etiqueta-prioridad {
+			display: block;
+			cursor: pointer;
+			margin-top: 0px;
+			.etiqueta-text {
+
+			    right: -35px;
+			    top: -6px;
+			}
+			&:hover .etiqueta-text { display: inline-block; }
+		}
+		span.font-strong { font-weight: bold; }
+		.btn-primary-rounded {
+			position: absolute;
+		    right: 20px;
+		    bottom: 10px;
+		}
+	}
+}
+
+.etiqueta-text {
+	display: none;
+    background-color: #fff;
+    position: relative;			
+    padding: 3px 10px;
+	font-size: 12px;
+    transition: .5s ease-out;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
 }

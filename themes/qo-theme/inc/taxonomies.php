@@ -108,32 +108,6 @@ function custom_taxonomies_callback(){
 		);
 
 		register_taxonomy( 'responsable', 'sistema', $args );
-	}	
-
-
-	if( ! taxonomy_exists('prioridad')){
-
-		$labels = array(
-			'name'              => 'Prioridad',
-			'singular_name'     => 'Prioridad',
-			'search_items'      => 'Buscar',
-			'all_items'         => 'Todos',
-			'edit_item'         => 'Editar Prioridad',
-			'update_item'       => 'Actualizar Prioridad',
-			'add_new_item'      => 'Nueva Prioridad',
-			'menu_name'         => 'Prioridad'
-		);
-		$args = array(
-			'hierarchical'      => true,
-			'labels'            => $labels,
-			'show_ui'           => true,
-			'show_admin_column' => true,
-			'show_in_nav_menus' => true,
-			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'prioridad' ),
-		);
-
-		register_taxonomy( 'prioridad', 'sistema', $args );
-	}	
+	}
 
 }

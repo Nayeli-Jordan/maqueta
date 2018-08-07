@@ -52,6 +52,18 @@
 // ==========================================================================
 .clear { clear: both; }
 
+@media #{$small-and-down} 		{ .clear-on-small 			{ clear: both; } }
+@media #{$sm-and-down} 			{ .clear-on-sm-and-down 	{ clear: both; } }
+@media #{$sm-only} 				{ .clear-on-sm 				{ clear: both; } }
+@media #{$sm-and-up} 			{ .clear-on-sm-and-up 		{ clear: both; } }
+@media #{$medium-and-down} 		{ .clear-on-med-and-down 	{ clear: both; } }
+@media #{$medium-only} 			{ .clear-on-med 			{ clear: both; } }
+@media #{$medium-and-up} 		{ .clear-on-med-and-up 		{ clear: both; } }
+@media #{$large-and-down} 		{ .clear-on-large-and-down 	{ clear: both; } }
+@media #{$large-only} 			{ .clear-on-large 			{ clear: both; } }
+@media #{$large-and-up} 		{ .clear-on-large-and-up 	{ clear: both; } }
+@media #{$extra-large-and-up} 	{ .clear-on-extra-large 	{ clear: both; } }
+
 // Visibility
 // ==========================================================================
 

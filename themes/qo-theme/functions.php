@@ -119,13 +119,16 @@ function sistema_custom_metabox(){
 }
 
 function display_sistema_atributos( $sistema ){
+    $estatus            = esc_html( get_post_meta( $sistema->ID, 'sistema_estatus', true ) );    
+
     $cliente            = esc_html( get_post_meta( $sistema->ID, 'sistema_cliente', true ) );    
     $marca            	= esc_html( get_post_meta( $sistema->ID, 'sistema_marca', true ) );    
     $proyecto           = esc_html( get_post_meta( $sistema->ID, 'sistema_proyecto', true ) );    
     $tiempoCotizado    	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCotizado', true ) );   
  
     $fechaRequerida    	= esc_html( get_post_meta( $sistema->ID, 'sistema_fechaRequerida', true ) );   
-    $fechaEntrega    	= esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
+    $fechaEntrega       = esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
+    $prioridad    	= esc_html( get_post_meta( $sistema->ID, 'sistema_prioridad', true ) );
 
     $tiempoCreativo_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_di', true ) );   
     $medioEntrada_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_di', true ) );   
@@ -189,7 +192,7 @@ function display_sistema_atributos( $sistema ){
     $ftp_stm    	= esc_html( get_post_meta( $sistema->ID, 'sistema_ftp_stm', true ) );
     $detalles_stm    	= esc_html( get_post_meta( $sistema->ID, 'sistema_detalles_stm', true ) );
 
-    $tiempoCreativo_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_ext', true ) ); 
+    $tiempoCreativo1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo1_ext', true ) ); 
     $solicitud1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solicitud1_ext', true ) ); 
     $solic_fecha1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_fecha1_ext', true ) ); 
     $solic_hora1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_hora1_ext', true ) ); 
@@ -197,6 +200,7 @@ function display_sistema_atributos( $sistema ){
     $req_hora1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_req_hora1_ext', true ) );
     $ent_fecha1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_fecha1_ext', true ) ); 
     $ent_hora1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_hora1_ext', true ) ); 
+    $tiempoCreativo2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo2_ext', true ) ); 
     $solicitud2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solicitud2_ext', true ) ); 
     $solic_fecha2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_fecha2_ext', true ) ); 
     $solic_hora2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_hora2_ext', true ) ); 
@@ -204,6 +208,7 @@ function display_sistema_atributos( $sistema ){
     $req_hora2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_req_hora2_ext', true ) );
     $ent_fecha2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_fecha2_ext', true ) ); 
     $ent_hora2_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_hora2_ext', true ) ); 
+    $tiempoCreativo3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo3_ext', true ) ); 
     $solicitud3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solicitud3_ext', true ) ); 
     $solic_fecha3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_fecha3_ext', true ) ); 
     $solic_hora3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_hora3_ext', true ) ); 
@@ -211,6 +216,7 @@ function display_sistema_atributos( $sistema ){
     $req_hora3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_req_hora3_ext', true ) );
     $ent_fecha3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_fecha3_ext', true ) ); 
     $ent_hora3_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_ent_hora3_ext', true ) ); 
+    $tiempoCreativo4_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo4_ext', true ) ); 
     $solicitud4_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solicitud4_ext', true ) ); 
     $solic_fecha4_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_fecha4_ext', true ) ); 
     $solic_hora4_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_hora4_ext', true ) ); 
@@ -221,6 +227,19 @@ function display_sistema_atributos( $sistema ){
 ?>
 
 <table class="table-sistema">
+    <tr>
+        <th class="bg-destacade"><label>Estatus</label></th>
+        <th>
+            <select name="sistema_estatus">
+                <option value="Abierto">Abierto</option>
+                <option value="Enterado" <?php selected($estatus, 'Enterado'); ?>>Enterado</option>
+                <option value="Trabajando" <?php selected($estatus, 'Trabajando'); ?>>Trabajando</option>
+                <option value="Hecho" <?php selected($estatus, 'Hecho'); ?>>Hecho</option>
+                <option value="Cerrado" <?php selected($estatus, 'Cerrado'); ?>>Cerrado</option>
+                <option value="Reabierto" <?php selected($estatus, 'Reabierto'); ?>>Reabierto</option>
+            </select>
+        </th>
+    </tr>
 	<tr><th colspan="6"><p class="note">*No olvides seleccionar el o los requerimientos necesarios para visualizar correctamente los campos. Aunque los campos estén completos no se visualizarán si no se selecciona (Columna derecha) el requerimiento correspondiente (Área Industrial, Visual, UX/UI, Social Media, etc.)</p></th></tr>
 	<tr>
 		<th><label>Solicitante</label></th>
@@ -257,7 +276,15 @@ function display_sistema_atributos( $sistema ){
 		<th><input type="text" name="sistema_tiempoCotizado" value="<?php echo $tiempoCotizado; ?>"></th>
 		<th colspan="1" class="color-light">.</th>
 		<th><label>Prioridad</label></th>
-		<th><p class="disabled">Columna derecha</p></th>
+		<th>
+            <select name="sistema_prioridad">
+                <option value="">---</option>
+                <option value="Baja" <?php selected($prioridad, 'Baja'); ?>>Baja</option>
+                <option value="Media" <?php selected($prioridad, 'Media'); ?>>Media</option>
+                <option value="Alta" <?php selected($prioridad, 'Alta'); ?>>Alta</option>
+                <option value="Urgente" <?php selected($prioridad, 'Urgente'); ?>>Urgente</option>
+            </select>
+        </th>
 	</tr>	
 </table>
 <table class="table-sistema">
@@ -578,12 +605,12 @@ function display_sistema_atributos( $sistema ){
 		<tr>
 			<th colspan="6"><h2>LLENAR EN CASO QUE EXISTAN CAMBIOS POSTERIORES A LA PRIMERA SOLICITUD</h2></th>
 		</tr>
-		<tr>
-			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo_ext" value="<?php echo $tiempoCreativo_ext; ?>" placeholder="00:00:00"></th>
-		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
+			<th colspan="4"><input type="text" name="sistema_tiempoCreativo1_ext" value="<?php echo $tiempoCreativo1_ext; ?>" placeholder="00:00:00"></th>
+		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #1</label></th>
 			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud1_ext"><?php echo $solicitud1_ext; ?></textarea></th>
@@ -601,6 +628,10 @@ function display_sistema_atributos( $sistema ){
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha1_ext" value="<?php echo $ent_fecha1_ext; ?>"></th>
 			<th><input type="text" name="sistema_ent_hora1_ext" value="<?php echo $ent_hora1_ext; ?>" placeholder="00:00">
+		</tr>
+		<tr>
+			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
+			<th colspan="4"><input type="text" name="sistema_tiempoCreativo2_ext" value="<?php echo $tiempoCreativo2_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #2</label></th>
@@ -621,6 +652,10 @@ function display_sistema_atributos( $sistema ){
 			<th><input type="text" name="sistema_ent_hora2_ext" value="<?php echo $ent_hora2_ext; ?>" placeholder="00:00">
 		</tr>
 		<tr>
+			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
+			<th colspan="4"><input type="text" name="sistema_tiempoCreativo3_ext" value="<?php echo $tiempoCreativo3_ext; ?>" placeholder="00:00:00"></th>
+		</tr>
+		<tr>
 			<th class="bg-destacade"><label>Actualización #3</label></th>
 			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud3_ext"><?php echo $solicitud3_ext; ?></textarea></th>
 			<th><label>Fecha y Hora Solicitado</label></th>
@@ -631,12 +666,16 @@ function display_sistema_atributos( $sistema ){
 			<th rowspan="2"><label>Solicitud</label></th>
 			<th><label>Fecha Requerida</label></th>
 			<th><input type="date" name="sistema_req_fecha3_ext" value="<?php echo $req_fecha3_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora3_ext" value="<?php echo $req_hora3_ext; ?>" placeholder="00:00">
+			<th><input type="text" name="sistema_req_hora3_ext" value="<?php echo $req_hora3_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha3_ext" value="<?php echo $ent_fecha3_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora3_ext" value="<?php echo $ent_hora3_ext; ?>" placeholder="00:00">
+			<th><input type="text" name="sistema_ent_hora3_ext" value="<?php echo $ent_hora3_ext; ?>" placeholder="00:00"></th>
+		</tr>
+		<tr>
+			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
+			<th colspan="4"><input type="text" name="sistema_tiempoCreativo4_ext" value="<?php echo $tiempoCreativo4_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #4</label></th>
@@ -649,12 +688,12 @@ function display_sistema_atributos( $sistema ){
 			<th rowspan="2"><label>Solicitud</label></th>
 			<th><label>Fecha Requerida</label></th>
 			<th><input type="date" name="sistema_req_fecha4_ext" value="<?php echo $req_fecha4_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora4_ext" value="<?php echo $req_hora4_ext; ?>" placeholder="00:00">
+			<th><input type="text" name="sistema_req_hora4_ext" value="<?php echo $req_hora4_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha4_ext" value="<?php echo $ent_fecha4_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora4_ext" value="<?php echo $ent_hora4_ext; ?>" placeholder="00:00">
+			<th><input type="text" name="sistema_ent_hora4_ext" value="<?php echo $ent_hora4_ext; ?>" placeholder="00:00"></th>
 		</tr>
 	</tbody>
 </table>
@@ -667,6 +706,9 @@ function sistema_save_metas( $idsistema, $sistema ){
 	//Comprobamos que es del tipo que nos interesa
 	if ( $sistema->post_type == 'sistema' ){
 	//Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['sistema_estatus'] ) ){
+            update_post_meta( $idsistema, 'sistema_estatus', $_POST['sistema_estatus'] );
+        }
         if ( isset( $_POST['sistema_cliente'] ) ){
             update_post_meta( $idsistema, 'sistema_cliente', $_POST['sistema_cliente'] );
         }
@@ -684,6 +726,12 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
         if ( isset( $_POST['sistema_fechaEntrega'] ) ){
             update_post_meta( $idsistema, 'sistema_fechaEntrega', $_POST['sistema_fechaEntrega'] );
+        }
+        if ( isset( $_POST['sistema_prioridad'] ) ){
+            update_post_meta( $idsistema, 'sistema_prioridad', $_POST['sistema_prioridad'] );
+        }
+        if ( isset( $_POST['sistema_tiempoCreativo_di'] ) ){
+            update_post_meta( $idsistema, 'sistema_tiempoCreativo_di', $_POST['sistema_tiempoCreativo_di'] );
         }
         if ( isset( $_POST['sistema_medioEntrada_di'] ) ){
             update_post_meta( $idsistema, 'sistema_medioEntrada_di', $_POST['sistema_medioEntrada_di'] );
@@ -856,8 +904,8 @@ function sistema_save_metas( $idsistema, $sistema ){
         if ( isset( $_POST['sistema_detalles_stm'] ) ){
             update_post_meta( $idsistema, 'sistema_detalles_stm', $_POST['sistema_detalles_stm'] );
         }
-        if ( isset( $_POST['sistema_tiempoCreativo_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_tiempoCreativo_ext', $_POST['sistema_tiempoCreativo_ext'] );
+        if ( isset( $_POST['sistema_tiempoCreativo1_ext'] ) ){
+            update_post_meta( $idsistema, 'sistema_tiempoCreativo1_ext', $_POST['sistema_tiempoCreativo1_ext'] );
         }
         if ( isset( $_POST['sistema_solicitud1_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solicitud1_ext', $_POST['sistema_solicitud1_ext'] );
@@ -880,6 +928,9 @@ function sistema_save_metas( $idsistema, $sistema ){
         if ( isset( $_POST['sistema_ent_hora1_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_hora1_ext', $_POST['sistema_ent_hora1_ext'] );
         }
+        if ( isset( $_POST['sistema_tiempoCreativo2_ext'] ) ){
+            update_post_meta( $idsistema, 'sistema_tiempoCreativo2_ext', $_POST['sistema_tiempoCreativo2_ext'] );
+        }
         if ( isset( $_POST['sistema_solicitud2_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solicitud2_ext', $_POST['sistema_solicitud2_ext'] );
         }
@@ -901,6 +952,9 @@ function sistema_save_metas( $idsistema, $sistema ){
         if ( isset( $_POST['sistema_ent_hora2_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_hora2_ext', $_POST['sistema_ent_hora2_ext'] );
         }
+        if ( isset( $_POST['sistema_tiempoCreativo3_ext'] ) ){
+            update_post_meta( $idsistema, 'sistema_tiempoCreativo3_ext', $_POST['sistema_tiempoCreativo3_ext'] );
+        }
         if ( isset( $_POST['sistema_solicitud3_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solicitud3_ext', $_POST['sistema_solicitud3_ext'] );
         }
@@ -921,6 +975,9 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
         if ( isset( $_POST['sistema_ent_hora3_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_hora3_ext', $_POST['sistema_ent_hora3_ext'] );
+        }
+        if ( isset( $_POST['sistema_tiempoCreativo4_ext'] ) ){
+            update_post_meta( $idsistema, 'sistema_tiempoCreativo4_ext', $_POST['sistema_tiempoCreativo4_ext'] );
         }
         if ( isset( $_POST['sistema_solicitud4_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solicitud4_ext', $_POST['sistema_solicitud4_ext'] );

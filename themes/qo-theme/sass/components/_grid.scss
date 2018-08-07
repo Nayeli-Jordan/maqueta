@@ -6,7 +6,14 @@
     width: calc(100% - 80px);
     max-width: 1600px;
   }
+  @media #{$medium-and-down} {
+    &.container-large { width: 90%; }
+  }
+  @media #{$small-and-down} {
+    &.container-large { width: 95%; }
+  }  
 }
+
 @media #{$medium-and-up} {
   .container {
     width: 85%;
@@ -156,6 +163,11 @@
         $i: $i + 1;
       }
     }
+  }
+
+  &.row-complete {
+    width: calc(100% + 20px);
+    margin-left: -10px;
   }
 }
 
