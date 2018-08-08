@@ -56,6 +56,12 @@ textarea {
 	width: 30%;
 	float: right;
 }
+.image-preview img {
+	max-width: 100%;
+	max-height: 100px;
+	width: auto;
+	height: auto;
+}
 
 .text-center { text-align: center; }
 .color-light { color: #fff; }
