@@ -7,77 +7,141 @@
 	global $post;
 	
 	while ( have_posts() ) : the_post();
-
-	$custom_fields 	= get_post_custom();
-	$post_id 		= get_the_ID();
-
-	$modelo       = get_post_meta( $post_id, 'qo_cotizaciones_modelo', true );
-	$nota         = get_post_meta( $post_id, 'qo_cotizaciones_nota', true );   
-	$piezas       = get_post_meta( $post_id, 'qo_cotizaciones_piezas', true );    
-	$precio       = get_post_meta( $post_id, 'qo_cotizaciones_precio', true );
-	$muestra       = get_post_meta( $post_id, 'qo_cotizaciones_muestra', true );		
-	$iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>
-	<div class="content-cotizacion relative"  style="page-break-after: always;">
-		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
-		<div class="container container-large">
-			<p class="date"><?php echo get_the_date(); ?></p>
-			<img class="img-client" src="<?php the_post_thumbnail_url('medium'); ?>">
-			<div class="row margin-bottom-xsmall">
-				<div class="col col-1_5">
-					<div class="item-cotizacion"><p>Modelo</p></div>
-					<div class="opt-cotizacion">
-						<div class="modelo"><?php if( $modelo != "" ) : ?><?php echo $modelo; ?><?php endif; ?></div>
-					</div>
-				</div>
-				<div class="col col-1_5">
-					<div class="item-cotizacion"><p>Nota</p></div>
-					<div class="opt-cotizacion">
-						<div class="nota"><?php if( $nota != "" ) : ?><?php echo $nota; ?><?php endif; ?></div>
-					</div>
-				</div>
-				<div class="col col-1_5">
-					<div class="item-cotizacion"><p>Piezas</p></div>
-					<div class="opt-cotizacion">
-						<div><?php if( $piezas != "" ) : ?><?php echo $piezas; ?><?php endif; ?></div>
-					</div>
-				</div>
-				<div class="col col-1_5">
-					<div class="item-cotizacion"><p>Precio</p></div>
-					<div class="opt-cotizacion">
-						<div><?php if( $precio != "" ) : ?>$<?php echo $precio; ?><?php endif; ?></div>
-					</div>
-				</div>
-				<div class="col col-1_5">
-					<div class="item-cotizacion"><p>Total</p></div>
-					<div class="opt-cotizacion">
-						<div>
-							<?php if( $piezas != "" && $precio != "") : 
-								$total_bruto 	= $piezas * $precio;
-								$iva 			= $total_bruto * .16;
-								$total_neto 	= $total_bruto + $iva;
-								?>
-								<?php if( $iva_inc == "Sí" ) : ?>
-									$<?php echo $total_neto; ?>
-								<?php else: ?>
-									$<?php echo $total_bruto; ?>
-								<?php endif; ?>						
-							<?php endif; ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s12">
-					<div class="item-cotizacion"><p>Detalles</p></div>
-					<div class="opt-cotizacion description">					
-						<div><?php the_content(); ?></div>
-					</div>
-				</div>
-			</div>
-			<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-footer.php'); ?>
-		</div>	
-	</div> <!-- end content-cotizacion -->
+<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-custom-fields.php'); ?>
+
+	<!-- 1 Item * Page ==> 16 Page -->
+	
+	<?php 
+	if( $modelo != "" && $nota != "" && $piezas != "" && $precio != "" ) :
+		$modeloA 	= $modelo;
+		$notaA 		= $nota;
+		$piezasA 	= $piezas;
+		$precioA 	= $precio;
+		$detalleA 	= $detalle;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo2 != "" && $nota2 != "" && $piezas2 != "" && $precio2 != "" ) :
+		$modeloA 	= $modelo2;
+		$notaA 		= $nota2;
+		$piezasA 	= $piezas2;
+		$precioA 	= $precio2;
+		$detalleA 	= $detalle2;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo3 != "" && $nota3 != "" && $piezas3 != "" && $precio3 != "" ) :
+		$modeloA 	= $modelo3;
+		$notaA 		= $nota3;
+		$piezasA 	= $piezas3;
+		$precioA 	= $precio3;
+		$detalleA 	= $detalle3;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo4 != "" && $nota4 != "" && $piezas4 != "" && $precio4 != "" ) :
+		$modeloA 	= $modelo4;
+		$notaA 		= $nota4;
+		$piezasA 	= $piezas4;
+		$precioA 	= $precio4;
+		$detalleA 	= $detalle4;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo5 != "" && $nota5 != "" && $piezas5 != "" && $precio5 != "" ) :
+		$modeloA 	= $modelo5;
+		$notaA 		= $nota5;
+		$piezasA 	= $piezas5;
+		$precioA 	= $precio5;
+		$detalleA 	= $detalle5;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo6 != "" && $nota6 != "" && $piezas6 != "" && $precio6 != "" ) :
+		$modeloA 	= $modelo6;
+		$notaA 		= $nota6;
+		$piezasA 	= $piezas6;
+		$precioA 	= $precio6;
+		$detalleA 	= $detalle6;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo7 != "" && $nota7 != "" && $piezas7 != "" && $precio7 != "" ) :
+		$modeloA 	= $modelo7;
+		$notaA 		= $nota7;
+		$piezasA 	= $piezas7;
+		$precioA 	= $precio7;
+		$detalleA 	= $detalle7;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo8 != "" && $nota8 != "" && $piezas8 != "" && $precio8 != "" ) :
+		$modeloA 	= $modelo8;
+		$notaA 		= $nota8;
+		$piezasA 	= $piezas8;
+		$precioA 	= $precio8;
+		$detalleA 	= $detalle8;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo9 != "" && $nota9 != "" && $piezas9 != "" && $precio9 != "" ) :
+		$modeloA 	= $modelo9;
+		$notaA 		= $nota9;
+		$piezasA 	= $piezas9;
+		$precioA 	= $precio9;
+		$detalleA 	= $detalle9;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo10 != "" && $nota10 != "" && $piezas10 != "" && $precio10 != "" ) :
+		$modeloA 	= $modelo10;
+		$notaA 		= $nota10;
+		$piezasA 	= $piezas10;
+		$precioA 	= $precio10;
+		$detalleA 	= $detalle10;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo11 != "" && $nota11 != "" && $piezas11 != "" && $precio11 != "" ) :
+		$modeloA 	= $modelo11;
+		$notaA 		= $nota11;
+		$piezasA 	= $piezas11;
+		$precioA 	= $precio11;
+		$detalleA 	= $detalle11;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo12 != "" && $nota12 != "" && $piezas12 != "" && $precio12 != "" ) :
+		$modeloA 	= $modelo12;
+		$notaA 		= $nota12;
+		$piezasA 	= $piezas12;
+		$precioA 	= $precio12;
+		$detalleA 	= $detalle12;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo13 != "" && $nota13 != "" && $piezas13 != "" && $precio13 != "" ) :
+		$modeloA 	= $modelo13;
+		$notaA 		= $nota13;
+		$piezasA 	= $piezas13;
+		$precioA 	= $precio13;
+		$detalleA 	= $detalle13;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo14 != "" && $nota14 != "" && $piezas14 != "" && $precio14 != "" ) :
+		$modeloA 	= $modelo14;
+		$notaA 		= $nota14;
+		$piezasA 	= $piezas14;
+		$precioA 	= $precio14;
+		$detalleA 	= $detalle14;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo15 != "" && $nota15 != "" && $piezas15 != "" && $precio15 != "" ) :
+		$modeloA 	= $modelo15;
+		$notaA 		= $nota15;
+		$piezasA 	= $piezas15;
+		$precioA 	= $precio15;
+		$detalleA 	= $detalle15;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;
+	if( $modelo16 != "" && $nota16 != "" && $piezas16 != "" && $precio16 != "" ) :
+		$modeloA 	= $modelo16;
+		$notaA 		= $nota16;
+		$piezasA 	= $piezas16;
+		$precioA 	= $precio16;
+		$detalleA 	= $detalle16;
+		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-details-content.php');
+	endif;	
+	?>
 
 	<?php if( $muestra != "" ) : ?>
 		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
