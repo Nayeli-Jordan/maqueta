@@ -1298,15 +1298,77 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
     $detalle14       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_detalle14', true ) );
     $detalle15       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_detalle15', true ) );
     $detalle16       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_detalle16', true ) );    
-    $muestra       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra', true ) );
-    $muestra2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra2', true ) );
-    $muestra3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra3', true ) );
-    $muestra4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra4', true ) );
+    $muestra_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra_1', true ) );
+    $muestra_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra_2', true ) );
+    $muestra_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra_3', true ) );
+    $muestra_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra_4', true ) );
+    $muestra2_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra2_1', true ) );
+    $muestra2_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra2_2', true ) );
+    $muestra2_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra2_3', true ) );
+    $muestra2_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra2_4', true ) );
+    $muestra3_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra3_1', true ) );
+    $muestra3_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra3_2', true ) );
+    $muestra3_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra3_3', true ) );
+    $muestra3_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra3_4', true ) );
+    $muestra4_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra4_1', true ) );
+    $muestra4_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra4_2', true ) );
+    $muestra4_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra4_3', true ) );
+    $muestra4_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra4_4', true ) );
+    $muestra5_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra5_1', true ) );
+    $muestra5_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra5_2', true ) );
+    $muestra5_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra5_3', true ) );
+    $muestra5_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra5_4', true ) );
+    $muestra6_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra6_1', true ) );
+    $muestra6_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra6_2', true ) );
+    $muestra6_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra6_3', true ) );
+    $muestra6_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra6_4', true ) );
+    $muestra7_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra7_1', true ) );
+    $muestra7_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra7_2', true ) );
+    $muestra7_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra7_3', true ) );
+    $muestra7_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra7_4', true ) );
+    $muestra8_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra8_1', true ) );
+    $muestra8_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra8_2', true ) );
+    $muestra8_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra8_3', true ) );
+    $muestra8_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra8_4', true ) );
+    $muestra9_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra9_1', true ) );
+    $muestra9_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra9_2', true ) );
+    $muestra9_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra9_3', true ) );
+    $muestra9_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra9_4', true ) );
+    $muestra10_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra10_1', true ) );
+    $muestra10_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra10_2', true ) );
+    $muestra10_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra10_3', true ) );
+    $muestra10_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra10_4', true ) );
+    $muestra11_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra11_1', true ) );
+    $muestra11_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra11_2', true ) );
+    $muestra11_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra11_3', true ) );
+    $muestra11_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra11_4', true ) );
+    $muestra12_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra12_1', true ) );
+    $muestra12_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra12_2', true ) );
+    $muestra12_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra12_3', true ) );
+    $muestra12_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra12_4', true ) );
+    $muestra13_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra13_1', true ) );
+    $muestra13_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra13_2', true ) );
+    $muestra13_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra13_3', true ) );
+    $muestra13_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra13_4', true ) );
+    $muestra14_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra14_1', true ) );
+    $muestra14_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra14_2', true ) );
+    $muestra14_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra14_3', true ) );
+    $muestra14_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra14_4', true ) );
+    $muestra15_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra15_1', true ) );
+    $muestra15_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra15_2', true ) );
+    $muestra15_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra15_3', true ) );
+    $muestra15_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra15_4', true ) );
+    $muestra16_1       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra16_1', true ) );
+    $muestra16_2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra16_2', true ) );
+    $muestra16_3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra16_3', true ) );
+    $muestra16_4       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_muestra16_4', true ) );
+
     $iva_inc      = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_iva_inc', true ) );
 ?>
 
 <div id="qo_cotizaciones">
     <div class="row margin-bottom-large">
+        <p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p>
         <p>* No olvides llenar la línea completa, de lo contrario no se mostrará ningún dato o marcará algún error.</p>
         <p>* Los "Detalles" sólo se muestran en la plantilla "Estilo de descripción".</p>
         <p>* La "Imagen destacada" corresponde al logo del cliente.</p>
@@ -1318,6 +1380,11 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
         <select name="qo_cotizaciones_estatus">
             <option value="VoBo" <?php selected($estatus, 'VoBo'); ?>>VoBo</option>
             <option value="Facturada" <?php selected($estatus, 'Facturada'); ?>>Facturada</option>
+        </select>
+        <label>¿Esta cotización incluirá IVA?*</label>
+        <select name="qo_cotizaciones_iva_inc">
+            <option value="Sí" <?php selected($iva_inc, 'Sí'); ?>>Sí</option>
+            <option value="No" <?php selected($iva_inc, 'No'); ?>>No</option>
         </select>   
     </div>
 	<div class="row text-center margin-bottom">
@@ -1338,9 +1405,181 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
         </div>
 	</div>
 	<div class="row margin-bottom">
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo" value="<?php echo $modelo; ?>"></div>
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota" value="<?php echo $nota; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>"></div>
+        <div class="col col-1_4"><textarea name="qo_cotizaciones_detalle"><?php echo $detalle; ?></textarea></div>
+            <div class="col col-1_4">
+                <div class="input-image">
+                    <input type="text" name="qo_cotizaciones_muestra_1" id="qo_cotizaciones_muestra_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra_1; ?>">
+                    <input type="button" class="button image-upload" value="Seleccionar">
+                </div>
+                <div class="image-preview">
+                    <img src="<?php echo $muestra_1; ?>">
+                </div>
+            </div>
+            <div class="col col-1_4">
+                <div class="input-image">
+                    <input type="text" name="qo_cotizaciones_muestra_2" id="qo_cotizaciones_muestra_2" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra_2; ?>">
+                    <input type="button" class="button image-upload" value="Seleccionar">
+                </div>
+                <div class="image-preview">
+                    <img src="<?php echo $muestra_2; ?>">
+                </div>
+            </div>
+            <div class="col col-1_4">
+                <div class="input-image">
+                    <input type="text" name="qo_cotizaciones_muestra_3" id="qo_cotizaciones_muestra_3" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra_3; ?>">
+                    <input type="button" class="button image-upload" value="Seleccionar">
+                </div>
+                <div class="image-preview">
+                    <img src="<?php echo $muestra_3; ?>">
+                </div>
+            </div>
+            <div class="col col-1_4">
+                <div class="input-image">
+                    <input type="text" name="qo_cotizaciones_muestra_4" id="qo_cotizaciones_muestra_4" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra_4; ?>">
+                    <input type="button" class="button image-upload" value="Seleccionar">
+                </div>
+                <div class="image-preview">
+                    <img src="<?php echo $muestra_4; ?>">
+                </div>
+            </div>
+    </div>
+    <div class="row margin-bottom">
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo2" value="<?php echo $modelo2; ?>"></div>
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota2" value="<?php echo $nota2; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas2" value="<?php echo $piezas2; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio2" value="<?php echo $precio2; ?>"></div>
+        <div class="col col-1_4"><textarea name="qo_cotizaciones_detalle2"><?php echo $detalle2; ?></textarea></div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra2_1" id="qo_cotizaciones_muestra2_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra2_1; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra2_1; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra2_2" id="qo_cotizaciones_muestra2_2" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra2_2; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra2_2; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra2_3" id="qo_cotizaciones_muestra2_3" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra2_3; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra2_3; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra2_4" id="qo_cotizaciones_muestra2_4" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra2_4; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra2_4; ?>">
+            </div>
+        </div>
+    </div> 
+    <div class="row margin-bottom">
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo3" value="<?php echo $modelo3; ?>"></div>
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota3" value="<?php echo $nota3; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>"></div>
+        <div class="col col-1_4"><textarea name="qo_cotizaciones_detalle2"><?php echo $detalle2; ?></textarea></div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra3_1" id="qo_cotizaciones_muestra3_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3_1; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra3_1; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra3_2" id="qo_cotizaciones_muestra3_2" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3_2; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra3_2; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra3_3" id="qo_cotizaciones_muestra3_3" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3_3; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra3_3; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra3_4" id="qo_cotizaciones_muestra3_4" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3_4; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra3_4; ?>">
+            </div>
+        </div>
+    </div> 
+    <div class="row margin-bottom">
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo4" value="<?php echo $modelo4; ?>"></div>
+        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota4" value="<?php echo $nota4; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas4" value="<?php echo $piezas4; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio4" value="<?php echo $precio4; ?>"></div>
+        <div class="col col-1_4"><textarea name="qo_cotizaciones_detalle2"><?php echo $detalle2; ?></textarea></div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra4_1" id="qo_cotizaciones_muestra4_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra4_1; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra4_1; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra4_2" id="qo_cotizaciones_muestra4_2" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra4_2; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra4_2; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra4_3" id="qo_cotizaciones_muestra4_3" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra4_3; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra4_3; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra4_4" id="qo_cotizaciones_muestra4_4" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra4_4; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra4_4; ?>">
+            </div>
+        </div>
+    </div> 
+   <!--  <div class="row margin-bottom">
 		<div class="col col-1_4">
-			<input type="text" name="qo_cotizaciones_modelo" value="<?php echo $modelo; ?>">			
-			<input type="text" name="qo_cotizaciones_modelo2" value="<?php echo $modelo2; ?>">			
+			<input type="text" name="qo_cotizaciones_modelo" value="<?php echo $modelo; ?>">		
+			<input type="text" name="qo_cotizaciones_modelo2" value="<?php echo $modelo2; ?>">		
 			<input type="text" name="qo_cotizaciones_modelo3" value="<?php echo $modelo3; ?>">	
             <input type="text" name="qo_cotizaciones_modelo4" value="<?php echo $modelo4; ?>">  
             <input type="text" name="qo_cotizaciones_modelo5" value="<?php echo $modelo5; ?>">  
@@ -1366,49 +1605,49 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
             <input type="text" name="qo_cotizaciones_nota7" value="<?php echo $nota7; ?>">            
             <input type="text" name="qo_cotizaciones_nota8" value="<?php echo $nota8; ?>">            
             <input type="text" name="qo_cotizaciones_nota9" value="<?php echo $nota9; ?>">            
-            <input type="text" name="qo_cotizaciones_nota10" value="<?php echo $nota10; ?>">            
-            <input type="text" name="qo_cotizaciones_nota11" value="<?php echo $nota11; ?>">            
-            <input type="text" name="qo_cotizaciones_nota12" value="<?php echo $nota12; ?>">            
-            <input type="text" name="qo_cotizaciones_nota13" value="<?php echo $nota13; ?>">            
-            <input type="text" name="qo_cotizaciones_nota14" value="<?php echo $nota14; ?>">            
-            <input type="text" name="qo_cotizaciones_nota15" value="<?php echo $nota15; ?>">            
-			<input type="text" name="qo_cotizaciones_nota16" value="<?php echo $nota16; ?>">			
+            <input type="text" name="qo_cotizaciones_nota10" value="<?php echo $nota10; ?>">           
+            <input type="text" name="qo_cotizaciones_nota11" value="<?php echo $nota11; ?>">           
+            <input type="text" name="qo_cotizaciones_nota12" value="<?php echo $nota12; ?>">           
+            <input type="text" name="qo_cotizaciones_nota13" value="<?php echo $nota13; ?>">           
+            <input type="text" name="qo_cotizaciones_nota14" value="<?php echo $nota14; ?>">           
+            <input type="text" name="qo_cotizaciones_nota15" value="<?php echo $nota15; ?>">           
+			<input type="text" name="qo_cotizaciones_nota16" value="<?php echo $nota16; ?>">		
 		</div>
 		<div class="col col-1-2_4">
-			<input type="number" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>">			
-			<input type="number" name="qo_cotizaciones_piezas2" value="<?php echo $piezas2; ?>">			
-			<input type="number" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>">		
-            <input type="number" name="qo_cotizaciones_piezas4" value="<?php echo $piezas4; ?>">          
-            <input type="number" name="qo_cotizaciones_piezas5" value="<?php echo $piezas5; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas6" value="<?php echo $piezas6; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas7" value="<?php echo $piezas7; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas8" value="<?php echo $piezas8; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas9" value="<?php echo $piezas9; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas10" value="<?php echo $piezas10; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas11" value="<?php echo $piezas11; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas12" value="<?php echo $piezas12; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas13" value="<?php echo $piezas13; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas14" value="<?php echo $piezas14; ?>">            
-            <input type="number" name="qo_cotizaciones_piezas15" value="<?php echo $piezas15; ?>">            
+			<input type="number" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>">	
+			<input type="number" name="qo_cotizaciones_piezas2" value="<?php echo $piezas2; ?>">	
+			<input type="number" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>">	
+            <input type="number" name="qo_cotizaciones_piezas4" value="<?php echo $piezas4; ?>">       
+            <input type="number" name="qo_cotizaciones_piezas5" value="<?php echo $piezas5; ?>">       
+            <input type="number" name="qo_cotizaciones_piezas6" value="<?php echo $piezas6; ?>">       
+            <input type="number" name="qo_cotizaciones_piezas7" value="<?php echo $piezas7; ?>">
+            <input type="number" name="qo_cotizaciones_piezas8" value="<?php echo $piezas8; ?>">
+            <input type="number" name="qo_cotizaciones_piezas9" value="<?php echo $piezas9; ?>">
+            <input type="number" name="qo_cotizaciones_piezas10" value="<?php echo $piezas10; ?>">
+            <input type="number" name="qo_cotizaciones_piezas11" value="<?php echo $piezas11; ?>">
+            <input type="number" name="qo_cotizaciones_piezas12" value="<?php echo $piezas12; ?>">
+            <input type="number" name="qo_cotizaciones_piezas13" value="<?php echo $piezas13; ?>">
+            <input type="number" name="qo_cotizaciones_piezas14" value="<?php echo $piezas14; ?>">
+            <input type="number" name="qo_cotizaciones_piezas15" value="<?php echo $piezas15; ?>">
 			<input type="number" name="qo_cotizaciones_piezas16" value="<?php echo $piezas16; ?>">			
 		</div>
 		<div class="col col-1-2_4">
-			<input type="number" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>">			
-			<input type="number" name="qo_cotizaciones_precio2" value="<?php echo $precio2; ?>">			
-			<input type="number" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>">		
-            <input type="number" name="qo_cotizaciones_precio4" value="<?php echo $precio4; ?>">          
-            <input type="number" name="qo_cotizaciones_precio5" value="<?php echo $precio5; ?>">            
-            <input type="number" name="qo_cotizaciones_precio6" value="<?php echo $precio6; ?>">            
-            <input type="number" name="qo_cotizaciones_precio7" value="<?php echo $precio7; ?>">            
-            <input type="number" name="qo_cotizaciones_precio8" value="<?php echo $precio8; ?>">            
-            <input type="number" name="qo_cotizaciones_precio9" value="<?php echo $precio9; ?>">            
-            <input type="number" name="qo_cotizaciones_precio10" value="<?php echo $precio10; ?>">            
-            <input type="number" name="qo_cotizaciones_precio11" value="<?php echo $precio11; ?>">            
-            <input type="number" name="qo_cotizaciones_precio12" value="<?php echo $precio12; ?>">            
-            <input type="number" name="qo_cotizaciones_precio13" value="<?php echo $precio13; ?>">            
-            <input type="number" name="qo_cotizaciones_precio14" value="<?php echo $precio14; ?>">            
-            <input type="number" name="qo_cotizaciones_precio15" value="<?php echo $precio15; ?>">            
-			<input type="number" name="qo_cotizaciones_precio16" value="<?php echo $precio16; ?>">			
+			<input type="number" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>">		
+			<input type="number" name="qo_cotizaciones_precio2" value="<?php echo $precio2; ?>">	
+			<input type="number" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>">	
+            <input type="number" name="qo_cotizaciones_precio4" value="<?php echo $precio4; ?>">       
+            <input type="number" name="qo_cotizaciones_precio5" value="<?php echo $precio5; ?>">       
+            <input type="number" name="qo_cotizaciones_precio6" value="<?php echo $precio6; ?>">      
+            <input type="number" name="qo_cotizaciones_precio7" value="<?php echo $precio7; ?>">       
+            <input type="number" name="qo_cotizaciones_precio8" value="<?php echo $precio8; ?>">       
+            <input type="number" name="qo_cotizaciones_precio9" value="<?php echo $precio9; ?>">       
+            <input type="number" name="qo_cotizaciones_precio10" value="<?php echo $precio10; ?>">     
+            <input type="number" name="qo_cotizaciones_precio11" value="<?php echo $precio11; ?>">     
+            <input type="number" name="qo_cotizaciones_precio12" value="<?php echo $precio12; ?>">     
+            <input type="number" name="qo_cotizaciones_precio13" value="<?php echo $precio13; ?>">     
+            <input type="number" name="qo_cotizaciones_precio14" value="<?php echo $precio14; ?>">     
+            <input type="number" name="qo_cotizaciones_precio15" value="<?php echo $precio15; ?>">     
+			<input type="number" name="qo_cotizaciones_precio16" value="<?php echo $precio16; ?>">
 		</div>
         <div class="col col-1_4">
             <textarea name="qo_cotizaciones_detalle"><?php echo $detalle; ?></textarea>          
@@ -1428,60 +1667,165 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
             <textarea name="qo_cotizaciones_detalle15"><?php echo $detalle15; ?></textarea>            
             <textarea name="qo_cotizaciones_detalle16"><?php echo $detalle16; ?></textarea>          
         </div>
+	</div> -->
+    <!-- <div class="row margin-bottom">
+        <p>*Puedes mostrar hasta 4 imágenes por muestra.</p>
+        <p>*Cada linea corresponde a una página diferente.</p>
+        <p>*El tamaño y acomodo de la imagen varía según la cantidad de imágenes a mostrar y la plantilla seleccionada.</p><br>
+        <p>°Plantilla Predeterminada ==> Hasta 4 imágenes por página / Página individual.</br>°Plantilla Horizontal ==> Hasta 4 imágenes por página / Página con tabla.</br>°Plantilla Vertical ==> 2 Líneas.</br>°Plantilla con Descripción ==> Hasta 4 imágenes por página / Página individual.</p>
+    </div>
+	<div class="row margin-bottom bg-gray">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra" id="qo_cotizaciones_muestra" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra2" id="qo_cotizaciones_muestra2" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra2; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra2; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra3" id="qo_cotizaciones_muestra3" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra3; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra4" id="qo_cotizaciones_muestra4" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra4; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra4; ?>">
+            </div>
+        </div>
 	</div>
-	<div class="row margin-bottom-large">
-		<p>*Los ultimos dos renglones sólo se mostrarán en la "Plantilla predeterminada"*</p>
-	</div>	
-	<div class="row margin-bottom-large">
-		<div class="input-image">
-            <label for="qo_cotizaciones_muestra">Muestra</label><br>
-            <input type="text" name="qo_cotizaciones_muestra" id="qo_cotizaciones_muestra" class="meta-image regular-text" value="<?php echo $muestra; ?>">
-            <input type="button" class="button image-upload" value="Seleccionar">
+    <div class="row margin-bottom">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra5" id="qo_cotizaciones_muestra5" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra5; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra5; ?>">
+            </div>
         </div>
-        <div class="image-preview">
-            <img src="<?php echo $muestra; ?>">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra6" id="qo_cotizaciones_muestra6" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra6; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra6; ?>">
+            </div>
         </div>
-	</div>
-    <div class="row margin-bottom-large">
-        <div class="input-image">
-            <label for="qo_cotizaciones_muestra2">Muestra</label><br>
-            <input type="text" name="qo_cotizaciones_muestra2" id="qo_cotizaciones_muestra2" class="meta-image regular-text" value="<?php echo $muestra2; ?>">
-            <input type="button" class="button image-upload" value="Seleccionar">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra7" id="qo_cotizaciones_muestra7" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra7; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra7; ?>">
+            </div>
         </div>
-        <div class="image-preview">
-            <img src="<?php echo $muestra2; ?>">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra8" id="qo_cotizaciones_muestra8" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra8; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra8; ?>">
+            </div>
+        </div>
+    </div> 
+    <div class="row margin-bottom bg-gray">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra9" id="qo_cotizaciones_muestra9" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra9; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra9; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra10" id="qo_cotizaciones_muestra10" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra10; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra10; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra11" id="qo_cotizaciones_muestra11" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra11; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra11; ?>">
+            </div>
+        </div>
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra12" id="qo_cotizaciones_muestra12" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra12; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra12; ?>">
+            </div>
         </div>
     </div>
-    <div class="row margin-bottom-large">
-        <div class="input-image">
-            <label for="qo_cotizaciones_muestra3">Muestra</label><br>
-            <input type="text" name="qo_cotizaciones_muestra3" id="qo_cotizaciones_muestra3" class="meta-image regular-text" value="<?php echo $muestra3; ?>">
-            <input type="button" class="button image-upload" value="Seleccionar">
+    <div class="row margin-bottom">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra13" id="qo_cotizaciones_muestra13" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra13; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra13; ?>">
+            </div>
         </div>
-        <div class="image-preview">
-            <img src="<?php echo $muestra3; ?>">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra14" id="qo_cotizaciones_muestra14" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra14; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra14; ?>">
+            </div>
         </div>
-    </div>
-    <div class="row margin-bottom-large">
-        <div class="input-image">
-            <label for="qo_cotizaciones_muestra4">Muestra</label><br>
-            <input type="text" name="qo_cotizaciones_muestra4" id="qo_cotizaciones_muestra4" class="meta-image regular-text" value="<?php echo $muestra4; ?>">
-            <input type="button" class="button image-upload" value="Seleccionar">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra15" id="qo_cotizaciones_muestra15" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra15; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra15; ?>">
+            </div>
         </div>
-        <div class="image-preview">
-            <img src="<?php echo $muestra4; ?>">
+        <div class="col col-1_4">
+            <div class="input-image">
+                <input type="text" name="qo_cotizaciones_muestra16" id="qo_cotizaciones_muestra16" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra16; ?>">
+                <input type="button" class="button image-upload" value="Seleccionar">
+            </div>
+            <div class="image-preview">
+                <img src="<?php echo $muestra16; ?>">
+            </div>
         </div>
-    </div>
-	<div class="row margin-bottom-large">
-		<label>¿Esta cotización incluirá IVA?*</label>
-		<select name="qo_cotizaciones_iva_inc">
-			<option value="Sí" <?php selected($iva_inc, 'Sí'); ?>>Sí</option>
-			<option value="No" <?php selected($iva_inc, 'No'); ?>>No</option>
-		</select>	
-	</div>
-	<div class="row">
-		<p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p>
-	</div>
+    </div>  -->
 </div>
 <?php
 
@@ -1735,17 +2079,197 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
         if ( isset( $_POST['qo_cotizaciones_detalle16'] ) ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_detalle16', $_POST['qo_cotizaciones_detalle16'] );
         }
-        if ( isset( $_POST['qo_cotizaciones_muestra'] ) ){
-            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra', $_POST['qo_cotizaciones_muestra'] );
+        if ( isset( $_POST['qo_cotizaciones_muestra_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra_1', $_POST['qo_cotizaciones_muestra_1'] );
         }
-        if ( isset( $_POST['qo_cotizaciones_muestra2'] ) ){
-            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra2', $_POST['qo_cotizaciones_muestra2'] );
+        if ( isset( $_POST['qo_cotizaciones_muestra_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra_2', $_POST['qo_cotizaciones_muestra_2'] );
         }
-        if ( isset( $_POST['qo_cotizaciones_muestra3'] ) ){
-            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra3', $_POST['qo_cotizaciones_muestra3'] );
+        if ( isset( $_POST['qo_cotizaciones_muestra_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra_3', $_POST['qo_cotizaciones_muestra_3'] );
         }
-        if ( isset( $_POST['qo_cotizaciones_muestra4'] ) ){
-            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra4', $_POST['qo_cotizaciones_muestra4'] );
+        if ( isset( $_POST['qo_cotizaciones_muestra_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra_4', $_POST['qo_cotizaciones_muestra_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra2_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra2_1', $_POST['qo_cotizaciones_muestra2_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra2_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra2_2', $_POST['qo_cotizaciones_muestra2_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra2_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra2_3', $_POST['qo_cotizaciones_muestra2_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra2_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra2_4', $_POST['qo_cotizaciones_muestra2_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra3_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra3_1', $_POST['qo_cotizaciones_muestra3_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra3_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra3_2', $_POST['qo_cotizaciones_muestra3_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra3_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra3_3', $_POST['qo_cotizaciones_muestra3_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra3_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra3_4', $_POST['qo_cotizaciones_muestra3_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra4_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra4_1', $_POST['qo_cotizaciones_muestra4_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra4_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra4_2', $_POST['qo_cotizaciones_muestra4_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra4_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra4_3', $_POST['qo_cotizaciones_muestra4_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra4_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra4_4', $_POST['qo_cotizaciones_muestra4_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra5_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra5_1', $_POST['qo_cotizaciones_muestra5_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra5_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra5_2', $_POST['qo_cotizaciones_muestra5_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra5_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra5_3', $_POST['qo_cotizaciones_muestra5_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra5_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra5_4', $_POST['qo_cotizaciones_muestra5_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra6_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra6_1', $_POST['qo_cotizaciones_muestra6_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra6_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra6_2', $_POST['qo_cotizaciones_muestra6_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra6_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra6_3', $_POST['qo_cotizaciones_muestra6_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra6_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra6_4', $_POST['qo_cotizaciones_muestra6_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra7_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra7_1', $_POST['qo_cotizaciones_muestra7_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra7_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra7_2', $_POST['qo_cotizaciones_muestra7_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra7_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra7_3', $_POST['qo_cotizaciones_muestra7_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra7_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra7_4', $_POST['qo_cotizaciones_muestra7_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra8_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra8_1', $_POST['qo_cotizaciones_muestra8_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra8_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra8_2', $_POST['qo_cotizaciones_muestra8_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra8_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra8_3', $_POST['qo_cotizaciones_muestra8_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra8_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra8_4', $_POST['qo_cotizaciones_muestra8_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra9_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra9_1', $_POST['qo_cotizaciones_muestra9_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra9_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra9_2', $_POST['qo_cotizaciones_muestra9_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra9_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra9_3', $_POST['qo_cotizaciones_muestra9_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra9_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra9_4', $_POST['qo_cotizaciones_muestra9_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra10_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra10_1', $_POST['qo_cotizaciones_muestra10_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra10_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra10_2', $_POST['qo_cotizaciones_muestra10_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra10_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra10_3', $_POST['qo_cotizaciones_muestra10_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra10_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra10_4', $_POST['qo_cotizaciones_muestra10_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra11_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra11_1', $_POST['qo_cotizaciones_muestra11_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra11_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra11_2', $_POST['qo_cotizaciones_muestra11_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra11_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra11_3', $_POST['qo_cotizaciones_muestra11_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra11_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra11_4', $_POST['qo_cotizaciones_muestra11_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra12_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra12_1', $_POST['qo_cotizaciones_muestra12_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra12_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra12_2', $_POST['qo_cotizaciones_muestra12_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra12_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra12_3', $_POST['qo_cotizaciones_muestra12_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra12_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra12_4', $_POST['qo_cotizaciones_muestra12_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra13_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra13_1', $_POST['qo_cotizaciones_muestra13_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra13_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra13_2', $_POST['qo_cotizaciones_muestra13_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra13_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra13_3', $_POST['qo_cotizaciones_muestra13_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra13_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra13_4', $_POST['qo_cotizaciones_muestra13_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra14_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra14_1', $_POST['qo_cotizaciones_muestra14_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra14_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra14_2', $_POST['qo_cotizaciones_muestra14_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra14_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra14_3', $_POST['qo_cotizaciones_muestra14_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra14_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra14_4', $_POST['qo_cotizaciones_muestra14_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra15_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra15_1', $_POST['qo_cotizaciones_muestra15_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra15_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra15_2', $_POST['qo_cotizaciones_muestra15_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra15_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra15_3', $_POST['qo_cotizaciones_muestra15_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra15_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra15_4', $_POST['qo_cotizaciones_muestra15_4'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra16_1'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra16_1', $_POST['qo_cotizaciones_muestra16_1'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra16_2'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra16_2', $_POST['qo_cotizaciones_muestra16_2'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra16_3'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra16_3', $_POST['qo_cotizaciones_muestra16_3'] );
+        }
+        if ( isset( $_POST['qo_cotizaciones_muestra16_4'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_muestra16_4', $_POST['qo_cotizaciones_muestra16_4'] );
         }
         if ( isset( $_POST['qo_cotizaciones_iva_inc'] ) ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_iva_inc', $_POST['qo_cotizaciones_iva_inc'] );

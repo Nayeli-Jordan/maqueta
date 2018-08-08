@@ -85,11 +85,36 @@
 		$precioD 	= $precio16;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-default-content.php');
 	endif;
+	
+	if( $muestra != "" || $muestra2 != "" || $muestra3 != "" || $muestra4 != "" ) :
+		$muestraA 	= $muestra;
+		$muestraB 	= $muestra2;
+		$muestraC 	= $muestra3;
+		$muestraD 	= $muestra4;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+	if( $muestra5 != "" || $muestra6 != "" || $muestra7 != "" || $muestra8 != "" ) :
+		$muestraA 	= $muestra5;
+		$muestraB 	= $muestra6;
+		$muestraC 	= $muestra7;
+		$muestraD 	= $muestra8;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+	if( $muestra9 != "" || $muestra10 != "" || $muestra11 != "" || $muestra12 != "" ) :
+		$muestraA 	= $muestra9;
+		$muestraB 	= $muestra10;
+		$muestraC 	= $muestra11;
+		$muestraD 	= $muestra12;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+	if( $muestra13 != "" || $muestra14 != "" || $muestra15 != "" || $muestra16 != "" ) :
+		$muestraA 	= $muestra13;
+		$muestraB 	= $muestra14;
+		$muestraC 	= $muestra15;
+		$muestraD 	= $muestra16;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
 	?>
-
-	<?php if( $muestra != "" ) : ?>
-		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
-	<?php endif; ?>
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 

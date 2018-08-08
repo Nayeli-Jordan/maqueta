@@ -3517,7 +3517,7 @@ video.responsive-video {
 
 /* line 83, ../sass/components/_position.scss */
 .content-cotizacion .row .col .item-cotizacion div,
-.content-cotizacion .row .col .opt-cotizacion div, .content-cotizacion .content-muestra img {
+.content-cotizacion .row .col .opt-cotizacion div, .content-cotizacion .content-muestra .content-center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -3809,64 +3809,96 @@ small {
 }
 /* line 95, ../sass/components/_utilities.scss */
 .content-cotizacion .footer-cotizacion {
+  position: absolute;
+  width: calc(90%);
+  bottom: 35px;
   text-align: center;
 }
-/* line 97, ../sass/components/_utilities.scss */
+/* line 100, ../sass/components/_utilities.scss */
 .content-cotizacion .footer-cotizacion p {
   font-size: 11px;
 }
-/* line 99, ../sass/components/_utilities.scss */
+/* line 102, ../sass/components/_utilities.scss */
 .content-cotizacion .footer-cotizacion p.inline-block {
   font-size: 14px;
   margin: 0 3px;
 }
-/* line 106, ../sass/components/_utilities.scss */
+/* line 109, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra {
   min-height: calc(100vh - 490px);
+  text-align: center;
 }
-/* line 108, ../sass/components/_utilities.scss */
-.content-cotizacion .content-muestra img {
+/* line 112, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center {
+  width: 100%;
+}
+/* line 115, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center img {
+  padding: 0 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
   max-height: calc(100vh - 490px);
 }
+/* line 122, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center img:first-child:nth-last-child(1) {
+  max-width: 100%;
+  padding: 0px;
+}
+/* line 126, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center img:first-child:nth-last-child(2),
+.content-cotizacion .content-muestra .content-center img:first-child:nth-last-child(2) ~ img {
+  max-width: calc(50% - 10px);
+}
+/* line 130, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center img:nth-last-child(3),
+.content-cotizacion .content-muestra .content-center img:nth-last-child(3) ~ img {
+  max-width: calc(33.33% - 10px);
+}
+/* line 134, ../sass/components/_utilities.scss */
+.content-cotizacion .content-muestra .content-center img:first-child:nth-last-child(4),
+.content-cotizacion .content-muestra .content-center img:first-child:nth-last-child(4) ~ img {
+  max-width: calc(25% - 10px);
+}
 
-/* line 115, ../sass/components/_utilities.scss */
+/* line 145, ../sass/components/_utilities.scss */
 .card-cotizacion {
   padding: 10px;
   margin-bottom: 20px;
 }
-/* line 118, ../sass/components/_utilities.scss */
+/* line 148, ../sass/components/_utilities.scss */
 .card-cotizacion .info-general {
   position: relative;
   width: calc(100% + 10px);
   top: 0px;
   margin-bottom: 10px;
 }
-/* line 124, ../sass/components/_utilities.scss */
+/* line 154, ../sass/components/_utilities.scss */
 .card-cotizacion img {
   max-width: 100px;
   max-height: 100px;
 }
 
 /* Sistema */
-/* line 133, ../sass/components/_utilities.scss */
+/* line 163, ../sass/components/_utilities.scss */
 #container-brief .col {
   border: 1px solid #eee;
   min-height: 28px;
   line-height: 26px;
   font-size: 14px;
 }
-/* line 138, ../sass/components/_utilities.scss */
+/* line 168, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style) {
   font-weight: bold;
   color: #7b2183;
   font-size: 14px;
   line-height: 26px;
 }
-/* line 143, ../sass/components/_utilities.scss */
+/* line 173, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style).color-light {
   color: #fff;
 }
-/* line 145, ../sass/components/_utilities.scss */
+/* line 175, ../sass/components/_utilities.scss */
 #container-brief .col.header-area-brief {
   background-color: #7b2183;
   color: #fff;
@@ -3875,7 +3907,7 @@ small {
   padding-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 153, ../sass/components/_utilities.scss */
+  /* line 183, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     width: 40%;
     position: absolute;
@@ -3884,24 +3916,24 @@ small {
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 153, ../sass/components/_utilities.scss */
+  /* line 183, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     margin-top: 20px;
   }
 }
-/* line 163, ../sass/components/_utilities.scss */
+/* line 193, ../sass/components/_utilities.scss */
 #container-brief .body-brief {
   margin-bottom: 30px;
 }
 
-/* line 168, ../sass/components/_utilities.scss */
+/* line 198, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento,
 .etiqueta-prioridad {
   display: inline-block;
   float: right;
 }
 
-/* line 173, ../sass/components/_utilities.scss */
+/* line 203, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento {
   width: 15px;
   height: 15px;
@@ -3909,7 +3941,7 @@ small {
   border-radius: 50%;
 }
 
-/* line 179, ../sass/components/_utilities.scss */
+/* line 209, ../sass/components/_utilities.scss */
 .etiqueta-prioridad {
   width: 30px;
   height: 10px;
@@ -3917,15 +3949,15 @@ small {
   border-radius: 3px;
 }
 
-/* line 186, ../sass/components/_utilities.scss */
+/* line 216, ../sass/components/_utilities.scss */
 .card-sistema {
   border-radius: 5px 10px 10px 5px;
 }
-/* line 188, ../sass/components/_utilities.scss */
+/* line 218, ../sass/components/_utilities.scss */
 .card-sistema .card-head {
   padding: 10px 20px;
 }
-/* line 190, ../sass/components/_utilities.scss */
+/* line 220, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status {
   width: 30px;
   height: 30px;
@@ -3938,42 +3970,42 @@ small {
   color: #fff;
   cursor: pointer;
 }
-/* line 201, ../sass/components/_utilities.scss */
+/* line 231, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before {
   content: '\f513';
 }
-/* line 204, ../sass/components/_utilities.scss */
+/* line 234, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before {
   content: '\f164';
 }
-/* line 207, ../sass/components/_utilities.scss */
+/* line 237, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before {
   content: '\e800';
 }
-/* line 210, ../sass/components/_utilities.scss */
+/* line 240, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 213, ../sass/components/_utilities.scss */
+/* line 243, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 215, ../sass/components/_utilities.scss */
+/* line 245, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status span:not(.etiqueta-text) {
   line-height: 30px;
   font-size: 14px;
 }
-/* line 219, ../sass/components/_utilities.scss */
+/* line 249, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status .etiqueta-text {
   color: #000;
   top: -28px;
   right: -30px;
 }
-/* line 224, ../sass/components/_utilities.scss */
+/* line 254, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 228, ../sass/components/_utilities.scss */
+/* line 258, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
   text-transform: uppercase;
   max-width: calc(100% - 30px);
@@ -3981,38 +4013,38 @@ small {
   font-weight: bold;
   color: #7b2183;
 }
-/* line 236, ../sass/components/_utilities.scss */
+/* line 266, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 239, ../sass/components/_utilities.scss */
+/* line 269, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   cursor: pointer;
   margin-top: 0px;
 }
-/* line 243, ../sass/components/_utilities.scss */
+/* line 273, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
 }
-/* line 248, ../sass/components/_utilities.scss */
+/* line 278, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 250, ../sass/components/_utilities.scss */
+/* line 280, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 251, ../sass/components/_utilities.scss */
+/* line 281, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
 
-/* line 259, ../sass/components/_utilities.scss */
+/* line 289, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   background-color: #fff;
@@ -4122,16 +4154,5 @@ footer {
   .content-cotizacion .content-img-muestra {
     min-height: 260px;
     position: relative;
-  }
-  /* line 49, ../sass/components/_print.scss */
-  .content-cotizacion .content-img-muestra img {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
   }
 }

@@ -86,5 +86,17 @@
     $muestra2       = get_post_meta( $post_id, 'qo_cotizaciones_muestra2', true );
     $muestra3       = get_post_meta( $post_id, 'qo_cotizaciones_muestra3', true );
     $muestra4       = get_post_meta( $post_id, 'qo_cotizaciones_muestra4', true );
+    $muestra5       = get_post_meta( $post_id, 'qo_cotizaciones_muestra5', true );
+    $muestra6       = get_post_meta( $post_id, 'qo_cotizaciones_muestra6', true );
+    $muestra7       = get_post_meta( $post_id, 'qo_cotizaciones_muestra7', true );
+    $muestra8       = get_post_meta( $post_id, 'qo_cotizaciones_muestra8', true );
+    $muestra9       = get_post_meta( $post_id, 'qo_cotizaciones_muestra9', true );
+    $muestra10       = get_post_meta( $post_id, 'qo_cotizaciones_muestra10', true );
+    $muestra11       = get_post_meta( $post_id, 'qo_cotizaciones_muestra11', true );
+    $muestra12       = get_post_meta( $post_id, 'qo_cotizaciones_muestra12', true );
+    $muestra13       = get_post_meta( $post_id, 'qo_cotizaciones_muestra13', true );
+    $muestra14       = get_post_meta( $post_id, 'qo_cotizaciones_muestra14', true );
+    $muestra15       = get_post_meta( $post_id, 'qo_cotizaciones_muestra15', true );
+    $muestra16       = get_post_meta( $post_id, 'qo_cotizaciones_muestra16', true );
     $iva_inc      = get_post_meta( $post_id, 'qo_cotizaciones_iva_inc', true );
 ?>

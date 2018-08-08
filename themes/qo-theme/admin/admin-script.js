@@ -31,4 +31,17 @@ jQuery(document).ready(function ($) {
     // Opens the media library frame.
     meta_image_frame.open();
   });
+
+if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-horizontal.php") {
+    $('body').addClass('templateHorizontal');
+} else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-vertical.php") {
+    $('body').addClass('templateVertical');
+} else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-details.php") {
+    $('body').addClass('templateDetails');
+} else {
+    $('body').addClass('templateDefault');
+}
+
 });
+
+
