@@ -45,6 +45,9 @@ textarea {
 .bg-gray { background-color: #eee!important; }
 
 /* Cotizaciones */
+.row.bg-gray { padding: 10px; }
+.row.bg-gray select { width: calc(100% - 20px)!important; }
+
 #qo_cotizaciones p { margin: 0px; }
 
 #qo_cotizaciones input[type="text"],

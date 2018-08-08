@@ -1217,6 +1217,7 @@ function qo_cotizaciones_custom_metabox(){
 }
 
 function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
+    $estatus       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_estatus', true ) );
     $modelo       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_modelo', true ) );
     $modelo2       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_modelo2', true ) );
     $modelo3       = esc_html( get_post_meta( $qo_cotizaciones->ID, 'qo_cotizaciones_modelo3', true ) );
@@ -1311,6 +1312,13 @@ function display_qo_cotizaciones_atributos( $qo_cotizaciones ){
         <p>* La "Imagen destacada" corresponde al logo del cliente.</p>
         <br>
         <p>°Plantilla Predeterminada ==> 4 Líneas.</br>°Plantilla Horizontal ==> 2 Líneas.</br>°Plantilla Vertical ==> 2 Líneas.</br>°Plantilla con Descripción ==> 1 Línea</p>
+    </div>
+    <div class="row bg-gray margin-bottom-large">
+        <label>¿Cual es el estatus?*</label>
+        <select name="qo_cotizaciones_estatus">
+            <option value="VoBo" <?php selected($estatus, 'VoBo'); ?>>VoBo</option>
+            <option value="Facturada" <?php selected($estatus, 'Facturada'); ?>>Facturada</option>
+        </select>   
     </div>
 	<div class="row text-center margin-bottom">
 		<div class="col col-1_4">
@@ -1484,6 +1492,9 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
 	//Comprobamos que es del tipo que nos interesa
 	if ( $qo_cotizaciones->post_type == 'qo_cotizaciones' ){
 	//Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['qo_cotizaciones_estatus'] ) ){
+            update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_estatus', $_POST['qo_cotizaciones_estatus'] );
+        } 
         if ( isset( $_POST['qo_cotizaciones_modelo'] ) ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_modelo', $_POST['qo_cotizaciones_modelo'] );
         } 

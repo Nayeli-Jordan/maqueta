@@ -3,7 +3,25 @@
 	<div class="info-general">
 		<div class="num-tiket bg-gradient-qo">
 			<div class="bg-light">
-				<p>000<?php echo get_the_ID(); ?></p>
+				<!-- <?php
+					$cur_id = get_the_ID();
+			        $args = array(
+			        	'post_type' 		=> 'qo_cotizaciones',
+			            'posts_per_page' 	=> 1,
+			            'post__not_in' 		=> array( $cur_id ),
+			            );
+			        $loop = new WP_Query( $args );
+			        if ( $loop->have_posts() ) {
+			            while ( $loop->have_posts() ) : $loop->the_post(); ?>
+			                		
+		            		<?php echo get_the_ID(); ?>
+		            		<?php the_title(); ?>
+
+			            <?php endwhile;
+			        } 
+			        wp_reset_postdata();
+			    ?> --><!--/.products-->	
+				<p><?php echo date("y") . date("m"); ?><?php echo get_the_ID(); ?></p>
 			</div>						
 		</div>
 		<div class="title-tiket bg-gradient-qo">
