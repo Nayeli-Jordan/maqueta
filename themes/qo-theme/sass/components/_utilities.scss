@@ -85,8 +85,8 @@
 					
 				}
 				&.description {
-					min-height: 180px;
-					div { text-align: left; }
+					min-height: 270px;
+					div { text-align: center; }
 				}					
 			}
 		}
@@ -110,6 +110,7 @@
 		//min-height: calc(100vh - 490px);
 		height: 420px;//(100vh - 490px);
 		text-align: center;
+		img { max-height: 420px;}
 	}	
 	&.contentHorizontal {		
 		.content-img-Horizontal {

@@ -51,7 +51,7 @@
 			<div class="col s12">
 				<div class="item-cotizacion"><p>Detalles</p></div>
 				<div class="opt-cotizacion description">					
-					<div><?php if( $detalleA != "" ) : ?>$<?php echo $detalleA; ?><?php endif; ?></div>
+					<div><?php if( $detalleA != "" ) : ?><?php echo $detalleA; ?><?php endif; ?></div>
 				</div>
 			</div>
 		</div>
