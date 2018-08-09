@@ -37,6 +37,16 @@
 		box-shadow: none;
 		.opt-cotizacion {
 			height: 120px;
+			div {
+				font-size: 20px!important;
+				line-height: 22px!important;
+				&.modelo,
+				&.nota {
+					font-size: 16px!important;
+					line-height: 20px!important;
+				}				
+			}
+
 			&.description {
 				height: 350px;
 			}

@@ -57,8 +57,10 @@ video.responsive-video {
 		display: block;
 		margin: 0 auto 20px;
 	}
-	.img-muestra {
-		max-height: 120px;
+	&.contentHorizontal {
+		.content-img-muestra {
+			img { max-height: 250px;}
+		}
 	}
 	.footer-cotizacion {
 		.bg-qo-logo {
@@ -67,5 +69,31 @@ video.responsive-video {
 			padding-bottom: 0px;
 			margin: 0 auto 10px;
 		}
+	}
+}
+
+.content-muestra,
+.content-img-muestra {
+	img {
+		padding: 0 5px;
+		box-sizing: border-box;
+		display: inline-block;
+		vertical-align: middle;
+	}	
+	img:first-child:nth-last-child(1){
+		max-width: 100%;
+		padding: 0px;
+	}
+	img:first-child:nth-last-child(2),
+	img:first-child:nth-last-child(2) ~ img {
+	    max-width: calc(50% - 10px);
+	}
+	img:nth-last-child(3),
+	img:nth-last-child(3) ~ img {
+	    max-width: calc(33.33% - 10px);
+	}
+	img:first-child:nth-last-child(4),
+	img:first-child:nth-last-child(4) ~ img {
+	    max-width: calc(25% - 10px);
 	}
 }

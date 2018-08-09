@@ -118,22 +118,6 @@
 				display: inline-block;
 				vertical-align: middle;
 				max-height: calc(100vh - 490px);
-			}
-			img:first-child:nth-last-child(1){
-				max-width: 100%;
-				padding: 0px;
-			}
-			img:first-child:nth-last-child(2),
-			img:first-child:nth-last-child(2) ~ img {
-			    max-width: calc(50% - 10px);
-			}
-			img:nth-last-child(3),
-			img:nth-last-child(3) ~ img {
-			    max-width: calc(33.33% - 10px);
-			}
-			img:first-child:nth-last-child(4),
-			img:first-child:nth-last-child(4) ~ img {
-			    max-width: calc(25% - 10px);
 			}								
 		}
 	}

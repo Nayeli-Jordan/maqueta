@@ -1,4 +1,4 @@
-<div class="content-cotizacion relative"  style="page-break-after: always;">
+<div class="content-cotizacion relative contentHorizontal"  style="page-break-after: always;">
 	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
 	<div class="container container-large">
 		<p class="date"><?php echo get_the_date(); ?></p>
@@ -76,9 +76,18 @@
 		</div>
 		<div class="row text-center">
 			<div class="content-img-muestra">
-				<?php if( $muestra != "" ) : ?>
-					<img class="responsive-img img-muestra" src="<?php echo $muestra; ?>">
-				<?php endif; ?>					
+				<?php if( $muestraA != "") : ?>
+					<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
+				<?php endif; ?>
+				<?php if( $muestraB != "") : ?>
+				<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+				<?php endif; ?>
+				<?php if( $muestraC != "") : ?>
+				<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+				<?php endif; ?>
+				<?php if( $muestraD != "") : ?>
+				<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+				<?php endif; ?>						
 			</div>
 			<p><strong>Muestra</strong></p>
 		</div>

@@ -82,6 +82,8 @@ textarea {
 	height: auto;
 }
 
+.templateHorizontal .hide-on-templateHorizontal { display: none; }
+
 
 /*SISTEMA*/
 .bg-destacade { background-color: #8c45c1!important; }
