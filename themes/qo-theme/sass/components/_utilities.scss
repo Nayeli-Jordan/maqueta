@@ -110,11 +110,24 @@
 		//min-height: calc(100vh - 490px);
 		height: 420px;//(100vh - 490px);
 		text-align: center;
-	}			
-	.content-img-Horizontal {
-		position: relative;
-		height: 210px;
-		img { max-height: 210px;}			
+	}	
+	&.contentHorizontal {		
+		.content-img-Horizontal {
+			position: relative;
+			height: 210px;
+			img { max-height: 210px;}			
+		}
+	}
+	&.contentVertical {
+		.opt-cotizacion { min-height: 100px!important; }
+		.content-img-Vertical {
+			position: relative;
+			height: 395px;
+			img { 
+				max-height: 395px;
+				padding: 5px; 
+			}
+		}
 	}
 }
 

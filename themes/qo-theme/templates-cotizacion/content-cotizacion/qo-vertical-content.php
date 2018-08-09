@@ -52,19 +52,21 @@
 			</div>
 			<div class="col s5 text-center">
 				<img class="img-client mabot" src="<?php the_post_thumbnail_url('medium'); ?>">
-				<div class="content-img-muestra content-img-muestra-vertical">
-					<?php if( $muestraA != "") : ?>
-						<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
-					<?php endif; ?>
-					<?php if( $muestraB != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
-					<?php endif; ?>
-					<?php if( $muestraC != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
-					<?php endif; ?>
-					<?php if( $muestraD != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
-					<?php endif; ?>						
+				<div class="content-img-Vertical">
+					<div class="content-center">
+						<?php if( $muestraA != "") : ?>
+							<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
+						<?php endif; ?>
+						<?php if( $muestraB != "") : ?>
+						<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+						<?php endif; ?>
+						<?php if( $muestraC != "") : ?>
+						<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+						<?php endif; ?>
+						<?php if( $muestraD != "") : ?>
+						<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+						<?php endif; ?>							
+					</div>					
 				</div>
 			</div>
 		</div>

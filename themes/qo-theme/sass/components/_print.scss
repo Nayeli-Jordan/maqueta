@@ -63,5 +63,17 @@
 			height: 250px!important;
 			img { max-height: 250px!important;}			
 		}
+		.content-img-Vertical {
+			height: 500px!important;
+			img { padding: 5px; }
+			img:first-child:nth-last-child(2),
+			img:first-child:nth-last-child(2) ~ img,
+			img:nth-last-child(3),
+			img:nth-last-child(3) ~ img,
+			img:first-child:nth-last-child(4),
+			img:first-child:nth-last-child(4) ~ img {
+				max-height: 250px;
+			}
+		}
 	}
 }
