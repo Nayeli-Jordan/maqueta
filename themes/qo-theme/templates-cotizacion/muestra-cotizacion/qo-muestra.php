@@ -1,4 +1,4 @@
-<div class="content-cotizacion relative"  style="page-break-after: always;">
+<div class="content-cotizacion content-cotizacion-muestra relative"  style="page-break-after: always;">
 	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-header.php'); ?>
 	<div class="container container-large">
 		<p class="date"><?php echo get_the_date(); ?></p>

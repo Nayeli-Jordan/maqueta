@@ -46,7 +46,6 @@
 					line-height: 20px!important;
 				}				
 			}
-
 			&.description {
 				height: 350px;
 			}
@@ -56,6 +55,9 @@
 		.content-img-muestra { 
 			min-height: 260px; 
 			position: relative;
+		}
+		.content-muestra{
+			height: 540px!important;
 		}
 	}
 }

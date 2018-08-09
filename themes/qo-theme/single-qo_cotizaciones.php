@@ -33,7 +33,7 @@
 		$muestraB 	= $muestra4_2;
 		$muestraC 	= $muestra4_3;
 		$muestraD 	= $muestra4_4;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-muestra.php');
 	endif;
 
 	if( ( $modelo5 != "" && $nota5 != "" && $piezas5 != "" && $precio5 != "") || ($modelo6 != "" && $nota6 != "" && $piezas6 != "" && $precio6 != "") || ($modelo7 != "" && $nota7 != "" && $piezas7 != "" && $precio7 != "") || ($modelo8 != "" && $nota8 != "" && $piezas8 != "" && $precio8 != "")) :
@@ -60,7 +60,7 @@
 		$muestraB 	= $muestra8_2;
 		$muestraC 	= $muestra8_3;
 		$muestraD 	= $muestra8_4;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-muestra.php');
 	endif;
 
 	if( ( $modelo9 != "" && $nota9 != "" && $piezas9 != "" && $precio9 != "") || ($modelo10 != "" && $nota10 != "" && $piezas10 != "" && $precio10 != "") || ($modelo11 != "" && $nota11 != "" && $piezas11 != "" && $precio11 != "") || ($modelo12 != "" && $nota12 != "" && $piezas12 != "" && $precio12 != "")) :
@@ -87,7 +87,7 @@
 		$muestraB 	= $muestra12_2;
 		$muestraC 	= $muestra12_3;
 		$muestraD 	= $muestra12_4;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-muestra.php');
 	endif;
 
 	if( ( $modelo13 != "" && $nota13 != "" && $piezas13 != "" && $precio13 != "") || ($modelo14 != "" && $nota14 != "" && $piezas14 != "" && $precio14 != "") || ($modelo15 != "" && $nota15 != "" && $piezas15 != "" && $precio15 != "") || ($modelo16 != "" && $nota16 != "" && $piezas16 != "" && $precio16 != "")) :		
@@ -114,7 +114,7 @@
 		$muestraB 	= $muestra16_2;
 		$muestraC 	= $muestra16_3;
 		$muestraD 	= $muestra16_4;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-muestra.php');
 	endif;
 	?>
 <?php 

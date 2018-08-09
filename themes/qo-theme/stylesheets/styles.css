@@ -3568,7 +3568,6 @@ video.responsive-video {
 }
 
 /* line 83, ../sass/components/_position.scss */
-.content-cotizacion .row .col .item-cotizacion div,
 .content-cotizacion .row .col .opt-cotizacion div, .content-cotizacion .content-muestra .content-center {
   position: absolute;
   top: 50%;
@@ -3827,37 +3826,32 @@ small {
   text-align: center;
   position: relative;
 }
-/* line 68, ../sass/components/_utilities.scss */
-.content-cotizacion .row .col .item-cotizacion div,
-.content-cotizacion .row .col .opt-cotizacion div {
-  width: calc(100% - 10px);
-}
-/* line 71, ../sass/components/_utilities.scss */
-.content-cotizacion .row .col .item-cotizacion div.modelo, .content-cotizacion .row .col .item-cotizacion div.nota,
-.content-cotizacion .row .col .opt-cotizacion div.modelo,
-.content-cotizacion .row .col .opt-cotizacion div.nota {
-  font-size: 12px;
-  line-height: 14px;
-}
-/* line 77, ../sass/components/_utilities.scss */
-.content-cotizacion .row .col .item-cotizacion.description,
-.content-cotizacion .row .col .opt-cotizacion.description {
-  min-height: 180px;
-}
-/* line 79, ../sass/components/_utilities.scss */
-.content-cotizacion .row .col .item-cotizacion.description div,
-.content-cotizacion .row .col .opt-cotizacion.description div {
-  text-align: left;
-}
-/* line 83, ../sass/components/_utilities.scss */
+/* line 70, ../sass/components/_utilities.scss */
 .content-cotizacion .row .col .item-cotizacion p {
   font-size: 16px;
   line-height: 26px;
 }
-/* line 88, ../sass/components/_utilities.scss */
+/* line 75, ../sass/components/_utilities.scss */
 .content-cotizacion .row .col .opt-cotizacion {
-  min-height: 70px;
+  min-height: 85px;
   padding: 5px;
+}
+/* line 78, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .opt-cotizacion div {
+  width: calc(100% - 10px);
+}
+/* line 81, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .opt-cotizacion div.modelo, .content-cotizacion .row .col .opt-cotizacion div.nota {
+  font-size: 12px;
+  line-height: 14px;
+}
+/* line 87, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .opt-cotizacion.description {
+  min-height: 180px;
+}
+/* line 89, ../sass/components/_utilities.scss */
+.content-cotizacion .row .col .opt-cotizacion.description div {
+  text-align: left;
 }
 /* line 95, ../sass/components/_utilities.scss */
 .content-cotizacion .footer-cotizacion {
@@ -3877,60 +3871,60 @@ small {
 }
 /* line 109, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra {
-  min-height: calc(100vh - 490px);
+  height: 420px;
   text-align: center;
 }
-/* line 112, ../sass/components/_utilities.scss */
+/* line 113, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra .content-center {
   width: 100%;
 }
-/* line 115, ../sass/components/_utilities.scss */
+/* line 116, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra .content-center img {
   padding: 0 5px;
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
-  max-height: calc(100vh - 490px);
+  max-height: 400px;
 }
 
-/* line 129, ../sass/components/_utilities.scss */
+/* line 130, ../sass/components/_utilities.scss */
 .card-cotizacion {
   padding: 10px;
   margin-bottom: 20px;
 }
-/* line 132, ../sass/components/_utilities.scss */
+/* line 133, ../sass/components/_utilities.scss */
 .card-cotizacion .info-general {
   position: relative;
   width: calc(100% + 10px);
   top: 0px;
   margin-bottom: 10px;
 }
-/* line 138, ../sass/components/_utilities.scss */
+/* line 139, ../sass/components/_utilities.scss */
 .card-cotizacion img {
   max-width: 100px;
   max-height: 100px;
 }
 
 /* Sistema */
-/* line 147, ../sass/components/_utilities.scss */
+/* line 148, ../sass/components/_utilities.scss */
 #container-brief .col {
   border: 1px solid #eee;
   min-height: 28px;
   line-height: 26px;
   font-size: 14px;
 }
-/* line 152, ../sass/components/_utilities.scss */
+/* line 153, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style) {
   font-weight: bold;
   color: #7b2183;
   font-size: 14px;
   line-height: 26px;
 }
-/* line 157, ../sass/components/_utilities.scss */
+/* line 158, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style).color-light {
   color: #fff;
 }
-/* line 159, ../sass/components/_utilities.scss */
+/* line 160, ../sass/components/_utilities.scss */
 #container-brief .col.header-area-brief {
   background-color: #7b2183;
   color: #fff;
@@ -3939,7 +3933,7 @@ small {
   padding-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 167, ../sass/components/_utilities.scss */
+  /* line 168, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     width: 40%;
     position: absolute;
@@ -3948,24 +3942,24 @@ small {
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 167, ../sass/components/_utilities.scss */
+  /* line 168, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     margin-top: 20px;
   }
 }
-/* line 177, ../sass/components/_utilities.scss */
+/* line 178, ../sass/components/_utilities.scss */
 #container-brief .body-brief {
   margin-bottom: 30px;
 }
 
-/* line 182, ../sass/components/_utilities.scss */
+/* line 183, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento,
 .etiqueta-prioridad {
   display: inline-block;
   float: right;
 }
 
-/* line 187, ../sass/components/_utilities.scss */
+/* line 188, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento {
   width: 15px;
   height: 15px;
@@ -3973,7 +3967,7 @@ small {
   border-radius: 50%;
 }
 
-/* line 193, ../sass/components/_utilities.scss */
+/* line 194, ../sass/components/_utilities.scss */
 .etiqueta-prioridad {
   width: 30px;
   height: 10px;
@@ -3981,15 +3975,15 @@ small {
   border-radius: 3px;
 }
 
-/* line 200, ../sass/components/_utilities.scss */
+/* line 201, ../sass/components/_utilities.scss */
 .card-sistema {
   border-radius: 5px 10px 10px 5px;
 }
-/* line 202, ../sass/components/_utilities.scss */
+/* line 203, ../sass/components/_utilities.scss */
 .card-sistema .card-head {
   padding: 10px 20px;
 }
-/* line 204, ../sass/components/_utilities.scss */
+/* line 205, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status {
   width: 30px;
   height: 30px;
@@ -4002,42 +3996,42 @@ small {
   color: #fff;
   cursor: pointer;
 }
-/* line 215, ../sass/components/_utilities.scss */
+/* line 216, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before {
   content: '\f513';
 }
-/* line 218, ../sass/components/_utilities.scss */
+/* line 219, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before {
   content: '\f164';
 }
-/* line 221, ../sass/components/_utilities.scss */
+/* line 222, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before {
   content: '\e800';
 }
-/* line 224, ../sass/components/_utilities.scss */
+/* line 225, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 227, ../sass/components/_utilities.scss */
+/* line 228, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 229, ../sass/components/_utilities.scss */
+/* line 230, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status span:not(.etiqueta-text) {
   line-height: 30px;
   font-size: 14px;
 }
-/* line 233, ../sass/components/_utilities.scss */
+/* line 234, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status .etiqueta-text {
   color: #000;
   top: -28px;
   right: -30px;
 }
-/* line 238, ../sass/components/_utilities.scss */
+/* line 239, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 242, ../sass/components/_utilities.scss */
+/* line 243, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
   text-transform: uppercase;
   max-width: calc(100% - 30px);
@@ -4045,38 +4039,38 @@ small {
   font-weight: bold;
   color: #7b2183;
 }
-/* line 250, ../sass/components/_utilities.scss */
+/* line 251, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 253, ../sass/components/_utilities.scss */
+/* line 254, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   cursor: pointer;
   margin-top: 0px;
 }
-/* line 257, ../sass/components/_utilities.scss */
+/* line 258, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
 }
-/* line 262, ../sass/components/_utilities.scss */
+/* line 263, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 264, ../sass/components/_utilities.scss */
+/* line 265, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 265, ../sass/components/_utilities.scss */
+/* line 266, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
 
-/* line 273, ../sass/components/_utilities.scss */
+/* line 274, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   background-color: #fff;
@@ -4188,13 +4182,17 @@ footer {
     font-size: 16px !important;
     line-height: 20px !important;
   }
-  /* line 50, ../sass/components/_print.scss */
+  /* line 49, ../sass/components/_print.scss */
   .content-cotizacion .opt-cotizacion.description {
     height: 350px;
   }
-  /* line 56, ../sass/components/_print.scss */
+  /* line 55, ../sass/components/_print.scss */
   .content-cotizacion .content-img-muestra {
     min-height: 260px;
     position: relative;
+  }
+  /* line 59, ../sass/components/_print.scss */
+  .content-cotizacion .content-muestra {
+    height: 540px !important;
   }
 }
