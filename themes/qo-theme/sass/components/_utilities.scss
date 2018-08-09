@@ -110,17 +110,11 @@
 		//min-height: calc(100vh - 490px);
 		height: 420px;//(100vh - 490px);
 		text-align: center;
-		.content-center {
-			width: 100%;
-			@extend %center-full;
-			img {
-				padding: 0 5px;
-				box-sizing: border-box;
-				display: inline-block;
-				vertical-align: middle;
-				max-height: 400px;//(100vh - 490px);
-			}								
-		}
+	}			
+	.content-img-Horizontal {
+		position: relative;
+		height: 210px;
+		img { max-height: 210px;}			
 	}
 }
 

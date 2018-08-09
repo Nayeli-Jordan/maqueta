@@ -75,19 +75,21 @@
 			</div>
 		</div>
 		<div class="row text-center">
-			<div class="content-img-muestra">
-				<?php if( $muestraA != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
-				<?php endif; ?>
-				<?php if( $muestraB != "") : ?>
-				<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
-				<?php endif; ?>
-				<?php if( $muestraC != "") : ?>
-				<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
-				<?php endif; ?>
-				<?php if( $muestraD != "") : ?>
-				<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
-				<?php endif; ?>						
+			<div class="content-img-Horizontal">
+				<div class="content-center">
+					<?php if( $muestraA != "") : ?>
+						<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
+					<?php endif; ?>
+					<?php if( $muestraB != "") : ?>
+					<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+					<?php endif; ?>
+					<?php if( $muestraC != "") : ?>
+					<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+					<?php endif; ?>
+					<?php if( $muestraD != "") : ?>
+					<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+					<?php endif; ?>						
+				</div>					
 			</div>
 			<p><strong>Muestra</strong></p>
 		</div>

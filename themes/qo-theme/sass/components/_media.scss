@@ -57,11 +57,6 @@ video.responsive-video {
 		display: block;
 		margin: 0 auto 20px;
 	}
-	&.contentHorizontal {
-		.content-img-muestra {
-			img { max-height: 250px;}
-		}
-	}
 	.footer-cotizacion {
 		.bg-qo-logo {
 			width: 50px;
@@ -73,7 +68,8 @@ video.responsive-video {
 }
 
 .content-muestra,
-.content-img-muestra {
+.content-img-muestra,
+.content-img-Horizontal {
 	img {
 		padding: 0 5px;
 		box-sizing: border-box;

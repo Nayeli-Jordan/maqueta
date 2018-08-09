@@ -51,13 +51,17 @@
 			}
 		}
 
-		//Horizontal
 		.content-img-muestra { 
 			min-height: 260px; 
 			position: relative;
 		}
 		.content-muestra{
 			height: 540px!important;
+		}
+		/* Horizontal */	
+		.content-img-Horizontal {
+			height: 250px!important;
+			img { max-height: 250px!important;}			
 		}
 	}
 }
