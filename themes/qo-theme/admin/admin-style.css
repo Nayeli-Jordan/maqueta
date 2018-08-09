@@ -82,8 +82,15 @@ textarea {
 	height: auto;
 }
 
-.templateHorizontal .hide-on-templateHorizontal { display: none; }
+/*Ocultar muestras y detalle segun template*/
+.templateHorizontal .hide-on-templateHorizontal,
+.templateDefault .hide-on-templateDefault,
 
+.templateDefault .col-detalle,
+.templateHorizontal .col-detalle { display: none; }
+
+.templateDefault .row .col-1-2_4,
+.templateHorizontal .row .col-1-2_4 { width: 25%; }
 
 /*SISTEMA*/
 .bg-destacade { background-color: #8c45c1!important; }

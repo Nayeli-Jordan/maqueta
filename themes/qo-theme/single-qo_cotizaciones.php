@@ -28,6 +28,14 @@
 		$precioD 	= $precio4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-default-content.php');
 	endif;
+	if( $muestra4_1 != "" || $muestra4_2 != "" || $muestra4_3 != "" || $muestra4_4 != "" ) :
+		$muestraA 	= $muestra4_1;
+		$muestraB 	= $muestra4_2;
+		$muestraC 	= $muestra4_3;
+		$muestraD 	= $muestra4_4;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+
 	if( ( $modelo5 != "" && $nota5 != "" && $piezas5 != "" && $precio5 != "") || ($modelo6 != "" && $nota6 != "" && $piezas6 != "" && $precio6 != "") || ($modelo7 != "" && $nota7 != "" && $piezas7 != "" && $precio7 != "") || ($modelo8 != "" && $nota8 != "" && $piezas8 != "" && $precio8 != "")) :
 		$modeloA 	= $modelo5;
 		$modeloB 	= $modelo6;
@@ -47,6 +55,14 @@
 		$precioD 	= $precio8;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-default-content.php');
 	endif;
+	if( $muestra8_1 != "" || $muestra8_2 != "" || $muestra8_3 != "" || $muestra8_4 != "" ) :
+		$muestraA 	= $muestra8_1;
+		$muestraB 	= $muestra8_2;
+		$muestraC 	= $muestra8_3;
+		$muestraD 	= $muestra8_4;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+
 	if( ( $modelo9 != "" && $nota9 != "" && $piezas9 != "" && $precio9 != "") || ($modelo10 != "" && $nota10 != "" && $piezas10 != "" && $precio10 != "") || ($modelo11 != "" && $nota11 != "" && $piezas11 != "" && $precio11 != "") || ($modelo12 != "" && $nota12 != "" && $piezas12 != "" && $precio12 != "")) :
 		$modeloA 	= $modelo9;
 		$modeloB 	= $modelo10;
@@ -66,6 +82,14 @@
 		$precioD 	= $precio12;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-default-content.php');
 	endif;
+	if( $muestra12_1 != "" || $muestra12_2 != "" || $muestra12_3 != "" || $muestra12_4 != "" ) :
+		$muestraA 	= $muestra12_1;
+		$muestraB 	= $muestra12_2;
+		$muestraC 	= $muestra12_3;
+		$muestraD 	= $muestra12_4;
+		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
+	endif;
+
 	if( ( $modelo13 != "" && $nota13 != "" && $piezas13 != "" && $precio13 != "") || ($modelo14 != "" && $nota14 != "" && $piezas14 != "" && $precio14 != "") || ($modelo15 != "" && $nota15 != "" && $piezas15 != "" && $precio15 != "") || ($modelo16 != "" && $nota16 != "" && $piezas16 != "" && $precio16 != "")) :		
 		$modeloA 	= $modelo13;
 		$modeloB 	= $modelo14;
@@ -85,33 +109,11 @@
 		$precioD 	= $precio16;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-default-content.php');
 	endif;
-	
-	if( $muestra != "" || $muestra2 != "" || $muestra3 != "" || $muestra4 != "" ) :
-		$muestraA 	= $muestra;
-		$muestraB 	= $muestra2;
-		$muestraC 	= $muestra3;
-		$muestraD 	= $muestra4;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
-	endif;
-	if( $muestra5 != "" || $muestra6 != "" || $muestra7 != "" || $muestra8 != "" ) :
-		$muestraA 	= $muestra5;
-		$muestraB 	= $muestra6;
-		$muestraC 	= $muestra7;
-		$muestraD 	= $muestra8;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
-	endif;
-	if( $muestra9 != "" || $muestra10 != "" || $muestra11 != "" || $muestra12 != "" ) :
-		$muestraA 	= $muestra9;
-		$muestraB 	= $muestra10;
-		$muestraC 	= $muestra11;
-		$muestraD 	= $muestra12;
-		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
-	endif;
-	if( $muestra13 != "" || $muestra14 != "" || $muestra15 != "" || $muestra16 != "" ) :
-		$muestraA 	= $muestra13;
-		$muestraB 	= $muestra14;
-		$muestraC 	= $muestra15;
-		$muestraD 	= $muestra16;
+	if( $muestra16_1 != "" || $muestra16_2 != "" || $muestra16_3 != "" || $muestra16_4 != "" ) :
+		$muestraA 	= $muestra16_1;
+		$muestraB 	= $muestra16_2;
+		$muestraC 	= $muestra16_3;
+		$muestraD 	= $muestra16_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-details-muestra.php');
 	endif;
 	?>
