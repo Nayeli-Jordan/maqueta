@@ -107,8 +107,7 @@
 	}
 
 	.content-muestra {
-		//min-height: calc(100vh - 490px);
-		height: 420px;//(100vh - 490px);
+		height: 420px;
 		text-align: center;
 		img { max-height: 420px;}
 	}	
@@ -130,14 +129,12 @@
 			}
 		}
 	}
-}
-
-
-	
+}	
 
 .card-cotizacion {
 	padding: 10px;
 	margin-bottom: 20px;
+	min-height: 245px;
 	.info-general {
 		position: relative;
 		width: calc(100% + 10px);

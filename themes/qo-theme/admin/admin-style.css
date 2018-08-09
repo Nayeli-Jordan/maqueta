@@ -36,7 +36,7 @@ textarea {
 .clear { clear: both; }
 
 .text-center 			{ text-align: center; }
-.color-light { color: #fff; }
+.color-light 			{ color: #fff; }
 
 .margin-bottom 			{ margin-bottom: 10px; }
 .margin-bottom-large 	{ margin-bottom: 20px; }
@@ -86,7 +86,6 @@ textarea {
 .templateHorizontal .hide-on-templateHorizontal,
 .templateVertical .hide-on-templateVertical,
 .templateDefault .hide-on-templateDefault,
-
 .templateDefault .col-detalle,
 .templateVertical .col-detalle,
 .templateHorizontal .col-detalle { display: none; }

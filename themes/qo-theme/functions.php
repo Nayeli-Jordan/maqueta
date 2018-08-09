@@ -26,10 +26,9 @@ require_once( 'inc/pages.php' );
 add_action( 'wp_enqueue_scripts', function(){
  
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
-	// wp_enqueue_script( 'materialize_js', JSPATH.'bin/materialize.min.js', array('jquery'), '1.0', true );
-    // wp_enqueue_script( 'imagesloaded_js', JSPATH.'imagesloaded.pkgd.min.js', array(), '', true );
-	// wp_enqueue_script( 'masonry_js', JSPATH.'packery.pkgd.min.js', array(), '', true );
-	wp_enqueue_script( 'qo_functions', JSPATH.'functions.js', array('materialize_js'), '1.0', true );
+    wp_enqueue_script( 'imagesloaded_js', JSPATH.'imagesloaded.pkgd.min.js', array(), '', true );
+	wp_enqueue_script( 'isotope_js', JSPATH.'isotope.pkgd.min.js', array(), '', true );
+	wp_enqueue_script( 'qo_functions', JSPATH.'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'qo_functions', 'siteUrl', SITEURL );
 	wp_localize_script( 'qo_functions', 'theme_path', THEMEPATH );

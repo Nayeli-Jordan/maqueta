@@ -1253,13 +1253,43 @@
   opacity: 0.8;
 }
 
-/* line 24, ../sass/components/_buttons.scss */
+/* line 22, ../sass/components/_buttons.scss */
+button {
+  outline: none;
+}
+
+/* line 23, ../sass/components/_buttons.scss */
+.btn-primaryQO {
+  border: 2px solid #7b2183;
+  background-color: transparent;
+  padding: 0px 10px;
+  margin: 0 5px 2px;
+  line-height: 25px;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 15px;
+  transition: .3s ease-out;
+  cursor: pointer;
+}
+/* line 34, ../sass/components/_buttons.scss */
+.btn-primaryQO:hover {
+  background-color: #7b2183;
+  color: #fff;
+  opacity: 0.8;
+}
+/* line 39, ../sass/components/_buttons.scss */
+.btn-primaryQO:active, .btn-primaryQO.is-checked {
+  background-color: #7b2183;
+  color: #fff;
+}
+
+/* line 47, ../sass/components/_buttons.scss */
 .buttons-sistema ul {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-/* line 28, ../sass/components/_buttons.scss */
+/* line 51, ../sass/components/_buttons.scss */
 .buttons-sistema ul li {
   border: 2px solid #7b2183;
   padding: 0px 10px;
@@ -1272,81 +1302,105 @@
   cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
-  /* line 28, ../sass/components/_buttons.scss */
+  /* line 51, ../sass/components/_buttons.scss */
   .buttons-sistema ul li {
     display: block;
   }
 }
-/* line 41, ../sass/components/_buttons.scss */
+/* line 64, ../sass/components/_buttons.scss */
 .buttons-sistema ul li:hover {
   background-color: #7b2183;
 }
-/* line 43, ../sass/components/_buttons.scss */
+/* line 66, ../sass/components/_buttons.scss */
 .buttons-sistema ul li:hover a {
   color: #fff;
 }
-/* line 48, ../sass/components/_buttons.scss */
+/* line 71, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-requerimiento li {
   border-color: #b21180;
 }
-/* line 50, ../sass/components/_buttons.scss */
+/* line 73, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-requerimiento li:hover {
   background-color: #b21180;
 }
-/* line 52, ../sass/components/_buttons.scss */
+/* line 75, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-requerimiento li:hover a {
   color: #fff;
 }
-/* line 57, ../sass/components/_buttons.scss */
+/* line 80, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-estatus li {
   border-color: #2174b9;
   line-height: 20px;
   font-size: 12px;
 }
-/* line 61, ../sass/components/_buttons.scss */
+/* line 84, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-estatus li:hover {
   background-color: #2174b9;
 }
-/* line 65, ../sass/components/_buttons.scss */
+/* line 88, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-baja {
   border-color: #42c101;
 }
-/* line 67, ../sass/components/_buttons.scss */
+/* line 90, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-baja:hover {
   background-color: #42c101;
 }
-/* line 69, ../sass/components/_buttons.scss */
+/* line 92, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-media {
   border-color: #f7d52d;
 }
-/* line 71, ../sass/components/_buttons.scss */
+/* line 94, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-media:hover {
   background-color: #f7d52d;
 }
-/* line 73, ../sass/components/_buttons.scss */
+/* line 96, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-alta {
   border-color: #ff991b;
 }
-/* line 75, ../sass/components/_buttons.scss */
+/* line 98, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-alta:hover {
   background-color: #ff991b;
 }
-/* line 77, ../sass/components/_buttons.scss */
+/* line 100, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-urgente {
   border-color: #ec0505;
 }
-/* line 79, ../sass/components/_buttons.scss */
+/* line 102, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad .btn-urgente:hover {
   background-color: #ec0505;
 }
-/* line 81, ../sass/components/_buttons.scss */
+/* line 104, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad li {
   line-height: 20px;
   font-size: 12px;
 }
-/* line 84, ../sass/components/_buttons.scss */
+/* line 107, ../sass/components/_buttons.scss */
 .buttons-sistema.buttons-prioridad li:hover {
   color: #fff;
+}
+
+/* line 113, ../sass/components/_buttons.scss */
+.card-cotizacion .status {
+  background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+/* line 124, ../sass/components/_buttons.scss */
+.card-cotizacion .status .etiqueta-text {
+  color: #000;
+  z-index: 9;
+  right: 20px;
+}
+/* line 129, ../sass/components/_buttons.scss */
+.card-cotizacion .status:hover .etiqueta-text {
+  display: inline-block;
 }
 
 /* line 4, ../sass/components/_color.scss */
@@ -3888,72 +3942,73 @@ small {
   height: 420px;
   text-align: center;
 }
-/* line 113, ../sass/components/_utilities.scss */
+/* line 112, ../sass/components/_utilities.scss */
 .content-cotizacion .content-muestra img {
   max-height: 420px;
 }
-/* line 116, ../sass/components/_utilities.scss */
+/* line 115, ../sass/components/_utilities.scss */
 .content-cotizacion.contentHorizontal .content-img-Horizontal {
   position: relative;
   height: 210px;
 }
-/* line 119, ../sass/components/_utilities.scss */
+/* line 118, ../sass/components/_utilities.scss */
 .content-cotizacion.contentHorizontal .content-img-Horizontal img {
   max-height: 210px;
 }
-/* line 123, ../sass/components/_utilities.scss */
+/* line 122, ../sass/components/_utilities.scss */
 .content-cotizacion.contentVertical .opt-cotizacion {
   min-height: 100px !important;
 }
-/* line 124, ../sass/components/_utilities.scss */
+/* line 123, ../sass/components/_utilities.scss */
 .content-cotizacion.contentVertical .content-img-Vertical {
   position: relative;
   height: 395px;
 }
-/* line 127, ../sass/components/_utilities.scss */
+/* line 126, ../sass/components/_utilities.scss */
 .content-cotizacion.contentVertical .content-img-Vertical img {
   max-height: 395px;
   padding: 5px;
 }
 
-/* line 138, ../sass/components/_utilities.scss */
+/* line 134, ../sass/components/_utilities.scss */
 .card-cotizacion {
   padding: 10px;
   margin-bottom: 20px;
+  min-height: 245px;
 }
-/* line 141, ../sass/components/_utilities.scss */
+/* line 138, ../sass/components/_utilities.scss */
 .card-cotizacion .info-general {
   position: relative;
   width: calc(100% + 10px);
   top: 0px;
   margin-bottom: 10px;
 }
-/* line 147, ../sass/components/_utilities.scss */
+/* line 144, ../sass/components/_utilities.scss */
 .card-cotizacion img {
   max-width: 100px;
   max-height: 100px;
 }
 
 /* Sistema */
-/* line 156, ../sass/components/_utilities.scss */
+/* line 153, ../sass/components/_utilities.scss */
 #container-brief .col {
   border: 1px solid #eee;
   min-height: 28px;
   line-height: 26px;
   font-size: 14px;
 }
-/* line 161, ../sass/components/_utilities.scss */
+/* line 158, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style) {
   font-weight: bold;
   color: #7b2183;
   font-size: 14px;
   line-height: 26px;
 }
-/* line 166, ../sass/components/_utilities.scss */
+/* line 163, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style).color-light {
   color: #fff;
 }
-/* line 168, ../sass/components/_utilities.scss */
+/* line 165, ../sass/components/_utilities.scss */
 #container-brief .col.header-area-brief {
   background-color: #7b2183;
   color: #fff;
@@ -3962,7 +4017,7 @@ small {
   padding-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 176, ../sass/components/_utilities.scss */
+  /* line 173, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     width: 40%;
     position: absolute;
@@ -3971,24 +4026,24 @@ small {
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 176, ../sass/components/_utilities.scss */
+  /* line 173, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     margin-top: 20px;
   }
 }
-/* line 186, ../sass/components/_utilities.scss */
+/* line 183, ../sass/components/_utilities.scss */
 #container-brief .body-brief {
   margin-bottom: 30px;
 }
 
-/* line 191, ../sass/components/_utilities.scss */
+/* line 188, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento,
 .etiqueta-prioridad {
   display: inline-block;
   float: right;
 }
 
-/* line 196, ../sass/components/_utilities.scss */
+/* line 193, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento {
   width: 15px;
   height: 15px;
@@ -3996,7 +4051,7 @@ small {
   border-radius: 50%;
 }
 
-/* line 202, ../sass/components/_utilities.scss */
+/* line 199, ../sass/components/_utilities.scss */
 .etiqueta-prioridad {
   width: 30px;
   height: 10px;
@@ -4004,15 +4059,15 @@ small {
   border-radius: 3px;
 }
 
-/* line 209, ../sass/components/_utilities.scss */
+/* line 206, ../sass/components/_utilities.scss */
 .card-sistema {
   border-radius: 5px 10px 10px 5px;
 }
-/* line 211, ../sass/components/_utilities.scss */
+/* line 208, ../sass/components/_utilities.scss */
 .card-sistema .card-head {
   padding: 10px 20px;
 }
-/* line 213, ../sass/components/_utilities.scss */
+/* line 210, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status {
   width: 30px;
   height: 30px;
@@ -4025,42 +4080,42 @@ small {
   color: #fff;
   cursor: pointer;
 }
-/* line 224, ../sass/components/_utilities.scss */
+/* line 221, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before {
   content: '\f513';
 }
-/* line 227, ../sass/components/_utilities.scss */
+/* line 224, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before {
   content: '\f164';
 }
-/* line 230, ../sass/components/_utilities.scss */
+/* line 227, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before {
   content: '\e800';
 }
-/* line 233, ../sass/components/_utilities.scss */
+/* line 230, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 236, ../sass/components/_utilities.scss */
+/* line 233, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 238, ../sass/components/_utilities.scss */
+/* line 235, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status span:not(.etiqueta-text) {
   line-height: 30px;
   font-size: 14px;
 }
-/* line 242, ../sass/components/_utilities.scss */
+/* line 239, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status .etiqueta-text {
   color: #000;
   top: -28px;
   right: -30px;
 }
-/* line 247, ../sass/components/_utilities.scss */
+/* line 244, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 251, ../sass/components/_utilities.scss */
+/* line 248, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
   text-transform: uppercase;
   max-width: calc(100% - 30px);
@@ -4068,38 +4123,38 @@ small {
   font-weight: bold;
   color: #7b2183;
 }
-/* line 259, ../sass/components/_utilities.scss */
+/* line 256, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 262, ../sass/components/_utilities.scss */
+/* line 259, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   cursor: pointer;
   margin-top: 0px;
 }
-/* line 266, ../sass/components/_utilities.scss */
+/* line 263, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
 }
-/* line 271, ../sass/components/_utilities.scss */
+/* line 268, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 273, ../sass/components/_utilities.scss */
+/* line 270, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 274, ../sass/components/_utilities.scss */
+/* line 271, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
 
-/* line 282, ../sass/components/_utilities.scss */
+/* line 279, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   background-color: #fff;

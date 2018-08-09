@@ -1,12 +1,11 @@
-<div class="col s12 m6 l4">
+<div class="col s12 m6 l4 element-item ">
 	<div class="shadow relative card-sistema">
 		<div class="card-head">
 			<div class="status shadow-small bg-<?php echo $estatus; ?>"><span class="icon-lock-open"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div>
 			<h2><?php the_title(); ?></h2>												
 		</div>
 		<div class="bg-gradient-qo hr hr-3"></div>
-		<div class="card-body">
-			
+		<div class="card-body">			
 			<span class="etiqueta-prioridad bg-<?php echo $prioridad; ?> shadow-small"><span class="etiqueta-text"><?php echo $prioridad; ?></span></span>
 			<?php echo get_the_term_list( $post->ID, 'requerimiento', '<p><span class="icon-tag icon-size-small"></span><span class="font-strong">', ', </span><span>', '</span></p>' );
 			 ?>									

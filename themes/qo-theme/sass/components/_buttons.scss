@@ -19,6 +19,29 @@
 		opacity: 0.8;
 	}
 }
+button { outline: none; }
+.btn-primaryQO {
+	border: 2px solid $purple-color;
+	background-color: transparent;
+	padding: 0px 10px;
+	margin: 0 5px 2px;
+	line-height: 25px;
+	font-size: 14px;
+	display: inline-block;
+	border-radius: 15px;
+	transition: .3s ease-out; 
+	cursor: pointer;
+	&:hover {
+		background-color: $purple-color;
+		color: $light-color;
+		opacity: 0.8;
+	}
+	&:active,
+	&.is-checked {
+		background-color: $purple-color;
+		color: $light-color;
+	}
+}
 
 .buttons-sistema {
 	ul {
@@ -83,5 +106,26 @@
 			font-size: 12px;
 			&:hover { color: #fff; } 
 		}
+	}
+}
+
+.card-cotizacion {
+	.status {
+		background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
+		color: #fff;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 0px;
+		right: 10px;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 50%;
+		.etiqueta-text {
+			color: #000;
+			z-index: 9;
+			right: 20px;
+		}
+		&:hover .etiqueta-text { display: inline-block; }
 	}
 }

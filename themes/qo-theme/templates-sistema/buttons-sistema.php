@@ -1,42 +1,32 @@
-<div class="row buttons-sistema buttons-responsables">
+<div  id="filters" class="button-group row margin-bottom-large text-center">
+	<button class="btn-primaryQO is-checked" data-filter="*">Todas</button>
+	<button class="btn-primaryQO" data-filter=".VoBo">VoBo</button>			
 	<?php 
 	$terms = get_terms( 'responsable' );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-		echo '<ul>';
-			foreach ( $terms as $term ) {
-				echo '<li><a href="' . SITEURL . 'responsable/' . $term->slug . '">' . $term->name . '</a></li>';
-			}
-		echo '</ul>';
+		foreach ( $terms as $term ) {
+			//echo '<li><a href="' . SITEURL . 'responsable/' . $term->slug . '">' . $term->name . '</a></li>';
+			echo '<button class="btn-primaryQO" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+		}
 	}
-	?>
-</div>
-<div class="row buttons-sistema buttons-requerimiento">
-	<?php 
+	echo '<br>';
 	$terms = get_terms( 'requerimiento' );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-		echo '<ul>';
-			foreach ( $terms as $term ) {
-				echo '<li><a href="' . SITEURL . 'requerimiento/' . $term->slug . '">' . $term->name . '</a></li>';
-			}
-		echo '</ul>';
+		foreach ( $terms as $term ) {
+			echo '<button class="btn-primaryQO" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+		}
 	}
 	?>
+	<br>
+	<button class="btn-primaryQO" data-filter=".Abierto">Abierto</button>	
+	<button class="btn-primaryQO" data-filter=".Enterado">Enterado</button>	
+	<button class="btn-primaryQO" data-filter=".Trabajando">Trabajando</button>	
+	<button class="btn-primaryQO" data-filter=".Hecho">Hecho</button>	
+	<button class="btn-primaryQO" data-filter=".Cerrado">Cerrado</button>	
+	<button class="btn-primaryQO" data-filter=".Reabierto">Reabierto</button>
+	<br>	
+	<button class="btn-primaryQO" data-filter=".Baja">Baja</button>	
+	<button class="btn-primaryQO" data-filter=".Media">Media</button>	
+	<button class="btn-primaryQO" data-filter=".Alta">Alta</button>	
+	<button class="btn-primaryQO" data-filter=".Urgente">Urgente</button>	
 </div>
-<div class="row buttons-sistema buttons-estatus">
-	<ul>
-		<li>Abierto</li>
-		<li>Enterado</li>
-		<li>Trabajando</li>
-		<li>Hecho</li>
-		<li>Cerrado</li>
-		<li>Reabierto</li>
-	</ul>
-</div>
-<div class="row buttons-sistema buttons-prioridad">
-	<ul>
-		<li class="btn-baja">Prioridad Baja</li>
-		<li class="btn-media">Prioridad Media</li>
-		<li class="btn-alta">Prioridad Alta</li>
-		<li class="btn-urgente">Prioridad Urgente</li>
-	</ul>
-</div>	
