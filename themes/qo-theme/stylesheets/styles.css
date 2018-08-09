@@ -3259,6 +3259,25 @@ video.responsive-video {
 .content-img-muestra img:first-child:nth-last-child(4) ~ img {
   max-width: calc(25% - 10px);
 }
+/* line 100, ../sass/components/_media.scss */
+.content-muestra.content-img-muestra-vertical img:first-child:nth-last-child(2),
+.content-muestra.content-img-muestra-vertical img:first-child:nth-last-child(2) ~ img,
+.content-img-muestra.content-img-muestra-vertical img:first-child:nth-last-child(2),
+.content-img-muestra.content-img-muestra-vertical img:first-child:nth-last-child(2) ~ img {
+  max-width: 100%;
+  padding: 0px;
+}
+/* line 105, ../sass/components/_media.scss */
+.content-muestra.content-img-muestra-vertical img:nth-last-child(3),
+.content-muestra.content-img-muestra-vertical img:nth-last-child(3) ~ img,
+.content-muestra.content-img-muestra-vertical img:first-child:nth-last-child(4),
+.content-muestra.content-img-muestra-vertical img:first-child:nth-last-child(4) ~ img,
+.content-img-muestra.content-img-muestra-vertical img:nth-last-child(3),
+.content-img-muestra.content-img-muestra-vertical img:nth-last-child(3) ~ img,
+.content-img-muestra.content-img-muestra-vertical img:first-child:nth-last-child(4),
+.content-img-muestra.content-img-muestra-vertical img:first-child:nth-last-child(4) ~ img {
+  max-width: calc(50% - 10px);
+}
 
 /* line 4, ../sass/components/_position.scss */
 .absolute {

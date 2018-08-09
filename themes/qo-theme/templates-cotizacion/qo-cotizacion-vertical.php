@@ -22,6 +22,10 @@
 		$piezasB 	= $piezas2;
 		$precioA 	= $precio;
 		$precioB 	= $precio2;
+		$muestraA	= $muestra2_1;
+		$muestraB	= $muestra2_2;
+		$muestraC	= $muestra2_3;
+		$muestraD	= $muestra2_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');
 	endif;
 	if( ( $modelo3 != "" && $nota3 != "" && $piezas3 != "" && $precio3 != "") || ($modelo4 != "" && $nota4 != "" && $piezas4 != "" && $precio4 != "")) :
@@ -33,6 +37,10 @@
 		$piezasB 	= $piezas4;
 		$precioA 	= $precio3;
 		$precioB 	= $precio4;
+		$muestraA	= $muestra4_1;
+		$muestraB	= $muestra4_2;
+		$muestraC	= $muestra4_3;
+		$muestraD	= $muestra4_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');
 	endif;
 	if( ( $modelo5 != "" && $nota5 != "" && $piezas5 != "" && $precio5 != "") || ($modelo6 != "" && $nota6 != "" && $piezas6 != "" && $precio6 != "")) :
@@ -44,6 +52,10 @@
 		$piezasB 	= $piezas6;
 		$precioA 	= $precio5;
 		$precioB 	= $precio6;
+		$muestraA	= $muestra6_1;
+		$muestraB	= $muestra6_2;
+		$muestraC	= $muestra6_3;
+		$muestraD	= $muestra6_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	if( ( $modelo7 != "" && $nota7 != "" && $piezas7 != "" && $precio7 != "") || ($modelo8 != "" && $nota8 != "" && $piezas8 != "" && $precio8 != "")) :
@@ -55,6 +67,10 @@
 		$piezasB 	= $piezas8;
 		$precioA 	= $precio7;
 		$precioB 	= $precio8;
+		$muestraA	= $muestra8_1;
+		$muestraB	= $muestra8_2;
+		$muestraC	= $muestra8_3;
+		$muestraD	= $muestra8_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	if( ( $modelo9 != "" && $nota9 != "" && $piezas9 != "" && $precio9 != "") || ($modelo10 != "" && $nota10 != "" && $piezas10 != "" && $precio10 != "")) :
@@ -66,6 +82,10 @@
 		$piezasB 	= $piezas10;
 		$precioA 	= $precio9;
 		$precioB 	= $precio10;
+		$muestraA	= $muestra10_1;
+		$muestraB	= $muestra10_2;
+		$muestraC	= $muestra10_3;
+		$muestraD	= $muestra10_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	if( ( $modelo11 != "" && $nota11 != "" && $piezas11 != "" && $precio11 != "") || ($modelo12 != "" && $nota12 != "" && $piezas12 != "" && $precio12 != "")) :
@@ -77,6 +97,10 @@
 		$piezasB 	= $piezas12;
 		$precioA 	= $precio11;
 		$precioB 	= $precio12;
+		$muestraA	= $muestra12_1;
+		$muestraB	= $muestra12_2;
+		$muestraC	= $muestra12_3;
+		$muestraD	= $muestra12_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	if( ( $modelo13 != "" && $nota13 != "" && $piezas13 != "" && $precio13 != "") || ($modelo14 != "" && $nota14 != "" && $piezas14 != "" && $precio14 != "")) :
@@ -88,6 +112,10 @@
 		$piezasB 	= $piezas14;
 		$precioA 	= $precio13;
 		$precioB 	= $precio14;
+		$muestraA	= $muestra14_1;
+		$muestraB	= $muestra14_2;
+		$muestraC	= $muestra14_3;
+		$muestraD	= $muestra14_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	if( ( $modelo15 != "" && $nota15 != "" && $piezas15 != "" && $precio15 != "") || ($modelo16 != "" && $nota16 != "" && $piezas16 != "" && $precio16 != "")) :
@@ -99,13 +127,13 @@
 		$piezasB 	= $piezas16;
 		$precioA 	= $precio15;
 		$precioB 	= $precio16;
+		$muestraA	= $muestra16_1;
+		$muestraB	= $muestra16_2;
+		$muestraC	= $muestra16_3;
+		$muestraD	= $muestra16_4;
 		include (TEMPLATEPATH . '/templates-cotizacion/content-cotizacion/qo-vertical-content.php');	
 	endif;
 	?>
-
-	<?php if( $muestra != "" ) : ?>
-		<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-muestra.php'); ?>
-	<?php endif; ?>
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 

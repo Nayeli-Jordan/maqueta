@@ -96,4 +96,17 @@ video.responsive-video {
 	img:first-child:nth-last-child(4) ~ img {
 	    max-width: calc(25% - 10px);
 	}
+	&.content-img-muestra-vertical {
+		img:first-child:nth-last-child(2),
+		img:first-child:nth-last-child(2) ~ img {
+		    max-width: 100%;
+			padding: 0px;
+		}
+		img:nth-last-child(3),
+		img:nth-last-child(3) ~ img,
+		img:first-child:nth-last-child(4),
+		img:first-child:nth-last-child(4) ~ img {
+		    max-width: calc(50% - 10px);
+		}
+	}
 }

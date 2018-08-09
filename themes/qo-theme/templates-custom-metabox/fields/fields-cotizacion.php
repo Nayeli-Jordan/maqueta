@@ -42,7 +42,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle"><?php echo $detalle; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra_1" id="qo_cotizaciones_muestra_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra_1; ?>">
@@ -132,7 +132,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle3"><?php echo $detalle3; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra3_1" id="qo_cotizaciones_muestra3_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra3_1; ?>">
@@ -220,7 +220,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas5" value="<?php echo $piezas5; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio5" value="<?php echo $precio5; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle5"><?php echo $detalle5; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra5_1" id="qo_cotizaciones_muestra5_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra5_1; ?>">
@@ -310,7 +310,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas7" value="<?php echo $piezas7; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio7" value="<?php echo $precio7; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle7"><?php echo $detalle7; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra7_1" id="qo_cotizaciones_muestra7_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra7_1; ?>">
@@ -398,7 +398,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas9" value="<?php echo $piezas9; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio9" value="<?php echo $precio9; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle9"><?php echo $detalle9; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra9_1" id="qo_cotizaciones_muestra9_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra9_1; ?>">
@@ -488,7 +488,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas11" value="<?php echo $piezas11; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio11" value="<?php echo $precio11; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle11"><?php echo $detalle11; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra11_1" id="qo_cotizaciones_muestra11_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra11_1; ?>">
@@ -576,7 +576,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas13" value="<?php echo $piezas13; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio13" value="<?php echo $precio13; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle13"><?php echo $detalle13; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra13_1" id="qo_cotizaciones_muestra13_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra13_1; ?>">
@@ -666,7 +666,7 @@
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_piezas15" value="<?php echo $piezas15; ?>"></div>
         <div class="col col-1-2_4"><input type="number" name="qo_cotizaciones_precio15" value="<?php echo $precio15; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle15"><?php echo $detalle15; ?></textarea></div>
-        <div class="hide-on-templateHorizontal hide-on-templateDefault">
+        <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
                     <input type="text" name="qo_cotizaciones_muestra15_1" id="qo_cotizaciones_muestra15_1" class="meta-image regular-text" placeholder="Muestra" value="<?php echo $muestra15_1; ?>">
