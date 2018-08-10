@@ -24,92 +24,37 @@ button { outline: none; }
 	border: 2px solid $purple-color;
 	background-color: transparent;
 	padding: 0px 10px;
-	margin: 0 5px 2px;
+	margin: 0 2px 5px;
 	line-height: 25px;
 	font-size: 14px;
 	display: inline-block;
 	border-radius: 15px;
 	transition: .3s ease-out; 
 	cursor: pointer;
+	&.btn-estatus, &.btn-prioridad { line-height: 20px; }
+	&.btn-area { border-color: #b21180; }
+	&.btn-estatus { border-color: #2174b9; }
+	&.btn-prioridad { border-color: #614893; }
 	&:hover {
 		background-color: $purple-color;
 		color: $light-color;
 		opacity: 0.8;
+		&.btn-area { background-color: #b21180; }
+		&.btn-estatus { background-color: #2174b9; }
+		&.btn-prioridad { background-color: #614893; }
 	}
 	&:active,
 	&.is-checked {
 		background-color: $purple-color;
 		color: $light-color;
+		&.btn-area { background-color: #b21180; }
+		&.btn-estatus { background-color: #2174b9; }
+		&.btn-prioridad { background-color: #614893; }
 	}
 }
 
-.buttons-sistema {
-	ul {
-		text-align: center;
-		margin-top: 0px;
-		margin-bottom: 10px;
-		li {
-			border: 2px solid $purple-color;
-			padding: 0px 10px;
-			margin: 0 5px 2px;
-			line-height: 25px;
-			font-size: 14px;
-			display: inline-block;
-			border-radius: 15px;
-			transition: .3s ease-out; 
-			cursor: pointer;
-			@media #{$sm-and-down} {
-				display: block;
-			}
-			&:hover {
-				background-color: $purple-color;
-				a { color: $light-color; }				
-			}
-		}
-	}
-	&.buttons-requerimiento {
-		li {
-			border-color: #b21180;
-			&:hover { 
-				background-color: #b21180; 
-				a { color: $light-color; }
-			} 
-		}
-	}
-	&.buttons-estatus {
-		li {
-			border-color: #2174b9;
-			line-height: 20px;
-			font-size: 12px;
-			&:hover { background-color: #2174b9; } 
-		}
-	}
-	&.buttons-prioridad {		
-		.btn-baja 		{ 
-			border-color: $baja-color; 
-			&:hover { background-color: $baja-color; }
-		}
-		.btn-media 		{ 
-			border-color: $media-color; 
-			&:hover { background-color: $media-color; }
-		}
-		.btn-alta 		{ 
-			border-color: $alta-color; 
-			&:hover { background-color: $alta-color; }
-		}
-		.btn-urgente 	{ 
-			border-color: $urgente-color; 
-			&:hover { background-color: $urgente-color; }
-		}
-		li { 
-			line-height: 20px;
-			font-size: 12px;
-			&:hover { color: #fff; } 
-		}
-	}
-}
-
-.card-cotizacion {
+.card-cotizacion,
+.content-cotizacion {
 	.status {
 		background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
 		color: #fff;
@@ -127,5 +72,14 @@ button { outline: none; }
 			right: 20px;
 		}
 		&:hover .etiqueta-text { display: inline-block; }
+	}
+}
+.content-cotizacion {
+	.status {
+		width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    top: -10px;
+	    right: -10px;
 	}
 }

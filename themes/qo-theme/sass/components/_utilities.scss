@@ -135,6 +135,11 @@
 	padding: 10px;
 	margin-bottom: 20px;
 	min-height: 245px;
+	.btn-show-cotizacion {
+		position: absolute;
+		top: 0px;
+		right: 50px;
+	}
 	.info-general {
 		position: relative;
 		width: calc(100% + 10px);
@@ -216,7 +221,6 @@
 			text-align: center;
 			background-color: $purple-color;
 			color: $light-color;
-			cursor: pointer;
 			&.bg-Reabierto {
 				span:not(.etiqueta-text):before { content:'\f513'; }				
 			}
@@ -250,7 +254,8 @@
 			max-width: calc(100% - 30px); 
 			font-size: 14px;
 			font-weight: bold;
-			color: $purple-color;
+			a { color: $purple-color; }
+			
 		}
 	}
 	.card-body {
@@ -258,7 +263,6 @@
 		font-size: 14px;
 		.etiqueta-prioridad {
 			display: block;
-			cursor: pointer;
 			margin-top: 0px;
 			.etiqueta-text {
 

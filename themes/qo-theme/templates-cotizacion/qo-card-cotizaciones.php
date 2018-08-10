@@ -10,9 +10,10 @@
 				<?php if( $estatus === "Facturada" ) : ?>
 					<span class="icon-ok"></span><span class="etiqueta-text">Facturada</span>
 				<?php else : ?>
-					<span class="icon-lock-open"></span><span class="etiqueta-text">VoBo</span>	
+					<span class="icon-clock-circled"></span><span class="etiqueta-text">VoBo</span>	
 				<?php endif; ?>
 			</div>
+			<a class="btn-show-cotizacion" href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div></a>
 			<div class="title-tiket bg-gradient-qo">
 				<a href="<?php the_permalink(); ?>" class="color-light">
 					<p>Proyecto: <?php the_title(); ?></p>

@@ -58,14 +58,18 @@
 		<?php flush(); ?>
 	</head>
 	<body>
-		<?php if (is_page( array('qo-clientes', 'qo-proveedores', 'qo-cotizaciones', 'qo-sistemas')) || is_singular('sistema') || is_archive( array('responsable'))) : ?>
+		<?php if (is_page( array('qo-clientes', 'qo-proveedores', 'qo-sistemas')) || is_singular('sistema') || is_archive( array('qo_cotizaciones'))) : ?>
 			<header class="container container-large archive-header">
 				<div class="row">
 					<div class="col s12 m4">
 						<div class="bg-image bg-contain bg-qo-logo" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png)"></div>
 					</div>
 					<div class="col s12 m8 title-archive">
-						<?php the_title(); ?>
+						<?php if (is_archive( array('qo_cotizaciones') )): ?>
+							Cotizaciones
+						<?php else: ?>
+							<?php the_title(); ?>
+						<?php endif ?>						
 					</div>
 				</div>				
 			</header>

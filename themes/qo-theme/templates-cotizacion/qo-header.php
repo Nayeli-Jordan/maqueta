@@ -28,5 +28,12 @@
 			<p>Proyecto: <?php the_title(); ?></p>
 		</div>
 	</div>	
+	<div class="status shadow-small">									
+		<?php if( $estatus === "Facturada" ) : ?>
+			<span class="icon-ok"></span><span class="etiqueta-text">Facturada</span>
+		<?php else : ?>
+			<span class="icon-clock-circled"></span><span class="etiqueta-text">VoBo</span>	
+		<?php endif; ?>
+	</div>
 </header>
 <img class="responsive-img" src="<?php echo THEMEPATH; ?>images/cotizacion/shadow.png">
