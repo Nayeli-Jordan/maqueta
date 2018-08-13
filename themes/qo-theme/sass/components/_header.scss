@@ -7,15 +7,69 @@ header {
 			}
 		}		
 	}
-	&.archive-header {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		margin-bottom: 20px;
-		@media #{$sm-and-down} {
-			padding-bottom: 0px;
-		}
-	}
 	&.header-cotizacion {
 		margin-bottom: 15px;
+	}
+}
+
+.archive-header {
+	padding-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	.title-archive {
+		//padding-left: 120px;
+	    font-size: 40px;
+	    line-height: 60px;
+	    font-weight: 600;
+	    color: $purple-color;
+	    @media #{$small-and-down} {
+	      font-size: 22px;
+	      line-height: 26px;
+	    }		
+	}
+	.btn-nav {
+		position: absolute;
+		top: 20px;
+		cursor: pointer;
+	}
+	nav {
+		position: absolute;
+		top: 0px;
+		left: -260px;
+		width: 250px;
+		min-height: 100vh;
+		padding: 20px 0px;
+		text-align: left;
+		background-color: $light-color;
+		z-index: 99;
+		transition: .3s ease-out;
+		@media #{$small-and-down} {
+	      width: 100%;
+	      left: -100%;
+	    }
+	    .icon-cancel {
+			font-size: 20px;
+			position: absolute;
+			right: 20px;
+			cursor: pointer;
+	    }
+		ul {
+			margin: 30px 0px 0px;
+			li {
+				display: block;				
+				a {
+					display: block;
+					font-size: 16px;
+					line-height: 40px;
+					padding: 0 20px;
+					transition: .1s ease-out;
+					&:hover {
+						background-color: $purple-color;
+						color: $light-color;
+					}				
+				}
+			}
+		}
+		&.active { left: 0px;}
 	}
 }

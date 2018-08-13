@@ -53,16 +53,4 @@ small                         { font-size: 75%; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-
-.title-archive {
-    font-size: 40px;
-    margin-top: 10px;
-    color: $purple-color;
-    @media #{$medium-and-down} {
-      font-size: 22px;
-      margin-top: 10px;
-      text-align: center;
-    }
-}
-
 .col-prod_serv { text-transform: capitalize; }

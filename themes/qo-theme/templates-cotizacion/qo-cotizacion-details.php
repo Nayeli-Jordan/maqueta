@@ -268,6 +268,7 @@
 		include (TEMPLATEPATH . '/templates-cotizacion/muestra-cotizacion/qo-muestra.php');
 	endif;
 	?>
+	<a href="<?php echo SITEURL; ?>qo_cotizaciones" class="btn btn-fixed shadow">Ver todas</a>
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 

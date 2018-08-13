@@ -15,8 +15,8 @@
 		<meta name="googlebot" content="index, follow" />
 
 		<!-- Favicon -->
-		<!-- <link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
-		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-16x16.png" sizes="16x16" /> -->
+		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-16x16.png" sizes="16x16" />
 
 		<!-- Facebook, Twitter metas -->
 		<meta property="og:title" content="<?php bloginfo('name'); ?>" />
@@ -58,23 +58,50 @@
 		<?php flush(); ?>
 	</head>
 	<body>
-		<?php if (is_page( array('qo-clientes', 'qo-proveedores', 'qo-sistemas')) || is_singular('sistema') || is_archive( array('qo_cotizaciones'))) : ?>
+		<?php if (!is_singular('qo_cotizaciones') || is_singular('sistema') || is_page( array('qo-clientes', 'qo-proveedores'))  || is_archive(array('sistema', 'qo_cotizaciones'))) : ?>
 			<header class="container container-large archive-header">
-				<div class="row">
-					<div class="col s12 m4">
-						<div class="bg-image bg-contain bg-qo-logo" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png)"></div>
-					</div>
-					<div class="col s12 m8 title-archive">
-						<?php if (is_archive('qo_cotizaciones')): ?>Cotizaciones
-						<?php elseif (is_archive('sistema')): ?>Brief's
-						<?php else: ?>
-							<?php the_title(); ?>
-						<?php endif ?>						
-					</div>
-				</div>				
+				<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+				<div class="title-archive">
+					<?php if (is_archive('qo_cotizaciones')): ?>Cotizaciones
+					<?php elseif (is_archive('sistema')): ?>Brief's
+					<?php else: ?>
+						<?php the_title(); ?>
+					<?php endif ?>						
+				</div>
+				<div class="btn-nav"><i class="icon-link-ext"></i></div>
+				<nav class="shadow">
+					<i class="icon-cancel"></i>
+					<ul>
+					<?php
+					$menu_name = 'qo_menu';
+
+					if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
+						$menu = wp_get_nav_menu_object( $locations[ $menu_name ]);
+						$menu_items = wp_get_nav_menu_items( $menu->term_id );
+						$menu_list = '';
+						foreach ( (array) $menu_items as $key => $menu_item) {
+
+							$url 				= $menu_item->url;
+							$title 				= $menu_item->title;
+							$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
+
+							//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
+							//$id 				= $menu_item->ID;
+							//$attr_title 		= $menu_item->attr_title;
+							//$description		= $menu_item->description;
+							//$xfn 				= $menu_item->xfn;
+							//$type 			= $menu_item->type;		taxonomy, page...
+							//$type_label		= $menu_item->type_label;		página, categoría...
+
+							$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+						}
+					}
+					echo $menu_list;
+					?>										
+					</ul>			
+				</nav>
+			
 			</header>
-		<?php elseif (is_singular('qo_cotizaciones')): ?>
-			<!-- Not header -->
 		<?php else: ?>
 			<header class="js-header">			
 				<nav>
@@ -104,7 +131,7 @@
 								}
 							}
 							echo $menu_list;
-						?>	 -->					
+						?>			 -->	
 					</ul>
 				</nav>
 			</header>

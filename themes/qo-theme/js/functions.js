@@ -29,6 +29,15 @@ var $=jQuery.noConflict();
 
 		// } 
 
+		//Nav QO
+		$(".btn-nav").click(function() {
+			$('.archive-header nav').addClass('active');		
+		});
+		$(".archive-header .icon-cancel").click(function() {
+			$('.archive-header nav').removeClass('active');		
+		});
+
+
 	});
 })(jQuery);
  

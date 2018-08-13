@@ -58,7 +58,8 @@ add_theme_support( 'post-thumbnails' );
 //Habilitar menú (aparece en personalizar)
 add_action('after_setup_theme', 'add_top_menu');
 function add_top_menu(){
-	register_nav_menu('top_menu',__('Top menu'));
+    register_nav_menu('top_menu',__('Top menú'));
+	register_nav_menu('qo_menu',__('QO menú'));
 }
 
 // remove "Private: " from titles
