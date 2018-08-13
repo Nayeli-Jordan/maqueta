@@ -34,15 +34,25 @@ jQuery(document).ready(function ($) {
   });
 
   /*Cotizaciones detect template*/
-  if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-horizontal.php") {
-      $('body').addClass('templateHorizontal');
-  } else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-vertical.php") {
-      $('body').addClass('templateVertical');
-  } else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-details.php") {
-      $('body').addClass('templateDetails');
-  } else {
-      $('body').addClass('templateDefault');
+  if ($('.post-type-qo_cotizaciones').length > 0) {
+    if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-horizontal.php") {
+        $('body').addClass('templateHorizontal');
+    } else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-vertical.php") {
+        $('body').addClass('templateVertical');
+    } else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-details.php") {
+        $('body').addClass('templateDetails');
+    } else {
+        $('body').addClass('templateDefault');
+    }    
   }
+
+
+  /*Botón Calendario en sistema*/
+  if ($('.post-type-sistema').length > 0) {
+    document.getElementById('calendario-stm-adder').innerHTML = '<a id="new-calendar" href="http://localhost:8888/queonda/wp-admin/admin.php?page=my-calendar" target="_blank">Crear Calendario</a><p>Guarda tus cambios y recarga después de crear tu calendario, así podrás visualizarlo en esta sección</p>';
+    //.appendChild('<a href="">Crear Calendario</a>');
+  }
+
 });
 
 

@@ -1,4 +1,4 @@
-			<?php if (!is_singular('qo_cotizaciones')) :?>
+			<?php if (is_home()) :?>
 					<footer>
 						<!-- <small> © <span id="year"></span> | <a href="https://gatchweb.com/" target="_blank">Hecho por GatchWeb</a></small> -->
 					</footer>

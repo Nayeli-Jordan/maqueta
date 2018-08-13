@@ -58,7 +58,10 @@
 		<?php flush(); ?>
 	</head>
 	<body>
-		<?php if (!is_singular('qo_cotizaciones') || is_singular('sistema') || is_page( array('qo-clientes', 'qo-proveedores'))  || is_archive(array('sistema', 'qo_cotizaciones'))) : ?>
+		<?php 
+global $post;
+		 ?>
+		<?php if (!is_home() || !is_singular('qo_cotizaciones')) : ?>
 			<header class="container container-large archive-header">
 				<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
 				<div class="title-archive">
@@ -68,7 +71,7 @@
 						<?php the_title(); ?>
 					<?php endif ?>						
 				</div>
-				<div class="btn-nav"><i class="icon-link-ext"></i></div>
+				<div class="btn-nav"><i class="icon-menu"></i></div>
 				<nav class="shadow">
 					<i class="icon-cancel"></i>
 					<ul>
@@ -84,14 +87,6 @@
 							$url 				= $menu_item->url;
 							$title 				= $menu_item->title;
 							$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
-
-							//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-							//$id 				= $menu_item->ID;
-							//$attr_title 		= $menu_item->attr_title;
-							//$description		= $menu_item->description;
-							//$xfn 				= $menu_item->xfn;
-							//$type 			= $menu_item->type;		taxonomy, page...
-							//$type_label		= $menu_item->type_label;		página, categoría...
 
 							$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
 						}
@@ -141,3 +136,4 @@
 		<?php if (!is_singular('qo_cotizaciones')) :?>
 			<div class="[ main-body ]">
 		<?php endif; ?>
+		

@@ -423,7 +423,7 @@
 
 	</div>
 
-	<a href="<?php echo SITEURL; ?>sistema" class="btn btn-fixed shadow">Ver todas</a>
+	<a href="<?php echo SITEURL; ?>sistema" class="btn btn-fixed shadow margin-right-xsmall">Ver todas</a>
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 

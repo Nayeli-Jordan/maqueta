@@ -153,6 +153,49 @@ function custom_taxonomies_callback(){
     } 
     wp_reset_postdata();
 
+	if( ! taxonomy_exists('calendario-stm')){
+
+		$labels = array(
+			'name'              => 'Calendario',
+			'singular_name'     => 'Calendario',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Calendario',
+			'update_item'       => 'Actualizar Calendario',
+			'add_new_item'      => 'Nueva Calendario',
+			'menu_name'         => 'Calendario'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'calendario-stm' ),
+		);
+
+		register_taxonomy( 'calendario-stm', 'sistema', $args );
+	}
+
+	$args = array(
+        'post_type'         => 'mc-events',
+        'posts_per_page'    => -1,
+        'orderby'           => 'date',
+        'order'             => 'ASC'
+        );
+    $loop = new WP_Query( $args );
+    $i = 1;
+    if ( $loop->have_posts() ) {
+        while ( $loop->have_posts() ) : $loop->the_post();
+        	global $post;
+
+        	wp_insert_term( $post->post_title, 'calendario-stm' );
+
+        $i ++;  endwhile;
+    } 
+    wp_reset_postdata();    
+
 	
 
 }

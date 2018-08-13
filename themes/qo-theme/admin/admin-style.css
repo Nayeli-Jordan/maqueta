@@ -94,6 +94,20 @@ textarea {
 .templateVertical .row .col-1-2_4,
 .templateHorizontal .row .col-1-2_4 { width: 25%; }
 
+/*Calendario*/
+#new-calendar {
+	margin-top: 10px;
+    background: #0073aa;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    display: block;
+}
+#new-calendar:hover {
+	background: #036492;
+}
+
 /*SISTEMA*/
 .bg-destacade { background-color: #8c45c1!important; }
 .bg-destacade label { 

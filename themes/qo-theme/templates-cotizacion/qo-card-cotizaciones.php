@@ -8,9 +8,9 @@
 			</div>
 			<div class="status shadow-small">									
 				<?php if( $estatus === "Facturada" ) : ?>
-					<span class="icon-ok"></span><span class="etiqueta-text">Facturada</span>
+					<span class="icon-money"></span><span class="etiqueta-text">Facturada</span>
 				<?php else : ?>
-					<span class="icon-clock-circled"></span><span class="etiqueta-text">VoBo</span>	
+					<span class="icon-clock"></span><span class="etiqueta-text">VoBo</span>	
 				<?php endif; ?>
 			</div>
 			<a class="btn-show-cotizacion" href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div></a>

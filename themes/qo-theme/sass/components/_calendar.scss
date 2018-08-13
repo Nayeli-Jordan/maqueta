@@ -1,0 +1,56 @@
+#qoCalendar {
+	.mc-export,
+	.mc-print,
+	.mc-format,
+	.mc-time .day,
+	.mc-time .week,
+	.mc-time .mc-active {
+		display: none!important;
+	}
+	.my-calendar-header {
+		.my-calendar-date-switcher {
+			.button { display: inline-block; }
+		}
+		//.mc-time .mc-active,
+		input[type='submit'],
+		.my-calendar-nav .my-calendar-prev a,
+		.my-calendar-nav .my-calendar-next a	{
+			border-radius: 3px!important;
+			border: 2px solid $purple-color!important;
+			color: $purple-color!important;
+			background: $light-color!important;
+			font-weight: 600!important;
+			box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25)!important;
+			&:hover {
+				text-decoration: none!important;
+				opacity: 0.8;
+			}
+		}
+		.my-calendar-date-switcher select {
+			box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25)!important;
+		}
+	}
+	.mc-main th {
+		background: $purple-color!important;
+	}
+	.mc-main .current-day .mc-date {
+		background: #a324af !important;
+		box-shadow: none!important;
+	}
+	.my-calendar-footer {
+		.category-key {
+			h3 { display: none; }
+			ul {
+				li a {
+					background: $light-color;
+					box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);
+					margin-right: 5px;
+					&:hover {
+						background: #eee;
+						color: $dark-color;
+					}
+				}
+			}			
+		}
+	}
+}
