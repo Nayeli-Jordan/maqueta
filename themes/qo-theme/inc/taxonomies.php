@@ -110,4 +110,49 @@ function custom_taxonomies_callback(){
 		register_taxonomy( 'responsable', 'sistema', $args );
 	}
 
+	if( ! taxonomy_exists('cotizacion-stm')){
+
+		$labels = array(
+			'name'              => 'Cotización',
+			'singular_name'     => 'Cotización',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Cotización',
+			'update_item'       => 'Actualizar Cotización',
+			'add_new_item'      => 'Nueva Cotización',
+			'menu_name'         => 'Cotización'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'cotizacion-stm' ),
+		);
+
+		register_taxonomy( 'cotizacion-stm', 'sistema', $args );
+	}
+
+	$args = array(
+        'post_type'         => 'qo_cotizaciones',
+        'posts_per_page'    => -1,
+        'orderby'           => 'date',
+        'order'             => 'ASC'
+        );
+    $loop = new WP_Query( $args );
+    $i = 1;
+    if ( $loop->have_posts() ) {
+        while ( $loop->have_posts() ) : $loop->the_post();
+        	global $post;
+
+        	wp_insert_term( $post->post_title, 'cotizacion-stm' );
+
+        $i ++;  endwhile;
+    } 
+    wp_reset_postdata();
+
+	
+
 }

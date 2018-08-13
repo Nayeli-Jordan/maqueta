@@ -5,6 +5,7 @@ a {
   cursor: pointer;
   // Gets rid of tap active state
   -webkit-tap-highlight-color: transparent;
+  &.hover-purple:hover { color: $purple-color; }
 }
 
 html{

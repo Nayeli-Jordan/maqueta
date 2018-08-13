@@ -234,8 +234,8 @@ function display_sistema_atributos( $sistema ){
 
 <table class="table-sistema">
     <tr>
-        <th class="bg-destacade"><label>Estatus</label></th>
-        <th>
+        <th colspan="2" class="bg-destacade"><label>Estatus</label></th>
+        <th colspan="4">
             <select name="sistema_estatus">
                 <option value="Abierto">Abierto</option>
                 <option value="Enterado" <?php selected($estatus, 'Enterado'); ?>>Enterado</option>
@@ -704,7 +704,6 @@ function display_sistema_atributos( $sistema ){
 	</tbody>
 </table>
 <?php
-
 }
 
 add_action( 'save_post', 'sistema_save_metas', 10, 2 );

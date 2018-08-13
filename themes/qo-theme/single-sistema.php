@@ -131,7 +131,18 @@
 				<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Marca</p></div>
 				<div class="col s12 sm6 m4 l2"><?php echo $marca ?></p></div>
 				<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Proyecto</p></div>
-				<div class="col s12 sm6 m4 l2"><?php echo $proyecto; ?></div>
+				<div class="col s12 sm6 m4 l2"><?php echo $proyecto; ?></div>				
+				<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Cotización</p></div>
+				<div class="col s12 sm6 m4 l2">
+				<?php 
+					$terms = get_the_terms($post->ID, 'cotizacion-stm');
+					if (is_array($terms) || is_object($terms)){
+						foreach ($terms as $term){
+							echo "<a class='inline-block margin-right-xsmall hover-purple' href='" . SITEURL . "qo_cotizaciones/" . $term->slug . "' target='_blank'><span class='block'>" . $term->name . "</span></a>";
+						}
+					}
+				?>
+				</div>
 				<div class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light"><p class="color-light text-center">Tiempo Cotizado</p></div>
 				<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Requerimiento</p></div>
 				<div class="col s12 sm6 m4 l2">
@@ -143,7 +154,7 @@
 				?>
 				</div>
 				<div class="col s12 sm6 m4 l2 hide-on-med-and-up bg-purple-light"><p class="color-light text-center">Tiempo Cotizado</p></div>
-				<div class="col s12 sm6 m4 l2 border-purple-light"><?php echo $tiempoCotizado; ?></div>
+				<div class="col s12 sm6 m4 l2 border-purple-light"><?php echo $tiempoCotizado; ?></div>				
 			</div>
 			<div class="brief-general-info">
 				<div class="row">

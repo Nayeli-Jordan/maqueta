@@ -65,8 +65,8 @@
 						<div class="bg-image bg-contain bg-qo-logo" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png)"></div>
 					</div>
 					<div class="col s12 m8 title-archive">
-						<?php if (is_archive( array('qo_cotizaciones') )): ?>
-							Cotizaciones
+						<?php if (is_archive('qo_cotizaciones')): ?>Cotizaciones
+						<?php elseif (is_archive('sistema')): ?>Brief's
 						<?php else: ?>
 							<?php the_title(); ?>
 						<?php endif ?>						
@@ -113,7 +113,4 @@
 
 		<?php if (!is_singular('qo_cotizaciones')) :?>
 			<div class="[ main-body ]">
-		<?php endif; ?>	
-		<?php if (is_singular('qo_cotizaciones')) :?>
-			
-		<?php endif; ?>	
+		<?php endif; ?>
