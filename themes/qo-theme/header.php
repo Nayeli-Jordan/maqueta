@@ -59,7 +59,8 @@
 	</head>
 	<body>
 		<?php if (is_home() || is_front_page()) : ?>			
-			<header class="js-header">			
+			<header class="js-header">
+				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
 				<nav>
 					<ul class="mb-nav" itemscope>
 						<!-- <?php

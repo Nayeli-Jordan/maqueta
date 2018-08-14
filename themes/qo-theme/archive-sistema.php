@@ -45,6 +45,8 @@
 			    ?>				
 				</div>
 			</div>
-		</section>	
+		</section>
+	<?php else: ?>
+		<?php include (TEMPLATEPATH . '/templates-qo/template-404.php'); ?>	
 	<?php endif; ?>
 <?php get_footer(); ?>

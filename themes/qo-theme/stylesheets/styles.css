@@ -3805,41 +3805,51 @@ small {
 }
 
 /* line 46, ../sass/components/_typography.scss */
+.fz-medium {
+  font-size: 20px;
+}
+
+/* line 47, ../sass/components/_typography.scss */
+.fz-large {
+  font-size: 30px;
+}
+
+/* line 49, ../sass/components/_typography.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 47, ../sass/components/_typography.scss */
+/* line 50, ../sass/components/_typography.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 49, ../sass/components/_typography.scss */
+/* line 52, ../sass/components/_typography.scss */
 .text-underline {
   text-decoration: underline;
 }
 
-/* line 50, ../sass/components/_typography.scss */
+/* line 53, ../sass/components/_typography.scss */
 .text-underline-hover:hover {
   text-decoration: underline;
 }
 
-/* line 52, ../sass/components/_typography.scss */
+/* line 55, ../sass/components/_typography.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 53, ../sass/components/_typography.scss */
+/* line 56, ../sass/components/_typography.scss */
 .text-left {
   text-align: left;
 }
 
-/* line 54, ../sass/components/_typography.scss */
+/* line 57, ../sass/components/_typography.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 56, ../sass/components/_typography.scss */
+/* line 59, ../sass/components/_typography.scss */
 .col-prod_serv {
   text-transform: capitalize;
 }
