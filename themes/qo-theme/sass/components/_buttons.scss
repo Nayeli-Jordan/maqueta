@@ -15,18 +15,6 @@
 	width: 100%;
 	.btn { margin: 3px 5px;}
 }
-.btn-fixed {
-	background-color: $purple-color;
-	color: $light-color;
-	border-radius: 3px;
-	position: fixed;
-	bottom: 10px;
-	left:50%;
-	-webkit-transform:translate(-50%, -50%);
-	-ms-transform:translate(-50%, -50%);
-	-o-transform:translate(-50%, -50%);
-	transform:translate(-50%, -50%)
-}
 .btn-primary-rounded {
 	background-color: $purple-color;
 	color: $light-color;

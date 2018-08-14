@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Importante agregar el prefijo para cuando dice que og no se está usando -->
-<html prefix="og: http://ogp.me/ns#" class="<?php if (is_singular('qo_cotizaciones')) :?> single-cotizacion <?php endif; ?>">
+<html prefix="og: http://ogp.me/ns#" class="<?php if (is_singular('qo_cotizaciones')) :?> single-cotizacion <?php elseif (is_page('qo-clientes')) :?> page-clientes <?php elseif (is_page('qo-proveedores')) :?> page-proveedores <?php endif; ?>">
 	<head>
 		<meta charset="utf-8">
 		<title><?php bloginfo('name'); ?></title>

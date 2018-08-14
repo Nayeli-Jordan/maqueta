@@ -346,7 +346,7 @@
 				echo $term->description . "; ";
 			}
 		?>
-		?subject=BRIEF: <?php the_title(); ?> | Actualización&body=Hay cambios en el Brief "<?php the_title(); ?>". %0D%0ARevísalos en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>.' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Actualización</a>		
+		?subject=BRIEF: <?php the_title(); ?> | Actualización&body=Hay cambios en el Brief "<?php the_title(); ?>". %0D%0ARevísalos en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>.' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Actualización</a>	
 	</div>
 <?php 
 	endwhile; // end of the loop

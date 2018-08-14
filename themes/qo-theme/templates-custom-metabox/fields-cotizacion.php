@@ -1,7 +1,8 @@
 <div id="qo_cotizaciones">
     <div class="row margin-bottom-large">
         <p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p><br>
-        <p>* No olvides llenar la línea completa, de lo contrario no se mostrará ningún dato o marcará algún error.</p>
+        <p>* No olvides <strong>llenar la línea completa</strong>, de lo contrario no se mostrará ningún dato o marcará algún error.</p>
+        <p>* <strong>Selecciona tu plantilla</strong> antes de llenar la información ya que no se muestran los mismos campos en todas.</p>
         <p>* Los <strong>Detalles</strong> sólo se muestran en la plantilla <em>Estilo de Descripción</em>.</p>
         <p>* La <strong>Imagen destacada</strong> corresponde al <em>logo del cliente</em>.</p>
         <br>
