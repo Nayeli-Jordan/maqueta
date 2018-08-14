@@ -94,9 +94,3 @@
 			</header>
 			<div class="[ main-body ]">
 		<?php endif; ?>
-		
-<?php if( current_user_can('editor') ) :  ?> 
-	<p>editor</p>
-<?php elseif(current_user_can('administrator')): ?>
-	<p>administrador</p>
-<?php endif; ?>

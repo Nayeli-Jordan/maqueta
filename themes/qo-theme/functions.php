@@ -69,6 +69,38 @@ function remove_private_prefix($title) {
 }
 add_filter('the_title', 'remove_private_prefix');
 
+//Hide item admin menu for certain user profile
+function qo_remove_menu_items() {
+    if( current_user_can( 'editor' ) ):
+        remove_menu_page( 'edit.php?post_type=nosotros' );
+        remove_menu_page( 'edit.php?post_type=servicios' );
+        remove_menu_page( 'edit.php?post_type=clientes' );
+        remove_menu_page( 'edit.php?post_type=proyectos' );
+        remove_menu_page( 'edit.php?post_type=reconocimientos' );
+
+        remove_menu_page( 'edit.php?post_type=qo_clientes' );
+        //remove_menu_page( 'edit.php?post_type=your_post_type' );
+        //remove_menu_page('edit.php'); // Posts
+        //remove_menu_page('upload.php'); // Media
+        //remove_menu_page('link-manager.php'); // Links
+        //
+        remove_menu_page('edit.php?post_type=page'); // Pages
+        remove_menu_page('edit-comments.php'); // Comments
+        //remove_menu_page('plugins.php'); // Plugins
+        //remove_menu_page('themes.php'); // Appearance
+        //remove_menu_page('users.php'); // Users
+        remove_menu_page('tools.php'); // Tools
+        //remove_menu_page('options-general.php'); // Settings
+        remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=solicitante&amp;post_type=sistema' );
+        remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=requerimiento&amp;post_type=sistema' );
+        remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=responsable&amp;post_type=sistema' );
+        remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=cotizacion-stm&amp;post_type=sistema' );
+        remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=calendario-stm&amp;post_type=sistema' );
+    endif;
+}
+add_action( 'admin_menu', 'qo_remove_menu_items' );
+
+
 /**
 * Optimización
 */

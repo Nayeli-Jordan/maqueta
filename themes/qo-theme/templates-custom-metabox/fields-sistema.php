@@ -1,8 +1,8 @@
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
     <tr>
         <th colspan="2" class="bg-destacade"><label>Estatus</label></th>
         <th colspan="4">
-            <select name="sistema_estatus">
+            <select name="sistema_estatus" class="editor-estatus">
                 <option value="Abierto">Abierto</option>
                 <option value="Enterado" <?php selected($estatus, 'Enterado'); ?>>Enterado</option>
                 <option value="Trabajando" <?php selected($estatus, 'Trabajando'); ?>>Trabajando</option>
@@ -59,14 +59,14 @@
         </th>
 	</tr>	
 </table>
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO INDUSTRIAL / DATOS Y APOYO</h2></th>			
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo_di" value="<?php echo $tiempoCreativo_di; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_di" value="<?php echo $tiempoCreativo_di; ?>" placeholder="00:00:00"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -163,14 +163,14 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO VISUAL / DATOS Y APOYO</h2></th>			
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo_dv" value="<?php echo $tiempoCreativo_dv; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_dv" value="<?php echo $tiempoCreativo_dv; ?>" placeholder="00:00:00"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -256,14 +256,14 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>MARKETING / DATOS Y APOYO</h2></th>			
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo_mkt" value="<?php echo $tiempoCreativo_mkt; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_mkt" value="<?php echo $tiempoCreativo_mkt; ?>" placeholder="00:00:00"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -312,14 +312,14 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>SISTEMAS / DATOS Y APOYO</h2></th>			
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo_stm" value="<?php echo $tiempoCreativo_stm; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_stm" value="<?php echo $tiempoCreativo_stm; ?>" placeholder="00:00:00"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -372,7 +372,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema">
+<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>LLENAR EN CASO QUE EXISTAN CAMBIOS POSTERIORES A LA PRIMERA SOLICITUD</h2></th>
@@ -381,7 +381,7 @@
 	<tbody>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo1_ext" value="<?php echo $tiempoCreativo1_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo1_ext" value="<?php echo $tiempoCreativo1_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #1</label></th>
@@ -403,7 +403,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo2_ext" value="<?php echo $tiempoCreativo2_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo2_ext" value="<?php echo $tiempoCreativo2_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #2</label></th>
@@ -425,7 +425,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo3_ext" value="<?php echo $tiempoCreativo3_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo3_ext" value="<?php echo $tiempoCreativo3_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #3</label></th>
@@ -447,7 +447,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" name="sistema_tiempoCreativo4_ext" value="<?php echo $tiempoCreativo4_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo4_ext" value="<?php echo $tiempoCreativo4_ext; ?>" placeholder="00:00:00"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #4</label></th>

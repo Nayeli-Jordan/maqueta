@@ -53,6 +53,13 @@ jQuery(document).ready(function ($) {
     //.appendChild('<a href="">Crear Calendario</a>');
   }
 
+  /*Disabled options for user*/
+  if ($('.user-editor').length > 0) {
+    $('.user-editor input:not(.editor-time), .user-editor select:not(.editor-estatus), .user-editor textarea').prop( "disabled", true );
+    $('input[type=checkbox]').attr("disabled", true);
+    $('#new-calendar').css("display", "none");
+  }
+
 });
 
 
