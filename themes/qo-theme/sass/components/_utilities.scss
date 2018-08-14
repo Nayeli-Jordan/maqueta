@@ -155,6 +155,10 @@
 
 /* Sistema */
 #container-brief {
+	margin-bottom: 60px;
+	@media #{$small-and-down} {
+		margin-bottom: 100px;
+	}
 	.col {
 		border: 1px solid #eee;
 		min-height: 28px;

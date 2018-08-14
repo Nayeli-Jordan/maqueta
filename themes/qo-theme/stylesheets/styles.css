@@ -105,1127 +105,1133 @@
 }
 
 /* line 29, ../sass/components/_box-model.scss */
+.margin-left-right-xxsmall {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 31, ../sass/components/_box-model.scss */
 .margin-auto {
   margin-left: auto;
   margin: auto;
 }
 
-/* line 33, ../sass/components/_box-model.scss */
+/* line 35, ../sass/components/_box-model.scss */
 .padding-top-xsmall {
   padding-top: 10px;
 }
 
-/* line 34, ../sass/components/_box-model.scss */
+/* line 36, ../sass/components/_box-model.scss */
 .padding-top-small {
   padding-top: 15px;
 }
 
-/* line 35, ../sass/components/_box-model.scss */
+/* line 37, ../sass/components/_box-model.scss */
 .padding-top {
   padding-top: 20px;
 }
 
-/* line 36, ../sass/components/_box-model.scss */
+/* line 38, ../sass/components/_box-model.scss */
 .padding-top-large {
   padding-top: 25px;
 }
 
-/* line 37, ../sass/components/_box-model.scss */
+/* line 39, ../sass/components/_box-model.scss */
 .padding-top-xlarge {
   padding-top: 30px;
 }
 
-/* line 39, ../sass/components/_box-model.scss */
+/* line 41, ../sass/components/_box-model.scss */
 .padding-bottom-xsmall {
   padding-bottom: 10px;
 }
 
-/* line 40, ../sass/components/_box-model.scss */
+/* line 42, ../sass/components/_box-model.scss */
 .padding-bottom-small {
   padding-bottom: 15px;
 }
 
-/* line 41, ../sass/components/_box-model.scss */
+/* line 43, ../sass/components/_box-model.scss */
 .padding-bottom {
   padding-bottom: 20px;
 }
 
-/* line 42, ../sass/components/_box-model.scss */
+/* line 44, ../sass/components/_box-model.scss */
 .padding-bottom-large {
   padding-bottom: 25px;
 }
 
-/* line 43, ../sass/components/_box-model.scss */
+/* line 45, ../sass/components/_box-model.scss */
 .padding-bottom-xlarge {
   padding-bottom: 30px;
 }
 
-/* line 45, ../sass/components/_box-model.scss */
+/* line 47, ../sass/components/_box-model.scss */
 .padding-right-xsmall {
   padding-right: 10px;
 }
 
-/* line 46, ../sass/components/_box-model.scss */
+/* line 48, ../sass/components/_box-model.scss */
 .padding-right-small {
   padding-right: 15px;
 }
 
-/* line 47, ../sass/components/_box-model.scss */
+/* line 49, ../sass/components/_box-model.scss */
 .padding-right {
   padding-right: 20px;
 }
 
-/* line 48, ../sass/components/_box-model.scss */
+/* line 50, ../sass/components/_box-model.scss */
 .padding-right-large {
   padding-right: 25px;
 }
 
-/* line 49, ../sass/components/_box-model.scss */
+/* line 51, ../sass/components/_box-model.scss */
 .padding-right-xlarge {
   padding-right: 30px;
 }
 
-/* line 51, ../sass/components/_box-model.scss */
+/* line 53, ../sass/components/_box-model.scss */
 .padding-left-xsmall {
   padding-left: 10px;
 }
 
-/* line 52, ../sass/components/_box-model.scss */
+/* line 54, ../sass/components/_box-model.scss */
 .padding-left-small {
   padding-left: 15px;
 }
 
-/* line 53, ../sass/components/_box-model.scss */
+/* line 55, ../sass/components/_box-model.scss */
 .padding-left {
   padding-left: 20px;
 }
 
-/* line 54, ../sass/components/_box-model.scss */
+/* line 56, ../sass/components/_box-model.scss */
 .padding-left-large {
   padding-left: 25px;
 }
 
-/* line 55, ../sass/components/_box-model.scss */
+/* line 57, ../sass/components/_box-model.scss */
 .padding-left-xlarge {
   padding-left: 30px;
 }
 
-/* line 57, ../sass/components/_box-model.scss */
+/* line 59, ../sass/components/_box-model.scss */
 .no-padding-top {
   padding-top: 0px;
 }
 
-/* line 58, ../sass/components/_box-model.scss */
+/* line 60, ../sass/components/_box-model.scss */
 .no-padding-bottom {
   padding-bottom: 0px;
 }
 
-/* line 59, ../sass/components/_box-model.scss */
+/* line 61, ../sass/components/_box-model.scss */
 .no-padding-right {
   padding-right: 0px;
 }
 
-/* line 60, ../sass/components/_box-model.scss */
+/* line 62, ../sass/components/_box-model.scss */
 .no-padding-left {
   padding-left: 0px;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-1p {
   width: 1%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-2p {
   width: 2%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-3p {
   width: 3%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-4p {
   width: 4%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-5p {
   width: 5%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-6p {
   width: 6%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-7p {
   width: 7%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-8p {
   width: 8%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-9p {
   width: 9%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-10p {
   width: 10%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-11p {
   width: 11%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-12p {
   width: 12%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-13p {
   width: 13%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-14p {
   width: 14%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-15p {
   width: 15%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-16p {
   width: 16%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-17p {
   width: 17%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-18p {
   width: 18%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-19p {
   width: 19%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-20p {
   width: 20%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-21p {
   width: 21%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-22p {
   width: 22%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-23p {
   width: 23%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-24p {
   width: 24%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-25p {
   width: 25%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-26p {
   width: 26%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-27p {
   width: 27%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-28p {
   width: 28%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-29p {
   width: 29%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-30p {
   width: 30%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-31p {
   width: 31%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-32p {
   width: 32%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-33p {
   width: 33%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-34p {
   width: 34%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-35p {
   width: 35%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-36p {
   width: 36%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-37p {
   width: 37%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-38p {
   width: 38%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-39p {
   width: 39%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-40p {
   width: 40%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-41p {
   width: 41%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-42p {
   width: 42%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-43p {
   width: 43%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-44p {
   width: 44%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-45p {
   width: 45%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-46p {
   width: 46%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-47p {
   width: 47%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-48p {
   width: 48%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-49p {
   width: 49%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-50p {
   width: 50%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-51p {
   width: 51%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-52p {
   width: 52%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-53p {
   width: 53%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-54p {
   width: 54%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-55p {
   width: 55%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-56p {
   width: 56%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-57p {
   width: 57%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-58p {
   width: 58%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-59p {
   width: 59%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-60p {
   width: 60%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-61p {
   width: 61%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-62p {
   width: 62%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-63p {
   width: 63%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-64p {
   width: 64%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-65p {
   width: 65%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-66p {
   width: 66%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-67p {
   width: 67%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-68p {
   width: 68%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-69p {
   width: 69%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-70p {
   width: 70%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-71p {
   width: 71%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-72p {
   width: 72%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-73p {
   width: 73%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-74p {
   width: 74%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-75p {
   width: 75%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-76p {
   width: 76%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-77p {
   width: 77%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-78p {
   width: 78%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-79p {
   width: 79%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-80p {
   width: 80%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-81p {
   width: 81%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-82p {
   width: 82%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-83p {
   width: 83%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-84p {
   width: 84%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-85p {
   width: 85%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-86p {
   width: 86%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-87p {
   width: 87%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-88p {
   width: 88%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-89p {
   width: 89%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-90p {
   width: 90%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-91p {
   width: 91%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-92p {
   width: 92%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-93p {
   width: 93%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-94p {
   width: 94%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-95p {
   width: 95%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-96p {
   width: 96%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-97p {
   width: 97%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-98p {
   width: 98%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-99p {
   width: 99%;
 }
 
-/* line 70, ../sass/components/_box-model.scss */
+/* line 72, ../sass/components/_box-model.scss */
 .width-100p {
   width: 100%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-1p {
   height: 1%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-2p {
   height: 2%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-3p {
   height: 3%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-4p {
   height: 4%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-5p {
   height: 5%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-6p {
   height: 6%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-7p {
   height: 7%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-8p {
   height: 8%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-9p {
   height: 9%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-10p {
   height: 10%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-11p {
   height: 11%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-12p {
   height: 12%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-13p {
   height: 13%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-14p {
   height: 14%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-15p {
   height: 15%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-16p {
   height: 16%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-17p {
   height: 17%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-18p {
   height: 18%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-19p {
   height: 19%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-20p {
   height: 20%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-21p {
   height: 21%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-22p {
   height: 22%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-23p {
   height: 23%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-24p {
   height: 24%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-25p {
   height: 25%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-26p {
   height: 26%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-27p {
   height: 27%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-28p {
   height: 28%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-29p {
   height: 29%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-30p {
   height: 30%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-31p {
   height: 31%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-32p {
   height: 32%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-33p {
   height: 33%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-34p {
   height: 34%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-35p {
   height: 35%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-36p {
   height: 36%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-37p {
   height: 37%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-38p {
   height: 38%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-39p {
   height: 39%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-40p {
   height: 40%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-41p {
   height: 41%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-42p {
   height: 42%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-43p {
   height: 43%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-44p {
   height: 44%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-45p {
   height: 45%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-46p {
   height: 46%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-47p {
   height: 47%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-48p {
   height: 48%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-49p {
   height: 49%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-50p {
   height: 50%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-51p {
   height: 51%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-52p {
   height: 52%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-53p {
   height: 53%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-54p {
   height: 54%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-55p {
   height: 55%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-56p {
   height: 56%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-57p {
   height: 57%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-58p {
   height: 58%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-59p {
   height: 59%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-60p {
   height: 60%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-61p {
   height: 61%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-62p {
   height: 62%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-63p {
   height: 63%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-64p {
   height: 64%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-65p {
   height: 65%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-66p {
   height: 66%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-67p {
   height: 67%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-68p {
   height: 68%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-69p {
   height: 69%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-70p {
   height: 70%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-71p {
   height: 71%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-72p {
   height: 72%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-73p {
   height: 73%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-74p {
   height: 74%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-75p {
   height: 75%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-76p {
   height: 76%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-77p {
   height: 77%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-78p {
   height: 78%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-79p {
   height: 79%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-80p {
   height: 80%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-81p {
   height: 81%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-82p {
   height: 82%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-83p {
   height: 83%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-84p {
   height: 84%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-85p {
   height: 85%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-86p {
   height: 86%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-87p {
   height: 87%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-88p {
   height: 88%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-89p {
   height: 89%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-90p {
   height: 90%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-91p {
   height: 91%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-92p {
   height: 92%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-93p {
   height: 93%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-94p {
   height: 94%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-95p {
   height: 95%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-96p {
   height: 96%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-97p {
   height: 97%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-98p {
   height: 98%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-99p {
   height: 99%;
 }
 
-/* line 78, ../sass/components/_box-model.scss */
+/* line 80, ../sass/components/_box-model.scss */
 .height-100p {
   height: 100%;
 }
@@ -1236,9 +1242,22 @@
   line-height: 30px;
   padding: 0 20px;
   transition: .3s ease-out;
+  font-weight: 300;
 }
 
-/* line 10, ../sass/components/_buttons.scss */
+/* line 11, ../sass/components/_buttons.scss */
+.content-fixed-buttons {
+  position: fixed;
+  bottom: 5px;
+  text-align: center;
+  width: 100%;
+}
+/* line 16, ../sass/components/_buttons.scss */
+.content-fixed-buttons .btn {
+  margin: 3px 5px;
+}
+
+/* line 18, ../sass/components/_buttons.scss */
 .btn-fixed {
   background-color: #7b2183;
   color: #fff;
@@ -1252,7 +1271,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* line 22, ../sass/components/_buttons.scss */
+/* line 30, ../sass/components/_buttons.scss */
 .btn-primary-rounded {
   background-color: #7b2183;
   color: #fff;
@@ -1262,17 +1281,17 @@
   line-height: 30px;
   border-radius: 50%;
 }
-/* line 30, ../sass/components/_buttons.scss */
+/* line 38, ../sass/components/_buttons.scss */
 .btn-primary-rounded:hover {
   opacity: 0.8;
 }
 
-/* line 34, ../sass/components/_buttons.scss */
+/* line 42, ../sass/components/_buttons.scss */
 button {
   outline: none;
 }
 
-/* line 35, ../sass/components/_buttons.scss */
+/* line 43, ../sass/components/_buttons.scss */
 .btn-primaryQO {
   border: 2px solid #7b2183;
   background-color: transparent;
@@ -1285,59 +1304,68 @@ button {
   transition: .3s ease-out;
   cursor: pointer;
 }
-/* line 46, ../sass/components/_buttons.scss */
+/* line 54, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus, .btn-primaryQO.btn-prioridad {
   line-height: 20px;
 }
-/* line 47, ../sass/components/_buttons.scss */
+/* line 55, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-area {
   border-color: #b21180;
 }
-/* line 48, ../sass/components/_buttons.scss */
+/* line 56, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus {
   border-color: #2174b9;
 }
-/* line 49, ../sass/components/_buttons.scss */
+/* line 57, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-prioridad {
   border-color: #614893;
 }
-/* line 50, ../sass/components/_buttons.scss */
+/* line 58, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover {
   background-color: #7b2183;
   color: #fff;
   opacity: 0.8;
 }
-/* line 54, ../sass/components/_buttons.scss */
+/* line 62, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-area {
   background-color: #b21180;
 }
-/* line 55, ../sass/components/_buttons.scss */
+/* line 63, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-estatus {
   background-color: #2174b9;
 }
-/* line 56, ../sass/components/_buttons.scss */
+/* line 64, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-prioridad {
   background-color: #614893;
 }
-/* line 58, ../sass/components/_buttons.scss */
+/* line 66, ../sass/components/_buttons.scss */
 .btn-primaryQO:active, .btn-primaryQO.is-checked {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 62, ../sass/components/_buttons.scss */
+/* line 70, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-area, .btn-primaryQO.is-checked.btn-area {
   background-color: #b21180;
 }
-/* line 63, ../sass/components/_buttons.scss */
+/* line 71, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-estatus, .btn-primaryQO.is-checked.btn-estatus {
   background-color: #2174b9;
 }
-/* line 64, ../sass/components/_buttons.scss */
+/* line 72, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-prioridad, .btn-primaryQO.is-checked.btn-prioridad {
   background-color: #614893;
 }
 
-/* line 70, ../sass/components/_buttons.scss */
+/* line 75, ../sass/components/_buttons.scss */
+.btn-purple {
+  background-color: #7b2183;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 35px;
+  display: inline-block;
+}
+
+/* line 85, ../sass/components/_buttons.scss */
 .card-cotizacion .status,
 .content-cotizacion .status {
   background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
@@ -1351,20 +1379,20 @@ button {
   line-height: 30px;
   border-radius: 50%;
 }
-/* line 81, ../sass/components/_buttons.scss */
+/* line 96, ../sass/components/_buttons.scss */
 .card-cotizacion .status .etiqueta-text,
 .content-cotizacion .status .etiqueta-text {
   color: #000;
   z-index: 9;
   right: 20px;
 }
-/* line 86, ../sass/components/_buttons.scss */
+/* line 101, ../sass/components/_buttons.scss */
 .card-cotizacion .status:hover .etiqueta-text,
 .content-cotizacion .status:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 90, ../sass/components/_buttons.scss */
+/* line 105, ../sass/components/_buttons.scss */
 .content-cotizacion .status {
   width: 40px;
   height: 40px;
@@ -3241,87 +3269,6 @@ ul li {
   font-size: 12px;
 }
 
-/* line 79, ../sass/components/_icons.scss */
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0%;
-  font-family: "helvetica","verdana","calibri", "san serif";
-  padding: 0%;
-  border: 0%;
-  font-weight: bold;
-}
-
-/* line 88, ../sass/components/_icons.scss */
-.date:hover {
-  background-color: #ededed;
-  cursor: pointer;
-}
-
-/* line 92, ../sass/components/_icons.scss */
-.col2 {
-  height: 1950px;
-  background-image: url(../images/live137244_goldensparks.jpg);
-  background-repeat: no-repeat;
-  padding-top: 30px;
-}
-
-/* line 99, ../sass/components/_icons.scss */
-.container_comp {
-  width: 880px;
-  height: 700px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #f7f7f7;
-  border-radius: 20px;
-  border: 1px solid #999999;
-  margin-bottom: 25px;
-}
-
-/* line 111, ../sass/components/_icons.scss */
-div.wrapper {
-  display: block;
-  width: 100%;
-  margin: 0;
-  text-align: left;
-  background-color: #f3e6c3;
-}
-
-/* line 118, ../sass/components/_icons.scss */
-.day {
-  width: 109px;
-  height: 25px;
-  color: #330000;
-  float: left;
-  padding: 5px;
-  text-align: center;
-  font: bold 16px arial;
-  border-bottom: 1px solid #999999;
-  border-right: 1px solid #999999;
-  background-color: #cccccc;
-}
-
-/* line 131, ../sass/components/_icons.scss */
-.container_calendar {
-  width: 840px;
-  height: 541px;
-  margin: 0 auto;
-  background-color: #f7f7f7;
-  border-radius: 20px;
-  border: 2px solid #999999;
-  margin-bottom: 25px;
-}
-
-/* line 142, ../sass/components/_icons.scss */
-.date {
-  width: 119px;
-  height: 100px;
-  float: left;
-  border-bottom: 1px solid #999999;
-  border-right: 1px solid #999999;
-  background-color: #ffffff;
-}
-
 /* line 4, ../sass/components/_media.scss */
 img.responsive-img,
 video.responsive-video {
@@ -4112,25 +4059,35 @@ small {
 }
 
 /* Sistema */
-/* line 158, ../sass/components/_utilities.scss */
+/* line 157, ../sass/components/_utilities.scss */
+#container-brief {
+  margin-bottom: 60px;
+}
+@media only screen and (max-width: 430px) {
+  /* line 157, ../sass/components/_utilities.scss */
+  #container-brief {
+    margin-bottom: 100px;
+  }
+}
+/* line 162, ../sass/components/_utilities.scss */
 #container-brief .col {
   border: 1px solid #eee;
   min-height: 28px;
   line-height: 26px;
   font-size: 14px;
 }
-/* line 163, ../sass/components/_utilities.scss */
+/* line 167, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style) {
   font-weight: bold;
   color: #7b2183;
   font-size: 14px;
   line-height: 26px;
 }
-/* line 168, ../sass/components/_utilities.scss */
+/* line 172, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style).color-light {
   color: #fff;
 }
-/* line 170, ../sass/components/_utilities.scss */
+/* line 174, ../sass/components/_utilities.scss */
 #container-brief .col.header-area-brief {
   background-color: #7b2183;
   color: #fff;
@@ -4139,7 +4096,7 @@ small {
   padding-bottom: 10px;
 }
 @media only screen and (min-width: 993px) {
-  /* line 178, ../sass/components/_utilities.scss */
+  /* line 182, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     width: 40%;
     position: absolute;
@@ -4148,24 +4105,24 @@ small {
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 178, ../sass/components/_utilities.scss */
+  /* line 182, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     margin-top: 20px;
   }
 }
-/* line 188, ../sass/components/_utilities.scss */
+/* line 192, ../sass/components/_utilities.scss */
 #container-brief .body-brief {
   margin-bottom: 30px;
 }
 
-/* line 193, ../sass/components/_utilities.scss */
+/* line 197, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento,
 .etiqueta-prioridad {
   display: inline-block;
   float: right;
 }
 
-/* line 198, ../sass/components/_utilities.scss */
+/* line 202, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento {
   width: 15px;
   height: 15px;
@@ -4173,7 +4130,7 @@ small {
   border-radius: 50%;
 }
 
-/* line 204, ../sass/components/_utilities.scss */
+/* line 208, ../sass/components/_utilities.scss */
 .etiqueta-prioridad {
   width: 30px;
   height: 10px;
@@ -4181,15 +4138,15 @@ small {
   border-radius: 3px;
 }
 
-/* line 211, ../sass/components/_utilities.scss */
+/* line 215, ../sass/components/_utilities.scss */
 .card-sistema {
   border-radius: 5px 10px 10px 5px;
 }
-/* line 213, ../sass/components/_utilities.scss */
+/* line 217, ../sass/components/_utilities.scss */
 .card-sistema .card-head {
   padding: 10px 20px;
 }
-/* line 215, ../sass/components/_utilities.scss */
+/* line 219, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status {
   width: 30px;
   height: 30px;
@@ -4201,83 +4158,83 @@ small {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 225, ../sass/components/_utilities.scss */
+/* line 229, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before {
   content: '\f513';
 }
-/* line 228, ../sass/components/_utilities.scss */
+/* line 232, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before {
   content: '\f164';
 }
-/* line 231, ../sass/components/_utilities.scss */
+/* line 235, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before {
   content: '\e800';
 }
-/* line 234, ../sass/components/_utilities.scss */
+/* line 238, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 237, ../sass/components/_utilities.scss */
+/* line 241, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
   content: '';
 }
-/* line 239, ../sass/components/_utilities.scss */
+/* line 243, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status span:not(.etiqueta-text) {
   line-height: 30px;
   font-size: 14px;
 }
-/* line 243, ../sass/components/_utilities.scss */
+/* line 247, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status .etiqueta-text {
   color: #000;
   top: -28px;
   right: -30px;
 }
-/* line 248, ../sass/components/_utilities.scss */
+/* line 252, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 252, ../sass/components/_utilities.scss */
+/* line 256, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
   text-transform: uppercase;
   max-width: calc(100% - 30px);
   font-size: 14px;
   font-weight: bold;
 }
-/* line 257, ../sass/components/_utilities.scss */
+/* line 261, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 a {
   color: #7b2183;
 }
-/* line 261, ../sass/components/_utilities.scss */
+/* line 265, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 264, ../sass/components/_utilities.scss */
+/* line 268, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   margin-top: 0px;
 }
-/* line 267, ../sass/components/_utilities.scss */
+/* line 271, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
 }
-/* line 272, ../sass/components/_utilities.scss */
+/* line 276, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 274, ../sass/components/_utilities.scss */
+/* line 278, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 275, ../sass/components/_utilities.scss */
+/* line 279, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
 
-/* line 283, ../sass/components/_utilities.scss */
+/* line 287, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   background-color: #fff;

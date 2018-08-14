@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+	<header class="container container-large archive-header">
+		<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+		<div class="title-archive"><?php the_title(); ?></div>
+		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
+	</header>
 	<section class="[ container container-large ]">
 		<div  id="filters" class="button-group row margin-bottom-large text-center">
 			<button class="btn-primaryQO is-checked" data-filter="*">Todas</button>

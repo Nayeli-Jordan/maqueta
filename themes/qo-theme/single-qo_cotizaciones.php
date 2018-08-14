@@ -4,7 +4,12 @@
 	
 	while ( have_posts() ) : the_post();
 ?>
-<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-custom-fields.php'); ?>
+	<header class="container container-large archive-header">
+		<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+		<div class="title-archive"><?php the_title(); ?></div>
+		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
+	</header>
+	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-custom-fields.php'); ?>
 
 	<!-- 4 Item * Page ==> 4 Page -->
 	

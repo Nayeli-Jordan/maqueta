@@ -2,119 +2,16 @@
 	get_header(); 
 	global $post;
 	
-	while ( have_posts() ) : the_post();
-
-	$custom_fields 			= get_post_custom();
-	$post_id 				= get_the_ID();
-
-    $estatus            	= get_post_meta( $post_id, 'sistema_estatus', true );     
-
-    $cliente            	= get_post_meta( $post_id, 'sistema_cliente', true );     
-    $marca            		= get_post_meta( $post_id, 'sistema_marca', true );     
-    $proyecto           	= get_post_meta( $post_id, 'sistema_proyecto', true );     
-    $tiempoCotizado    		= get_post_meta( $post_id, 'sistema_tiempoCotizado', true );    
- 
-    $fechaRequerida    		= get_post_meta( $post_id, 'sistema_fechaRequerida', true );    
-    $fechaEntrega    		= get_post_meta( $post_id, 'sistema_fechaEntrega', true ); 
-    $prioridad    		= get_post_meta( $post_id, 'sistema_prioridad', true ); 
-
-    $tiempoCreativo_di  	= get_post_meta( $post_id, 'sistema_tiempoCreativo_di', true );    
-    $medioEntrada_di   		= get_post_meta( $post_id, 'sistema_medioEntrada_di', true );    
-    $requerimiento_di 		= get_post_meta( $post_id, 'sistema_requerimiento_di', true );    
-    $noPiezas_di    		= get_post_meta( $post_id, 'sistema_noPiezas_di', true );    
-    $descripcion_di    		= get_post_meta( $post_id, 'sistema_descripcion_di', true );    
-    $cantidad_di    		= get_post_meta( $post_id, 'sistema_cantidad_di', true ); 
-    $detalles_di    		= get_post_meta( $post_id, 'sistema_detalles_di', true );        
-    $product1_di    		= get_post_meta( $post_id, 'sistema_product1_di', true );    
-    $peso1_di    			= get_post_meta( $post_id, 'sistema_peso1_di', true );    
-    $cantCarga1_di    		= get_post_meta( $post_id, 'sistema_cantCarga1_di', true );    
-    $largo1_di    			= get_post_meta( $post_id, 'sistema_largo1_di', true );    
-    $ancho1_di    			= get_post_meta( $post_id, 'sistema_peso1_di', true );    
-    $alto1_di    			= get_post_meta( $post_id, 'sistema_alto1_di', true ); 
-    $product2_di    		= get_post_meta( $post_id, 'sistema_product2_di', true );    
-    $peso2_di    			= get_post_meta( $post_id, 'sistema_peso2_di', true );    
-    $cantCarga2_di    		= get_post_meta( $post_id, 'sistema_cantCarga2_di', true );    
-    $largo2_di    			= get_post_meta( $post_id, 'sistema_largo2_di', true );    
-    $ancho2_di    			= get_post_meta( $post_id, 'sistema_peso2_di', true );    
-    $alto2_di    			= get_post_meta( $post_id, 'sistema_alto2_di', true ); 
-    $product3_di    		= get_post_meta( $post_id, 'sistema_product3_di', true );    
-    $peso3_di    			= get_post_meta( $post_id, 'sistema_peso3_di', true );    
-    $cantCarga3_di    		= get_post_meta( $post_id, 'sistema_cantCarga3_di', true );    
-    $largo3_di    			= get_post_meta( $post_id, 'sistema_largo3_di', true );    
-    $ancho3_di    			= get_post_meta( $post_id, 'sistema_peso3_di', true );    
-    $alto3_di    			= get_post_meta( $post_id, 'sistema_alto3_di', true ); 
-
-    $tiempoCreativo_dv  	= get_post_meta( $post_id, 'sistema_tiempoCreativo_dv', true );    
-    $medioEntrada_dv   		= get_post_meta( $post_id, 'sistema_medioEntrada_dv', true );    
-    $requerimiento_dv 		= get_post_meta( $post_id, 'sistema_requerimiento_dv', true );    
-    $noPiezas_dv    		= get_post_meta( $post_id, 'sistema_noPiezas_dv', true );    
-    $descripcion_dv    		= get_post_meta( $post_id, 'sistema_descripcion_dv', true );    
-    $cantidad_dv    		= get_post_meta( $post_id, 'sistema_cantidad_dv', true ); 
-    $detalles_dv    		= get_post_meta( $post_id, 'sistema_detalles_dv', true );        
-    $material1_dv    		= get_post_meta( $post_id, 'sistema_material1_dv', true );   
-    $largo1_dv    			= get_post_meta( $post_id, 'sistema_largo1_dv', true );    
-    $ancho1_dv    			= get_post_meta( $post_id, 'sistema_peso1_dv', true );    
-    $alto1_dv    			= get_post_meta( $post_id, 'sistema_alto1_dv', true ); 
-    $material2_dv    		= get_post_meta( $post_id, 'sistema_material2_dv', true );   
-    $largo2_dv    			= get_post_meta( $post_id, 'sistema_largo2_dv', true );    
-    $ancho2_dv    			= get_post_meta( $post_id, 'sistema_peso2_dv', true );    
-    $alto2_dv    			= get_post_meta( $post_id, 'sistema_alto2_dv', true ); 
-    $material3_dv    		= get_post_meta( $post_id, 'sistema_material3_dv', true );   
-    $largo3_dv    			= get_post_meta( $post_id, 'sistema_largo3_dv', true );    
-    $ancho3_dv    			= get_post_meta( $post_id, 'sistema_peso3_dv', true );    
-    $alto3_dv    			= get_post_meta( $post_id, 'sistema_alto3_dv', true ); 
-
-    $tiempoCreativo_mkt   	= get_post_meta( $post_id, 'sistema_tiempoCreativo_mkt', true );    
-    $medioEntrada_mkt   	= get_post_meta( $post_id, 'sistema_medioEntrada_mkt', true );    
-    $requerimiento_mkt 		= get_post_meta( $post_id, 'sistema_requerimiento_mkt', true );    
-    $personasExternas_mkt   = get_post_meta( $post_id, 'sistema_personasExternas_mkt', true ); 
-    $caracteristicas_mkt    = get_post_meta( $post_id, 'sistema_caracteristicas_mkt', true );  
-    $noPersonas_mkt    		= get_post_meta( $post_id, 'sistema_noPersonas_mkt', true ); 
-    $detalles_mkt    		= get_post_meta( $post_id, 'sistema_detalles_mkt', true ); 
-
-    $tiempoCreativo_stm   	= get_post_meta( $post_id, 'sistema_tiempoCreativo_stm', true );    
-    $medioEntrada_stm   	= get_post_meta( $post_id, 'sistema_medioEntrada_stm', true );    
-    $requerimiento_stm 		= get_post_meta( $post_id, 'sistema_requerimiento_stm', true );    
-    $dominioHospedaje_stm   = get_post_meta( $post_id, 'sistema_dominioHospedaje_stm', true ); 
-    $dominio_stm    		= get_post_meta( $post_id, 'sistema_dominio_stm', true );  
-    $ftp_stm    			= get_post_meta( $post_id, 'sistema_ftp_stm', true ); 
-    $detalles_stm    		= get_post_meta( $post_id, 'sistema_detalles_stm', true ); 
-
-    $tiempoCreativo1_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo1_ext', true );  
-    $solicitud1_ext   		= get_post_meta( $post_id, 'sistema_solicitud1_ext', true );  
-    $solic_fecha1_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha1_ext', true );  
-    $solic_hora1_ext   		= get_post_meta( $post_id, 'sistema_solic_hora1_ext', true );  
-    $req_fecha1_ext   		= get_post_meta( $post_id, 'sistema_req_fecha1_ext', true );  
-    $req_hora1_ext   		= get_post_meta( $post_id, 'sistema_req_hora1_ext', true ); 
-    $ent_fecha1_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha1_ext', true );  
-    $ent_hora1_ext   		= get_post_meta( $post_id, 'sistema_ent_hora1_ext', true );
-    $tiempoCreativo2_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo2_ext', true );
-    $solicitud2_ext   		= get_post_meta( $post_id, 'sistema_solicitud2_ext', true );  
-    $solic_fecha2_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha2_ext', true );  
-    $solic_hora2_ext   		= get_post_meta( $post_id, 'sistema_solic_hora2_ext', true );  
-    $req_fecha2_ext   		= get_post_meta( $post_id, 'sistema_req_fecha2_ext', true );  
-    $req_hora2_ext   		= get_post_meta( $post_id, 'sistema_req_hora2_ext', true ); 
-    $ent_fecha2_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha2_ext', true );  
-    $ent_hora2_ext   		= get_post_meta( $post_id, 'sistema_ent_hora2_ext', true );  
-    $tiempoCreativo3_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo3_ext', true );
-    $solicitud3_ext   		= get_post_meta( $post_id, 'sistema_solicitud3_ext', true );  
-    $solic_fecha3_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha3_ext', true );  
-    $solic_hora3_ext   		= get_post_meta( $post_id, 'sistema_solic_hora3_ext', true );  
-    $req_fecha3_ext   		= get_post_meta( $post_id, 'sistema_req_fecha3_ext', true );  
-    $req_hora3_ext   		= get_post_meta( $post_id, 'sistema_req_hora3_ext', true ); 
-    $ent_fecha3_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha3_ext', true );  
-    $ent_hora3_ext   		= get_post_meta( $post_id, 'sistema_ent_hora3_ext', true );
-    $tiempoCreativo4_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo4_ext', true );
-    $solicitud4_ext   		= get_post_meta( $post_id, 'sistema_solicitud4_ext', true );  
-    $solic_fecha4_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha4_ext', true );  
-    $solic_hora4_ext   		= get_post_meta( $post_id, 'sistema_solic_hora4_ext', true );  
-    $req_fecha4_ext   		= get_post_meta( $post_id, 'sistema_req_fecha4_ext', true );  
-    $req_hora4_ext   		= get_post_meta( $post_id, 'sistema_req_hora4_ext', true ); 
-    $ent_fecha4_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );  
-    $ent_hora4_ext   		= get_post_meta( $post_id, 'sistema_ent_hora4_ext', true ); 	
+	while ( have_posts() ) : the_post();	
 ?>
+	<header class="container container-large archive-header">
+		<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+		<div class="title-archive"><?php the_title(); ?></div>
+		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
+	</header>
+	<?php include (TEMPLATEPATH . '/templates-sistema/qo-custom-fields.php'); ?>
 
-	<div id="container-brief" class="container container-large">
+	<div id="container-brief" class="container container-large margin-bottom-xlarge">
 		<div id="header-brief" class="relative margin-bottom-large">
 			<div class="row">
 				<div class="col s12 sm6 m4 l2 bg-purple-xlight"><p>Solicitante</p></div>
@@ -353,77 +250,104 @@
 		</div>		
 		<?php endif; ?>
 
-		<div id="brief-extra" class="body-brief">
-			<div class="row">
-				<div class="col s12 header-area-brief">
-					<h2>LLENAR EN CASO QUE EXISTAN CAMBIOS POSTERIORES A LA PRIMER SOLICITUD</h2>
-				</div>
-				<div class="row">
-					<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #1</p></div>
-					<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
-					<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo1_ext; ?></div>
-					<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
-					<div class="col s12 m7 l4"><?php echo $solicitud1_ext; ?></div>
-					<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?><br><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?><br><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
-				</div>
-				<div class="row">
-					<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #2</p></div>
-					<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
-					<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo2_ext; ?></div>
-					<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
-					<div class="col s12 m7 l4"><?php echo $solicitud2_ext; ?></div>
-					<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?><br><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?><br><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
-				</div>
-				<div class="row">
-					<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #3</p></div>
-					<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
-					<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo3_ext; ?></div>
-					<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
-					<div class="col s12 m7 l4"><?php echo $solicitud3_ext; ?></div>
-					<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?><br><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?><br><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
-				</div>
-				<div class="row">
-					<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #4</p></div>
-					<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
-					<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo4_ext; ?></div>
-					<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
-					<div class="col s12 m7 l4"><?php echo $solicitud4_ext; ?></div>
-					<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?><br><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?><br><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?></div>
-					<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
-					<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
+		<?php if( $solicitud1_ext != "" || $solicitud2_ext != "" || $solicitud3_ext != "" || $solicitud4_ext != "" ) : ?>
+
+			<div id="brief-extra" class="body-brief">
+				<div class="row">				
+					<div class="col s12 header-area-brief">
+						<h2>ACTUALIZACIONES POSTERIORES</h2>
+					</div>
+					<?php if( $solicitud1_ext != "" ) : ?>
+						<div class="row">
+							<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #1</p></div>
+							<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
+							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo1_ext; ?></div>
+							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
+							<div class="col s12 m7 l4"><?php echo $solicitud1_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?><br><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?><br><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
+						</div>
+					<?php endif; ?>
+					<?php if( $solicitud2_ext != "" ) : ?>
+						<div class="row">
+							<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #2</p></div>
+							<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
+							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo2_ext; ?></div>
+							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
+							<div class="col s12 m7 l4"><?php echo $solicitud2_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?><br><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?><br><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
+						</div>
+					<?php endif; ?>
+					<?php if( $solicitud3_ext != "" ) : ?>
+						<div class="row">
+							<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #3</p></div>
+							<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
+							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo3_ext; ?></div>
+							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
+							<div class="col s12 m7 l4"><?php echo $solicitud3_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?><br><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?><br><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
+						</div>
+					<?php endif; ?>
+					<?php if( $solicitud4_ext != "" ) : ?>
+						<div class="row">
+							<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #4</p></div>
+							<div class="col s12 sm6 m4 l3 uppercase bg-purple-light"><p class="color-light">Tiempo Creativo</p></div>
+							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo4_ext; ?></div>
+							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
+							<div class="col s12 m7 l4"><?php echo $solicitud4_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?><br><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?><br><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?></div>
+							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
+						</div>
+					<?php endif; ?>
 				</div>
 			</div>
-		</div>
-
+		<?php endif; ?>
+	</div>	
+	<div class="content-fixed-buttons">
+		<a href="<?php echo SITEURL; ?>sistema" class="btn btn-purple shadow margin-left-right-xxsmall">Ver todas</a>
+		<a href='mailto:
+		<?php 
+			$terms = get_the_terms($post->ID, 'responsable');
+			foreach($terms as $term){
+				echo $term->description . "; ";
+			}
+		?>
+		?subject=BRIEF: <?php the_title(); ?> | Nuevo!&body=Se ha creado un nuevo Brief "<?php the_title(); ?>". %0D%0ARevísalo en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>. %0D%0AFecha de entrega: <?php echo $fechaEntrega; ?>. %0D%0APrioridad: <?php echo $prioridad; ?>' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Nuevo</a>
+		<a href='mailto:
+		<?php 
+			$terms = get_the_terms($post->ID, 'responsable');
+			foreach($terms as $term){
+				echo $term->description . "; ";
+			}
+		?>
+		?subject=BRIEF: <?php the_title(); ?> | Actualización&body=Hay cambios en el Brief "<?php the_title(); ?>". %0D%0ARevísalos en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>.' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Actualización</a>		
 	</div>
-
-	<a href="<?php echo SITEURL; ?>sistema" class="btn btn-fixed shadow margin-right-xsmall">Ver todas</a>
 <?php 
 	endwhile; // end of the loop
 	get_footer(); 
