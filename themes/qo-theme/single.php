@@ -4,8 +4,8 @@
 	
 	while ( have_posts() ) : the_post(); 
 ?>
-	<section class="[ relative ][ bg-image ][ padding-top-bottom-large ]" style="background-image: url(<?php echo THEMEPATH ?>images/bg-initial.png);">
-
+	<section class="container">
+		
 	</section>
 <?php 
 	endwhile; // end of the loop.
