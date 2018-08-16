@@ -5,11 +5,9 @@
 	.archive-header { display: none; }
 	.table-clients, .table-proveedores {
 		#head-table-clients, #head-table-proveedores { display: none; }
-		.col {
-			&:nth-child(odd) { clear: both; }
-		}
-		.col-number           { width: 10px; }    
-		.col-title            { width: calc(100% - 25px);; }    
+		.col:nth-child(odd) 	{ clear: both; }
+		.col-number           	{ width: 10px; }    
+		.col-title            	{ width: calc(100% - 25px);; }    
 		.col-razon_social, 
 		.col-rfc, 
 		.col-ruc, 
@@ -50,18 +48,14 @@
 					line-height: 20px!important;
 				}				
 			}
-			&.description {
-				height: 350px;
-			}
+			&.description { height: 350px; }
 		}
 
-		.content-img-muestra { 
-			min-height: 260px; 
+		.content-img-muestra {
 			position: relative;
+			min-height: 260px;			
 		}
-		.content-muestra{
-			height: 540px!important;
-		}
+		.content-muestra{ height: 540px!important; }
 		/* Horizontal */	
 		.content-img-Horizontal {
 			height: 250px!important;

@@ -2,44 +2,44 @@
 // ==========================================================================
 
 .btn {
-	text-align: center;
-	line-height: 30px;
 	padding: 0 20px;
-	transition: .3s ease-out;
+	text-align: center;
 	font-weight: 300;
+	line-height: 30px;
+	transition: .3s ease-out;
 }
 .content-fixed-buttons {
 	position: fixed;
 	bottom: 5px;
+	width: 100%;	
 	text-align: center;
-	width: 100%;
 	.btn { margin: 3px 5px;}
 }
 .btn-primary-rounded {
+	width: 30px;
+	height: 30px;	
+	text-align: center;
+	line-height: 30px;	
 	background-color: $purple-color;
 	color: $light-color;
-	text-align: center;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
 	border-radius: 50%;
 	&:hover {
 		opacity: 0.8;
 	}
 	&#show-more-btn-sistema {
-		cursor: pointer;
 		font-size: 25px;
+		cursor: pointer;		
 	}
 }
 button { outline: none; }
 .btn-primaryQO {
-	border: 2px solid $purple-color;
-	background-color: transparent;
-	padding: 0px 10px;
+	display: inline-block;
 	margin: 0 2px 5px;
+	padding: 0px 10px;	
 	line-height: 25px;
 	font-size: 14px;
-	display: inline-block;
+	background-color: transparent;	
+	border: 2px solid $purple-color;
 	border-radius: 5px;
 	transition: .3s ease-out; 
 	cursor: pointer;
@@ -48,8 +48,8 @@ button { outline: none; }
 	&.btn-estatus { border-color: #2174b9; }
 	&.btn-prioridad { border-color: #614893; }
 	&:hover {
-		background-color: $purple-color;
 		color: $light-color;
+		background-color: $purple-color;
 		opacity: 0.8;
 		&.btn-area { background-color: #b21180; }
 		&.btn-estatus { background-color: #2174b9; }
@@ -65,40 +65,40 @@ button { outline: none; }
 	}
 }
 .btn-purple {
-	background-color: $purple-color;
-	color: $light-color;
-	border-radius: 3px;
-	line-height: 35px;
 	display: inline-block;
+	line-height: 35px;
+	color: $light-color;	
+	background-color: $purple-color;
+	border-radius: 3px;
 }
 
 .card-cotizacion,
 .content-cotizacion {
 	.status {
-		background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
-		color: #fff;
-		width: 30px;
-		height: 30px;
 		position: absolute;
 		top: 0px;
-		right: 10px;
+		right: 10px;		
+		width: 30px;
+		height: 30px;
 		text-align: center;
-		line-height: 30px;
+		line-height: 30px;		
+		color: #fff;
+		background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
 		border-radius: 50%;
 		.etiqueta-text {
-			color: #000;
-			z-index: 9;
 			right: 20px;
+			color: #000;
+			z-index: 9;			
 		}
 		&:hover .etiqueta-text { display: inline-block; }
 	}
 }
 .content-cotizacion {
 	.status {
+	    top: -10px;
+	    right: -10px;		
 		width: 40px;
 	    height: 40px;
 	    line-height: 40px;
-	    top: -10px;
-	    right: -10px;
 	}
 }

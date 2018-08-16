@@ -14,12 +14,12 @@
 		//.mc-time .mc-active,
 		input[type='submit'],
 		.my-calendar-nav .my-calendar-prev a,
-		.my-calendar-nav .my-calendar-next a	{
-			border-radius: 3px!important;
-			border: 2px solid $purple-color!important;
+		.my-calendar-nav .my-calendar-next a {
+			font-weight: 600!important;
 			color: $purple-color!important;
 			background: $light-color!important;
-			font-weight: 600!important;
+			border-radius: 3px!important;
+			border: 2px solid $purple-color!important;			
 			box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25)!important;
 			&:hover {
 				text-decoration: none!important;
@@ -42,12 +42,12 @@
 			h3 { display: none; }
 			ul {
 				li a {
-					background: $light-color;
-					box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);
 					margin-right: 5px;
+					background: $light-color;
+					box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);					
 					&:hover {
-						background: #eee;
 						color: $dark-color;
+						background: #eee;						
 					}
 				}
 			}			

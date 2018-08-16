@@ -167,8 +167,8 @@
   }
 
   &.row-complete {
-    width: calc(100% + 20px);
     margin-left: -10px;
+    width: calc(100% + 20px);    
   }
 }
 
@@ -196,20 +196,20 @@
     .col-contactComercial, 
     .col-telefono,
     .col-email,
-    .col-cumpleanos { 
-      width: 100%;
+    .col-cumpleanos {
       padding-top: 2px!important;
-      padding-bottom: 2px!important;
+      padding-bottom: 2px!important;      
+      width: 100%;
       p {
         margin-right: 5px;
         &:before {
           content: '';
-          width: 3px;
-          height: 3px;
-          background-color: $purple-color;
           display: inline-block;
           margin-right: 3px;
           margin-bottom: 3px;
+          width: 3px;
+          height: 3px;          
+          background-color: $purple-color;
         }
       }
     }
@@ -237,20 +237,20 @@
     .col-contactComercial, 
     .col-telefono,
     .col-email,
-    .col-fecha_ingreso { 
-      width: 100%;
+    .col-fecha_ingreso {
       padding-top: 2px!important;
       padding-bottom: 2px!important;
+      width: 100%;      
       p {
         margin-right: 5px;
         &:before {
           content: '';
+          display: inline-block;
+          margin-right: 3px;
+          margin-bottom: 3px;          
           width: 3px;
           height: 3px;
           background-color: $purple-color;
-          display: inline-block;
-          margin-right: 3px;
-          margin-bottom: 3px;
         }
       }
     }
@@ -259,17 +259,15 @@
 
 .content-cotizacion {
   position: relative;
-  height: 920px;//792px; medida real   
-  width: 612px;
-  padding-top: 35px;
-  padding-bottom: 35px;
   margin: 30px auto;
+  padding-top: 35px;
+  padding-bottom: 35px;    
+  width: 612px;
+  height: 920px;//792px; medida real  
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
               0 3px 1px -2px rgba(0,0,0,0.12),
               0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 //COTIZACIÓN
-.col-1_5 {
-  width: 20%;
-}
+.col-1_5 { width: 20%; }

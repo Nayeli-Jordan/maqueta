@@ -11,6 +11,9 @@ var $=jQuery.noConflict();
 		$(document).ready(function() {
 			//footerBottom();
 			isotopeQO();
+			if ($('.my-calendar-date-switcher').length > 0) {
+				$('.my-calendar-date-switcher input[type=submit]').val('Ir');
+			}
 		});
  
 		$(window).on('resize', function(){

@@ -12,13 +12,11 @@
 	}
 	.content-clients,
 	.content-proveedores {
-		@media #{$medium-and-up} { min-width: 1500px; }
-		@media #{$sm-and-down} { max-width: 100%; }
+		@media #{$medium-and-up} 	{ min-width: 1500px; }
+		@media #{$sm-and-down} 		{ max-width: 100%; }
 		.row {
 			padding: 10px 0;
-			&:nth-child(odd) {
-				background-color: #eee;
-			}
+			&:nth-child(odd) { background-color: #eee; }
 		}
 	}
 	.content-proveedores {
@@ -31,10 +29,10 @@
 	top: 40px;
 	right: 0px;
 	.num-tiket {
-		padding: 2px;
 		display: inline-block;
-		border-radius: 15px;
 		margin-bottom: 5px;
+		padding: 2px;		
+		border-radius: 15px;		
 		.bg-light {
 			padding: 0 30px;
 			border-radius: 15px;
@@ -46,25 +44,24 @@
 	}
 	.title-tiket {
 		padding: 8px 30px;
+		font-weight: 500;
 		color: $light-color;
 		border-top-left-radius: 15px;
-		border-bottom-left-radius: 15px;
-		font-weight: 500;
+		border-bottom-left-radius: 15px;		
 	}
 }
 .content-cotizacion {
 	.date { font-size: 14px; }
-
 	.row {
 		.col {
 			padding: 0 2px;
 			.item-cotizacion,
 			.opt-cotizacion {
+				position: relative;
 				margin-bottom: 3px;
+				text-align: center;
 				border: 1px solid gray;
 				border-radius: 5px;
-				text-align: center;
-				position: relative;	
 			}
 			.item-cotizacion {
 				p {
@@ -81,8 +78,7 @@
 					&.modelo, &.nota {
 						font-size: 12px;
 						line-height: 14px;
-					}
-					
+					}					
 				}
 				&.description {
 					min-height: 270px;
@@ -94,8 +90,8 @@
 
 	.footer-cotizacion {
 		position: absolute;
-		width: calc(90%);
 		bottom: 45px;
+		width: calc(90%);		
 		text-align: center;
 		p {
 			font-size: 11px;
@@ -142,9 +138,9 @@
 	}
 	.info-general {
 		position: relative;
-		width: calc(100% + 10px);
 		top: 0px;
 		margin-bottom: 10px;
+		width: calc(100% + 10px);
 	}
 	img {
 		max-width: 100px;
@@ -156,14 +152,12 @@
 /* Sistema */
 #container-brief {
 	margin-bottom: 60px;
-	@media #{$small-and-down} {
-		margin-bottom: 100px;
-	}
-	.col {
-		border: 1px solid #eee;
+	@media #{$small-and-down} { margin-bottom: 100px; }
+	.col {		
 		min-height: 28px;
 		line-height: 26px;
 		font-size: 14px;
+		border: 1px solid #eee;
 		p:not(.not-style) {
 			font-weight: bold;
 			color: $purple-color;
@@ -172,26 +166,22 @@
 			&.color-light { color: $light-color;}
 		}
 		&.header-area-brief {
-			background-color: $purple-color;
-			color: $light-color;
-			font-size: 22px;
 			padding-top: 10px;
-			padding-bottom: 10px;
+			padding-bottom: 10px;			
+			font-size: 22px;
+			color: $light-color;
+			background-color: $purple-color;
 		}
 	}
 	.brief-general-info {
 	    @media #{$large-and-up} { 
-			width: 40%;
 		    position: absolute;
 		    top: 0px;right: 0px;
+		    width: 40%;
 		}
-		@media #{$medium-and-down} {
-			margin-top: 20px;
-		}
+		@media #{$medium-and-down} { margin-top: 20px; }
 	}
-	.body-brief {
-		margin-bottom: 30px;
-	}
+	.body-brief { margin-bottom: 30px; }
 }
 
 .etiqueta-requerimiento,
@@ -200,15 +190,15 @@
 	float: right;
 }
 .etiqueta-requerimiento {
+	margin-top: 6px;
 	width: 15px;
-	height: 15px;
-	margin-top: 6px;	
+	height: 15px;	
 	border-radius: 50%;
 }
 .etiqueta-prioridad {
-	width: 30px;
-	height: 10px;
 	margin-top: 8px;
+	width: 30px;
+	height: 10px;	
 	border-radius: 3px;
 }
 
@@ -217,49 +207,38 @@
 	.card-head {
 		padding: 10px 20px;
 		.status { 
-			width: 30px;
-			height: 30px;
 			position: absolute;
 			top: 4px; right: 20px;
-			border-radius: 50%;
+			width: 30px;
+			height: 30px;
 			text-align: center;
+			color: $light-color;			
 			background-color: $purple-color;
-			color: $light-color;
-			&.bg-Reabierto {
-				span:not(.etiqueta-text):before { content:'\f513'; }				
-			}
-			&.bg-Enterado {
-				span:not(.etiqueta-text):before { content:'\f164'; }				
-			}
-			&.bg-Trabajando {				
-				span:not(.etiqueta-text):before { content:'\e800'; }
-			}
-			&.bg-Hecho {				
-				span:not(.etiqueta-text):before { content:''; }
-			}
-			&.bg-Cerrado {
-				span:not(.etiqueta-text):before { content:''; }				
-			}
+			border-radius: 50%;			
+			&.bg-Reabierto span:not(.etiqueta-text):before { content:'\f513'; }
+			&.bg-Enterado span:not(.etiqueta-text):before { content:'\f164'; }
+			&.bg-Trabajando span:not(.etiqueta-text):before { content:'\e800'; }
+			&.bg-Hecho span:not(.etiqueta-text):before { content:''; }
+			&.bg-Cerrado span:not(.etiqueta-text):before { content:''; }
 			span:not(.etiqueta-text) {
 				line-height: 30px;
 				font-size: 14px;
 			}
-			.etiqueta-text { 
-				color: $dark-color; 
+			.etiqueta-text {
 				top: -28px;
     			right: -30px;
+				color: $dark-color;
+				background-color: $light-color;
+				z-index: 1;			
 			}
-			&:hover .etiqueta-text {
-				display: inline-block;
-			}
+			&:hover .etiqueta-text { display: inline-block; }
 		}
 		h2 { 
-			text-transform: uppercase;
 			max-width: calc(100% - 30px); 
 			font-size: 14px;
 			font-weight: bold;
-			a { color: $purple-color; }
-			
+			text-transform: uppercase;
+			a { color: $purple-color; }			
 		}
 	}
 	.card-body {
@@ -269,9 +248,9 @@
 			display: block;
 			margin-top: 0px;
 			.etiqueta-text {
-
 			    right: -35px;
 			    top: -6px;
+			    z-index: 1;
 			}
 			&:hover .etiqueta-text { display: inline-block; }
 		}
@@ -293,10 +272,10 @@
 
 .etiqueta-text {
 	display: none;
-    background-color: #fff;
-    position: relative;			
+    position: relative;
     padding: 3px 10px;
-	font-size: 12px;
+	font-size: 12px;   
+    background-color: #fff;
     transition: .5s ease-out;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
 }

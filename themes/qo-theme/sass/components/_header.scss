@@ -13,8 +13,8 @@ header {
 }
 
 .archive-header {
-	padding-top: 20px;
 	margin-bottom: 20px;
+	padding-top: 20px;	
 	text-align: center;
 	.title-archive {
 		//padding-left: 120px;
@@ -30,16 +30,16 @@ header {
 	.btn-nav {
 		position: absolute;
 		top: 20px;
-		cursor: pointer;
 		font-size: 20px;
+		cursor: pointer;
 	}
 	nav {
 		position: absolute;
 		top: 0px;
 		left: -260px;
-		width: 250px;
-		min-height: 100vh;
 		padding: 20px 0px;
+		width: 250px;
+		min-height: 100vh;		
 		text-align: left;
 		background-color: $light-color;
 		z-index: 99;
@@ -48,10 +48,10 @@ header {
 	      width: 100%;
 	      left: -100%;
 	    }
-	    .icon-cancel {
-			font-size: 20px;
+	    .icon-cancel {			
 			position: absolute;
 			right: 20px;
+			font-size: 20px;
 			cursor: pointer;
 	    }
 		ul {
@@ -60,9 +60,9 @@ header {
 				display: block;				
 				a {
 					display: block;
-					font-size: 16px;
-					line-height: 40px;
 					padding: 0 20px;
+					font-size: 16px;
+					line-height: 40px;					
 					transition: .1s ease-out;
 					&:hover {
 						background-color: $purple-color;
