@@ -31,6 +31,23 @@
 		cursor: pointer;		
 	}
 }
+#btn-entrega-proxima {
+	background-color: red;
+	bottom: 50px;
+	opacity: 1;
+	.etiqueta-text {
+		width: 115px;
+		color: #000;
+		background-color: #fff;
+		z-index: 1;
+		position: absolute;
+		top: 0px;
+		right: -118px;
+	}
+	&:hover {
+		.etiqueta-text { display: inline-block; }
+	}
+}
 button { outline: none; }
 .btn-primaryQO {
 	display: inline-block;

@@ -46,7 +46,19 @@
 			<p class="margin-top-xsmall"><span class="icon-calendar-inv"></span>Requerida: <?php echo $fechaRequerida; ?></p>
 			<p><span class="icon-calendar-inv"></span>Entrega: <?php echo $fechaEntrega; ?></p>
 
-			<a href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div></a>
+<?php 
+	$todayDate = date('Y-m-d');
+	$todayDate=date('Y-m-d', strtotime($todayDate));
+	$activeAlertDate = date('Y-m-d', strtotime($fechaEntrega . ' - 3 days'));
+	//echo "Hoy: " . $todayDate. "<br> Fecha Alerta: " . $activeAlertDate;
+
+	if (($todayDate >= $activeAlertDate)){
+	    echo "<a href='<?php echo the_permalink(); ?>'><div id='btn-entrega-proxima' class='shadow btn-primary-rounded'><span class='icon-clock'></span><span class='etiqueta-text'>Entrega Cercana</span></div></a>";
+	}
+?>
+
+			
+			<a href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
 		</div>							
 	</div>
 </div>	

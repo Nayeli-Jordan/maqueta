@@ -111,7 +111,6 @@
 		        } 
 		        wp_reset_postdata();
 		    ?>
-
 			</div> <!-- end clients -->
 		</div>		  
 	</section>
