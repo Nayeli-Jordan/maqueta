@@ -8,36 +8,28 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
+	margin-bottom: 10px;	
 	width: 100%;
-	margin-bottom: 10px;
-	line-height: 24px;
 	min-height: 32px;
+	line-height: 24px;
 }
 
-.table-sistema textarea {
-	resize: none;
-}
+.table-sistema textarea { resize: none; }
 
 .row {
 	display: table;
 	width: 100%;
 }
 .row .col {
-	float: left;
-    box-sizing: border-box;
+	float: left;    
     padding: 0 2px;
     min-height: 1px;
+    box-sizing: border-box;
 }
-.row .col-1_5 {
-	width: 20%;
-}
-.row .col-1_4 {
-	width: 25%;
-}
-.row .col-1-2_4 {
-	width: 12.5%;
-}
-.clear { clear: both; }
+.row .col-1_5 			{ width: 20%; }
+.row .col-1_4 			{ width: 25%; }
+.row .col-1-2_4 		{ width: 12.5%; }
+.clear 					{ clear: both; }
 
 .text-center 			{ text-align: center; }
 .color-light 			{ color: #fff; }
@@ -46,31 +38,25 @@ textarea {
 .margin-bottom-large 	{ margin-bottom: 20px; }
 
 
-.bg-gray { background-color: #eee!important; }
+.bg-gray 				{ background-color: #eee!important; }
 
 /* Cotizaciones */
-.row.bg-gray { padding: 10px; }
-.row.bg-gray select { width: calc(100% - 20px)!important; }
+.row.bg-gray 			{ padding: 10px; }
+.row.bg-gray select 	{ width: calc(100% - 20px)!important; }
 
-#qo_cotizaciones p { margin: 0px; }
+#qo_cotizaciones p 		{ margin: 0px; }
 
 #qo_cotizaciones input[type="text"],
 #qo_cotizaciones input[type="number"],
-#qo_cotizaciones textarea {
-	min-height: 60px;
-}
+#qo_cotizaciones textarea { min-height: 60px; }
 #qo_cotizaciones textarea {
 	margin-bottom: 7px;
 	resize: none;
 }
 
 .input-image,
-.image-preview {
-	display: inline-block;
-}
-.input-image {
-	width: 65%;
-}
+.image-preview { display: inline-block; }
+.input-image { width: 65%; }
 .image-upload {
 	display: block;
 	float: right;
@@ -80,10 +66,10 @@ textarea {
 	float: right;
 }
 .image-preview img {
-	max-width: 100%;
-	max-height: 100px;
 	width: auto;
 	height: auto;
+	max-width: 100%;
+	max-height: 100px;
 }
 
 /*Ocultar muestras y detalle segun template*/
@@ -100,51 +86,44 @@ textarea {
 
 /*Calendario*/
 #new-calendar {
-	margin-top: 10px;
-    background: #0073aa;
-    color: #fff;
+	display: block;
+	margin-top: 10px;   
     text-align: center;
+    color: #fff;
     text-decoration: none;
     line-height: 30px;
-    display: block;
+    background: #0073aa;
 }
-#new-calendar:hover {
-	background: #036492;
-}
+#new-calendar:hover { background: #036492; }
 
 /*SISTEMA*/
 .bg-destacade { background-color: #8c45c1!important; }
-.bg-destacade label { 
-	color: #fff!important; 
+.bg-destacade label {
 	padding-left: 10px;
+	color: #fff!important;	
 }
 
-.table-sistema { width: 100%; }
-.table-sistema th { text-align: left; }
-.table-sistema label { color: purple; }
+.table-sistema 			{ width: 100%; }
+.table-sistema th 		{ text-align: left; }
+.table-sistema label 	{ color: purple; }
 .table-sistema h2 {
-	background-color: purple;
+	margin-top: 20px!important;
+	font-weight: bold!important;	
     color: #fff;
-    font-weight: bold!important;
-    margin-top: 20px!important;
+    background-color: purple;    
 }
 p.disabled {
+	margin: 0px;
 	font-size: 10px;
 	color: #b7b2b2;
 	text-align: center;
-	border: 1px solid #dddddd;
 	line-height: 30px;
-	margin: 0px;
+	border: 1px solid #dddddd;	
+	
 }
-.table-sistema label{
-	font-size: 12px;
-}
+.table-sistema label{ font-size: 12px; }
 .table-sistema input[type="text"],
-.table-sistema input[type="date"] {
-	margin-bottom: 0px;
-}
+.table-sistema input[type="date"] { margin-bottom: 0px; }
 .note { font-size: 10px; }
 
-textarea.textarea_row3 {
-	min-height: 120px;
-}
+textarea.textarea_row3 { min-height: 120px; }
