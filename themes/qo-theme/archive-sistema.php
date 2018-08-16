@@ -5,7 +5,7 @@
 			<div class="title-archive">Brief´s</div>
 			<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
 		</header>
-		<section class="[ container container-large ]">
+		<section class="[ container container-large ] margin-bottom-60">
 			<?php include (TEMPLATEPATH . '/templates-sistema/buttons-sistema.php'); ?>	
 			<div class="row margin-top">
 				<div class="grid">
@@ -46,6 +46,9 @@
 				</div>
 			</div>
 		</section>
+		<div class="content-fixed-buttons">
+			<a href="<?php echo SITEURL; ?>my-calendar" class="btn btn-purple shadow margin-left-right-xxsmall">Ver calendario</a>
+		</div>
 	<?php else: ?>
 		<?php include (TEMPLATEPATH . '/templates-qo/template-404.php'); ?>	
 	<?php endif; ?>

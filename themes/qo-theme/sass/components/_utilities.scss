@@ -275,6 +275,13 @@
 			}
 			&:hover .etiqueta-text { display: inline-block; }
 		}
+		.etiqueta-requerimiento {
+			position: relative;
+			bottom: -6px;
+			margin-left: 2px;
+			margin: 4px;
+			float: none;
+		}
 		span.font-strong { font-weight: bold; }
 		.btn-primary-rounded {
 			position: absolute;

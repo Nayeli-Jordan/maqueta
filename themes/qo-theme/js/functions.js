@@ -37,7 +37,13 @@ var $=jQuery.noConflict();
 			$('.archive-header nav').removeClass('active');		
 		});
 
-
+		//Buttons sistema
+		$("#show-more-btn-sistema").click(function() {
+			$('#extra-buttons-sistema').fadeIn(	);		
+			$('#show-less-btn-sistema').fadeIn(	);		
+			$('#show-more-btn-sistema').addClass('hide');		
+		});
+		
 	});
 })(jQuery);
  

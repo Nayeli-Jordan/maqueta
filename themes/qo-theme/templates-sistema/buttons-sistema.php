@@ -16,15 +16,18 @@
 	}
 	?>
 	<br>
-	<button class="btn-primaryQO btn-estatus" data-filter=".Abierto">Abierto</button>	
-	<button class="btn-primaryQO btn-estatus" data-filter=".Enterado">Enterado</button>	
-	<button class="btn-primaryQO btn-estatus" data-filter=".Trabajando">Trabajando</button>	
-	<button class="btn-primaryQO btn-estatus" data-filter=".Hecho">Hecho</button>	
-	<button class="btn-primaryQO btn-estatus" data-filter=".Cerrado">Cerrado</button>	
-	<button class="btn-primaryQO btn-estatus" data-filter=".Reabierto">Reabierto</button>
-	<br>	
-	<button class="btn-primaryQO btn-prioridad" data-filter=".Baja">Baja</button>	
-	<button class="btn-primaryQO btn-prioridad" data-filter=".Media">Media</button>	
-	<button class="btn-primaryQO btn-prioridad" data-filter=".Alta">Alta</button>	
-	<button class="btn-primaryQO btn-prioridad" data-filter=".Urgente">Urgente</button>	
+	<div id="show-more-btn-sistema" class="btn-primary-rounded margin-auto">+</div>
+	<div id="extra-buttons-sistema" class="hide">
+		<button class="btn-primaryQO btn-estatus" data-filter=".Abierto">Abierto</button>	
+		<button class="btn-primaryQO btn-estatus" data-filter=".Enterado">Enterado</button>	
+		<button class="btn-primaryQO btn-estatus" data-filter=".Trabajando">Trabajando</button>	
+		<button class="btn-primaryQO btn-estatus" data-filter=".Hecho">Hecho</button>	
+		<button class="btn-primaryQO btn-estatus" data-filter=".Cerrado">Cerrado</button>	
+		<button class="btn-primaryQO btn-estatus" data-filter=".Reabierto">Reabierto</button>
+		<br>	
+		<button class="btn-primaryQO btn-prioridad" data-filter=".Baja">Baja</button>	
+		<button class="btn-primaryQO btn-prioridad" data-filter=".Media">Media</button>	
+		<button class="btn-primaryQO btn-prioridad" data-filter=".Alta">Alta</button>	
+		<button class="btn-primaryQO btn-prioridad" data-filter=".Urgente">Urgente</button>			
+	</div>
 </div>

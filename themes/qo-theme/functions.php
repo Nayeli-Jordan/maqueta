@@ -69,6 +69,33 @@ function remove_private_prefix($title) {
 }
 add_filter('the_title', 'remove_private_prefix');
 
+//Change style login
+function my_login_logo() { ?>
+  <style type="text/css">
+    body { background-color: #dcdcdc!important; }
+    #login h1 a, .login h1 a {
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/identidad/logo.png);
+        width: 150px;
+        height: 90px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .login label, .login #backtoblog a, .login #nav a { color: #23282d!important; }
+  </style>
+<?php }//end my_login_logo()
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+  return home_url();
+}//end my_login_logo_url()
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+  return 'Nelio Software';
+}//end my_login_logo_url_title()
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+
 //Hide item admin menu for certain user profile
 function qo_remove_menu_items() {
     if( current_user_can( 'editor' ) ):
@@ -96,6 +123,14 @@ function qo_remove_menu_items() {
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=responsable&amp;post_type=sistema' );
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=cotizacion-stm&amp;post_type=sistema' );
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=calendario-stm&amp;post_type=sistema' );
+    //elseif( user_can( '4', 'administrator' ) ):
+    //elseif( user_can( '4', 'administrator' ) ):
+   /* elseif( ! is_super_admin() ):
+        remove_menu_page( 'edit.php?post_type=nosotros' );
+        remove_menu_page( 'edit.php?post_type=servicios' );
+        remove_menu_page( 'edit.php?post_type=clientes' );
+        remove_menu_page( 'edit.php?post_type=proyectos' );
+        remove_menu_page( 'edit.php?post_type=reconocimientos' );*/
     endif;
 }
 add_action( 'admin_menu', 'qo_remove_menu_items' );

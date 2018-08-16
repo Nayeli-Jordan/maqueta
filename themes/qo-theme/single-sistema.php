@@ -330,7 +330,8 @@
 		<?php endif; ?>
 	</div>	
 	<div class="content-fixed-buttons">
-		<a href="<?php echo SITEURL; ?>sistema" class="btn btn-purple shadow margin-left-right-xxsmall">Ver todas</a>
+		<a href="<?php echo SITEURL; ?>sistema" class="btn btn-purple shadow margin-left-right-xxsmall">Ver Brief´s</a>
+		<a href="<?php echo SITEURL; ?>my-calendar" class="btn btn-purple shadow margin-left-right-xxsmall">Ver calendario</a>
 		<a href='mailto:
 		<?php 
 			$terms = get_the_terms($post->ID, 'responsable');

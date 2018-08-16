@@ -34,7 +34,7 @@
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 					echo '<p class="font-strong"><span class="icon-tag icon-size-small"></span>';
 					foreach ( $terms as $term ) {
-						echo '<span>' . $term->name . ' </span>';
+						echo "<span>" . $term->name . "<span class='etiqueta-requerimiento bg-" . $term->slug . "'></span> </span>";
 					}
 					echo "</p>";
 				}

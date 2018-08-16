@@ -8,7 +8,10 @@
 	
 	while ( have_posts() ) : the_post();
 ?>
-<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-custom-fields.php'); ?>
+	<header class="container container-large archive-header">
+		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
+	</header>
+	<?php include (TEMPLATEPATH . '/templates-cotizacion/qo-custom-fields.php'); ?>
 
 	<!-- 1 Item * Page ==> 16 Page -->
 	
