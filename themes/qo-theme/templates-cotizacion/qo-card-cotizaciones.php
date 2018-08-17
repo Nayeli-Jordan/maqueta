@@ -3,7 +3,7 @@
 		<div class="info-general">
 			<div class="num-tiket bg-gradient-qo">
 				<div class="bg-light">
-					<p><?php echo date("y") . date("m"); ?><?php echo get_the_ID(); ?></p>
+					<p><?php echo date("y") . date("m"). $cotizacionNumber; ?></p>
 				</div>						
 			</div>
 			<div class="status shadow-small">									

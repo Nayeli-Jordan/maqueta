@@ -1,7 +1,6 @@
 <?php 
 	get_header(); 
 	global $post;
-	
 	while ( have_posts() ) : the_post();	
 ?>
 	<header class="container container-large archive-header">
@@ -56,7 +55,7 @@
 			<div class="brief-general-info">
 				<div class="row">
 					<div class="col s12 sm6 m4 l6 bg-purple-xlight"><p>No. de Brief</p></div>
-					<div class="col s12 sm6 m4 l6"><?php echo get_the_ID(); ?></div>
+					<div class="col s12 sm6 m4 l6"><?php echo date("y") . date("m") . post_number_sistema(get_the_ID()); ?></div>
 					<div class="col s12 sm6 m4 l6 clear bg-purple-xlight"><p>Fecha de Entrega</p></div>
 					<div class="col s12 sm6 m4 l6"><?php echo $fechaEntrega; ?></div>
 					<div class="col s12 sm6 m4 l6 clear bg-purple-xlight"><p>Responsable</p></div>

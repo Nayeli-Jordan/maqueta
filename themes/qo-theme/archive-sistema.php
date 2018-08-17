@@ -17,34 +17,27 @@
 			            'order' 			=> 'ASC'
 			            );
 			        $loop = new WP_Query( $args );
-			        $i = 1;
 			        if ( $loop->have_posts() ) {
 			            while ( $loop->have_posts() ) : $loop->the_post(); 
 
 						$custom_fields 			= get_post_custom();
 						$post_id 				= get_the_ID();
 
-					    $estatus            	= get_post_meta( $post_id, 'sistema_estatus', true );     
-					    
+					    $estatus            	= get_post_meta( $post_id, 'sistema_estatus', true );	    
 					    $cliente            	= get_post_meta( $post_id, 'sistema_cliente', true );     
 					    $marca            		= get_post_meta( $post_id, 'sistema_marca', true );     
 					    $proyecto           	= get_post_meta( $post_id, 'sistema_proyecto', true );     
-					    $tiempoCotizado    		= get_post_meta( $post_id, 'sistema_tiempoCotizado', true );    
-					 
-					    $fechaRequerida    		= get_post_meta( $post_id, 'sistema_fechaRequerida', true );    
+					    $tiempoCotizado    		= get_post_meta( $post_id, 'sistema_tiempoCotizado', true ); 
 					    $fechaEntrega    		= get_post_meta( $post_id, 'sistema_fechaEntrega', true ); 
 		    			$prioridad    			= get_post_meta( $post_id, 'sistema_prioridad', true );
-
 		    			$ent_fecha1_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha1_ext', true );
 		    			$ent_fecha2_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha2_ext', true );
 		    			$ent_fecha3_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha3_ext', true );
 		    			$ent_fecha4_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );
-							
-			            	?>
 
-						<?php include (TEMPLATEPATH . '/templates-sistema/card-sistema.php'); ?>	
+		    				include (TEMPLATEPATH . '/templates-sistema/card-sistema.php'); 
 
-			            <?php $i ++;  endwhile;
+		    			endwhile;
 			        } 
 			        wp_reset_postdata();
 			    ?>				

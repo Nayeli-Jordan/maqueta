@@ -32,7 +32,7 @@
 				echo "</p>";
 			?>
 			<div class="hr bg-gradient-qo margin-top-xsmall margin-bottom-xsmall"></div>
-			<div class="number-brief"><?php echo date("y") . date("m"); ?><?php echo get_the_ID(); ?></div>
+			<div class="number-brief"><?php echo date("y") . date("m") . post_number_sistema(get_the_ID()); ?></div>
 			<div class="content-info-brief">
 				<p><span class="uppercase color-purple font-strong">Cliente:</span> <?php echo $cliente; ?></p>
 				<p><span class="uppercase color-purple font-strong">Marca:</span> <?php echo $marca ?></p>

@@ -21,7 +21,7 @@
 			        } 
 			        wp_reset_postdata();
 			    ?> --><!--/.products-->	
-				<p><?php echo date("y") . date("m"); ?><?php echo get_the_ID(); ?></p>
+				<p><?php echo date("y") . date("m") . post_number_qo_cotizaciones(get_the_ID()); ?></p>
 			</div>						
 		</div>
 		<div class="title-tiket bg-gradient-qo">

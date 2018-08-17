@@ -69,6 +69,41 @@ function remove_private_prefix($title) {
 }
 add_filter('the_title', 'remove_private_prefix');
 
+//Númerar posts
+function post_number_sistema($postID){
+    $getOrderedPostsSistema= new WP_Query('post_type=sistema&orderby=date&order=ASC&posts_per_page=-1');
+    $count = 1;
+    if($getOrderedPostsSistema->have_posts()) {
+        while ($getOrderedPostsSistema->have_posts()) {
+            $getOrderedPostsSistema->the_post();
+            if ($postID != get_the_ID()){
+                $count++;
+            } else {
+                $postNumberSistema= $count;
+            }
+        }
+    }
+    wp_reset_query();
+    return $postNumberSistema;
+}
+
+function post_number_qo_cotizaciones($postID){
+    $getOrderedPostsCotizacion= new WP_Query('post_type=qo_cotizaciones&orderby=date&order=ASC&posts_per_page=-1');
+    $count = 1;
+    if($getOrderedPostsCotizacion->have_posts()) {
+        while ($getOrderedPostsCotizacion->have_posts()) {
+            $getOrderedPostsCotizacion->the_post();
+            if ($postID != get_the_ID()){
+                $count++;
+            } else {
+                $postNumberCotizacion= $count;
+            }
+        }
+    }
+    wp_reset_query();
+    return $postNumberCotizacion;
+}
+
 //Change style login
 function my_login_logo() { ?>
   <style type="text/css">
@@ -95,7 +130,6 @@ function my_login_logo_url_title() {
 }//end my_login_logo_url_title()
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 
-grant_super_admin(1);
 //Hide item admin menu for certain user profile
 function qo_remove_menu_items() {
     //Editor
@@ -198,11 +232,9 @@ function display_sistema_atributos( $sistema ){
     $cliente            = esc_html( get_post_meta( $sistema->ID, 'sistema_cliente', true ) );    
     $marca            	= esc_html( get_post_meta( $sistema->ID, 'sistema_marca', true ) );    
     $proyecto           = esc_html( get_post_meta( $sistema->ID, 'sistema_proyecto', true ) );    
-    $tiempoCotizado    	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCotizado', true ) );   
- 
+    $tiempoCotizado    	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCotizado', true ) ); 
     $fechaEntrega       = esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
     $prioridad    	= esc_html( get_post_meta( $sistema->ID, 'sistema_prioridad', true ) );
-
     $tiempoCreativo_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_di', true ) );   
     $medioEntrada_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_di', true ) );   
     $requerimiento_di 	= esc_html( get_post_meta( $sistema->ID, 'sistema_requerimiento_di', true ) );   
@@ -228,8 +260,7 @@ function display_sistema_atributos( $sistema ){
     $largo3_di    	= esc_html( get_post_meta( $sistema->ID, 'sistema_largo3_di', true ) );   
     $ancho3_di    	= esc_html( get_post_meta( $sistema->ID, 'sistema_peso3_di', true ) );   
     $alto3_di    	= esc_html( get_post_meta( $sistema->ID, 'sistema_alto3_di', true ) );
-
-    $tiempoCreativo_dv   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_dv', true ) );   
+    $tiempoCreativo_dv   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_dv', true ) );  
     $medioEntrada_dv   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_dv', true ) );   
     $requerimiento_dv 	= esc_html( get_post_meta( $sistema->ID, 'sistema_requerimiento_dv', true ) );   
     $noPiezas_dv    	= esc_html( get_post_meta( $sistema->ID, 'sistema_noPiezas_dv', true ) );   
@@ -248,15 +279,13 @@ function display_sistema_atributos( $sistema ){
     $largo3_dv    	= esc_html( get_post_meta( $sistema->ID, 'sistema_largo3_dv', true ) );   
     $ancho3_dv    	= esc_html( get_post_meta( $sistema->ID, 'sistema_peso3_dv', true ) );   
     $alto3_dv    	= esc_html( get_post_meta( $sistema->ID, 'sistema_alto3_dv', true ) );
-
-    $tiempoCreativo_mkt   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_mkt', true ) );   
+    $tiempoCreativo_mkt   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_mkt', true ) );
     $medioEntrada_mkt   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_mkt', true ) );   
     $requerimiento_mkt 	= esc_html( get_post_meta( $sistema->ID, 'sistema_requerimiento_mkt', true ) );   
     $personasExternas_mkt    	= esc_html( get_post_meta( $sistema->ID, 'sistema_personasExternas_mkt', true ) );
     $caracteristicas_mkt    	= esc_html( get_post_meta( $sistema->ID, 'sistema_caracteristicas_mkt', true ) ); 
     $noPersonas_mkt    	= esc_html( get_post_meta( $sistema->ID, 'sistema_noPersonas_mkt', true ) );
     $detalles_mkt    	= esc_html( get_post_meta( $sistema->ID, 'sistema_detalles_mkt', true ) );
-
     $tiempoCreativo_stm   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_stm', true ) );   
     $medioEntrada_stm   	= esc_html( get_post_meta( $sistema->ID, 'sistema_medioEntrada_stm', true ) );   
     $requerimiento_stm 	= esc_html( get_post_meta( $sistema->ID, 'sistema_requerimiento_stm', true ) );   
@@ -264,7 +293,6 @@ function display_sistema_atributos( $sistema ){
     $dominio_stm    	= esc_html( get_post_meta( $sistema->ID, 'sistema_dominio_stm', true ) ); 
     $ftp_stm    	= esc_html( get_post_meta( $sistema->ID, 'sistema_ftp_stm', true ) );
     $detalles_stm    	= esc_html( get_post_meta( $sistema->ID, 'sistema_detalles_stm', true ) );
-
     $tiempoCreativo1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo1_ext', true ) ); 
     $solicitud1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solicitud1_ext', true ) ); 
     $solic_fecha1_ext   	= esc_html( get_post_meta( $sistema->ID, 'sistema_solic_fecha1_ext', true ) ); 
@@ -575,7 +603,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
 	}
 }
-
 
 //qo_clientes
 add_action( 'add_meta_boxes', 'qo_clientes_custom_metabox' );
