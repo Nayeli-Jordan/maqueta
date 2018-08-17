@@ -62,12 +62,36 @@ function add_top_menu(){
 	register_nav_menu('qo_menu',__('QO menú'));
 }
 
-// remove "Private: " from titles
-function remove_private_prefix($title) {
-    $title = str_replace('Privado: ', '', $title);
-    return $title;
-}
-add_filter('the_title', 'remove_private_prefix');
+//Change style login
+function my_login_logo() { ?>
+  <style type="text/css">
+    body { background-color: #dcdcdc!important; }
+    #login h1 a, .login h1 a {
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/identidad/logo.png);
+        width: 150px;
+        height: 90px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .login label, .login #backtoblog a, .login #nav a { color: #23282d!important; }
+  </style>
+<?php }//end my_login_logo()
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+  return home_url();
+}//end my_login_logo_url()
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+  return '¿Qué Onda?';
+}//end my_login_logo_url_title()
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+
+/**
+* Configuraciones WP - QO posts
+*/
 
 //Númerar posts
 function post_number_sistema($postID){
@@ -104,31 +128,24 @@ function post_number_qo_cotizaciones($postID){
     return $postNumberCotizacion;
 }
 
-//Change style login
-function my_login_logo() { ?>
-  <style type="text/css">
-    body { background-color: #dcdcdc!important; }
-    #login h1 a, .login h1 a {
-        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/identidad/logo.png);
-        width: 150px;
-        height: 90px;
-        background-size: contain;
-        background-repeat: no-repeat;
+
+/**
+* Configuraciones QO posts privacidad
+*/
+function force_type_private($post){
+    if ($post['post_type'] == 'qo_cotizaciones' || $post['post_type'] == 'sistema') {
+        if ($post['post_status'] != 'trash') $post['post_status'] = 'private';
     }
-    .login label, .login #backtoblog a, .login #nav a { color: #23282d!important; }
-  </style>
-<?php }//end my_login_logo()
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
+    return $post;
+}
+add_filter('wp_insert_post_data', 'force_type_private');
 
-function my_login_logo_url() {
-  return home_url();
-}//end my_login_logo_url()
-add_filter( 'login_headerurl', 'my_login_logo_url' );
-
-function my_login_logo_url_title() {
-  return '¿Qué Onda?';
-}//end my_login_logo_url_title()
-add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+// remove "Private: " from titles
+function remove_private_prefix($title) {
+    $title = str_replace('Privado: ', '', $title);
+    return $title;
+}
+add_filter('the_title', 'remove_private_prefix');
 
 //Hide item admin menu for certain user profile
 function qo_remove_menu_items() {
@@ -1322,17 +1339,3 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
         }
 	}
 }
-
-
-
-/**
-* CUSTOM POST Private
-*/
-
-/*function force_type_private($post)
-{
-    if ($post['post_type'] == 'qo_cotizaciones' || $post['post_type'] == 'sistema')
-    $post['post_status'] = 'private';
-    return $post;
-}
-add_filter('wp_insert_post_data', 'force_type_private');*/
