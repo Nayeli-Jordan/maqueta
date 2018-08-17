@@ -33,7 +33,12 @@
 					 
 					    $fechaRequerida    		= get_post_meta( $post_id, 'sistema_fechaRequerida', true );    
 					    $fechaEntrega    		= get_post_meta( $post_id, 'sistema_fechaEntrega', true ); 
-		    			$prioridad    			= get_post_meta( $post_id, 'sistema_prioridad', true ); 
+		    			$prioridad    			= get_post_meta( $post_id, 'sistema_prioridad', true );
+
+		    			$ent_fecha1_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha1_ext', true );
+		    			$ent_fecha2_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha2_ext', true );
+		    			$ent_fecha3_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha3_ext', true );
+		    			$ent_fecha4_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );
 							
 			            	?>
 

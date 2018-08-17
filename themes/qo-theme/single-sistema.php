@@ -57,8 +57,6 @@
 				<div class="row">
 					<div class="col s12 sm6 m4 l6 bg-purple-xlight"><p>No. de Brief</p></div>
 					<div class="col s12 sm6 m4 l6"><?php echo get_the_ID(); ?></div>
-					<div class="col s12 sm6 m4 l6 clear bg-purple-xlight"><p>Fecha Requerida</p></div>
-					<div class="col s12 sm6 m4 l6"><?php echo $fechaRequerida; ?></div>
 					<div class="col s12 sm6 m4 l6 clear bg-purple-xlight"><p>Fecha de Entrega</p></div>
 					<div class="col s12 sm6 m4 l6"><?php echo $fechaEntrega; ?></div>
 					<div class="col s12 sm6 m4 l6 clear bg-purple-xlight"><p>Responsable</p></div>
@@ -264,12 +262,10 @@
 							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo1_ext; ?></div>
 							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 							<div class="col s12 m7 l4"><?php echo $solicitud1_ext; ?></div>
-							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?><br><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?><br><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?><br><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha1_ext . ' ' . $solic_hora1_ext; ?></div>
-							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha1_ext . ' ' . $req_hora1_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
 						</div>
@@ -281,12 +277,10 @@
 							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo2_ext; ?></div>
 							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 							<div class="col s12 m7 l4"><?php echo $solicitud2_ext; ?></div>
-							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?><br><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?><br><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?><br><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha2_ext . ' ' . $solic_hora2_ext; ?></div>
-							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha2_ext . ' ' . $req_hora2_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
 						</div>
@@ -298,12 +292,10 @@
 							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo3_ext; ?></div>
 							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 							<div class="col s12 m7 l4"><?php echo $solicitud3_ext; ?></div>
-							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?><br><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?><br><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?><br><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha3_ext . ' ' . $solic_hora3_ext; ?></div>
-							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha3_ext . ' ' . $req_hora3_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
 						</div>
@@ -315,12 +307,10 @@
 							<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo4_ext; ?></div>
 							<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 							<div class="col s12 m7 l4"><?php echo $solicitud4_ext; ?></div>
-							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha Requerida<br>Fecha de ENTREGA</p></div>
-							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?><br><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?><br><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
+							<div class="col s12 m5 l3 hide-on-med-and-down bg-purple-xlight"><p>Fecha y Hora Solicitado<br>Fecha de ENTREGA</p></div>
+							<div class="col s12 m7 l3 hide-on-med-and-down"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?><br><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up clear bg-purple-xlight"><p>Fecha y Hora Solicitado</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $solic_fecha4_ext . ' ' . $solic_hora4_ext; ?></div>
-							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha Requerida</p></div>
-							<div class="col s12 m7 hide-on-large-and-up"><?php echo $req_fecha4_ext . ' ' . $req_hora4_ext; ?></div>
 							<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 							<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
 						</div>

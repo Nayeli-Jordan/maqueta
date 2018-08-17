@@ -218,8 +218,8 @@
 			&.bg-Reabierto span:not(.etiqueta-text):before { content:'\f513'; }
 			&.bg-Enterado span:not(.etiqueta-text):before { content:'\f164'; }
 			&.bg-Trabajando span:not(.etiqueta-text):before { content:'\e800'; }
-			&.bg-Hecho span:not(.etiqueta-text):before { content:''; }
-			&.bg-Cerrado span:not(.etiqueta-text):before { content:''; }
+			&.bg-Hecho span:not(.etiqueta-text):before { content:'\e805'; }
+			&.bg-Cerrado span:not(.etiqueta-text):before { content:'\f512'; }
 			span:not(.etiqueta-text) {
 				line-height: 30px;
 				font-size: 14px;

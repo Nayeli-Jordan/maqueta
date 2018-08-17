@@ -108,6 +108,9 @@ function qo_remove_menu_items() {
         remove_menu_page( 'edit.php?post_type=reconocimientos' );
 
         remove_menu_page( 'edit.php?post_type=qo_clientes' );
+        remove_menu_page( 'edit.php?post_type=qo_proveedores' );
+        remove_menu_page( 'edit.php?post_type=qo_cotizaciones' );
+        remove_submenu_page( 'edit.php?post_type=sistema', 'post-new.php?post_type=sistema' );
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=solicitante&amp;post_type=sistema' );
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=requerimiento&amp;post_type=sistema' );
         remove_submenu_page( 'edit.php?post_type=sistema', 'edit-tags.php?taxonomy=responsable&amp;post_type=sistema' );
@@ -116,6 +119,7 @@ function qo_remove_menu_items() {
 
         remove_menu_page('edit.php'); // Posts
         remove_menu_page('edit.php?post_type=page'); // Pages
+        remove_menu_page( 'upload.php' ); //Multimedia
         remove_menu_page('edit-comments.php'); // Comments
         remove_menu_page('tools.php'); // Tools
     endif;
@@ -128,6 +132,7 @@ function qo_remove_menu_items() {
         remove_menu_page('edit-comments.php'); // Comments
         remove_menu_page('themes.php'); // Appearance
         remove_menu_page('tools.php'); // Tools
+        remove_menu_page( 'options-general.php' );        //Ajustes
         remove_menu_page( 'edit.php?post_type=nosotros' );
         remove_menu_page( 'edit.php?post_type=servicios' );
         remove_menu_page( 'edit.php?post_type=clientes' );
@@ -195,7 +200,6 @@ function display_sistema_atributos( $sistema ){
     $proyecto           = esc_html( get_post_meta( $sistema->ID, 'sistema_proyecto', true ) );    
     $tiempoCotizado    	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCotizado', true ) );   
  
-    $fechaRequerida    	= esc_html( get_post_meta( $sistema->ID, 'sistema_fechaRequerida', true ) );   
     $fechaEntrega       = esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
     $prioridad    	= esc_html( get_post_meta( $sistema->ID, 'sistema_prioridad', true ) );
 
@@ -316,9 +320,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         } 
         if ( isset( $_POST['tiempoCotizado'] ) ){
             update_post_meta( $idsistema, 'tiempoCotizado', $_POST['tiempoCotizado'] );
-        }
-        if ( isset( $_POST['sistema_fechaRequerida'] ) ){
-            update_post_meta( $idsistema, 'sistema_fechaRequerida', $_POST['sistema_fechaRequerida'] );
         }
         if ( isset( $_POST['sistema_fechaEntrega'] ) ){
             update_post_meta( $idsistema, 'sistema_fechaEntrega', $_POST['sistema_fechaEntrega'] );
@@ -512,12 +513,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         if ( isset( $_POST['sistema_solic_hora1_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solic_hora1_ext', $_POST['sistema_solic_hora1_ext'] );
         }
-        if ( isset( $_POST['sistema_req_fecha1_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_fecha1_ext', $_POST['sistema_req_fecha1_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_hora1_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_hora1_ext', $_POST['sistema_req_hora1_ext'] );
-        }
         if ( isset( $_POST['sistema_ent_fecha1_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_fecha1_ext', $_POST['sistema_ent_fecha1_ext'] );
         }
@@ -535,12 +530,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
         if ( isset( $_POST['sistema_solic_hora2_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solic_hora2_ext', $_POST['sistema_solic_hora2_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_fecha2_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_fecha2_ext', $_POST['sistema_req_fecha2_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_hora2_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_hora2_ext', $_POST['sistema_req_hora2_ext'] );
         }
         if ( isset( $_POST['sistema_ent_fecha2_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_fecha2_ext', $_POST['sistema_ent_fecha2_ext'] );
@@ -560,12 +549,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         if ( isset( $_POST['sistema_solic_hora3_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solic_hora3_ext', $_POST['sistema_solic_hora3_ext'] );
         }
-        if ( isset( $_POST['sistema_req_fecha3_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_fecha3_ext', $_POST['sistema_req_fecha3_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_hora3_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_hora3_ext', $_POST['sistema_req_hora3_ext'] );
-        }
         if ( isset( $_POST['sistema_ent_fecha3_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_fecha3_ext', $_POST['sistema_ent_fecha3_ext'] );
         }
@@ -583,12 +566,6 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
         if ( isset( $_POST['sistema_solic_hora4_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_solic_hora4_ext', $_POST['sistema_solic_hora4_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_fecha4_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_fecha4_ext', $_POST['sistema_req_fecha4_ext'] );
-        }
-        if ( isset( $_POST['sistema_req_hora4_ext'] ) ){
-            update_post_meta( $idsistema, 'sistema_req_hora4_ext', $_POST['sistema_req_hora4_ext'] );
         }
         if ( isset( $_POST['sistema_ent_fecha4_ext'] ) ){
             update_post_meta( $idsistema, 'sistema_ent_fecha4_ext', $_POST['sistema_ent_fecha4_ext'] );

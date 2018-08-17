@@ -2,7 +2,7 @@
 	<?php if (is_user_logged_in()) : ?>
 		<header class="container container-large archive-header">
 			<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
-			<div class="title-archive"><?php the_title(); ?></div>
+			<div class="title-archive">Cotizaciones</div>
 			<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
 		</header>
 		<section class="[ container container-large ]">

@@ -24,8 +24,6 @@
 		<th><label>Cliente</label></th>
 		<th><input type="text" name="sistema_cliente" value="<?php echo $cliente; ?>"></th>
 		<th colspan="2" class="color-light">.</th>
-		<th><label>Fecha Requerida</label></th>
-		<th><input type="date" name="sistema_fechaRequerida" value="<?php echo $fechaRequerida; ?>"></th>
 	</tr>
 	<tr>
 		<th><label>Marca</label></th>
@@ -45,7 +43,7 @@
 	<tr class="margin-bottom-large">
 		<th><label>Requerimiento</label></th>
 		<th><p class="disabled">Columna derecha</p></th>
-		<th><input type="text" name="sistema_tiempoCotizado" value="<?php echo $tiempoCotizado; ?>"></th>
+		<th><input class="editor-time" type="text" name="sistema_tiempoCotizado" value="<?php echo $tiempoCotizado; ?>"></th>
 		<th colspan="1" class="color-light">.</th>
 		<th><label>Prioridad</label></th>
 		<th>
@@ -66,7 +64,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_di" value="<?php echo $tiempoCreativo_di; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_di" value="<?php echo $tiempoCreativo_di; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -170,7 +168,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_dv" value="<?php echo $tiempoCreativo_dv; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_dv" value="<?php echo $tiempoCreativo_dv; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -263,7 +261,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_mkt" value="<?php echo $tiempoCreativo_mkt; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_mkt" value="<?php echo $tiempoCreativo_mkt; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -319,7 +317,7 @@
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_stm" value="<?php echo $tiempoCreativo_stm; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo_stm" value="<?php echo $tiempoCreativo_stm; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -381,91 +379,71 @@
 	<tbody>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo1_ext" value="<?php echo $tiempoCreativo1_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo1_ext" value="<?php echo $tiempoCreativo1_ext; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #1</label></th>
-			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud1_ext"><?php echo $solicitud1_ext; ?></textarea></th>
+			<th colspan="2" rowspan="2"><textarea class="textarea_row3" name="sistema_solicitud1_ext"><?php echo $solicitud1_ext; ?></textarea></th>
 			<th><label>Fecha y Hora Solicitado</label></th>
 			<th><input type="date" name="sistema_solic_fecha1_ext" value="<?php echo $solic_fecha1_ext; ?>"></th>
-			<th><input type="text" name="sistema_solic_hora1_ext" value="<?php echo $solic_hora1_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_solic_hora1_ext" value="<?php echo $solic_hora1_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
-			<th rowspan="2"><label>Solicitud</label></th>
-			<th><label>Fecha Requerida</label></th>
-			<th><input type="date" name="sistema_req_fecha1_ext" value="<?php echo $req_fecha1_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora1_ext" value="<?php echo $req_hora1_ext; ?>" placeholder="00:00">
-		</tr>
-		<tr>
+			<th><label>Solicitud</label></th>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha1_ext" value="<?php echo $ent_fecha1_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora1_ext" value="<?php echo $ent_hora1_ext; ?>" placeholder="00:00">
+			<th><input type="time" name="sistema_ent_hora1_ext" value="<?php echo $ent_hora1_ext; ?>" placeholder="00:00">
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo2_ext" value="<?php echo $tiempoCreativo2_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo2_ext" value="<?php echo $tiempoCreativo2_ext; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #2</label></th>
-			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud2_ext"><?php echo $solicitud2_ext; ?></textarea></th>
+			<th colspan="2" rowspan="2"><textarea class="textarea_row3" name="sistema_solicitud2_ext"><?php echo $solicitud2_ext; ?></textarea></th>
 			<th><label>Fecha y Hora Solicitado</label></th>
 			<th><input type="date" name="sistema_solic_fecha2_ext" value="<?php echo $solic_fecha2_ext; ?>"></th>
-			<th><input type="text" name="sistema_solic_hora2_ext" value="<?php echo $solic_hora2_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_solic_hora2_ext" value="<?php echo $solic_hora2_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
-			<th rowspan="2"><label>Solicitud</label></th>
-			<th><label>Fecha Requerida</label></th>
-			<th><input type="date" name="sistema_req_fecha2_ext" value="<?php echo $req_fecha2_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora2_ext" value="<?php echo $req_hora2_ext; ?>" placeholder="00:00">
-		</tr>
-		<tr>
+			<th><label>Solicitud</label></th>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha2_ext" value="<?php echo $ent_fecha2_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora2_ext" value="<?php echo $ent_hora2_ext; ?>" placeholder="00:00">
+			<th><input type="time" name="sistema_ent_hora2_ext" value="<?php echo $ent_hora2_ext; ?>" placeholder="00:00">
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo3_ext" value="<?php echo $tiempoCreativo3_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo3_ext" value="<?php echo $tiempoCreativo3_ext; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #3</label></th>
-			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud3_ext"><?php echo $solicitud3_ext; ?></textarea></th>
+			<th colspan="2" rowspan="2"><textarea class="textarea_row3" name="sistema_solicitud3_ext"><?php echo $solicitud3_ext; ?></textarea></th>
 			<th><label>Fecha y Hora Solicitado</label></th>
 			<th><input type="date" name="sistema_solic_fecha3_ext" value="<?php echo $solic_fecha3_ext; ?>"></th>
-			<th><input type="text" name="sistema_solic_hora3_ext" value="<?php echo $solic_hora3_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_solic_hora3_ext" value="<?php echo $solic_hora3_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
-			<th rowspan="2"><label>Solicitud</label></th>
-			<th><label>Fecha Requerida</label></th>
-			<th><input type="date" name="sistema_req_fecha3_ext" value="<?php echo $req_fecha3_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora3_ext" value="<?php echo $req_hora3_ext; ?>" placeholder="00:00"></th>
-		</tr>
-		<tr>
+			<th><label>Solicitud</label></th>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha3_ext" value="<?php echo $ent_fecha3_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora3_ext" value="<?php echo $ent_hora3_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_ent_hora3_ext" value="<?php echo $ent_hora3_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
 			<th colspan="2" class="bg-destacade"><label>Tiempo Creativo</label></th>
-			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo4_ext" value="<?php echo $tiempoCreativo4_ext; ?>" placeholder="00:00:00"></th>
+			<th colspan="4"><input type="text" class="editor-time" name="sistema_tiempoCreativo4_ext" value="<?php echo $tiempoCreativo4_ext; ?>" placeholder="00:00 hrs"></th>
 		</tr>
 		<tr>
 			<th class="bg-destacade"><label>Actualización #4</label></th>
-			<th colspan="2" rowspan="3"><textarea class="textarea_row3" name="sistema_solicitud4_ext"><?php echo $solicitud4_ext; ?></textarea></th>
+			<th colspan="2" rowspan="2"><textarea class="textarea_row3" name="sistema_solicitud4_ext"><?php echo $solicitud4_ext; ?></textarea></th>
 			<th><label>Fecha y Hora Solicitado</label></th>
 			<th><input type="date" name="sistema_solic_fecha4_ext" value="<?php echo $solic_fecha4_ext; ?>"></th>
-			<th><input type="text" name="sistema_solic_hora4_ext" value="<?php echo $solic_hora4_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_solic_hora4_ext" value="<?php echo $solic_hora4_ext; ?>" placeholder="00:00"></th>
 		</tr>
 		<tr>
-			<th rowspan="2"><label>Solicitud</label></th>
-			<th><label>Fecha Requerida</label></th>
-			<th><input type="date" name="sistema_req_fecha4_ext" value="<?php echo $req_fecha4_ext; ?>"></th>
-			<th><input type="text" name="sistema_req_hora4_ext" value="<?php echo $req_hora4_ext; ?>" placeholder="00:00"></th>
-		</tr>
-		<tr>
+			<th><label>Solicitud</label></th>
 			<th><label>Fecha de ENTREGA</label></th>
 			<th><input type="date" name="sistema_ent_fecha4_ext" value="<?php echo $ent_fecha4_ext; ?>"></th>
-			<th><input type="text" name="sistema_ent_hora4_ext" value="<?php echo $ent_hora4_ext; ?>" placeholder="00:00"></th>
+			<th><input type="time" name="sistema_ent_hora4_ext" value="<?php echo $ent_hora4_ext; ?>" placeholder="00:00"></th>
 		</tr>
 	</tbody>
 </table>

@@ -8,8 +8,7 @@
     $marca            		= get_post_meta( $post_id, 'sistema_marca', true );     
     $proyecto           	= get_post_meta( $post_id, 'sistema_proyecto', true );     
     $tiempoCotizado    		= get_post_meta( $post_id, 'sistema_tiempoCotizado', true );    
- 
-    $fechaRequerida    		= get_post_meta( $post_id, 'sistema_fechaRequerida', true );    
+    
     $fechaEntrega    		= get_post_meta( $post_id, 'sistema_fechaEntrega', true ); 
     $prioridad    		= get_post_meta( $post_id, 'sistema_prioridad', true ); 
 
@@ -79,32 +78,24 @@
     $solicitud1_ext   		= get_post_meta( $post_id, 'sistema_solicitud1_ext', true );  
     $solic_fecha1_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha1_ext', true );  
     $solic_hora1_ext   		= get_post_meta( $post_id, 'sistema_solic_hora1_ext', true );  
-    $req_fecha1_ext   		= get_post_meta( $post_id, 'sistema_req_fecha1_ext', true );  
-    $req_hora1_ext   		= get_post_meta( $post_id, 'sistema_req_hora1_ext', true ); 
     $ent_fecha1_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha1_ext', true );  
     $ent_hora1_ext   		= get_post_meta( $post_id, 'sistema_ent_hora1_ext', true );
     $tiempoCreativo2_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo2_ext', true );
     $solicitud2_ext   		= get_post_meta( $post_id, 'sistema_solicitud2_ext', true );  
     $solic_fecha2_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha2_ext', true );  
     $solic_hora2_ext   		= get_post_meta( $post_id, 'sistema_solic_hora2_ext', true );  
-    $req_fecha2_ext   		= get_post_meta( $post_id, 'sistema_req_fecha2_ext', true );  
-    $req_hora2_ext   		= get_post_meta( $post_id, 'sistema_req_hora2_ext', true ); 
     $ent_fecha2_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha2_ext', true );  
     $ent_hora2_ext   		= get_post_meta( $post_id, 'sistema_ent_hora2_ext', true );  
     $tiempoCreativo3_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo3_ext', true );
     $solicitud3_ext   		= get_post_meta( $post_id, 'sistema_solicitud3_ext', true );  
     $solic_fecha3_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha3_ext', true );  
     $solic_hora3_ext   		= get_post_meta( $post_id, 'sistema_solic_hora3_ext', true );  
-    $req_fecha3_ext   		= get_post_meta( $post_id, 'sistema_req_fecha3_ext', true );  
-    $req_hora3_ext   		= get_post_meta( $post_id, 'sistema_req_hora3_ext', true ); 
     $ent_fecha3_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha3_ext', true );  
     $ent_hora3_ext   		= get_post_meta( $post_id, 'sistema_ent_hora3_ext', true );
     $tiempoCreativo4_ext   	= get_post_meta( $post_id, 'sistema_tiempoCreativo4_ext', true );
     $solicitud4_ext   		= get_post_meta( $post_id, 'sistema_solicitud4_ext', true );  
     $solic_fecha4_ext   	= get_post_meta( $post_id, 'sistema_solic_fecha4_ext', true );  
     $solic_hora4_ext   		= get_post_meta( $post_id, 'sistema_solic_hora4_ext', true );  
-    $req_fecha4_ext   		= get_post_meta( $post_id, 'sistema_req_fecha4_ext', true );  
-    $req_hora4_ext   		= get_post_meta( $post_id, 'sistema_req_hora4_ext', true ); 
     $ent_fecha4_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );  
     $ent_hora4_ext   		= get_post_meta( $post_id, 'sistema_ent_hora4_ext', true ); 
 ?>

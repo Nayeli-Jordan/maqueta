@@ -4197,11 +4197,11 @@ small {
 }
 /* line 221, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
-  content: '';
+  content: '\e805';
 }
 /* line 222, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
-  content: '';
+  content: '\f512';
 }
 /* line 223, ../sass/components/_utilities.scss */
 .card-sistema .card-head .status span:not(.etiqueta-text) {
