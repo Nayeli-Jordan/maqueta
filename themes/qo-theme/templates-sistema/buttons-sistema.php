@@ -1,14 +1,21 @@
 <div  id="filters" class="button-group row margin-bottom-large text-center">
 	<button class="btn-primaryQO is-checked" data-filter="*">Todas</button>
 	<?php 
-	$terms = get_terms( 'responsable' );
+	$terms = get_terms( array( 
+	    'taxonomy' => 'responsable',
+	    'hide_empty' => false,
+	) );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 		foreach ( $terms as $term ) {
 			echo '<button class="btn-primaryQO" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
 		}
 	}
+
 	echo '<br>';
-	$terms = get_terms( 'requerimiento' );
+	$terms = get_terms( array( 
+	    'taxonomy' => 'requerimiento',
+	    'hide_empty' => false,
+	) );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 		foreach ( $terms as $term ) {
 			echo '<button class="btn-primaryQO btn-area" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
