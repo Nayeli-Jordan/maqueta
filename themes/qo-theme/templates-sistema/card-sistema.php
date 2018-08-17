@@ -32,24 +32,26 @@
 				echo "</p>";
 			?>
 			<div class="hr bg-gradient-qo margin-top-xsmall margin-bottom-xsmall"></div>
-			<p><span class="uppercase color-purple font-strong">Cliente:</span> <?php echo $cliente; ?></p>
-			<p><span class="uppercase color-purple font-strong">Marca:</span> <?php echo $marca ?></p>
-			<p><span class="uppercase color-purple font-strong">Proyecto:</span> <?php echo $proyecto; ?></p>
-			<p class="margin-top-xsmall"><span class="icon-calendar-inv"></span>Requerida: 
-			<?php
-				/*if( $req_fecha4_ext  != "" ) : 
-					$req_fecha4_ext;
-				elseif( $req_fecha3_ext  != "" ) : 
-					$req_fecha3_ext;
-				elseif( $req_fecha2_ext  != "" ) : 
-					$req_fecha2_ext;
-				elseif( $req_fecha1_ext  != "" ) : 
-					$req_fecha1_ext;
-				elseif( $fechaEntrega != "" ) : 
-					$fechaRequerida;
-				endif;*/
-			?></p>
-			<p><span class="icon-calendar-inv"></span>Entrega: <?php echo $fechaEntrega; ?></p>
+			<div class="number-brief"><?php echo date("y") . date("m"); ?><?php echo get_the_ID(); ?></div>
+			<div class="content-info-brief">
+				<p><span class="uppercase color-purple font-strong">Cliente:</span> <?php echo $cliente; ?></p>
+				<p><span class="uppercase color-purple font-strong">Marca:</span> <?php echo $marca ?></p>
+				<p><span class="uppercase color-purple font-strong">Proyecto:</span> <?php echo $proyecto; ?></p>
+				<p class="margin-top-xsmall"><span class="icon-calendar-inv"></span>Entrega: 
+				<?php 
+					if( $ent_fecha4_ext  != "" ) : 
+						echo $ent_fecha4_ext;
+					elseif( $ent_fecha3_ext  != "" ) : 
+						echo $ent_fecha3_ext;
+					elseif( $ent_fecha2_ext  != "" ) : 
+						echo $ent_fecha2_ext;
+					elseif( $ent_fecha1_ext  != "" ) : 
+						echo $ent_fecha1_ext;
+					elseif( $fechaEntrega != "" ) : 
+						echo $fechaEntrega;
+					endif;
+				?></p>				
+			</div>
 
 			<?php 
 				$todayDate = date('Y-m-d');
@@ -65,9 +67,8 @@
 				elseif( $fechaEntrega != "" ) : 
 					$limitFechaEntrega = $fechaEntrega;
 				endif;
-				echo $limitFechaEntrega;
 				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . ' - 3 days'));
-				//echo "Hoy: " . $todayDate. "<br> Fecha Alerta: " . $activeAlertDate;
+				//echo "Hoy: " . $todayDate . "<br> Fecha Entrega: " . $limitFechaEntrega . "<br>  Fecha Alerta: " . $activeAlertDate;
 
 				if (($todayDate >= $activeAlertDate)){
 				    echo "<a href='<?php echo the_permalink(); ?>'><div id='btn-entrega-proxima' class='shadow btn-primary-rounded'><span class='icon-clock'></span><span class='etiqueta-text'>Entrega Cercana</span></div></a>";

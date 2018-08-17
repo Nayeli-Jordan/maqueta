@@ -1285,10 +1285,11 @@
 /* line 34, ../sass/components/_buttons.scss */
 #btn-entrega-proxima {
   background-color: red;
-  bottom: 50px;
+  bottom: 45px;
   opacity: 1;
+  cursor: auto;
 }
-/* line 38, ../sass/components/_buttons.scss */
+/* line 39, ../sass/components/_buttons.scss */
 #btn-entrega-proxima .etiqueta-text {
   width: 115px;
   color: #000;
@@ -1298,17 +1299,17 @@
   top: 0px;
   right: -118px;
 }
-/* line 48, ../sass/components/_buttons.scss */
+/* line 49, ../sass/components/_buttons.scss */
 #btn-entrega-proxima:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 51, ../sass/components/_buttons.scss */
+/* line 52, ../sass/components/_buttons.scss */
 button {
   outline: none;
 }
 
-/* line 52, ../sass/components/_buttons.scss */
+/* line 53, ../sass/components/_buttons.scss */
 .btn-primaryQO {
   display: inline-block;
   margin: 0 2px 5px;
@@ -1321,59 +1322,59 @@ button {
   transition: .3s ease-out;
   cursor: pointer;
 }
-/* line 63, ../sass/components/_buttons.scss */
+/* line 64, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus, .btn-primaryQO.btn-prioridad {
   line-height: 20px;
 }
-/* line 64, ../sass/components/_buttons.scss */
+/* line 65, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-area {
   border-color: #b21180;
 }
-/* line 65, ../sass/components/_buttons.scss */
+/* line 66, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus {
   border-color: #2174b9;
 }
-/* line 66, ../sass/components/_buttons.scss */
+/* line 67, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-prioridad {
   border-color: #614893;
 }
-/* line 67, ../sass/components/_buttons.scss */
+/* line 68, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover {
   color: #fff;
   background-color: #7b2183;
   opacity: 0.8;
 }
-/* line 71, ../sass/components/_buttons.scss */
+/* line 72, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-area {
   background-color: #b21180;
 }
-/* line 72, ../sass/components/_buttons.scss */
+/* line 73, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-estatus {
   background-color: #2174b9;
 }
-/* line 73, ../sass/components/_buttons.scss */
+/* line 74, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-prioridad {
   background-color: #614893;
 }
-/* line 75, ../sass/components/_buttons.scss */
+/* line 76, ../sass/components/_buttons.scss */
 .btn-primaryQO:active, .btn-primaryQO.is-checked {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 79, ../sass/components/_buttons.scss */
+/* line 80, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-area, .btn-primaryQO.is-checked.btn-area {
   background-color: #b21180;
 }
-/* line 80, ../sass/components/_buttons.scss */
+/* line 81, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-estatus, .btn-primaryQO.is-checked.btn-estatus {
   background-color: #2174b9;
 }
-/* line 81, ../sass/components/_buttons.scss */
+/* line 82, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-prioridad, .btn-primaryQO.is-checked.btn-prioridad {
   background-color: #614893;
 }
 
-/* line 84, ../sass/components/_buttons.scss */
+/* line 85, ../sass/components/_buttons.scss */
 .btn-purple {
   display: inline-block;
   line-height: 35px;
@@ -1382,7 +1383,7 @@ button {
   border-radius: 3px;
 }
 
-/* line 94, ../sass/components/_buttons.scss */
+/* line 95, ../sass/components/_buttons.scss */
 .card-cotizacion .status,
 .content-cotizacion .status {
   position: absolute;
@@ -1396,20 +1397,20 @@ button {
   background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
   border-radius: 50%;
 }
-/* line 105, ../sass/components/_buttons.scss */
+/* line 106, ../sass/components/_buttons.scss */
 .card-cotizacion .status .etiqueta-text,
 .content-cotizacion .status .etiqueta-text {
   right: 20px;
   color: #000;
   z-index: 9;
 }
-/* line 110, ../sass/components/_buttons.scss */
+/* line 111, ../sass/components/_buttons.scss */
 .card-cotizacion .status:hover .etiqueta-text,
 .content-cotizacion .status:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 114, ../sass/components/_buttons.scss */
+/* line 115, ../sass/components/_buttons.scss */
 .content-cotizacion .status {
   top: -10px;
   right: -10px;
@@ -4269,8 +4270,18 @@ small {
   right: 20px;
   bottom: 10px;
 }
+/* line 270, ../sass/components/_utilities.scss */
+.card-sistema .card-body .number-brief {
+  float: right;
+  font-size: 10px;
+  font-weight: bold;
+}
+/* line 275, ../sass/components/_utilities.scss */
+.card-sistema .card-body .content-info-brief {
+  padding-right: 40px;
+}
 
-/* line 273, ../sass/components/_utilities.scss */
+/* line 281, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   position: relative;
