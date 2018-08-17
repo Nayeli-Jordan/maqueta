@@ -196,6 +196,33 @@ function custom_taxonomies_callback(){
     } 
     wp_reset_postdata();    
 
+
+    if( ! taxonomy_exists('estatus-brief')){
+
+		$labels = array(
+			'name'              => 'Estatus Brief',
+			'singular_name'     => 'Estatus Brief',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Estatus Brief',
+			'update_item'       => 'Actualizar Estatus Brief',
+			'add_new_item'      => 'Nueva Estatus Brief',
+			'menu_name'         => 'Estatus Brief'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'estatus-brief' ),
+		);
+
+		register_taxonomy( 'estatus-brief', 'sistema', $args );
+	}
+	wp_insert_term( 'Archivada', 'estatus-brief' );
+
 	
 
 }

@@ -14,7 +14,15 @@
 			            'post_type' 		=> 'sistema',
 			            'posts_per_page' 	=> -1,
 			            'orderby' 			=> 'date',
-			            'order' 			=> 'ASC'
+			            'order' 			=> 'ASC',
+						'tax_query' 		=> array(
+							array(
+								'taxonomy' 	=> 'estatus-brief',
+								'field'	   	=> 'slug',
+								'terms'	 	=> 'archivada',
+								'operator'	=> 'NOT IN',
+							)
+						)
 			            );
 			        $loop = new WP_Query( $args );
 			        if ( $loop->have_posts() ) {
