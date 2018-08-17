@@ -1309,7 +1309,60 @@ button {
   outline: none;
 }
 
-/* line 53, ../sass/components/_buttons.scss */
+/* line 54, ../sass/components/_buttons.scss */
+.option-set button {
+  display: inline-block;
+  margin: 0 2px 5px;
+  padding: 0px 10px;
+  line-height: 25px;
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid #7b2183;
+  border-radius: 5px;
+  transition: .3s ease-out;
+  cursor: pointer;
+}
+/* line 66, ../sass/components/_buttons.scss */
+.option-set.btns-group-estatus button, .option-set.btns-group-prioridad button {
+  line-height: 20px;
+}
+/* line 67, ../sass/components/_buttons.scss */
+.option-set.btns-group-area button {
+  border-color: #b21180;
+}
+/* line 69, ../sass/components/_buttons.scss */
+.option-set.btns-group-area button:hover, .option-set.btns-group-area button.selected {
+  background-color: #b21180;
+}
+/* line 71, ../sass/components/_buttons.scss */
+.option-set.btns-group-estatus button {
+  border-color: #2174b9;
+}
+/* line 73, ../sass/components/_buttons.scss */
+.option-set.btns-group-estatus button:hover, .option-set.btns-group-estatus button.selected {
+  background-color: #2174b9;
+}
+/* line 75, ../sass/components/_buttons.scss */
+.option-set.btns-group-prioridad button {
+  border-color: #614893;
+}
+/* line 77, ../sass/components/_buttons.scss */
+.option-set.btns-group-prioridad button:hover, .option-set.btns-group-prioridad button.selected {
+  background-color: #614893;
+}
+/* line 79, ../sass/components/_buttons.scss */
+.option-set button:hover {
+  color: #fff;
+  background-color: #7b2183;
+  opacity: 0.8;
+}
+/* line 85, ../sass/components/_buttons.scss */
+.option-set button.selected {
+  background-color: #7b2183;
+  color: #fff;
+}
+
+/* line 90, ../sass/components/_buttons.scss */
 .btn-primaryQO {
   display: inline-block;
   margin: 0 2px 5px;
@@ -1322,59 +1375,59 @@ button {
   transition: .3s ease-out;
   cursor: pointer;
 }
-/* line 64, ../sass/components/_buttons.scss */
+/* line 101, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus, .btn-primaryQO.btn-prioridad {
   line-height: 20px;
 }
-/* line 65, ../sass/components/_buttons.scss */
+/* line 102, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-area {
   border-color: #b21180;
 }
-/* line 66, ../sass/components/_buttons.scss */
+/* line 103, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus {
   border-color: #2174b9;
 }
-/* line 67, ../sass/components/_buttons.scss */
+/* line 104, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-prioridad {
   border-color: #614893;
 }
-/* line 68, ../sass/components/_buttons.scss */
+/* line 105, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover {
   color: #fff;
   background-color: #7b2183;
   opacity: 0.8;
 }
-/* line 72, ../sass/components/_buttons.scss */
+/* line 109, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-area {
   background-color: #b21180;
 }
-/* line 73, ../sass/components/_buttons.scss */
+/* line 110, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-estatus {
   background-color: #2174b9;
 }
-/* line 74, ../sass/components/_buttons.scss */
+/* line 111, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-prioridad {
   background-color: #614893;
 }
-/* line 76, ../sass/components/_buttons.scss */
+/* line 113, ../sass/components/_buttons.scss */
 .btn-primaryQO:active, .btn-primaryQO.is-checked {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 80, ../sass/components/_buttons.scss */
+/* line 117, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-area, .btn-primaryQO.is-checked.btn-area {
   background-color: #b21180;
 }
-/* line 81, ../sass/components/_buttons.scss */
+/* line 118, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-estatus, .btn-primaryQO.is-checked.btn-estatus {
   background-color: #2174b9;
 }
-/* line 82, ../sass/components/_buttons.scss */
+/* line 119, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-prioridad, .btn-primaryQO.is-checked.btn-prioridad {
   background-color: #614893;
 }
 
-/* line 85, ../sass/components/_buttons.scss */
+/* line 122, ../sass/components/_buttons.scss */
 .btn-purple {
   display: inline-block;
   line-height: 35px;
@@ -1383,7 +1436,7 @@ button {
   border-radius: 3px;
 }
 
-/* line 95, ../sass/components/_buttons.scss */
+/* line 132, ../sass/components/_buttons.scss */
 .card-cotizacion .status,
 .content-cotizacion .status {
   position: absolute;
@@ -1397,20 +1450,20 @@ button {
   background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
   border-radius: 50%;
 }
-/* line 106, ../sass/components/_buttons.scss */
+/* line 143, ../sass/components/_buttons.scss */
 .card-cotizacion .status .etiqueta-text,
 .content-cotizacion .status .etiqueta-text {
   right: 20px;
   color: #000;
   z-index: 9;
 }
-/* line 111, ../sass/components/_buttons.scss */
+/* line 148, ../sass/components/_buttons.scss */
 .card-cotizacion .status:hover .etiqueta-text,
 .content-cotizacion .status:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 115, ../sass/components/_buttons.scss */
+/* line 152, ../sass/components/_buttons.scss */
 .content-cotizacion .status {
   top: -10px;
   right: -10px;

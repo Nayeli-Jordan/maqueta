@@ -11,6 +11,7 @@ var $=jQuery.noConflict();
 		$(document).ready(function() {
 			//footerBottom();
 			isotopeQO();
+			isotopeMultipleQO();
 			if ($('.my-calendar-date-switcher').length > 0) {
 				$('.my-calendar-date-switcher input[type=submit]').val('Ir');
 			}
@@ -67,6 +68,7 @@ function getFooterHeight(){
 */
 
 /*Filtros CotizaciónQO */
+
 function isotopeQO(){
 	// init Isotope
 	var $grid = $('.grid').isotope({
@@ -90,3 +92,45 @@ function isotopeQO(){
 	  });
 	});
 }
+
+/*Filtros Brief's */
+
+function isotopeMultipleQO(){
+    var $container = $('.grid'),
+        filters = {};
+
+    $container.isotope({
+      itemSelector : '.element-item',
+      /*masonry: {
+        columnWidth: 80
+      }*/
+    });
+
+    // filter buttons
+    $('.filter button').click(function(){
+      var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+        return;
+      }
+      
+      var $optionSet = $this.parents('.option-set');
+      // change selected class
+      $optionSet.find('.selected').removeClass('selected');
+      $this.addClass('selected');
+      
+      // store filter value in object
+      // i.e. filters.color = 'red'
+      var group = $optionSet.attr('data-filter-group');
+      filters[ group ] = $this.attr('data-filter-value');
+      // convert object into array
+      var isoFilters = [];
+      for ( var prop in filters ) {
+        isoFilters.push( filters[ prop ] )
+      }
+      var selector = isoFilters.join('');
+      $container.isotope({ filter: selector });
+
+      return false;
+    });
+  };

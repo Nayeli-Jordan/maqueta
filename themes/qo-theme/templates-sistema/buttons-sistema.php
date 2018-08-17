@@ -1,5 +1,4 @@
-<div  id="filters" class="button-group row margin-bottom-large text-center">
-	<button class="btn-primaryQO is-checked" data-filter="*">Todas</button>
+<div class="filter option-set button-group row margin-bottom-xsmall text-center btns-group-responsable" data-filter-group="responsable">
 	<?php 
 	$terms = get_terms( array( 
 	    'taxonomy' => 'responsable',
@@ -7,34 +6,42 @@
 	) );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 		foreach ( $terms as $term ) {
-			echo '<button class="btn-primaryQO" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+			echo '<button data-filter-value=".' . $term->slug . '">' . $term->name . '</button>';
 		}
 	}
-
-	echo '<br>';
+	?>	
+	<button data-filter-value="" class="selected">x</button>
+</div>
+<div class="filter option-set button-group row margin-bottom-xsmall text-center btns-group-area" data-filter-group="area">
+	<?php 
 	$terms = get_terms( array( 
 	    'taxonomy' => 'requerimiento',
 	    'hide_empty' => false,
 	) );
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
 		foreach ( $terms as $term ) {
-			echo '<button class="btn-primaryQO btn-area" data-filter=".' . $term->slug . '">' . $term->name . '</button>';
+			echo '<button data-filter-value=".' . $term->slug . '">' . $term->name . '</button>';
 		}
 	}
 	?>
-	<br>
-	<div id="show-more-btn-sistema" class="btn-primary-rounded margin-auto">+</div>
-	<div id="extra-buttons-sistema" class="hide">
-		<button class="btn-primaryQO btn-estatus" data-filter=".Abierto">Abierto</button>	
-		<button class="btn-primaryQO btn-estatus" data-filter=".Enterado">Enterado</button>	
-		<button class="btn-primaryQO btn-estatus" data-filter=".Trabajando">Trabajando</button>	
-		<button class="btn-primaryQO btn-estatus" data-filter=".Hecho">Hecho</button>	
-		<button class="btn-primaryQO btn-estatus" data-filter=".Cerrado">Cerrado</button>	
-		<button class="btn-primaryQO btn-estatus" data-filter=".Reabierto">Reabierto</button>
-		<br>	
-		<button class="btn-primaryQO btn-prioridad" data-filter=".Baja">Baja</button>	
-		<button class="btn-primaryQO btn-prioridad" data-filter=".Media">Media</button>	
-		<button class="btn-primaryQO btn-prioridad" data-filter=".Alta">Alta</button>	
-		<button class="btn-primaryQO btn-prioridad" data-filter=".Urgente">Urgente</button>			
+	<button data-filter-value="" class="selected">x</button>
+</div>
+<div id="show-more-btn-sistema" class="btn-primary-rounded margin-auto">+</div>
+<div id="extra-buttons-sistema" class="hide">		
+	<div class="filter option-set button-group row margin-bottom-xsmall text-center btns-group-estatus" data-filter-group="estatus">
+		<button data-filter-value=".Abierto">Abierto</button>
+		<button data-filter-value=".Enterado">Enterado</button>
+		<button data-filter-value=".Trabajando">Trabajando</button>
+		<button data-filter-value=".Hecho">Hecho</button>
+		<button data-filter-value=".Cerrado">Cerrado</button>
+		<button data-filter-value=".Reabierto">Reabierto</button>
+		<button data-filter-value="" class="selected">x</button>
+	</div>
+	<div class="filter option-set button-group row margin-bottom-large text-center btns-group-prioridad" data-filter-group="prioridad">
+		<button data-filter-value=".Baja">Baja</button>
+		<button data-filter-value=".Media">Media</button>
+		<button data-filter-value=".Alta">Alta</button>
+		<button data-filter-value=".Urgente">Urgente</button>
+		<button data-filter-value="" class="selected">x</button>	
 	</div>
 </div>
