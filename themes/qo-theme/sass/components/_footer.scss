@@ -2,9 +2,13 @@ footer {
 	position: relative;
 	padding: 20px 0 70px;
 	color: $light-color;
-	text-shadow: 1px 1px #929292;
-	background-color: #eee;
+	text-align: center;
+	a { 
+		color: $light-color;
+		&:hover { text-decoration: underline; }
+	}
 	.bg-logo-light {
+		margin: auto;
 		width: 100px;
 		height: 40px;
 	}

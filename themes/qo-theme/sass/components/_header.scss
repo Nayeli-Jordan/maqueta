@@ -3,7 +3,7 @@ header:not(.archive-header) {
 	left: 0px;
 	width: 45px;
 	min-height: 100vh;
-	z-index: 99;
+	z-index: 200;
 	ul {
 		position: absolute;
 		top: calc(50% - 150px); //Height ul

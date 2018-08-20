@@ -41,7 +41,7 @@
 			</div>
 		</section>		
 	</div>
-	<section id="section-servicios" class="container padding-top-bottom-50 relative">
+	<section id="section-servicios" class="container relative">
 		<div class="bg-degrade-fondo"></div>
 		<h2>Servicios</h2>
 		<div id="slider-servicios" class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="12000" data-cycle-slides="> div" data-cycle-next="#next-service" data-cycle-prev="#prev-service" data-cycle-pager=".services-pager">
@@ -84,15 +84,16 @@
 	    <div class="bg-image bg-contain absolute top-30p right-0 width-45p padding-bottom-45p rotate-120" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 	    <div class="bg-image bg-contain absolute bottom-5p left-5p width-30p padding-bottom-30p rotate-270" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 	</section>
-	<div class="relative">
+	<div class="relative z-index-100">
 		<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo.png);"></div>
-		<section id="section-clientes">
-			<h2>Clientes</h2>
+		<section id="section-clientes" class="container relative text-center">
+			<h2 class="color-light">Clientes</h2>
+			<div class="row">
 			<?php
 		        $args = array(
 		            'post_type' 		=> 'clientes',
 		            'posts_per_page' 	=> -1,
-		            'orderby' 			=> 'title',
+		            'orderby' 			=> 'date',
 		            'order' 			=> 'ASC'
 		            );
 		        $loop = new WP_Query( $args );
@@ -100,15 +101,19 @@
 		        if ( $loop->have_posts() ) {
 		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
-						<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
+		            	<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
+		            	<?php if ($i === 5 || $i === 10 || $i === 15) : ?>
+		            		<div class="clearfix-l-and-up"></div>
+		            	<?php endif ?>		
 
 		            <?php $i ++;  endwhile;
 		        } 
 		        wp_reset_postdata();
-		    ?>
+		    ?>				
+			</div>
 		</section>
 		<section id="section-trabajos">
-			<h2>Trabajos</h2>
+			<h2 class="color-light">Trabajos</h2>
 			<div class="row grid">
 			<?php
 		        $args = array(
@@ -132,6 +137,5 @@
 		    ?>
 	   		</div> 
 		</section>		
-	</div>
 
 <?php get_footer(); ?>

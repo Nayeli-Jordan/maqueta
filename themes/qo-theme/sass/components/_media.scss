@@ -100,6 +100,36 @@ video.responsive-video {
 	to { background-position: 0 100%; }
 }
 
+//Bg colores qo
+.bg-colores-qo {
+	background-position-y: 0;
+	top: -155px;	
+	@media #{$medium-and-down} 	{  top: -100px; }
+	@media #{$sm-and-down} 		{  top: -120px; }
+	@media #{$small-and-down} 	{  top: -80px; }
+}
+
+//Section clientes
+#section-clientes {
+	@media #{$medium-and-up} { 
+		padding-top: 10px;
+	}
+	@media #{$large-and-up} { 
+		padding-top: 0px;
+	}
+	@media #{$extra-large-and-up} { 
+		padding-top: 90px;
+	}
+	.bg-image {
+		display: inline-block;
+		width: 100px;
+		height: 25px;
+		max-width: 100%;
+		margin-bottom: 25px;
+		padding: 0 0.75rem;
+    	box-sizing: border-box;
+	}
+}
 
 //Sistema
 
@@ -195,8 +225,11 @@ video.responsive-video {
 			.content-card-body {
 				position: relative;
 				margin-top: -40px;
-				padding: 0 20% 80px 20%;
+				padding: 0 20% 190px 20%;
 				background-color: $light-color;
+				@media #{$medium-and-down} 	{  padding-bottom: 140px; }
+				@media #{$sm-and-down} 		{  padding-bottom: 160px; }
+				@media #{$small-and-down} 	{  padding-bottom: 180px; }
 				.hr {
 					margin: 10px auto 10px auto;
 					height: 5px;
@@ -226,11 +259,19 @@ video.responsive-video {
 	}
 }
 .services-pager {
+	position: absolute;
+    width: 100%;
+    bottom: 100px;
 	text-align: center;
+	z-index: 101;
+	@media #{$medium-and-down} 	{  bottom: 50px; }
+	@media #{$sm-and-down} 		{  bottom: 70px; }
+	@media #{$small-and-down} 	{  bottom: 70px; }
 	span {
 		margin: 0 7px;
 		font-size: 45px;
 		color: #c4c4c4;
+		cursor: pointer;
 		&.cycle-pager-active {
 			color: #6e6e6e;
 		}

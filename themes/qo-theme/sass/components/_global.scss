@@ -45,6 +45,12 @@ ul {
 }
 
 .clearfix { clear: both; }
+@media #{$large-and-up} { 
+  .clearfix-l-and-up { clear: both; }
+}
+@media #{$medium-and-down} { 
+  .clearfix-l-and-up { display: none; }
+}
 
 .hr {
     width: 100%;
