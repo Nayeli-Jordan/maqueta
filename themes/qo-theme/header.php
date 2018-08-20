@@ -62,6 +62,7 @@
 			<header class="js-header">
 				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
 				<nav>
+					<i class="icon-cancel btn-header-close"></i>
 					<ul class="mb-nav" itemscope>
 						<?php
 							$menu_name = 'top_menu';
@@ -75,14 +76,6 @@
 									$url 				= $menu_item->url;
 									$title 				= $menu_item->title;
 									$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
-
-									//$menu_item_parent	= $menu_item->menu_item_parent;		id del padre
-									//$id 				= $menu_item->ID;
-									//$attr_title 		= $menu_item->attr_title;
-									//$description		= $menu_item->description;
-									//$xfn 				= $menu_item->xfn;
-									//$type 			= $menu_item->type;		taxonomy, page...
-									//$type_label		= $menu_item->type_label;		página, categoría...
 
 									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '"><div></div><span>' . $title . '</span></a></li>';
 								}

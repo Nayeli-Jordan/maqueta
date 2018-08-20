@@ -4,82 +4,148 @@ header:not(.archive-header) {
 	width: 45px;
 	min-height: 100vh;
 	z-index: 200;
-	ul {
-		position: absolute;
-		top: calc(50% - 150px); //Height ul
-		margin-top: 0px;
-		margin-bottom: 0px;
-		//@extend %center-full; 
-		li {
-			display: block;
-			position: relative;
-			a {
+	.icon-menu {
+		position: fixed;
+		top: 20px;
+		font-size: 20px;
+		z-index: 200;
+	}
+	@media #{$medium-and-up} {
+		ul {
+			position: absolute;
+			top: calc(50% - 150px); //Height ul
+			margin-top: 0px;
+			margin-bottom: 0px;
+			//@extend %center-full; 
+			li {
 				display: block;
-				padding: 20px 20px 20px 30px;
-				div {
-					display: inline-block;
-					width: 15px;
-					height: 15px;
-					background-color: $dark-color;
-					border-radius: 50%;
-					transition: .3s ease-out;
-					&:before, &:after{
-						content: '';
-						display: block;
-						left: 5px;
-						position: relative;
-						width: 5px;
-						height: 5px;
+				position: relative;
+				a {
+					display: block;
+					padding: 20px 20px 20px 30px;
+					div {
+						display: inline-block;
+						width: 15px;
+						height: 15px;
 						background-color: $dark-color;
 						border-radius: 50%;
-					}
-					&:before { 
-						top: -18px;
-					}
-					&:after {
-						bottom: -21px;
-					}
-				}
-				span {
-					position: absolute;
-					left: 30px;
-					font-size: 20px;
-					text-shadow: 1px 0px #929292;
-					transition: .2s ease-in;
-					opacity: 0;
-				}
-				&:hover {
-					div {
-						background-color: $purple-color;
-						border-radius: 0px;
-						transform:rotate(45deg);						
-						//background: linear-gradient(to right, rgb(74,114,178), rgb(112,169,186), rgb(88,30,127), rgb(186,0,124))
-						&:before, &:after {
-							background-color: $purple-color;
-							border-radius: 0px;
+						transition: .3s ease-out;
+						&:before, &:after{
+							content: '';
+							display: block;
+							left: 5px;
+							position: relative;
+							width: 5px;
+							height: 5px;
+							background-color: $dark-color;
+							border-radius: 50%;
+						}
+						&:before { 
+							top: -18px;
+						}
+						&:after {
+							bottom: -21px;
+						}
+						@media #{$sm-and-down} { 
+						  display: none;
 						}
 					}
 					span {
-						left: 60px;
-						color: $purple-color;
-						opacity: 1;						
+						position: absolute;
+						left: 30px;
+						font-size: 20px;
+						text-shadow: 1px 0px #929292;
+						transition: .2s ease-in;
+						opacity: 0;
+					}
+					&:hover {
+						div {
+							background-color: $purple-color;
+							border-radius: 0px;
+							transform:rotate(45deg);						
+							//background: linear-gradient(to right, rgb(74,114,178), rgb(112,169,186), rgb(88,30,127), rgb(186,0,124))
+							&:before, &:after {
+								background-color: $purple-color;
+								border-radius: 0px;
+							}
+						}
+						span {
+							left: 60px;
+							color: $purple-color;
+							opacity: 1;						
+						}
 					}
 				}
-			}
-		}		
+			}		
+		}
+	}
+	@media #{$sm-and-down} {
+		position: fixed;
+		top: 0px;
+		left: -900px;
+	    min-width: 100vw;
+	    min-height: 100vh;
+	    padding-top: 20px;
+	    padding-bottom: 20px;
+	    background-color: $light-color;	    
+	    transition: .6s ease-out;
+	    &.active {
+	    	left: 0px;
+	    }
+	    .icon-cancel {
+	    	display: block;
+	    	padding: 0 20px; 
+	    	text-align: right;
+	    }
+	    ul {
+	    	margin: 0px;
+	    	li {
+	    		a {
+	    			display: block;
+	    			padding: 0 20px;
+	    			font-size: 16px;
+	    			line-height: 40px;
+	    			&:hover {
+	    				background-color: $purple-color;
+	    				color: $light-color;
+	    			}
+	    		}
+	    	}
+	    }
+	    
 	}
 	&.header-cotizacion {
 		margin-bottom: 15px;
 	}
 }
+@media #{$medium-and-up} {
+	.icon-cancel, .icon-menu { display: none!important; }
+}
+
 
 #section-initial {
-	.container {
-		min-height: 100vh;
-		.bg-image {
-			@extend %center-full; 
-		}	
-	}	
+	@media #{$small-and-down} {
+		.bg-image { height: 90px }
+	}
+	@media #{$sm-and-down} {
+		.container {
+			padding: 30px 0;
+			.bg-image {
+				margin: auto;
+				height: 120px;
+				max-width: 90%;
+			}			
+		}
+	}
+	@media #{$medium-and-up} { 
+		.container {
+			min-height: 100vh;
+			.bg-image {
+				margin: 0px;
+				@include center-full(); 
+			}	
+		}		
+	}
 }
 
 .archive-header {

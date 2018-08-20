@@ -32,6 +32,13 @@ var $=jQuery.noConflict();
 		// if( parseInt( isSingular ) ){
 
 		// } 
+		//Nav QO
+		$(".btn-header-open").click(function() {
+			$('.js-header').addClass('active');		
+		});
+		$(".btn-header-close").click(function() {
+			$('.js-header').removeClass('active');		
+		});
 
 		//Nav QO
 		$(".btn-nav").click(function() {

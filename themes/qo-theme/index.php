@@ -1,8 +1,9 @@
 <?php get_header(); ?>
 	<div class="relative">
 		<div class="bg-image bg-absolute bg-textura" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/textura.png);"></div>
-		<section id="section-initial">
+		<section id="section-initial">			
 			<div class="container relative">
+				<i class="icon-menu btn-header-open"></i>
 				<div class="bg-logo bg-image bg-contain margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png);"></div>
 			</div>
 		</section>
