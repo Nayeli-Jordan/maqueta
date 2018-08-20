@@ -1,6 +1,14 @@
 			<?php if (is_home() || is_front_page()) :?>
-					<footer>
-						<!-- <small> © <span id="year"></span> | <a href="https://gatchweb.com/" target="_blank">Hecho por GatchWeb</a></small> -->
+					<footer class="container text-center">
+						<div class="bg-image bg-contain bg-logo-light" style="background-image: url(<?php echo THEMEPATH; ?>images/footer/qo-light.png);"></div>
+						<p>INSURGENTES SUR #608 PISO 2 <br>COL. DEL VALLE, DEL. BENITOJUÁREZ C.P 03810</p>
+						<p>Tel. 55431389</p>
+						<div class="redes">
+							<div class="bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/footer/facebook.png);"></div>
+							<div class="bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/footer/twitter.png);"></div>
+							<div class="bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/footer/youtube.png);"></div>
+							<div class="bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/footer/linkedin.png);"></div>
+						</div>
 					</footer>
 				</div><!-- end main-body -->
 			<?php endif; ?>

@@ -37,7 +37,11 @@ video.responsive-video {
 	left: 0; 
 }
 
-
+.bg-logo {
+	max-width: 100%;
+	width: 500px;
+	height: 180px;
+}
 .bg-qo-logo {
 	width: 100%;
 	height: 60px;
@@ -47,6 +51,57 @@ video.responsive-video {
 		height: 50px;
 	}
 }
+
+//Nosotros
+.bg-icon-nosotros {
+	width: 70px;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bg-puntos {
+	position: absolute;
+	width: 100%;
+	height: 230px;	
+	z-index: -1;
+}
+.bg-line-dotted {
+	position: absolute;
+    top: 15px;
+    right: -65px;
+    width: 70px;
+    height: 10px;
+    &:nth-child(3n) { display: none; }
+}
+.bg-textura {
+	bottom: -300px;
+	background-size: auto;
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 30s linear infinite;
+	-ms-animation: animatedBackground 30s linear infinite;
+	-moz-animation: animatedBackground 30s linear infinite;
+	-webkit-animation: animatedBackground 30s linear infinite;
+}
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-ms-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+
+
+//Sistema
 
 .content-cotizacion {
 	.img-qo-logo { width: 200px; }
@@ -107,5 +162,77 @@ video.responsive-video {
 	img:first-child:nth-last-child(4) ~ img {
 	    max-width: calc(50% - 10px);	    
 		max-height: 190px;
+	}
+}
+
+// Slider 
+#slider-servicios {
+	div.cycle-slide:not(.bg-arrow) {
+		width: 100%;
+		.content-card {
+			position: relative;
+			margin: auto;
+			max-width: 500px;
+			width: 80%;
+			text-align: center;
+			.content-card-image {
+				position: relative;
+				.fondo-bg-image {
+					position: absolute;
+				    bottom: 0px;
+				    width: 100%;
+				    padding-bottom: calc(50%);
+				    background-color: $light-color;
+				}
+				.bg-image {
+					position: relative;
+					width: 100%;
+					padding-bottom: calc(100% - 120px);
+					border-radius: 50%;
+					border: 60px solid #fff;
+				}				
+			}
+			.content-card-body {
+				position: relative;
+				margin-top: -40px;
+				padding: 0 20% 80px 20%;
+				background-color: $light-color;
+				.hr {
+					margin: 10px auto 10px auto;
+					height: 5px;
+				}
+				p {
+					padding: 0 10px;
+					text-align: left;					
+				}
+			}	
+		}
+	}
+	
+}
+.bg-arrow {
+	display: block;
+	position: absolute;
+	top: 35%;	
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 100;
+	&#prev-service {
+		left: 5%;
+	}
+	&#next-service {
+		right: 5%;
+	}
+}
+.services-pager {
+	text-align: center;
+	span {
+		margin: 0 7px;
+		font-size: 45px;
+		color: #c4c4c4;
+		&.cycle-pager-active {
+			color: #6e6e6e;
+		}
 	}
 }

@@ -1,3 +1,19 @@
 footer {
 	position: relative;
+	padding: 20px 0 70px;
+	color: $light-color;
+	text-shadow: 1px 1px #929292;
+	background-color: #eee;
+	.bg-logo-light {
+		width: 100px;
+		height: 40px;
+	}
+	.redes {
+		.bg-image {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			margin: 0 15px;
+		}
+	}
 }

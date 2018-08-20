@@ -1,7 +1,11 @@
 // Effects
 // ==========================================================================
 
+.rotate-60 { transform: rotate(60deg); }
+.rotate-120 { transform: rotate(120deg); }
+.rotate-140 { transform: rotate(140deg); }
 .rotate-180 { transform: rotate(180deg); }
+.rotate-270 { transform: rotate(270deg); }
 
 .shadow {
   box-shadow: 0 7px 10px 0 rgba(0,0,0,0.14),

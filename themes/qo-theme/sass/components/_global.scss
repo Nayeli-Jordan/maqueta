@@ -18,14 +18,19 @@ html {
 
 body {
   position: relative;
-  margin: 0px;  
+  margin: 0px;
+  max-width: 100vw;
+  overflow-x: hidden;
+  &.page-home {
+    background-color: #eceaea;
+  } 
 }
 .main-body {
   position: relative;
 }
 
 section {
-	margin: 50px 0;
+	//margin: 50px 0;
   & + section { margin-top: 50px; }
 }
 

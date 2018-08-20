@@ -57,13 +57,13 @@
 		<?php wp_head(); ?>
 		<?php flush(); ?>
 	</head>
-	<body>
+	<body class="<?php if (is_home()) :?>page-home<?php endif; ?>">
 		<?php if (is_home() || is_front_page()) : ?>			
 			<header class="js-header">
 				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
 				<nav>
 					<ul class="mb-nav" itemscope>
-						<!-- <?php
+						<?php
 							$menu_name = 'top_menu';
 
 							if (( $locations = get_nav_menu_locations()) && isset( $locations[ $menu_name ])) {
@@ -84,11 +84,11 @@
 									//$type 			= $menu_item->type;		taxonomy, page...
 									//$type_label		= $menu_item->type_label;		página, categoría...
 
-									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '">' . $title . '</a></li>';
+									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '"><div></div><span>' . $title . '</span></a></li>';
 								}
 							}
 							echo $menu_list;
-						?>			 -->	
+						?>
 					</ul>
 				</nav>
 			</header>

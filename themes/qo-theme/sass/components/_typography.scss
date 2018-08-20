@@ -15,18 +15,26 @@ html{
   color: $dark-color;
 }
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.3;
   margin: 0px;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 600;  
 }
 
 // Header Styles
-h1 { font-size: $h1-fontsize;}
-h2 { font-size: $h2-fontsize;}
-h3 { font-size: $h3-fontsize;}
-h4 { font-size: $h4-fontsize;}
-h5 { font-size: $h5-fontsize;}
-h6 { font-size: $h6-fontsize;}
+h1 { font-size: $h1-fontsize; line-height: 1.3; }
+h2 { position: relative; margin-bottom: 20px; font-size: $h2-fontsize; line-height: 1.3; text-align: center; }
+h3 { font-size: $h3-fontsize; line-height: 1.3; }
+h4 { font-size: $h4-fontsize; line-height: 1.3; }
+h5 { font-size: $h5-fontsize; line-height: 1.3; }
+h6 { font-size: $h6-fontsize; line-height: 1.3; }
+
+.tile-qo {
+
+  &.title-qo-small {
+    font-size: 18px;
+  }
+}
 
 p { 
   margin: 0px; 

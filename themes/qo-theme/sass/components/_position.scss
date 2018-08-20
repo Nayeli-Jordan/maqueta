@@ -9,6 +9,35 @@
 .right-0          			{ right: 0; }
 .left-0          			{ left: 0; }
 
+// Position top, left, right, left -100% to 100%
+$i: -100;
+@while $i <= $size-percent {
+	.top-#{$i}#{"p"} {
+		top: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.bottom-#{$i}#{"p"} {
+		bottom: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.left-#{$i}#{"p"} {
+		left: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
+$i: -100;
+@while $i <= $size-percent {
+	.right-#{$i}#{"p"} {
+		right: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
 
 // Align
 // ==========================================================================

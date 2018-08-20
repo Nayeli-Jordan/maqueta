@@ -44,6 +44,14 @@
 .padding-bottom 			{ padding-bottom: $box-space; }
 .padding-bottom-large		{ padding-bottom: ($box-space/4)*5; }
 .padding-bottom-xlarge 		{ padding-bottom: ($box-space/4)*6; }
+//  Padding bottom 1% to 100%
+$i: 1;
+@while $i <= $size-percent {
+	.padding-bottom-#{$i}#{"p"} {
+		padding-bottom: #{$i}#{"%"};
+	}
+	$i: $i + 1; 
+}
 
 .padding-right-xsmall		{ padding-right: ($box-space/4)*2; }
 .padding-right-small 		{ padding-right: ($box-space/4)*3; }
@@ -56,6 +64,10 @@
 .padding-left 				{ padding-left: $box-space; }
 .padding-left-large			{ padding-left: ($box-space/4)*5; }
 .padding-left-xlarge 		{ padding-left: ($box-space/4)*6; }
+
+.padding-top-bottom-50 		{ padding-top: 50px; padding-bottom: 50px; }
+
+.padding-left-right-30 		{ padding-left: 30px!important; padding-right: 30px!important; }
 
 .no-padding-top 			{ padding-top: 0px; }
 .no-padding-bottom 			{ padding-bottom: 0px; }
