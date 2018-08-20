@@ -72,6 +72,12 @@ video.responsive-video {
     width: 70px;
     height: 10px;
     &:nth-child(3n) { display: none; }
+   	@media #{$sm-and-down} { 
+		position: relative;
+		top: inherit;
+		right: inherit;
+		margin: 30px auto;
+	}
 }
 .bg-textura {
 	bottom: -300px;
@@ -205,6 +211,9 @@ video.responsive-video {
 			max-width: 500px;
 			width: 80%;
 			text-align: center;
+			@media #{$small-and-down} { 
+				width: 100%;
+			}
 			.content-card-image {
 				position: relative;
 				.fondo-bg-image {
@@ -220,6 +229,10 @@ video.responsive-video {
 					padding-bottom: calc(100% - 120px);
 					border-radius: 50%;
 					border: 60px solid #fff;
+					@media #{$sm-and-down} { 
+						padding-bottom: calc(100% - 40px);
+						border-width: 20px;
+					}
 				}				
 			}
 			.content-card-body {
@@ -228,14 +241,21 @@ video.responsive-video {
 				padding: 0 20% 190px 20%;
 				background-color: $light-color;
 				@media #{$medium-and-down} 	{  padding-bottom: 140px; }
-				@media #{$sm-and-down} 		{  padding-bottom: 160px; }
+				@media #{$sm-and-down} 		{  
+					margin-top: 0px;
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-bottom: 160px;
+				}
 				@media #{$small-and-down} 	{  padding-bottom: 180px; }
 				.hr {
 					margin: 10px auto 10px auto;
 					height: 5px;
 				}
 				p {
-					padding: 0 10px;
+					@media #{$medium-and-up} { 
+					  padding: 0 10px;
+					}					
 					text-align: left;					
 				}
 			}	
@@ -251,11 +271,17 @@ video.responsive-video {
 	height: 50px;
 	cursor: pointer;
 	z-index: 100;
+	
+	@media #{$small-and-down} { 
+		display: none;
+	}
 	&#prev-service {
 		left: 5%;
+		@media #{$medium-and-down} { left: -10px; }
 	}
 	&#next-service {
 		right: 5%;
+		@media #{$medium-and-down} { right: -10px; }
 	}
 }
 .services-pager {
@@ -268,10 +294,14 @@ video.responsive-video {
 	@media #{$sm-and-down} 		{  bottom: 70px; }
 	@media #{$small-and-down} 	{  bottom: 70px; }
 	span {
-		margin: 0 7px;
-		font-size: 45px;
+		padding: 0 7px;
+		font-size: 55px;
+		line-height: 20px;
 		color: #c4c4c4;
 		cursor: pointer;
+		@media #{$small-and-down} { 
+			font-size: 80px;
+		}
 		&.cycle-pager-active {
 			color: #6e6e6e;
 		}

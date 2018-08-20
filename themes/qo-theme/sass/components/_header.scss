@@ -16,7 +16,9 @@ header:not(.archive-header) {
 			top: calc(50% - 150px); //Height ul
 			margin-top: 0px;
 			margin-bottom: 0px;
-			//@extend %center-full; 
+			opacity: 0.5;
+			transition: .4s ease-out;
+			&:hover { opacity: 1; } 
 			li {
 				display: block;
 				position: relative;
