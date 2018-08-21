@@ -6,8 +6,11 @@
 				<i class="icon-menu btn-header-open"></i>
 				<div id="header-logo-qo" class="bg-logo bg-image bg-contain margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png);"></div>
 				<div class="bg-logo-secondary bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png);"></div>
-			</div>
+			</div>			
 		</section>
+		<div class="container">
+			<hr class="line-shadow">
+		</div>
 		<section id="section-nosotros" class="container text-center padding-top-bottom-50">
 			<div class="row relative">
 				<div class="bg-image bg-contain bg-puntos margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/puntos.png);"></div>
@@ -69,7 +72,7 @@
 									<h3><?php the_title(); ?></h3>
 									<div class="hr bg-gradient-qo"></div>
 									<?php the_content(); ?>										
-								</div>							
+								</div>					
 							</div>
 						</div>
 
