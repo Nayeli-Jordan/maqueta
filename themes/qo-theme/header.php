@@ -76,9 +76,10 @@
 
 									$url 				= $menu_item->url;
 									$title 				= $menu_item->title;
+									$attr_title 		= $menu_item->attr_title;
 									$class 				= esc_attr( implode( ' ', apply_filters( 'nav_menu_css_class', array_filter( $menu_item->classes ), $menu_item) ) );
 
-									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a href="' . $url . '"><div></div><span>' . $title . '</span></a></li>';
+									$menu_list .='<li itemprop="actionOption" class="' . $class .'"><a id="' . $attr_title . '" class="item-scroll" "><div></div><span>' . $title . '</span></a></li>';
 								}
 							}
 							echo $menu_list;

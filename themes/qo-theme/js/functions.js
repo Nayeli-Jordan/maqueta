@@ -32,12 +32,24 @@ var $=jQuery.noConflict();
 		// if( parseInt( isSingular ) ){
 
 		// } 
-		//Nav QO
+		//Nav Index
 		$(".btn-header-open").click(function() {
 			$('.js-header').addClass('active');		
 		});
 		$(".btn-header-close").click(function() {
 			$('.js-header').removeClass('active');		
+		});
+
+		//Scroll menú
+		$("a.item-scroll").click(function() {
+			//buttonMenuScroll();
+			var idOption = $(this).attr('id'); //Opción del menú
+			// console.log(idOption);
+			var idSection = "#section-" + idOption; //Sección a la que se dirigirá
+			// console.log(idSection); 
+			$('html, body').animate({		
+				scrollTop: $(idSection).offset().top - 80
+			}, 1000);
 		});
 
 		//Nav QO
