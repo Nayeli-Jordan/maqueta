@@ -300,7 +300,8 @@ video.responsive-video {
 		color: #c4c4c4;
 		cursor: pointer;
 		@media #{$small-and-down} { 
-			font-size: 80px;
+			font-size: 90px;
+			padding: 0 3px;
 		}
 		&.cycle-pager-active {
 			color: #6e6e6e;

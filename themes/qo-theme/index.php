@@ -27,7 +27,7 @@
 							<div class="col s12 m4 padding-left-right-30">
 								<div class="bg-image bg-contain bg-icon-nosotros margin-bottom-large" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
 								<h3 class="tile-qo <?php if( $i === 3 ) : ?>title-qo-small<?php endif; ?>"><?php the_title(); ?></h3>
-								<div class="relative">
+								<div class="relative fz-small">
 									<?php the_content(); ?>
 									<?php if( $i !== 3 ) : ?>
 										<div class="bg-image bg-contain bg-line-dotted margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/line-nosotros1.png);"></div>
@@ -81,7 +81,7 @@
 	    <div id="prev-service" class="bg-image bg-contain bg-arrow" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/atras.png);"></div>
 	    <div id="next-service" class="bg-image bg-contain bg-arrow" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/delante.png);"></div>
 	    <div class="bg-image bg-contain absolute top-10p right-10p width-25p padding-bottom-25p rotate-60" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
-	    <div class="bg-image bg-contain absolute top-45p left-0 width-20p padding-bottom-20p rotate-140" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
+	    <div class="bg-image bg-contain absolute top-25p left-0 width-20p padding-bottom-20p rotate-140" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
 	    <div class="bg-image bg-contain absolute top-30p right-0 width-45p padding-bottom-45p rotate-120" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 	    <div class="bg-image bg-contain absolute bottom-5p left-5p width-30p padding-bottom-30p rotate-270" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 	</section>
@@ -113,14 +113,14 @@
 		    ?>				
 			</div>
 		</section>
-		<section id="section-trabajos">
+		<section id="section-trabajos" class="container">
 			<h2 class="color-light">Trabajos</h2>
 			<div class="row grid">
 			<?php
 		        $args = array(
 		            'post_type' 		=> 'proyectos',
 		            'posts_per_page' 	=> -1,
-		            'orderby' 			=> 'title',
+		            'orderby' 			=> 'date',
 		            'order' 			=> 'ASC'
 		            );
 		        $loop = new WP_Query( $args );
@@ -128,8 +128,9 @@
 		        if ( $loop->have_posts() ) {
 		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
-					<div class="col s12 m6">
-						<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
+					<div class="col s12 m6 element-item">
+						<!-- <div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div> -->
+						<img src="<?php the_post_thumbnail_url('medium'); ?>">
 					</div>				
 
 		            <?php $i ++;  endwhile;

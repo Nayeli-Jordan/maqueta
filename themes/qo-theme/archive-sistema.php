@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 	<?php if (is_user_logged_in()) : ?>
 		<header class="container container-large archive-header">
-			<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+			<a href="<?php echo SITEURL; ?>"><div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div></a>
 			<div class="title-archive">Brief´s</div>
 			<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
 		</header>

@@ -2,13 +2,16 @@ footer {
 	position: relative;
 	padding: 20px 0 70px;
 	color: $light-color;
+	font-family: $font-titles;
 	text-align: center;
+	strong { letter-spacing: 0.5px; }
 	a { 
-		color: $light-color;
+		font-family: $font-default;
+		color: #cac5c5;
 		&:hover { text-decoration: underline; }
 	}
 	.bg-logo-light {
-		margin: auto;
+		margin: 0 auto 20px;
 		width: 100px;
 		height: 40px;
 	}

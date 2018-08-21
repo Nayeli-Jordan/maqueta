@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<header class="container container-large archive-header">
-		<div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div>
+		<a href="<?php echo SITEURL; ?>"><div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div></a>
 		<div class="title-archive">Calendario</div>
 		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
 	</header>
