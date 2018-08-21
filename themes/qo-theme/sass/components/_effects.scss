@@ -17,3 +17,88 @@
 }
 
 .transition { transition: .3s ease-out; }
+
+//Navegador
+@keyframes animatedNav {
+	from { left: -100px; }
+	to { left: 0px; }
+}
+@-webkit-keyframes animatedNav {
+	from { left: -100px; }
+	to { left: 0px; }
+}
+@-ms-keyframes animatedNav {
+	from { left: -100px; }
+	to { left: 0px; }
+}
+@-moz-keyframes animatedNav {
+	from { left: -100px; }
+	to { left: 0px; }
+}
+
+// Movimiento Fondo
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-webkit-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-ms-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+@-moz-keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 0 100%; }
+}
+
+
+// Movimiento A Bolita 
+.moveA {
+	animation: animatedBolaA 3s linear infinite; 
+	-ms-animation: animatedBolaA 3s linear infinite;
+	-moz-animation: animatedBolaA 3s linear infinite;
+	-webkit-animation: animatedBolaA 3s linear infinite;
+}
+.moveB {
+	animation: animatedBolaA 5s linear infinite; 
+	-ms-animation: animatedBolaA 5s linear infinite;
+	-moz-animation: animatedBolaA 5s linear infinite;
+	-webkit-animation: animatedBolaA 5s linear infinite;
+}
+.moveSpeed {
+	animation: animatedBolaA 2s linear infinite; 
+	-ms-animation: animatedBolaA 2s linear infinite;
+	-moz-animation: animatedBolaA 2s linear infinite;
+	-webkit-animation: animatedBolaA 2s linear infinite;
+}
+@keyframes animatedBolaA {
+	0% { transform: scale(1); }
+	25% { transform: scale(1.1); }
+	50% { transform: scale(1.2); }
+	75% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+@-webkit-keyframes animatedBolaA {
+	0% { transform: scale(1); }
+	25% { transform: scale(1.1); }
+	50% { transform: scale(1.2); }
+	75% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+@-ms-keyframes animatedBolaA {
+	0% { transform: scale(1); }
+	25% { transform: scale(1.1); }
+	50% { transform: scale(1.2); }
+	75% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+@-moz-keyframes animatedBolaA {
+	0% { transform: scale(1); }
+	25% { transform: scale(1.1); }
+	50% { transform: scale(1.2); }
+	75% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}

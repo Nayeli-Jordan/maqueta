@@ -1,9 +1,12 @@
 header.js-header {
 	position: fixed;
-	left: 0px;
 	width: 45px;
 	min-height: 100vh;
 	z-index: 200;
+	animation: animatedNav 1.5s linear; 
+	-ms-animation: animatedNav 1.5s linear;
+	-moz-animation: animatedNav 1.5s linear;
+	-webkit-animation: animatedNav 1.5s linear;
 	.icon-menu {
 		position: fixed;
 		top: 20px;
@@ -60,8 +63,9 @@ header.js-header {
 						left: 30px;
 						padding: 10px 10px 10px 15px;
 						font-size: 20px;
-						color: $light-color;
-    					background-color: #565656;
+						color: #565656;
+    					background-color: #eceaea;
+    					box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);
 						transition: .2s ease-in;
 						opacity: 0;
 					}

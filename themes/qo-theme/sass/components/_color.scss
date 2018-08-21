@@ -15,9 +15,9 @@
 .bg-degrade-fondo		{
 	position: absolute;
 	top: 0px;
-	left: -5%;
-	width: calc(100% + 10%);
-	height: 300px;
+	left: -10%;
+	right: -10%;
+	height: 500px;
 	background: linear-gradient(to bottom, rgba(236,234,234,0), rgba(236,234,234,1));
 }
 .bg-light 				{ background-color: $light-color; }

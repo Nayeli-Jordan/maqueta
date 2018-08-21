@@ -28,14 +28,15 @@ add_action( 'wp_enqueue_scripts', function(){
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(''), '2.1.1', true );
     wp_enqueue_script( 'imagesloaded_js', JSPATH.'imagesloaded.pkgd.min.js', array(), '', true );
     wp_enqueue_script( 'isotope_js', JSPATH.'isotope.pkgd.min.js', array(), '', true );
+    wp_enqueue_script( 'masonry_js', JSPATH.'packery.pkgd.min.js', array(), '', true );
 	wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.min.js', array(), '', true );
 	wp_enqueue_script( 'qo_functions', JSPATH.'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'qo_functions', 'siteUrl', SITEURL );
 	wp_localize_script( 'qo_functions', 'theme_path', THEMEPATH );
 	
-	// $is_home = is_front_page() ? "1" : "0";
-	// wp_localize_script( 'qo_functions', 'isHome', $is_home );
+	$is_home = is_front_page() ? "1" : "0";
+	wp_localize_script( 'qo_functions', 'isHome', $is_home );
  
 });
 

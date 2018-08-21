@@ -80,30 +80,14 @@ video.responsive-video {
 	}
 }
 .bg-textura {
-	bottom: -300px;
+	bottom: -500px;
 	background-size: auto;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
-	animation: animatedBackground 30s linear infinite;
-	-ms-animation: animatedBackground 30s linear infinite;
-	-moz-animation: animatedBackground 30s linear infinite;
-	-webkit-animation: animatedBackground 30s linear infinite;
-}
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 0 100%; }
-}
-@-webkit-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 0 100%; }
-}
-@-ms-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 0 100%; }
-}
-@-moz-keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 0 100%; }
+	animation: animatedBackground 40s linear infinite;
+	-ms-animation: animatedBackground 40s linear infinite;
+	-moz-animation: animatedBackground 40s linear infinite;
+	-webkit-animation: animatedBackground 40s linear infinite;
 }
 
 //Bg colores qo
