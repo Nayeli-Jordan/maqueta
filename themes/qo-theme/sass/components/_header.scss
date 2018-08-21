@@ -21,7 +21,12 @@ header.js-header {
 			margin-bottom: 0px;
 			opacity: 0.5;
 			transition: .4s ease-out;
-			&:hover { opacity: 1; } 
+			&:hover { 
+				opacity: 1;
+				div {
+					box-shadow: 0 3px 10px 0 rgba(255,255,255,0.20);
+				}
+			} 
 			li {
 				display: block;
 				position: relative;
@@ -35,6 +40,7 @@ header.js-header {
 						height: 15px;
 						background-color: #484848;
 						border-radius: 50%;
+						box-shadow: 0 3px 10px 0 rgba(255,255,255,0.30);
 						z-index: 1;
 						transition: .3s ease-out;
 						&:before, &:after{
@@ -46,6 +52,7 @@ header.js-header {
 							height: 5px;
 							background-color: #484848;
 							border-radius: 50%;
+							box-shadow: 0 3px 10px 0 rgba(255,255,255,0.30);
 						}
 						&:before { 
 							top: -18px;
@@ -133,12 +140,12 @@ header.js-header {
 
 #section-initial {
 	@media #{$small-and-down} {
-		.bg-image { height: 90px }
+		#header-logo-qo.bg-image { height: 90px }
 	}
 	@media #{$sm-and-down} {
 		.container {
 			padding: 30px 0;
-			.bg-image {
+			#header-logo-qo.bg-image {
 				margin: auto;
 				height: 120px;
 				max-width: 90%;
@@ -148,7 +155,7 @@ header.js-header {
 	@media #{$medium-and-up} { 
 		.container {
 			min-height: 100vh;
-			.bg-image {
+			#header-logo-qo.bg-image {
 				margin: 0px;
 				@include center-full(); 
 			}	

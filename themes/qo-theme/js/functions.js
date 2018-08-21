@@ -10,7 +10,10 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			if( parseInt( isHome ) ){
-				imageMasonry();
+				if ($('.grid-item').length > 0) {
+					imageMasonry();
+				}				
+				logoScroll();
 			}			
 			isotopeQO();
 			isotopeMultipleQO();
@@ -21,12 +24,16 @@ var $=jQuery.noConflict();
  
 		$(window).on('resize', function(){
 			if( parseInt( isHome ) ){
-				imageMasonry();
+				if ($('.grid-item').length > 0) {
+					imageMasonry();
+				}
 			}
 		});
  
 		$(document).scroll(function() {
-
+			if( parseInt( isHome ) ){
+				logoScroll();
+			}
 		});
 
 		//Nav Index
@@ -147,3 +154,18 @@ function isotopeMultipleQO(){
       return false;
     });
 };
+
+function logoScroll() {
+	// get the position logo
+	var initPositionLogo = $('#header-logo-qo').offset();
+	var finalPositionLogo = initPositionLogo.top + 180;
+	//console.log(finalPositionLogo);
+
+	var y = $(this).scrollTop();
+	//If the current Y is bigger than the element.
+	if(y >= finalPositionLogo){
+		$('.bg-logo-secondary').addClass('logo-fixed');
+	}else{
+		$('.bg-logo-secondary').removeClass('logo-fixed');
+	}
+}

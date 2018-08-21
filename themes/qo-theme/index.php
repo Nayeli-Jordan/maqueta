@@ -4,14 +4,15 @@
 		<section id="section-initial">			
 			<div class="container relative">
 				<i class="icon-menu btn-header-open"></i>
-				<div class="bg-logo bg-image bg-contain margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png);"></div>
+				<div id="header-logo-qo" class="bg-logo bg-image bg-contain margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png);"></div>
+				<div class="bg-logo-secondary bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png);"></div>
 			</div>
 		</section>
 		<section id="section-nosotros" class="container text-center padding-top-bottom-50">
 			<div class="row relative">
 				<div class="bg-image bg-contain bg-puntos margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/puntos.png);"></div>
-				<div class="bg-image bg-contain absolute top-15p width-40p padding-bottom-40p moveB" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
-				<div class="bg-image bg-contain absolute top--10p right-0 width-30p padding-bottom-30p moveA" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
+				<div class="bg-image bg-contain absolute top-15p width-40p padding-bottom-40p moveB z-index--1" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
+				<div class="bg-image bg-contain absolute top--10p right-0 width-30p padding-bottom-30p moveA z-index--1" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 				<?php
 			        $args = array(
 			            'post_type' 		=> 'nosotros',
@@ -62,7 +63,7 @@
 							<div class="content-card">
 								<div class="content-card-image">
 									<div class="fondo-bg-image"></div>
-									<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>									
+									<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>									
 								</div>
 								<div class="content-card-body">
 									<h3><?php the_title(); ?></h3>
@@ -89,7 +90,7 @@
 		<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo.png);"></div>
 		<section id="section-clientes" class="container relative text-center">
 			<h2 class="color-light">Clientes</h2>
-			<div class="row">
+			<div class="row margin-bottom-xlarge">
 			<?php
 		        $args = array(
 		            'post_type' 		=> 'clientes',
@@ -103,7 +104,7 @@
 		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
 		            	<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
-		            	<?php if ($i === 5 || $i === 10 || $i === 15) : ?>
+		            	<?php if ($i === 5 || $i === 10 || $i === 15 || $i === 20 || $i === 25 || $i === 30 || $i === 35 || $i === 40 || $i === 45) : ?>
 		            		<div class="clearfix-l-and-up"></div>
 		            	<?php endif ?>		
 
@@ -128,9 +129,9 @@
 		        if ( $loop->have_posts() ) {
 		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
-					<div class="col s12 m6 l4 xl3 grid-item">
+					<div class="col s12 sm6 l4 xl3 grid-item">
 						<!-- <div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div> -->
-						<img class="responsive-img block margin-auto margin-bottom margin-bottom" src="<?php the_post_thumbnail_url('medium'); ?>">
+						<img class="responsive-img block margin-auto margin-bottom margin-bottom" src="<?php the_post_thumbnail_url('full'); ?>">
 					</div>				
 
 		            <?php $i ++;  endwhile;
