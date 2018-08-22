@@ -78,16 +78,28 @@
 			<div class="content-img-Horizontal">
 				<div class="content-center">
 					<?php if( $muestraA != "") : ?>
-						<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
+						<div>
+							<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
+							<p><?php echo get_post(pippin_get_image_id($muestraA))->post_content; ?></p>		
+						</div>	
 					<?php endif; ?>
 					<?php if( $muestraB != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+						<div>
+							<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+							<p><?php echo get_post(pippin_get_image_id($muestraB))->post_content; ?></p>		
+						</div>	
 					<?php endif; ?>
 					<?php if( $muestraC != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+						<div>
+							<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+							<p><?php echo get_post(pippin_get_image_id($muestraC))->post_content; ?></p>		
+						</div>	
 					<?php endif; ?>
 					<?php if( $muestraD != "") : ?>
-					<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+						<div>
+							<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+							<p><?php echo get_post(pippin_get_image_id($muestraD))->post_content; ?></p>		
+						</div>	
 					<?php endif; ?>						
 				</div>					
 			</div>

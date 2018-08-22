@@ -1,7 +1,7 @@
 <div id="page-404">
 	<div class="bg-image bg-absolute bg-textura" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/textura.png);"></div>
-	<div class="relative">
-		<header class="container container-large archive-header margin-top-xlarge">
+	<div class="relative padding-top-xlarge">
+		<header class="container container-large archive-header">
 			<a href="<?php echo SITEURL; ?>"><div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div></a>
 			<div class="title-archive">Error!</div>	
 		</header>

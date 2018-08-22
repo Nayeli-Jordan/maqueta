@@ -109,15 +109,17 @@
 	}
 
 	.content-muestra {
-		height: 420px;
+		height: 480px;
+		//height: 420px;
 		text-align: center;
-		img { max-height: 420px;}
+		img { max-height: 430px;} //Height content-muestra - texto descriptivo (40px) - 10px margin
+		//img { max-height: 370px;} //Height content-muestra - texto descriptivo (40px) - 10px margin
 	}	
 	&.contentHorizontal {		
 		.content-img-Horizontal {
 			position: relative;
 			height: 210px;
-			img { max-height: 210px;}			
+			img { max-height: 160px;} //Height content-muestra - texto descriptivo (40px) - 10px margin
 		}
 	}
 	&.contentVertical {
@@ -125,9 +127,20 @@
 		.content-img-Vertical {
 			position: relative;
 			height: 395px;
-			img { 
-				max-height: 395px;
+			div { 
 				padding: 5px; 
+			}
+			div:first-child:nth-last-child(1),
+			div:first-child:nth-last-child(1) ~ div {
+				img { max-height: 345px; }//Height content-muestra - texto descriptivo (40px) - 10px margin
+			}
+			div:first-child:nth-last-child(2),
+			div:first-child:nth-last-child(2) ~ div,
+			div:nth-last-child(3),
+			div:nth-last-child(3) ~ div,
+			div:first-child:nth-last-child(4),
+			div:first-child:nth-last-child(4) ~ div {
+				img { max-height: 135px; } //Height content-muestra - texto descriptivo (40px) - 10px margin
 			}
 		}
 	}
