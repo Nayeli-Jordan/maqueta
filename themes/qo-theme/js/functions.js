@@ -56,6 +56,11 @@ var $=jQuery.noConflict();
 			}, 1000);
 		});
 
+		//Email
+		$("#link-mail").click(function() {
+			$(this).attr('href', 'mailto: contacto@queonda.com.mx');
+		});
+
 		//Nav QO
 		$(".btn-nav").click(function() {
 			$('.archive-header nav').addClass('active');		
