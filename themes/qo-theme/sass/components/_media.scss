@@ -97,8 +97,7 @@ video.responsive-video {
 		margin: 30px auto;
 	}
 }
-.bg-textura {
-	bottom: -500px;
+.bg-textura {	
 	background-size: auto;
 	background-position: 0px 0px;
 	background-repeat: repeat-x;
@@ -106,6 +105,9 @@ video.responsive-video {
 	-ms-animation: animatedBackground 40s linear infinite;
 	-moz-animation: animatedBackground 40s linear infinite;
 	-webkit-animation: animatedBackground 40s linear infinite;
+}
+.page-home .bg-textura {
+	bottom: -500px;
 }
 
 //Bg colores qo
@@ -115,6 +117,10 @@ video.responsive-video {
 	@media #{$medium-and-down} 	{  top: -100px; }
 	@media #{$sm-and-down} 		{  top: -120px; }
 	@media #{$small-and-down} 	{  top: -140px; }
+}
+
+#page-404 .bg-colores-qo {
+	top: 0px;
 }
 
 //Section clientes

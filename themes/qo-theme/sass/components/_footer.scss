@@ -30,3 +30,13 @@ footer {
 		}
 	}
 }
+
+#page-404 {
+	footer {
+		padding: 230px 0 90px;
+		@media #{$large-and-down} 	{  padding: 190px 0 90px ; }
+		@media #{$medium-and-down} 	{  padding: 160px 0 90px; }
+		@media #{$sm-and-down} 		{  padding: 140px 0 90px; }
+		@media #{$small-and-down} 	{  padding: 120px 0 90px; }
+	}
+}
