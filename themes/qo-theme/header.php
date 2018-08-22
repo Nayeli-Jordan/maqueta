@@ -64,7 +64,7 @@
 				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
 				<nav>
 					<i class="icon-cancel btn-header-close"></i>
-					<ul class="mb-nav" itemscope>
+					<ul class="qo-nav" itemscope>
 						<?php
 							$menu_name = 'top_menu';
 

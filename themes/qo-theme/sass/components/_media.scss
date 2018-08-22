@@ -47,16 +47,17 @@ video.responsive-video {
     position: fixed;
     top: -50px;
     left: 50%;	
-	width: 65px;
-    height: 35px;
+	width: 50px;
+    height: 30px;
     opacity: 0;
     z-index: 200;
 	transition: .1s ease-out;
 	&.logo-fixed {
 	    position: fixed;
 	    top: 30px;
-	    left: 5px;
+	    left: 15px;
 	    opacity: 1;
+	    @media #{$sm-and-down} { display: none; }
 	}	
 }
 .bg-qo-logo {
@@ -113,7 +114,7 @@ video.responsive-video {
 	top: -155px;	
 	@media #{$medium-and-down} 	{  top: -100px; }
 	@media #{$sm-and-down} 		{  top: -120px; }
-	@media #{$small-and-down} 	{  top: -80px; }
+	@media #{$small-and-down} 	{  top: -140px; }
 }
 
 //Section clientes

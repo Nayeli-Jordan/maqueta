@@ -14,6 +14,7 @@ var $=jQuery.noConflict();
 					imageMasonry();
 				}				
 				logoScroll();
+				colorMenu();
 			}			
 			isotopeQO();
 			isotopeMultipleQO();
@@ -27,21 +28,29 @@ var $=jQuery.noConflict();
 				if ($('.grid-item').length > 0) {
 					imageMasonry();
 				}
+				// Eliminar overflow hidden si menú móvil se quedo abierto
+				if ($('.js-header.active').length > 0) {
+					$('.js-header').removeClass('active');
+					$('html').removeClass('snow');	
+				}
 			}
 		});
  
 		$(document).scroll(function() {
 			if( parseInt( isHome ) ){
 				logoScroll();
+				colorMenu();
 			}
 		});
 
 		//Nav Index
 		$(".btn-header-open").click(function() {
 			$('.js-header').addClass('active');		
+			$('html').addClass('snow');		
 		});
 		$(".btn-header-close").click(function() {
 			$('.js-header').removeClass('active');		
+			$('html').removeClass('snow');		
 		});
 
 		//Scroll menú
@@ -54,6 +63,8 @@ var $=jQuery.noConflict();
 			$('html, body').animate({		
 				scrollTop: $(idSection).offset().top - 80
 			}, 1000);
+			$('.js-header').removeClass('active');
+			$('html').removeClass('snow');	
 		});
 
 		//Email
@@ -172,5 +183,21 @@ function logoScroll() {
 		$('.bg-logo-secondary').addClass('logo-fixed');
 	}else{
 		$('.bg-logo-secondary').removeClass('logo-fixed');
+	}
+}
+
+// Cambiar tonos menú desktop en bg-colores-qo
+function colorMenu() {
+	// get the position logo
+	var positionBg = $('.bg-colores-qo').offset();
+	var finalPositionBg = positionBg.top - 200;
+	console.log(finalPositionBg);
+
+	var y = $(this).scrollTop();
+	//If the current Y is bigger than the element.
+	if(y >= finalPositionBg){
+		$('.qo-nav').addClass('nav-clare');
+	}else{
+		$('.qo-nav').removeClass('nav-clare');
 	}
 }
