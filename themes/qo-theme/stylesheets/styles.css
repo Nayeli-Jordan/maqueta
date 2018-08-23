@@ -9154,7 +9154,7 @@ small {
 }
 
 /* line 9, ../sass/components/_utilities.scss */
-#section-nosotros .col:hover .bg-image {
+#section-nosotros .col:hover .bg-icon-nosotros {
   animation: rubberBand 1.5s linear infinite;
   -ms-animation: rubberBand 1.5s linear infinite;
   -moz-animation: rubberBand 1.5s linear infinite;

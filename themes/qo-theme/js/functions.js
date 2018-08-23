@@ -71,7 +71,7 @@ var $=jQuery.noConflict();
 			audio.play();
 		});
 
-		$("a.item-scroll").hover(function() {  //.bg-arrow, .services-pager span, footer a
+		$("a.item-scroll, .redes a").hover(function() {  //#section-nosotros .col,.bg-arrow, .services-pager span, footer a
 			var audio = document.getElementById("audio-click");
 			audio.volume = 0.1;
 			audio.play();

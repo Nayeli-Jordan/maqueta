@@ -110,8 +110,8 @@
 		        $args = array(
 		            'post_type' 		=> 'clientes',
 		            'posts_per_page' 	=> -1,
-		            'orderby' 			=> 'date',
-		            'order' 			=> 'ASC'
+		            'orderby' 			=> 'rand',
+		            //'order' 			=> 'ASC'
 		            );
 		        $loop = new WP_Query( $args );
 		        $i = 1;

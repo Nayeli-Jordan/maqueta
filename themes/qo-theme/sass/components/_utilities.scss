@@ -6,7 +6,7 @@
 #section-nosotros {
 	.col {
 		&:hover {
-			.bg-image {
+			.bg-icon-nosotros {
 				@include rubberBand();
 			}
 		}
