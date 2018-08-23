@@ -25,7 +25,11 @@ footer {
 				color: $light-color;
 				font-size: 25px;
 				text-shadow: 5px 3px #585858;
+				transition: .3s ease-out;
 				&.icon-youtube-play { font-size: 30px; }				
+			}
+			&:hover {
+				i { text-shadow: 6px 4px #464646; }
 			}
 		}
 	}

@@ -4,7 +4,14 @@
 
 // NOSOTROS
 #section-nosotros {
-	.tile-qo { min-height: 50px; }
+	.col {
+		&:hover {
+			.bg-image {
+				@include rubberBand();
+			}
+		}
+		.tile-qo { min-height: 50px; }
+	}	
 }
 
 // SISTEMA

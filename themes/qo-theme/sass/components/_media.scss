@@ -98,13 +98,13 @@ video.responsive-video {
 	}
 }
 .bg-textura {	
-	background-size: auto;
+	background-size: 100%;
 	background-position: 0px 0px;
-	background-repeat: repeat-x;
-	animation: animatedBackground 40s linear infinite;
-	-ms-animation: animatedBackground 40s linear infinite;
-	-moz-animation: animatedBackground 40s linear infinite;
-	-webkit-animation: animatedBackground 40s linear infinite;
+	background-repeat: repeat-y;
+	animation: animatedBackground 35s linear infinite;
+	-ms-animation: animatedBackground 35s linear infinite;
+	-moz-animation: animatedBackground 35s linear infinite;
+	-webkit-animation: animatedBackground 35s linear infinite;
 }
 .page-home .bg-textura {
 	bottom: -500px;
@@ -221,7 +221,10 @@ video.responsive-video {
 	height: 50px;
 	cursor: pointer;
 	z-index: 100;
-	
+	&:hover {
+		filter:brightness(0.4);
+		-webkit-filter:brightness(0.4);
+	}
 	@media #{$small-and-down} { 
 		display: none;
 	}
@@ -255,6 +258,9 @@ video.responsive-video {
 		}
 		&.cycle-pager-active {
 			color: #6e6e6e;
+		}
+		&:hover {
+			color: #d6bdbd;
 		}
 	}
 }

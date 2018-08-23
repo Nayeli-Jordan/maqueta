@@ -1,4 +1,16 @@
 <?php get_header(); ?>
+	<!-- <audio id="audio-hover">
+		<source src="<?php echo THEMEPATH; ?>sound/hover.mp3" type="audio/mpeg"></source>
+	</audio> -->
+	<audio id="audio-scroll">
+		<source src="<?php echo THEMEPATH; ?>sound/scroll.mp3" type="audio/mpeg"></source>
+	</audio>
+	<audio id="audio-click">
+		<source src="<?php echo THEMEPATH; ?>sound/click.mp3" type="audio/mpeg"></source>
+	</audio>
+	<audio id="audio-slider">
+		<source src="<?php echo THEMEPATH; ?>sound/slider.mp3" type="audio/mpeg"></source>
+	</audio>
 	<div class="relative">
 		<div class="bg-image bg-absolute bg-textura" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/textura.png);"></div>
 		<section id="section-initial">			

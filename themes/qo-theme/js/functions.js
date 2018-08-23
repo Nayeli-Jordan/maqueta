@@ -65,6 +65,22 @@ var $=jQuery.noConflict();
 			}, 1000);
 			$('.js-header').removeClass('active');
 			$('html').removeClass('snow');	
+
+			var audio = document.getElementById("audio-scroll");
+			audio.volume = 0.1;
+			audio.play();
+		});
+
+		$("a.item-scroll").hover(function() {  //.bg-arrow, .services-pager span, footer a
+			var audio = document.getElementById("audio-click");
+			audio.volume = 0.1;
+			audio.play();
+		});
+
+		$(".bg-arrow, .services-pager span").click(function() {
+			var audio = document.getElementById("audio-slider");
+			audio.volume = 0.2;
+			audio.play();
 		});
 
 		//Email
