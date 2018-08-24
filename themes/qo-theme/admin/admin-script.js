@@ -48,9 +48,8 @@ jQuery(document).ready(function ($) {
 
 
   /*Botón Calendario en sistema*/
-  if ($('.post-type-sistema').length > 0) {
+  if ($('.post-php.post-type-sistema').length > 0) {
     document.getElementById('calendario-stm-adder').innerHTML = '<a id="new-calendar" href="http://localhost:8888/queonda/wp-admin/admin.php?page=my-calendar" target="_blank">Crear Calendario</a><p>Guarda tus cambios y recarga después de crear tu calendario, así podrás visualizarlo en esta sección</p>';
-    //.appendChild('<a href="">Crear Calendario</a>');
   }
 
   /*Disabled options for user*/

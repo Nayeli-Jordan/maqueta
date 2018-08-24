@@ -9551,36 +9551,37 @@ small {
 }
 /* line 262, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
+  margin-bottom: 0px;
   max-width: calc(100% - 30px);
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 267, ../sass/components/_utilities.scss */
+/* line 268, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 a {
   color: #7b2183;
 }
-/* line 270, ../sass/components/_utilities.scss */
+/* line 271, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 273, ../sass/components/_utilities.scss */
+/* line 274, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   margin-top: 0px;
 }
-/* line 276, ../sass/components/_utilities.scss */
+/* line 277, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
   z-index: 1;
 }
-/* line 281, ../sass/components/_utilities.scss */
+/* line 282, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 283, ../sass/components/_utilities.scss */
+/* line 284, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-requerimiento {
   position: relative;
   bottom: -6px;
@@ -9588,28 +9589,28 @@ small {
   margin: 4px;
   float: none;
 }
-/* line 290, ../sass/components/_utilities.scss */
+/* line 291, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 291, ../sass/components/_utilities.scss */
+/* line 292, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
-/* line 296, ../sass/components/_utilities.scss */
+/* line 297, ../sass/components/_utilities.scss */
 .card-sistema .card-body .number-brief {
   float: right;
   font-size: 10px;
   font-weight: bold;
 }
-/* line 301, ../sass/components/_utilities.scss */
+/* line 302, ../sass/components/_utilities.scss */
 .card-sistema .card-body .content-info-brief {
   padding-right: 40px;
 }
 
-/* line 307, ../sass/components/_utilities.scss */
+/* line 308, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   position: relative;
