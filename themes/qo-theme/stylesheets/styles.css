@@ -1831,50 +1831,52 @@ button {
   background-color: transparent;
   border: 2px solid #7b2183;
   border-radius: 5px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
   transition: .3s ease-out;
   cursor: pointer;
 }
-/* line 66, ../sass/components/_buttons.scss */
+/* line 67, ../sass/components/_buttons.scss */
 .option-set.btns-group-estatus button, .option-set.btns-group-prioridad button {
   line-height: 20px;
 }
-/* line 67, ../sass/components/_buttons.scss */
+/* line 68, ../sass/components/_buttons.scss */
 .option-set.btns-group-area button {
   border-color: #b21180;
 }
-/* line 69, ../sass/components/_buttons.scss */
+/* line 70, ../sass/components/_buttons.scss */
 .option-set.btns-group-area button:hover, .option-set.btns-group-area button.selected {
   background-color: #b21180;
 }
-/* line 71, ../sass/components/_buttons.scss */
+/* line 72, ../sass/components/_buttons.scss */
 .option-set.btns-group-estatus button {
   border-color: #2174b9;
 }
-/* line 73, ../sass/components/_buttons.scss */
+/* line 74, ../sass/components/_buttons.scss */
 .option-set.btns-group-estatus button:hover, .option-set.btns-group-estatus button.selected {
   background-color: #2174b9;
 }
-/* line 75, ../sass/components/_buttons.scss */
+/* line 76, ../sass/components/_buttons.scss */
 .option-set.btns-group-prioridad button {
   border-color: #614893;
 }
-/* line 77, ../sass/components/_buttons.scss */
+/* line 78, ../sass/components/_buttons.scss */
 .option-set.btns-group-prioridad button:hover, .option-set.btns-group-prioridad button.selected {
   background-color: #614893;
 }
-/* line 79, ../sass/components/_buttons.scss */
+/* line 80, ../sass/components/_buttons.scss */
 .option-set button:hover {
   color: #fff;
   background-color: #7b2183;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
   opacity: 0.8;
 }
-/* line 85, ../sass/components/_buttons.scss */
+/* line 87, ../sass/components/_buttons.scss */
 .option-set button.selected {
   background-color: #7b2183;
   color: #fff;
 }
 
-/* line 90, ../sass/components/_buttons.scss */
+/* line 92, ../sass/components/_buttons.scss */
 .btn-primaryQO {
   display: inline-block;
   margin: 0 2px 5px;
@@ -1887,59 +1889,59 @@ button {
   transition: .3s ease-out;
   cursor: pointer;
 }
-/* line 101, ../sass/components/_buttons.scss */
+/* line 103, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus, .btn-primaryQO.btn-prioridad {
   line-height: 20px;
 }
-/* line 102, ../sass/components/_buttons.scss */
+/* line 104, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-area {
   border-color: #b21180;
 }
-/* line 103, ../sass/components/_buttons.scss */
+/* line 105, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-estatus {
   border-color: #2174b9;
 }
-/* line 104, ../sass/components/_buttons.scss */
+/* line 106, ../sass/components/_buttons.scss */
 .btn-primaryQO.btn-prioridad {
   border-color: #614893;
 }
-/* line 105, ../sass/components/_buttons.scss */
+/* line 107, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover {
   color: #fff;
   background-color: #7b2183;
   opacity: 0.8;
 }
-/* line 109, ../sass/components/_buttons.scss */
+/* line 111, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-area {
   background-color: #b21180;
 }
-/* line 110, ../sass/components/_buttons.scss */
+/* line 112, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-estatus {
   background-color: #2174b9;
 }
-/* line 111, ../sass/components/_buttons.scss */
+/* line 113, ../sass/components/_buttons.scss */
 .btn-primaryQO:hover.btn-prioridad {
   background-color: #614893;
 }
-/* line 113, ../sass/components/_buttons.scss */
+/* line 115, ../sass/components/_buttons.scss */
 .btn-primaryQO:active, .btn-primaryQO.is-checked {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 117, ../sass/components/_buttons.scss */
+/* line 119, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-area, .btn-primaryQO.is-checked.btn-area {
   background-color: #b21180;
 }
-/* line 118, ../sass/components/_buttons.scss */
+/* line 120, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-estatus, .btn-primaryQO.is-checked.btn-estatus {
   background-color: #2174b9;
 }
-/* line 119, ../sass/components/_buttons.scss */
+/* line 121, ../sass/components/_buttons.scss */
 .btn-primaryQO:active.btn-prioridad, .btn-primaryQO.is-checked.btn-prioridad {
   background-color: #614893;
 }
 
-/* line 122, ../sass/components/_buttons.scss */
+/* line 124, ../sass/components/_buttons.scss */
 .btn-purple {
   display: inline-block;
   line-height: 35px;
@@ -1948,7 +1950,7 @@ button {
   border-radius: 3px;
 }
 
-/* line 132, ../sass/components/_buttons.scss */
+/* line 134, ../sass/components/_buttons.scss */
 .card-cotizacion .status,
 .content-cotizacion .status {
   position: absolute;
@@ -1962,20 +1964,20 @@ button {
   background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
   border-radius: 50%;
 }
-/* line 143, ../sass/components/_buttons.scss */
+/* line 145, ../sass/components/_buttons.scss */
 .card-cotizacion .status .etiqueta-text,
 .content-cotizacion .status .etiqueta-text {
   right: 20px;
   color: #000;
   z-index: 9;
 }
-/* line 148, ../sass/components/_buttons.scss */
+/* line 150, ../sass/components/_buttons.scss */
 .card-cotizacion .status:hover .etiqueta-text,
 .content-cotizacion .status:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 152, ../sass/components/_buttons.scss */
+/* line 154, ../sass/components/_buttons.scss */
 .content-cotizacion .status {
   top: -10px;
   right: -10px;
@@ -4572,9 +4574,8 @@ video.responsive-video {
   margin: 0 auto 20px auto !important;
 }
 
-/* line 298, ../sass/components/_media.scss */
+/* line 297, ../sass/components/_media.scss */
 .content-muestra div,
-.content-img-muestra div,
 .content-img-Horizontal div,
 .content-img-Vertical div {
   display: inline-block;
@@ -4582,9 +4583,8 @@ video.responsive-video {
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 303, ../sass/components/_media.scss */
+/* line 302, ../sass/components/_media.scss */
 .content-muestra div p,
-.content-img-muestra div p,
 .content-img-Horizontal div p,
 .content-img-Vertical div p {
   max-height: 57px;
@@ -4592,56 +4592,74 @@ video.responsive-video {
   font-size: 11px;
   overflow: hidden;
 }
-/* line 310, ../sass/components/_media.scss */
+/* line 309, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(1),
-.content-img-muestra div:first-child:nth-last-child(1),
 .content-img-Horizontal div:first-child:nth-last-child(1),
 .content-img-Vertical div:first-child:nth-last-child(1) {
   max-width: 100%;
   padding: 0px;
 }
-/* line 314, ../sass/components/_media.scss */
+
+/* line 317, ../sass/components/_media.scss */
+.content-muestra div p {
+  max-height: 40px;
+}
+/* line 321, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(2),
 .content-muestra div:first-child:nth-last-child(2) ~ div,
-.content-img-muestra div:first-child:nth-last-child(2),
-.content-img-muestra div:first-child:nth-last-child(2) ~ div,
-.content-img-Horizontal div:first-child:nth-last-child(2),
-.content-img-Horizontal div:first-child:nth-last-child(2) ~ div,
-.content-img-Vertical div:first-child:nth-last-child(2),
-.content-img-Vertical div:first-child:nth-last-child(2) ~ div {
-  max-width: calc(50% - 10px);
-}
-/* line 318, ../sass/components/_media.scss */
 .content-muestra div:nth-last-child(3),
 .content-muestra div:nth-last-child(3) ~ div,
-.content-img-muestra div:nth-last-child(3),
-.content-img-muestra div:nth-last-child(3) ~ div,
+.content-muestra div:first-child:nth-last-child(4),
+.content-muestra div:first-child:nth-last-child(4) ~ div {
+  margin-bottom: 10px;
+}
+/* line 328, ../sass/components/_media.scss */
+.content-muestra div:first-child:nth-last-child(2) img,
+.content-muestra div:first-child:nth-last-child(2) ~ div img,
+.content-muestra div:nth-last-child(3) img,
+.content-muestra div:nth-last-child(3) ~ div img,
+.content-muestra div:first-child:nth-last-child(4) img,
+.content-muestra div:first-child:nth-last-child(4) ~ div img {
+  max-height: 180px;
+}
+/* line 332, ../sass/components/_media.scss */
+.content-muestra div:first-child:nth-last-child(2),
+.content-muestra div:first-child:nth-last-child(2) ~ div {
+  width: 100%;
+  padding: 0px;
+}
+/* line 337, ../sass/components/_media.scss */
+.content-muestra div:nth-last-child(3),
+.content-muestra div:nth-last-child(3) ~ div,
+.content-muestra div:first-child:nth-last-child(4),
+.content-muestra div:first-child:nth-last-child(4) ~ div {
+  width: calc(50% - 10px);
+}
+
+/* line 346, ../sass/components/_media.scss */
+.content-img-Horizontal div:first-child:nth-last-child(2),
+.content-img-Horizontal div:first-child:nth-last-child(2) ~ div {
+  max-width: calc(50% - 10px);
+}
+/* line 350, ../sass/components/_media.scss */
 .content-img-Horizontal div:nth-last-child(3),
-.content-img-Horizontal div:nth-last-child(3) ~ div,
-.content-img-Vertical div:nth-last-child(3),
-.content-img-Vertical div:nth-last-child(3) ~ div {
+.content-img-Horizontal div:nth-last-child(3) ~ div {
   max-width: calc(33.33% - 10px);
 }
-/* line 322, ../sass/components/_media.scss */
-.content-muestra div:first-child:nth-last-child(4),
-.content-muestra div:first-child:nth-last-child(4) ~ div,
-.content-img-muestra div:first-child:nth-last-child(4),
-.content-img-muestra div:first-child:nth-last-child(4) ~ div,
+/* line 354, ../sass/components/_media.scss */
 .content-img-Horizontal div:first-child:nth-last-child(4),
-.content-img-Horizontal div:first-child:nth-last-child(4) ~ div,
-.content-img-Vertical div:first-child:nth-last-child(4),
-.content-img-Vertical div:first-child:nth-last-child(4) ~ div {
+.content-img-Horizontal div:first-child:nth-last-child(4) ~ div {
   max-width: calc(25% - 10px);
 }
 
-/* line 329, ../sass/components/_media.scss */
+/* line 361, ../sass/components/_media.scss */
 .content-img-Vertical div:first-child:nth-last-child(2),
 .content-img-Vertical div:first-child:nth-last-child(2) ~ div {
   max-width: 100%;
   max-height: 190px;
   padding: 0px;
 }
-/* line 335, ../sass/components/_media.scss */
+/* line 367, ../sass/components/_media.scss */
 .content-img-Vertical div:nth-last-child(3),
 .content-img-Vertical div:nth-last-child(3) ~ div,
 .content-img-Vertical div:first-child:nth-last-child(4),
@@ -10061,37 +10079,32 @@ footer .redes a:hover i {
   .content-cotizacion .opt-cotizacion.description {
     height: 350px;
   }
-  /* line 57, ../sass/components/_print.scss */
-  .content-cotizacion .content-img-muestra {
-    position: relative;
-    min-height: 260px;
-  }
-  /* line 61, ../sass/components/_print.scss */
+  /* line 56, ../sass/components/_print.scss */
   .content-cotizacion .content-muestra {
     height: 490px !important;
   }
-  /* line 63, ../sass/components/_print.scss */
+  /* line 58, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Horizontal {
     height: 250px !important;
   }
-  /* line 65, ../sass/components/_print.scss */
+  /* line 60, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Horizontal img {
     max-height: 200px !important;
   }
-  /* line 67, ../sass/components/_print.scss */
+  /* line 62, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Vertical {
     height: 500px !important;
   }
-  /* line 69, ../sass/components/_print.scss */
+  /* line 64, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Vertical div {
     padding: 5px;
   }
-  /* line 72, ../sass/components/_print.scss */
+  /* line 67, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Vertical div:first-child:nth-last-child(1) img,
   .content-cotizacion .content-img-Vertical div:first-child:nth-last-child(1) ~ div img {
     max-height: 400px;
   }
-  /* line 80, ../sass/components/_print.scss */
+  /* line 75, ../sass/components/_print.scss */
   .content-cotizacion .content-img-Vertical div:first-child:nth-last-child(2) img,
   .content-cotizacion .content-img-Vertical div:first-child:nth-last-child(2) ~ div img,
   .content-cotizacion .content-img-Vertical div:nth-last-child(3) img,
@@ -10101,7 +10114,7 @@ footer .redes a:hover i {
     max-height: 200px;
   }
 
-  /* line 84, ../sass/components/_print.scss */
+  /* line 79, ../sass/components/_print.scss */
   .content-fixed-buttons {
     display: none;
   }
