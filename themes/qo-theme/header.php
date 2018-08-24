@@ -11,8 +11,15 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<!-- Meta robots -->
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow" />
+		<?php if (is_home() || is_404()): ?>
+			<meta name="robots" content="index, follow" />
+			<meta name="googlebot" content="index, follow" />		
+		<?php else: ?>
+			<!-- Evitar que se indexe el sistema QO -->
+			<meta name="robots" content="noindex" />
+			<meta name="googlebot" content="noindex">
+		<?php endif ?>
+
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
@@ -51,7 +58,7 @@
 		<link rel="canonical" href="<?php echo site_url(); ?>" />
 
 		<!-- Sitemap Google Verify -->
-		<meta name="google-site-verification" content="" />
+		<meta name="google-site-verification" content="It5oQOBZoAwIBDAboPgUlYvsPEfL5Q9nDWi5XF6SaVs" />
 
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>

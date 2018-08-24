@@ -5,7 +5,34 @@
 add_action( 'init', 'custom_taxonomies_callback', 0 );
 function custom_taxonomies_callback(){
 
-	
+
+	if( ! taxonomy_exists('dimensiones')){
+
+		$labels = array(
+			'name'              => 'Dimensiones',
+			'singular_name'     => 'Dimensiones',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Dimensiones',
+			'update_item'       => 'Actualizar Dimensiones',
+			'add_new_item'      => 'Nueva Dimensiones',
+			'menu_name'         => 'Dimensiones'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'dimensiones' ),
+		);
+
+		register_taxonomy( 'dimensiones', 'proyectos', $args );
+	}
+	wp_insert_term( 'larga', 'dimensiones' );
+	wp_insert_term( 'corta', 'dimensiones' );
+
 	if( ! taxonomy_exists('subservicios')){
 
 		$labels = array(

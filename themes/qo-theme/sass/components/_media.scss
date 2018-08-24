@@ -139,8 +139,7 @@ video.responsive-video {
 		width: 100px;
 		height: 25px;
 		max-width: 100%;
-		margin-bottom: 25px;
-		padding: 0 0.75rem;
+		margin: 0 2px 25px;
     	box-sizing: border-box;
 	}
 }
@@ -373,3 +372,10 @@ video.responsive-video {
 	}
 }
 
+#section-trabajos {
+	.bg-image {
+		width: 100%;
+		&.width-corta { padding-bottom: 50%; }
+		&.width-larga { padding-bottom: 135%; }
+	}
+}

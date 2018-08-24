@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-	<!-- <audio id="audio-hover">
-		<source src="<?php echo THEMEPATH; ?>sound/hover.mp3" type="audio/mpeg"></source>
-	</audio> -->
 	<audio id="audio-scroll">
 		<source src="<?php echo THEMEPATH; ?>sound/scroll.mp3" type="audio/mpeg"></source>
 	</audio>
@@ -142,11 +139,13 @@
 		        $loop = new WP_Query( $args );
 		        $i = 1;
 		        if ( $loop->have_posts() ) {
-		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
+		            while ( $loop->have_posts() ) : $loop->the_post(); 
 
-					<div class="col s12 sm6 l4 xl3 grid-item">
-						<!-- <div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div> -->
-						<img class="responsive-img block margin-auto margin-bottom margin-bottom" src="<?php the_post_thumbnail_url('full'); ?>">
+	            	// Get ancho taxonomy
+					$terms_proyecto = get_the_term_list( $post->ID, 'dimensiones', '', ', ', '' ) ; ?>		
+
+					<div class="col s12 sm6 l4 grid-item">
+						<div class="bg-image width-<?php echo strip_tags($terms_proyecto); ?> margin-bottom" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);"></div>
 					</div>				
 
 		            <?php $i ++;  endwhile;

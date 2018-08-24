@@ -153,9 +153,6 @@ function isotopeMultipleQO(){
 
     $container.isotope({
       itemSelector : '.element-item',
-      /*masonry: {
-        columnWidth: 80
-      }*/
     });
 
     // filter buttons
@@ -172,7 +169,6 @@ function isotopeMultipleQO(){
       $this.addClass('selected');
       
       // store filter value in object
-      // i.e. filters.color = 'red'
       var group = $optionSet.attr('data-filter-group');
       filters[ group ] = $this.attr('data-filter-value');
       // convert object into array
