@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.min.js', array(), '', true );
     }
     wp_enqueue_script( 'isotope_js', JSPATH.'isotope.pkgd.min.js', array(), '', true );	
-	wp_enqueue_script( 'qo_functions', JSPATH.'functions.min.js', array(), '1.0', true );
+	wp_enqueue_script( 'qo_functions', JSPATH.'functions.js', array(), '1.0', true );
  
 	wp_localize_script( 'qo_functions', 'siteUrl', SITEURL );
 	wp_localize_script( 'qo_functions', 'theme_path', THEMEPATH );
