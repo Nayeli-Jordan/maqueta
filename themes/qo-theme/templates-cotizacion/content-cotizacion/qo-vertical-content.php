@@ -56,27 +56,31 @@
 					<div class="content-center">
 						<?php if( $muestraA != "") : ?>
 							<div>
-								<img class="responsive-img inline-block" src="<?php echo $muestraA; ?>">
-								<p><?php echo get_post(pippin_get_image_id($muestraA))->post_content; ?></p>
-							</div>	
+								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraA), 'medium'); ?>
+								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
+								<p><?php echo get_post(pippin_get_image_id($muestraA))->post_content; ?></p>		
+							</div>				
 						<?php endif; ?>
 						<?php if( $muestraB != "") : ?>
 							<div>
-								<img class="responsive-img inline-block" src="<?php echo $muestraB; ?>">
+								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraB), 'medium'); ?>
+								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
 								<p><?php echo get_post(pippin_get_image_id($muestraB))->post_content; ?></p>
-							</div>	
+							</div>
 						<?php endif; ?>
 						<?php if( $muestraC != "") : ?>
 							<div>
-								<img class="responsive-img inline-block" src="<?php echo $muestraC; ?>">
+								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraC), 'medium'); ?>
+								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
 								<p><?php echo get_post(pippin_get_image_id($muestraC))->post_content; ?></p>
-							</div>	
+							</div>
 						<?php endif; ?>
 						<?php if( $muestraD != "") : ?>
 							<div>
-								<img class="responsive-img inline-block" src="<?php echo $muestraD; ?>">
+								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraD), 'medium'); ?>
+								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
 								<p><?php echo get_post(pippin_get_image_id($muestraD))->post_content; ?></p>
-							</div>	
+							</div>
 						<?php endif; ?>						
 					</div>					
 				</div>
