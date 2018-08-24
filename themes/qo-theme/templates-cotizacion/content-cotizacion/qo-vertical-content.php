@@ -51,35 +51,35 @@
 				</div>
 			</div>
 			<div class="col s5 text-center">
-				<img class="img-client mabot" src="<?php the_post_thumbnail_url('medium'); ?>">
+				<img class="img-client" src="<?php the_post_thumbnail_url('medium'); ?>">
 				<div class="content-img-Vertical">
 					<div class="content-center">
 						<?php if( $muestraA != "") : ?>
 							<div>
-								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraA), 'medium'); ?>
+								<?php $image_thumb = wp_get_attachment_image_src(qo_get_image_id($muestraA), 'large'); ?>
 								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
-								<p><?php echo get_post(pippin_get_image_id($muestraA))->post_content; ?></p>		
+								<p><?php echo get_post(qo_get_image_id($muestraA))->post_content; ?></p>		
 							</div>				
 						<?php endif; ?>
 						<?php if( $muestraB != "") : ?>
 							<div>
-								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraB), 'medium'); ?>
+								<?php $image_thumb = wp_get_attachment_image_src(qo_get_image_id($muestraB), 'large'); ?>
 								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
-								<p><?php echo get_post(pippin_get_image_id($muestraB))->post_content; ?></p>
+								<p><?php echo get_post(qo_get_image_id($muestraB))->post_content; ?></p>
 							</div>
 						<?php endif; ?>
 						<?php if( $muestraC != "") : ?>
 							<div>
-								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraC), 'medium'); ?>
+								<?php $image_thumb = wp_get_attachment_image_src(qo_get_image_id($muestraC), 'large'); ?>
 								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
-								<p><?php echo get_post(pippin_get_image_id($muestraC))->post_content; ?></p>
+								<p><?php echo get_post(qo_get_image_id($muestraC))->post_content; ?></p>
 							</div>
 						<?php endif; ?>
 						<?php if( $muestraD != "") : ?>
 							<div>
-								<?php $image_thumb = wp_get_attachment_image_src(pippin_get_image_id($muestraD), 'medium'); ?>
+								<?php $image_thumb = wp_get_attachment_image_src(qo_get_image_id($muestraD), 'large'); ?>
 								<img class="responsive-img inline-block" src="<?php echo $image_thumb[0]; ?>">
-								<p><?php echo get_post(pippin_get_image_id($muestraD))->post_content; ?></p>
+								<p><?php echo get_post(qo_get_image_id($muestraD))->post_content; ?></p>
 							</div>
 						<?php endif; ?>						
 					</div>					
