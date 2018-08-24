@@ -203,7 +203,7 @@ function colorMenu() {
 	// get the position logo
 	var positionBg = $('.bg-colores-qo').offset();
 	var finalPositionBg = positionBg.top - 200;
-	console.log(finalPositionBg);
+	//console.log(finalPositionBg);
 
 	var y = $(this).scrollTop();
 	//If the current Y is bigger than the element.
