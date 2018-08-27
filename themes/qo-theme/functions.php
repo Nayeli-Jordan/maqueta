@@ -55,32 +55,8 @@ function load_custom_files_wp_admin() {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_files_wp_admin' );
 
-//Habilitar thumbnail en post
-add_theme_support( 'post-thumbnails' ); 
-
-//Habilitar menú (aparece en personalizar)
-add_action('after_setup_theme', 'add_top_menu');
-function add_top_menu(){
-    register_nav_menu('top_menu',__('Top menú'));
-	register_nav_menu('qo_menu',__('QO menú'));
-}
-
 //Change style login
-function my_login_logo() { ?>
-  <style type="text/css">
-    body { background-color: #dcdcdc!important; }
-    #login h1 a, .login h1 a {
-        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/identidad/logo.png);
-        width: 150px;
-        height: 90px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    .login label, .login #backtoblog a, .login #nav a { color: #23282d!important; }
-  </style>
-<?php }//end my_login_logo()
-add_action( 'login_enqueue_scripts', 'my_login_logo' );
-
+add_action( 'login_enqueue_scripts', 'load_custom_files_wp_admin' );
 function my_login_logo_url() {
   return home_url();
 }//end my_login_logo_url()
@@ -90,6 +66,16 @@ function my_login_logo_url_title() {
   return '¿Qué Onda?';
 }//end my_login_logo_url_title()
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+
+//Habilitar thumbnail en post
+add_theme_support( 'post-thumbnails' ); 
+
+//Habilitar menú (aparece en personalizar)
+add_action('after_setup_theme', 'add_top_menu');
+function add_top_menu(){
+    register_nav_menu('top_menu',__('Top menú'));
+	register_nav_menu('qo_menu',__('QO menú'));
+}
 
 
 /**

@@ -127,3 +127,49 @@ p.disabled {
 .note { font-size: 10px; }
 
 textarea.textarea_row3 { min-height: 120px; }
+
+/* Estilos login */
+body { background-color: #dcdcdc!important; }
+#login h1 a, .login h1 a {
+    width: 150px;
+    height: 90px;
+    background-image: url(../images/identidad/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+form#loginform {
+	border-radius: 10px;
+	box-shadow: 2px 3px 15px 0 rgba(0,0,0,0.25);
+}
+.login label, .login #backtoblog a, .login #nav a { color: #23282d!important; }
+.login #nav a:hover, .login #backtoblog a:hover { color: #652b85!important; }
+.login #login_error, .login .message, .login .success { border-left-color: #652b85; }
+.login form .input, .login input[type=text] {
+	background: transparent;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #652b85;
+}
+.login form input[type=checkbox]{
+	border: 2px solid #652b85;
+}
+input[type=checkbox]:checked:before{
+	margin: -4px 0 0 -5px;
+	color: #652b85;
+}
+.login input:focus {
+	outline: none!important;
+}
+.login .button {
+    color: #652b85;
+    text-shadow: none;
+    font-weight: 700;	
+	background: transparent;
+    border: 2px solid #652b85!important;
+    box-shadow: none;
+}
+.login .button:hover {
+	background-color: #652b85;
+	color: #fff;
+}
