@@ -52,7 +52,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans:700i" rel="stylesheet">
 
 		<!--Import materialize.css-->
-		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.min.css" media="screen,projection, print" />
+		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection, print" />
 
 		<!-- Canonical URL -->
 		<link rel="canonical" href="<?php echo site_url(); ?>" />

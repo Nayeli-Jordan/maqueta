@@ -162,17 +162,17 @@ add_action('init', function(){
 	register_post_type( 'reconocimientos', $args );	
 
 	$labels = array(
-		'name'          => 'Sistema',
-		'Singular_name' => 'Sistema',
-		'add_new'       => 'Nuevo Sistema',
-		'add_new_item'  => 'Nuevo Sistema',
-		'edit_item'     => 'Editar Sistema',
-		'new_item'      => 'Nuevo Sistema',
+		'name'          => 'Brief´s',
+		'Singular_name' => 'Brief´s',
+		'add_new'       => 'Nuevo Brief´s',
+		'add_new_item'  => 'Nuevo Brief´s',
+		'edit_item'     => 'Editar Brief´s',
+		'new_item'      => 'Nuevo Brief´s',
 		'all_items'     => 'Todo',
-		'view_item'     => 'Ver Sistema',
-		'search_items'  => 'Buscar Sistema',
-		'not_found'     => 'No hay Sistema.',
-		'menu_name'     => 'Sistema'
+		'view_item'     => 'Ver Brief´s',
+		'search_items'  => 'Buscar Brief´s',
+		'not_found'     => 'No hay Brief´s.',
+		'menu_name'     => 'Brief´s'
 	);
 
 	$args = array(

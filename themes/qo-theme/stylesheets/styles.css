@@ -9621,6 +9621,12 @@ small {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
 }
 
+/* Ocultar detalles calendario */
+/* line 319, ../sass/components/_utilities.scss */
+.my-calendar-table .details {
+  display: none !important;
+}
+
 @media only screen and (min-width: 601px) {
   /* line 1, ../sass/components/_header.scss */
   header.js-header {
@@ -9863,10 +9869,10 @@ header.js-header.header-cotizacion {
 }
 /* line 198, ../sass/components/_header.scss */
 .archive-header nav {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: -260px;
-  padding: 20px 0px;
+  padding: 50px 0px 20px;
   width: 250px;
   min-height: 100vh;
   text-align: left;

@@ -90,10 +90,12 @@ var $=jQuery.noConflict();
 
 		//Nav QO
 		$(".btn-nav").click(function() {
-			$('.archive-header nav').addClass('active');		
+			$('.archive-header nav').addClass('active');
+			$('html').addClass('snow');	
 		});
 		$(".archive-header .icon-cancel").click(function() {
-			$('.archive-header nav').removeClass('active');		
+			$('.archive-header nav').removeClass('active');
+			$('html').removeClass('snow');	
 		});
 
 		//Buttons sistema

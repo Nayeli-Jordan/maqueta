@@ -96,6 +96,14 @@ textarea {
 }
 #new-calendar:hover { background: #036492; }
 
+label[for='mc_event_time'], #mc_event_time,
+label[for='mc_event_endtime'], #mc_event_endtime,
+label[for='e_hide_end'], #e_hide_end,
+#my-calendar .note,
+#my-calendar #add_field,
+#my-calendar #del_field,
+#my-calendar .postbox h2 { display: none!important; }
+
 /*SISTEMA*/
 .bg-destacade { background-color: #8c45c1!important; }
 .bg-destacade label {

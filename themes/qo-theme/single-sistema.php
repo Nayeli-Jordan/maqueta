@@ -17,8 +17,10 @@
 				<div class="col s12 sm6 m4 l2">
 				<?php 
 					$terms = get_the_terms($post->ID, 'solicitante');
-					foreach($terms as $term){
-						echo $term->name . "</br>";
+					if ( is_array( $terms ) ) {
+						foreach($terms as $term){
+							echo $term->name . "</br>";
+						}
 					}
 				?>
 				</div>
@@ -32,7 +34,7 @@
 				<div class="col s12 sm6 m4 l2">
 				<?php 
 					$terms = get_the_terms($post->ID, 'cotizacion-stm');
-					if (is_array($terms) || is_object($terms)){
+					if ( is_array( $terms ) ) {
 						foreach ($terms as $term){
 							echo "<a class='inline-block margin-right-xsmall hover-purple' href='" . SITEURL . "qo_cotizaciones/" . $term->slug . "' target='_blank'><span class='block'>" . $term->name . "</span></a>";
 						}
@@ -44,8 +46,10 @@
 				<div class="col s12 sm6 m4 l2">
 				<?php 
 					$terms = get_the_terms($post->ID, 'requerimiento');
-					foreach($terms as $term){
-						echo "<span class='block'>" . $term->name . "<span class='etiqueta-requerimiento bg-" . $term->slug . "'></span></span>";
+					if ( is_array( $terms ) ) {
+						foreach($terms as $term){
+							echo "<span class='block'>" . $term->name . "<span class='etiqueta-requerimiento bg-" . $term->slug . "'></span></span>";
+						}
 					}
 				?>
 				</div>
@@ -62,8 +66,10 @@
 					<div class="col s12 sm6 m4 l6">
 					<?php 
 						$terms = get_the_terms($post->ID, 'responsable');
-						foreach($terms as $term){
-							echo $term->name . "</br>";
+						if ( is_array( $terms ) ) {
+							foreach($terms as $term){
+								echo $term->name . "</br>";
+							}
 						}
 					?>
 					</div>
@@ -77,7 +83,7 @@
 		<div id="brief-dv" class="body-brief">
 			<div class="row">
 				<div class="col s12 header-area-brief">
-					<h2>DISEÑO VISUAL / DATOS Y APOYO</h2>
+					<span>DISEÑO VISUAL / DATOS Y APOYO</span>
 				</div>
 				<div class="row">
 					<div class="col s12 sm6 m3 l2 bg-purple-xlight"><p>Medio de entrada</p></div>
@@ -129,7 +135,7 @@
 		<div id="brief-di" class="body-brief">
 			<div class="row">
 				<div class="col s12 header-area-brief">
-					<h2>DISEÑO INDUSTRIAL / DATOS Y APOYO</h2>
+					<span>DISEÑO INDUSTRIAL / DATOS Y APOYO</span>
 				</div>
 				<div class="row">
 					<div class="col s12 sm6 m3 l2 bg-purple-xlight"><p>Medio de entrada</p></div>
@@ -193,7 +199,7 @@
 		<div id="brief-mkt" class="body-brief">
 			<div class="row">
 				<div class="col s12 header-area-brief">
-					<h2>MARKETING / DATOS Y APOYO</h2>
+					<span>MARKETING / DATOS Y APOYO</span>
 				</div>
 				<div class="row">
 					<div class="col s12 sm6 m3 l2 bg-purple-xlight"><p>Medio de entrada</p></div>
@@ -222,7 +228,7 @@
 		<div id="brief-stm" class="body-brief">
 			<div class="row">
 				<div class="col s12 header-area-brief">
-					<h2>SISTEMAS / DATOS Y APOYO</h2>
+					<span>SISTEMAS / DATOS Y APOYO</span>
 				</div>
 				<div class="row">
 					<div class="col s12 sm6 m3 l2 bg-purple-xlight"><p>Medio de entrada</p></div>
@@ -252,7 +258,7 @@
 			<div id="brief-extra" class="body-brief">
 				<div class="row">				
 					<div class="col s12 header-area-brief">
-						<h2>ACTUALIZACIONES POSTERIORES</h2>
+						<span>ACTUALIZACIONES POSTERIORES</span>
 					</div>
 					<?php if( $solicitud1_ext != "" ) : ?>
 						<div class="row">
@@ -324,16 +330,20 @@
 		<a href='mailto:
 		<?php 
 			$terms = get_the_terms($post->ID, 'responsable');
-			foreach($terms as $term){
-				echo $term->description . "; ";
+			if ( is_array( $terms ) ) {
+				foreach($terms as $term){
+					echo $term->description . "; ";
+				}
 			}
 		?>
 		?subject=BRIEF: <?php the_title(); ?> | Nuevo!&body=Se ha creado un nuevo Brief "<?php the_title(); ?>". %0D%0ARevísalo en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>. %0D%0AFecha de entrega: <?php echo $fechaEntrega; ?>. %0D%0APrioridad: <?php echo $prioridad; ?>' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Nuevo</a>
 		<a href='mailto:
 		<?php 
 			$terms = get_the_terms($post->ID, 'responsable');
-			foreach($terms as $term){
-				echo $term->description . "; ";
+			if ( is_array( $terms ) ) {
+				foreach($terms as $term){
+					echo $term->description . "; ";
+				}
 			}
 		?>
 		?subject=BRIEF: <?php the_title(); ?> | Actualización&body=Hay cambios en el Brief "<?php the_title(); ?>". %0D%0ARevísalos en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>.' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Actualización</a>	

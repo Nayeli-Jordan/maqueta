@@ -4,16 +4,18 @@ jQuery(document).ready(function ($) {
   var meta_image_frame;
   // Runs when the image button is clicked.
   $('.image-upload').click(function (e) {
+    var forButtonUpload = $(this).attr('for'); //Image upload for
     // Get preview pane
     var meta_image_preview = $(this).parent().parent().children('.image-preview');
     // Prevents the default action from occuring.
     e.preventDefault();
     var meta_image = $(this).parent().children('.meta-image');
     // If the frame already exists, re-open it.
-    if (meta_image_frame) {
+    //No funciona si se pretende jalar más de una imagen diferente
+    /*if (meta_image_frame) {
       meta_image_frame.open();
       return;
-    }
+    }*/
     // Sets up the media library frame
     meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
       title: meta_image.title,
@@ -60,5 +62,3 @@ jQuery(document).ready(function ($) {
   }
 
 });
-
-

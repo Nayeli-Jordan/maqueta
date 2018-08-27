@@ -101,7 +101,21 @@ function post_number_sistema($postID){
 }
 
 function post_number_qo_cotizaciones($postID){
-    $getOrderedPostsCotizacion= new WP_Query('post_type=qo_cotizaciones&orderby=date&order=ASC&posts_per_page=-1');
+     $args = array(
+        'post_type'         => 'qo_cotizaciones',
+        'posts_per_page'    => -1,
+        'orderby'           => 'date',
+        'order'             => 'ASC',
+        'tax_query'         => array(
+            array(
+                'taxonomy'  => 'estatus-cotizacion',
+                'field'     => 'slug',
+                'terms'     => 'template',
+                'operator'  => 'NOT IN',
+            )
+        )
+    );
+    $getOrderedPostsCotizacion= new WP_Query($args);
     $count = 1;
     if($getOrderedPostsCotizacion->have_posts()) {
         while ($getOrderedPostsCotizacion->have_posts()) {

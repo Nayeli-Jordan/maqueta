@@ -250,6 +250,31 @@ function custom_taxonomies_callback(){
 	}
 	wp_insert_term( 'Archivada', 'estatus-brief' );
 
-	
+
+    if( ! taxonomy_exists('estatus-cotizacion')){
+
+		$labels = array(
+			'name'              => 'Estatus Cotización',
+			'singular_name'     => 'Estatus Cotización',
+			'search_items'      => 'Buscar',
+			'all_items'         => 'Todos',
+			'edit_item'         => 'Editar Estatus Cotización',
+			'update_item'       => 'Actualizar Estatus Cotización',
+			'add_new_item'      => 'Nueva Estatus Cotización',
+			'menu_name'         => 'Estatus Cotización'
+		);
+		$args = array(
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'show_in_nav_menus' => true,
+			'query_var'         => true,
+			'rewrite'           => array( 'slug' => 'estatus-cotizacion' ),
+		);
+
+		register_taxonomy( 'estatus-cotizacion', 'qo_cotizaciones', $args );
+	}
+	wp_insert_term( 'Template', 'estatus-cotizacion' );	
 
 }

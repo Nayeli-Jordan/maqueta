@@ -1,12 +1,16 @@
 <div class="col s12 m6 l4 element-item margin-bottom-large <?php echo $estatus . ' ' . $prioridad . ' '; ?>
 <?php 
-	$terms = get_the_terms($post->ID, 'responsable');
-	foreach ( $terms as $term ) {
-		echo $term->slug . ' ';
+	$terms = get_the_terms( $post->id, 'responsable' );
+	if ( is_array( $terms ) ) {
+	    foreach ( $terms as $term ) {
+			echo $term->slug . ' ';
+		}
 	}
-	$terms = get_the_terms($post->ID, 'requerimiento');
-	foreach ( $terms as $term ) {
-		echo $term->slug . ' ';
+	$terms = get_the_terms( $post->id, 'requerimiento' );
+	if ( is_array( $terms ) ) {
+	    foreach ( $terms as $term ) {
+			echo $term->slug . ' ';
+		}
 	}
 ?>">
 	<div class="shadow relative card-sistema">
@@ -18,18 +22,22 @@
 		<div class="card-body">			
 			<span class="etiqueta-prioridad bg-<?php echo $prioridad; ?> shadow-small"><span class="etiqueta-text"><?php echo $prioridad; ?></span></span>
 			<?php
-				$terms = get_the_terms($post->ID, 'responsable');
+				$terms = get_the_terms( $post->id, 'responsable' );
 				echo '<p><span class="icon-user icon-size-small"></span>';
-				foreach ( $terms as $term ) {
-					echo '<span>' . $term->name . ' </span>';
+				if ( is_array( $terms ) ) {
+				    foreach ( $terms as $term ) {
+						echo '<span>' . $term->name . ' </span>';
+					}
 				}
 				echo '</p>';
-				$terms = get_the_terms($post->ID, 'requerimiento');
+				$terms = get_the_terms( $post->id, 'requerimiento' );
 				echo '<p class="font-strong"><span class="icon-tag icon-size-small"></span>';
-				foreach ( $terms as $term ) {
-					echo "<span>" . $term->name . "<span class='etiqueta-requerimiento bg-" . $term->slug . "'></span> </span>";
+				if ( is_array( $terms ) ) {
+				    foreach ( $terms as $term ) {
+						echo "<span>" . $term->name . "<span class='etiqueta-requerimiento bg-" . $term->slug . "'></span> </span>";
+					}
 				}
-				echo "</p>";
+				echo '</p>';
 			?>
 			<div class="hr bg-gradient-qo margin-top-xsmall margin-bottom-xsmall"></div>
 			<div class="number-brief"><?php echo date("y") . date("m") . post_number_sistema(get_the_ID()); ?></div>
@@ -69,11 +77,9 @@
 				endif;
 				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . ' - 3 days'));
 				//echo "Hoy: " . $todayDate . "<br> Fecha Entrega: " . $limitFechaEntrega . "<br>  Fecha Alerta: " . $activeAlertDate;
-
-				if (($todayDate >= $activeAlertDate)){
-				    echo "<a href='<?php echo the_permalink(); ?>'><div id='btn-entrega-proxima' class='shadow btn-primary-rounded'><span class='icon-clock'></span><span class='etiqueta-text'>Entrega Cercana</span></div></a>";
-				}
-			?>		
+				if (($todayDate >= $activeAlertDate)){ ?>
+				    <div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
+				<?php } ?>		
 			<a href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
 		</div>							
 	</div>
