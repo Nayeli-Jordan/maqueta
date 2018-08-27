@@ -49,6 +49,8 @@ textarea {
 #qo_cotizaciones input[type="text"],
 #qo_cotizaciones input[type="number"],
 #qo_cotizaciones textarea { min-height: 60px; }
+#qo_cotizaciones input[type="text"].meta-imaged { min-height: 30px; }
+#qo_cotizaciones input[type="button"].image-upload { width: 100%; }
 #qo_cotizaciones textarea {
 	margin-bottom: 7px;
 	resize: none;
@@ -63,6 +65,8 @@ textarea {
 }
 .image-preview {
 	width: 30%;
+	min-height: 75px;
+    background-color: #eee;
 	float: right;
 }
 .image-preview img {

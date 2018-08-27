@@ -47,7 +47,6 @@
 									<?php endif; ?>
 								</div>
 							</div>
-
 			            <?php $i ++;  endwhile;
 			        } 
 			        wp_reset_postdata();
