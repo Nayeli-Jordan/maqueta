@@ -83,7 +83,6 @@
 								</div>					
 							</div>
 						</div>
-
 		            <?php $i ++;  endwhile;
 		        } 
 		        wp_reset_postdata();
