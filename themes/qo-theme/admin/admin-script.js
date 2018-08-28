@@ -59,6 +59,6 @@ jQuery(document).ready(function ($) {
     $('.user-editor input:not(.editor-time), .user-editor select:not(.editor-estatus), .user-editor textarea').prop( "disabled", true );
     $('input[type=checkbox]').attr("disabled", true);
     $('#new-calendar').css("display", "none");
-  }
+  } 
 
 });

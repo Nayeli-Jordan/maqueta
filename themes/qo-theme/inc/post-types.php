@@ -283,7 +283,6 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'thumbnail' ),
 		'menu_icon' 		 => 'dashicons-list-view'
 	);
-	register_post_type( 'qo_cotizaciones', $args );		
-
+	register_post_type( 'qo_cotizaciones', $args );	
 
 });

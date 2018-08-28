@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php echo do_shortcode('[shift8_portfolio numposts="337"]'); ?>
 	<audio id="audio-scroll">
 		<source src="<?php echo THEMEPATH; ?>sound/scroll.mp3" type="audio/mpeg"></source>
 	</audio>
