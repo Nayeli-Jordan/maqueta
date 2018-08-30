@@ -1,4 +1,4 @@
-<div id="qo_cotizaciones">
+<div id="qo_cotizaciones" class="qo-custom-fields">
     <div class="row margin-bottom-large">
         <p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p><br>
         <p>* No olvides <strong>llenar la línea completa</strong>, de lo contrario no se mostrará ningún dato o marcará algún error.</p>

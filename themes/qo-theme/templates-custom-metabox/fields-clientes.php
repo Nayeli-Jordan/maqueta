@@ -1,4 +1,4 @@
-<div>
+<div class="qo-custom-fields">
 	<div class="row">
 		<label>Razón social</label>
 		<input type="text" name="qo_clientes_razon_social" value="<?php echo $razon_social; ?>">

@@ -1,4 +1,4 @@
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
     <tr>
         <th colspan="2" class="bg-destacade"><label>Estatus</label></th>
         <th colspan="4">
