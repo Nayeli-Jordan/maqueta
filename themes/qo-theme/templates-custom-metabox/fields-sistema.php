@@ -57,7 +57,7 @@
         </th>
 	</tr>	
 </table>
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO INDUSTRIAL / DATOS Y APOYO</h2></th>			
@@ -161,7 +161,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO VISUAL / DATOS Y APOYO</h2></th>			
@@ -254,7 +254,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>MARKETING / DATOS Y APOYO</h2></th>			
@@ -310,7 +310,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>SISTEMAS / DATOS Y APOYO</h2></th>			
@@ -370,7 +370,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>LLENAR EN CASO QUE EXISTAN CAMBIOS POSTERIORES A LA PRIMERA SOLICITUD</h2></th>

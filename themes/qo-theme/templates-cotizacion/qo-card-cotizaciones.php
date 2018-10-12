@@ -1,9 +1,9 @@
-<div class="col s12 m6 l4 xl3 element-item <?php echo $estatus; ?>">
+<div class="col s12 m6 l4 xl3 element-item <?php echo $estatus . ' ' . get_the_date("Y") . ' ' . get_the_date("Y-n"); ?>">
 	<div class="shadow relative card-cotizacion">
 		<div class="info-general">
 			<div class="num-tiket bg-gradient-qo">
 				<div class="bg-light">
-					<p><?php echo date("y") . date("m"). $cotizacionNumber; ?></p>
+					<p><?php echo get_the_date("y") . get_the_date("m") . $cotizacionNumber; ?></p>
 				</div>						
 			</div>
 			<div class="status shadow-small">									

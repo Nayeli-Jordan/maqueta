@@ -104,11 +104,19 @@ var $=jQuery.noConflict();
 			$('#show-less-btn-sistema').fadeIn(	);		
 			$('#show-more-btn-sistema').addClass('hide');		
 		});
+
+		//Botones año cotización
+		$(".btns-group-ano button").click(function() {
+			var idButton = $(this).attr('id');
+			$('.btns-group-mes').addClass('hide');
+			$('.btns-group-mes button.empty-value').click();		
+			$('.btns-group-mes-' + idButton).removeClass('hide');		
+		});
 		
 	});
 })(jQuery);
 
-/*Filtros CotizaciónQO */
+/*Filtros CotizaciónQO (simple)*/
 
 function isotopeQO(){
 	// init Isotope
@@ -147,7 +155,7 @@ function imageMasonry(){
 	}); 
 }
 
-/*Filtros Brief's */
+/*Filtros Brief's y cotización (multiple) */
 
 function isotopeMultipleQO(){
     var $container = $('.grid'),

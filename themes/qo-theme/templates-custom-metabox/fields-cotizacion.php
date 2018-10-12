@@ -46,7 +46,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra_1" id="qo_cotizaciones_muestra_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra_1" id="qo_cotizaciones_muestra_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -55,7 +55,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra_2" id="qo_cotizaciones_muestra_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra_2" id="qo_cotizaciones_muestra_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -64,7 +64,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra_3" id="qo_cotizaciones_muestra_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra_3" id="qo_cotizaciones_muestra_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -73,7 +73,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra_4" id="qo_cotizaciones_muestra_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra_4" id="qo_cotizaciones_muestra_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -91,7 +91,7 @@
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra2_1" id="qo_cotizaciones_muestra2_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra2_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra2_1" id="qo_cotizaciones_muestra2_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra2_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -100,7 +100,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra2_2" id="qo_cotizaciones_muestra2_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra2_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra2_2" id="qo_cotizaciones_muestra2_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra2_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -109,7 +109,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra2_3" id="qo_cotizaciones_muestra2_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra2_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra2_3" id="qo_cotizaciones_muestra2_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra2_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -118,7 +118,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra2_4" id="qo_cotizaciones_muestra2_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra2_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra2_4" id="qo_cotizaciones_muestra2_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra2_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -136,7 +136,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra3_1" id="qo_cotizaciones_muestra3_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra3_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra3_1" id="qo_cotizaciones_muestra3_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra3_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -145,7 +145,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra3_2" id="qo_cotizaciones_muestra3_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra3_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra3_2" id="qo_cotizaciones_muestra3_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra3_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -154,7 +154,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra3_3" id="qo_cotizaciones_muestra3_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra3_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra3_3" id="qo_cotizaciones_muestra3_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra3_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -163,7 +163,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra3_4" id="qo_cotizaciones_muestra3_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra3_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra3_4" id="qo_cotizaciones_muestra3_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra3_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -180,7 +180,7 @@
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle4"><?php echo $detalle4; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra4_1" id="qo_cotizaciones_muestra4_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra4_1; ?>">
+                <input type="text" name="qo_cotizaciones_muestra4_1" id="qo_cotizaciones_muestra4_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra4_1; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -189,7 +189,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra4_2" id="qo_cotizaciones_muestra4_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra4_2; ?>">
+                <input type="text" name="qo_cotizaciones_muestra4_2" id="qo_cotizaciones_muestra4_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra4_2; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -198,7 +198,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra4_3" id="qo_cotizaciones_muestra4_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra4_3; ?>">
+                <input type="text" name="qo_cotizaciones_muestra4_3" id="qo_cotizaciones_muestra4_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra4_3; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -207,7 +207,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra4_4" id="qo_cotizaciones_muestra4_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra4_4; ?>">
+                <input type="text" name="qo_cotizaciones_muestra4_4" id="qo_cotizaciones_muestra4_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra4_4; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -224,7 +224,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra5_1" id="qo_cotizaciones_muestra5_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra5_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra5_1" id="qo_cotizaciones_muestra5_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra5_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -233,7 +233,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra5_2" id="qo_cotizaciones_muestra5_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra5_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra5_2" id="qo_cotizaciones_muestra5_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra5_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -242,7 +242,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra5_3" id="qo_cotizaciones_muestra5_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra5_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra5_3" id="qo_cotizaciones_muestra5_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra5_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -251,7 +251,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra5_4" id="qo_cotizaciones_muestra5_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra5_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra5_4" id="qo_cotizaciones_muestra5_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra5_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -269,7 +269,7 @@
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra6_1" id="qo_cotizaciones_muestra6_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra6_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra6_1" id="qo_cotizaciones_muestra6_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra6_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -278,7 +278,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra6_2" id="qo_cotizaciones_muestra6_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra6_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra6_2" id="qo_cotizaciones_muestra6_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra6_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -287,7 +287,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra6_3" id="qo_cotizaciones_muestra6_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra6_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra6_3" id="qo_cotizaciones_muestra6_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra6_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -296,7 +296,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra6_4" id="qo_cotizaciones_muestra6_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra6_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra6_4" id="qo_cotizaciones_muestra6_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra6_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -314,7 +314,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra7_1" id="qo_cotizaciones_muestra7_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra7_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra7_1" id="qo_cotizaciones_muestra7_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra7_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -323,7 +323,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra7_2" id="qo_cotizaciones_muestra7_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra7_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra7_2" id="qo_cotizaciones_muestra7_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra7_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -332,7 +332,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra7_3" id="qo_cotizaciones_muestra7_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra7_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra7_3" id="qo_cotizaciones_muestra7_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra7_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -341,7 +341,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra7_4" id="qo_cotizaciones_muestra7_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra7_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra7_4" id="qo_cotizaciones_muestra7_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra7_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -358,7 +358,7 @@
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle8"><?php echo $detalle8; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra8_1" id="qo_cotizaciones_muestra8_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra8_1; ?>">
+                <input type="text" name="qo_cotizaciones_muestra8_1" id="qo_cotizaciones_muestra8_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra8_1; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -367,7 +367,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra8_2" id="qo_cotizaciones_muestra8_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra8_2; ?>">
+                <input type="text" name="qo_cotizaciones_muestra8_2" id="qo_cotizaciones_muestra8_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra8_2; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -376,7 +376,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra8_3" id="qo_cotizaciones_muestra8_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra8_3; ?>">
+                <input type="text" name="qo_cotizaciones_muestra8_3" id="qo_cotizaciones_muestra8_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra8_3; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -385,7 +385,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra8_4" id="qo_cotizaciones_muestra8_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra8_4; ?>">
+                <input type="text" name="qo_cotizaciones_muestra8_4" id="qo_cotizaciones_muestra8_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra8_4; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -402,7 +402,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra9_1" id="qo_cotizaciones_muestra9_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra9_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra9_1" id="qo_cotizaciones_muestra9_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra9_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -411,7 +411,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra9_2" id="qo_cotizaciones_muestra9_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra9_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra9_2" id="qo_cotizaciones_muestra9_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra9_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -420,7 +420,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra9_3" id="qo_cotizaciones_muestra9_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra9_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra9_3" id="qo_cotizaciones_muestra9_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra9_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -429,7 +429,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra9_4" id="qo_cotizaciones_muestra9_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra9_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra9_4" id="qo_cotizaciones_muestra9_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra9_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -447,7 +447,7 @@
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra10_1" id="qo_cotizaciones_muestra10_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra10_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra10_1" id="qo_cotizaciones_muestra10_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra10_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -456,7 +456,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra10_2" id="qo_cotizaciones_muestra10_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra10_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra10_2" id="qo_cotizaciones_muestra10_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra10_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -465,7 +465,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra10_3" id="qo_cotizaciones_muestra10_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra10_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra10_3" id="qo_cotizaciones_muestra10_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra10_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -474,7 +474,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra10_4" id="qo_cotizaciones_muestra10_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra10_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra10_4" id="qo_cotizaciones_muestra10_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra10_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -492,7 +492,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra11_1" id="qo_cotizaciones_muestra11_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra11_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra11_1" id="qo_cotizaciones_muestra11_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra11_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -501,7 +501,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra11_2" id="qo_cotizaciones_muestra11_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra11_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra11_2" id="qo_cotizaciones_muestra11_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra11_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -510,7 +510,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra11_3" id="qo_cotizaciones_muestra11_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra11_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra11_3" id="qo_cotizaciones_muestra11_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra11_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -519,7 +519,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra11_4" id="qo_cotizaciones_muestra11_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra11_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra11_4" id="qo_cotizaciones_muestra11_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra11_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -536,7 +536,7 @@
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle12"><?php echo $detalle12; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra12_1" id="qo_cotizaciones_muestra12_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra12_1; ?>">
+                <input type="text" name="qo_cotizaciones_muestra12_1" id="qo_cotizaciones_muestra12_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra12_1; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -545,7 +545,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra12_2" id="qo_cotizaciones_muestra12_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra12_2; ?>">
+                <input type="text" name="qo_cotizaciones_muestra12_2" id="qo_cotizaciones_muestra12_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra12_2; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -554,7 +554,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra12_3" id="qo_cotizaciones_muestra12_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra12_3; ?>">
+                <input type="text" name="qo_cotizaciones_muestra12_3" id="qo_cotizaciones_muestra12_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra12_3; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -563,7 +563,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra12_4" id="qo_cotizaciones_muestra12_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra12_4; ?>">
+                <input type="text" name="qo_cotizaciones_muestra12_4" id="qo_cotizaciones_muestra12_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra12_4; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -580,7 +580,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra13_1" id="qo_cotizaciones_muestra13_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra13_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra13_1" id="qo_cotizaciones_muestra13_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra13_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -589,7 +589,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra13_2" id="qo_cotizaciones_muestra13_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra13_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra13_2" id="qo_cotizaciones_muestra13_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra13_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -598,7 +598,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra13_3" id="qo_cotizaciones_muestra13_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra13_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra13_3" id="qo_cotizaciones_muestra13_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra13_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -607,7 +607,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra13_4" id="qo_cotizaciones_muestra13_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra13_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra13_4" id="qo_cotizaciones_muestra13_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra13_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -625,7 +625,7 @@
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra14_1" id="qo_cotizaciones_muestra14_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra14_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra14_1" id="qo_cotizaciones_muestra14_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra14_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -634,7 +634,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra14_2" id="qo_cotizaciones_muestra14_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra14_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra14_2" id="qo_cotizaciones_muestra14_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra14_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -643,7 +643,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra14_3" id="qo_cotizaciones_muestra14_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra14_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra14_3" id="qo_cotizaciones_muestra14_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra14_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -652,7 +652,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra14_4" id="qo_cotizaciones_muestra14_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra14_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra14_4" id="qo_cotizaciones_muestra14_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra14_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -670,7 +670,7 @@
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra15_1" id="qo_cotizaciones_muestra15_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra15_1; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra15_1" id="qo_cotizaciones_muestra15_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra15_1; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -679,7 +679,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra15_2" id="qo_cotizaciones_muestra15_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra15_2; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra15_2" id="qo_cotizaciones_muestra15_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra15_2; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -688,7 +688,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra15_3" id="qo_cotizaciones_muestra15_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra15_3; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra15_3" id="qo_cotizaciones_muestra15_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra15_3; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -697,7 +697,7 @@
             </div>
             <div class="col col-1_4">
                 <div class="input-image">
-                    <input type="text" name="qo_cotizaciones_muestra15_4" id="qo_cotizaciones_muestra15_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra15_4; ?>">
+                    <input type="text" name="qo_cotizaciones_muestra15_4" id="qo_cotizaciones_muestra15_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra15_4; ?>">
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -714,7 +714,7 @@
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle16"><?php echo $detalle16; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra16_1" id="qo_cotizaciones_muestra16_1" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra16_1; ?>">
+                <input type="text" name="qo_cotizaciones_muestra16_1" id="qo_cotizaciones_muestra16_1" class="meta-image" placeholder="Muestra" value="<?php echo $muestra16_1; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -723,7 +723,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra16_2" id="qo_cotizaciones_muestra16_2" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra16_2; ?>">
+                <input type="text" name="qo_cotizaciones_muestra16_2" id="qo_cotizaciones_muestra16_2" class="meta-image" placeholder="Muestra" value="<?php echo $muestra16_2; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -732,7 +732,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra16_3" id="qo_cotizaciones_muestra16_3" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra16_3; ?>">
+                <input type="text" name="qo_cotizaciones_muestra16_3" id="qo_cotizaciones_muestra16_3" class="meta-image" placeholder="Muestra" value="<?php echo $muestra16_3; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">
@@ -741,7 +741,7 @@
         </div>
         <div class="col col-1_4">
             <div class="input-image">
-                <input type="text" name="qo_cotizaciones_muestra16_4" id="qo_cotizaciones_muestra16_4" class="meta-imaged" placeholder="Muestra" value="<?php echo $muestra16_4; ?>">
+                <input type="text" name="qo_cotizaciones_muestra16_4" id="qo_cotizaciones_muestra16_4" class="meta-image" placeholder="Muestra" value="<?php echo $muestra16_4; ?>">
                 <input type="button" class="button image-upload" value="Seleccionar">
             </div>
             <div class="image-preview">

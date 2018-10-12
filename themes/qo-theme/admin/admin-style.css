@@ -49,7 +49,7 @@
 #qo_cotizaciones input[type="text"],
 #qo_cotizaciones input[type="number"],
 #qo_cotizaciones textarea { min-height: 60px; }
-#qo_cotizaciones input[type="text"].meta-imaged { min-height: 30px; }
+#qo_cotizaciones input[type="text"].meta-image { min-height: 30px; }
 #qo_cotizaciones input[type="button"].image-upload { width: 100%; }
 #qo_cotizaciones textarea {
 	margin-bottom: 7px;
@@ -77,16 +77,20 @@
 }
 
 /*Ocultar muestras y detalle segun template*/
-.qo-custom-fields .templateHorizontal .hide-on-templateHorizontal,
-.qo-custom-fields .templateVertical .hide-on-templateVertical,
-.qo-custom-fields .templateDefault .hide-on-templateDefault,
-.qo-custom-fields .templateDefault .col-detalle,
-.qo-custom-fields .templateVertical .col-detalle,
-.qo-custom-fields .templateHorizontal .col-detalle { display: none; }
+/* .post-new-php => primera vez que se abre el post ==> .templateDefault */
+.templateHorizontal .qo-custom-fields .hide-on-templateHorizontal,
+.templateVertical .qo-custom-fields .hide-on-templateVertical,
+.templateDefault .qo-custom-fields .hide-on-templateDefault,
+.templateDefault .qo-custom-fields .col-detalle,
+.post-new-php .qo-custom-fields .hide-on-templateDefault,
+.post-new-php .qo-custom-fields .col-detalle,
+.templateVertical .qo-custom-fields .col-detalle,
+.templateHorizontal .qo-custom-fields .col-detalle { display: none; }
 
-.qo-custom-fields .templateDefault .row .col-1-2_4,
-.qo-custom-fields .templateVertical .row .col-1-2_4,
-.qo-custom-fields .templateHorizontal .row .col-1-2_4 { width: 25%; }
+.templateDefault .qo-custom-fields .row .col-1-2_4,
+.post-new-php .qo-custom-fields .row .col-1-2_4,
+.templateVertical .qo-custom-fields .row .col-1-2_4,
+.templateHorizontal .qo-custom-fields .row .col-1-2_4 { width: 25%; }
 
 /*Calendario*/
 #new-calendar {

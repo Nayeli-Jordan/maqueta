@@ -36,7 +36,7 @@ jQuery(document).ready(function ($) {
   });
 
   /*Cotizaciones detect template*/
-  if ($('.post-type-qo_cotizaciones').length > 0) {
+  if ($('.post-php.post-type-qo_cotizaciones').length > 0) {
     if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-horizontal.php") {
         $('body').addClass('templateHorizontal');
     } else if(document.getElementById('page_template').value == "templates-cotizacion/qo-cotizacion-vertical.php") {
@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
 
   /*Botón Calendario en sistema*/
   if ($('.post-php.post-type-sistema').length > 0) {
-    document.getElementById('calendario-stm-adder').innerHTML = '<a id="new-calendar" href="http://localhost:8888/queonda/wp-admin/admin.php?page=my-calendar" target="_blank">Crear Calendario</a><p>Guarda tus cambios y recarga después de crear tu calendario, así podrás visualizarlo en esta sección</p>';
+    document.getElementById('calendario-stm-adder').innerHTML = '<a id="new-calendar" href="../wp-admin/admin.php?page=my-calendar" target="_blank">Crear Calendario</a><p>Guarda tus cambios y recarga después de crear tu calendario, así podrás visualizarlo en esta sección</p>';
   }
 
   /*Disabled options for user*/

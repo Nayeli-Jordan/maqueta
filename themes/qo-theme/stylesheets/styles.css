@@ -1940,8 +1940,14 @@ button {
 .btn-primaryQO:active.btn-prioridad, .btn-primaryQO.is-checked.btn-prioridad {
   background-color: #614893;
 }
+/* line 123, ../sass/components/_buttons.scss */
+.btn-primaryQO.active {
+  border-color: #871592;
+  background-color: #871592;
+  color: #fff;
+}
 
-/* line 124, ../sass/components/_buttons.scss */
+/* line 129, ../sass/components/_buttons.scss */
 .btn-purple {
   display: inline-block;
   line-height: 35px;
@@ -1950,7 +1956,7 @@ button {
   border-radius: 3px;
 }
 
-/* line 134, ../sass/components/_buttons.scss */
+/* line 139, ../sass/components/_buttons.scss */
 .card-cotizacion .status,
 .content-cotizacion .status {
   position: absolute;
@@ -1964,20 +1970,20 @@ button {
   background: linear-gradient(to right, #4a72b2, #70a9ba, #581e7f, #ba007c);
   border-radius: 50%;
 }
-/* line 145, ../sass/components/_buttons.scss */
+/* line 150, ../sass/components/_buttons.scss */
 .card-cotizacion .status .etiqueta-text,
 .content-cotizacion .status .etiqueta-text {
   right: 20px;
   color: #000;
   z-index: 9;
 }
-/* line 150, ../sass/components/_buttons.scss */
+/* line 155, ../sass/components/_buttons.scss */
 .card-cotizacion .status:hover .etiqueta-text,
 .content-cotizacion .status:hover .etiqueta-text {
   display: inline-block;
 }
 
-/* line 154, ../sass/components/_buttons.scss */
+/* line 159, ../sass/components/_buttons.scss */
 .content-cotizacion .status {
   top: -10px;
   right: -10px;
@@ -2516,9 +2522,10 @@ section + section {
 
 /* line 42, ../sass/components/_global.scss */
 ul {
+  margin: 0px;
   padding: 0px;
 }
-/* line 44, ../sass/components/_global.scss */
+/* line 45, ../sass/components/_global.scss */
 ul li {
   margin: 0px;
   font-size: 12px;
@@ -2526,55 +2533,55 @@ ul li {
   list-style-type: none;
 }
 
-/* line 52, ../sass/components/_global.scss */
+/* line 53, ../sass/components/_global.scss */
 .clearfix {
   clear: both;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 54, ../sass/components/_global.scss */
+  /* line 55, ../sass/components/_global.scss */
   .clearfix-l-and-up {
     clear: both;
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 57, ../sass/components/_global.scss */
+  /* line 58, ../sass/components/_global.scss */
   .clearfix-l-and-up {
     display: none;
   }
 }
-/* line 60, ../sass/components/_global.scss */
+/* line 61, ../sass/components/_global.scss */
 .hr {
   width: 100%;
   height: 1px;
   border: 0px;
   background-color: #fff;
 }
-/* line 65, ../sass/components/_global.scss */
+/* line 66, ../sass/components/_global.scss */
 .hr.hr-3 {
   height: 3px;
 }
 
-/* line 71, ../sass/components/_global.scss */
+/* line 72, ../sass/components/_global.scss */
 ::-webkit-scrollbar {
   width: 10px;
   max-height: 10px;
 }
 
-/* line 75, ../sass/components/_global.scss */
+/* line 76, ../sass/components/_global.scss */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(157, 26, 129, 0.2);
 }
 
-/* line 80, ../sass/components/_global.scss */
+/* line 81, ../sass/components/_global.scss */
 ::-webkit-scrollbar-thumb {
   border-radius: 3px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   background-color: rgba(157, 26, 129, 0.8);
 }
 
-/* line 86, ../sass/components/_global.scss */
+/* line 87, ../sass/components/_global.scss */
 #wpadminbar {
   position: fixed !important;
 }

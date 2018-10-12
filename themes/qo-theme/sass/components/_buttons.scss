@@ -120,6 +120,11 @@ button { outline: none; }
 		&.btn-estatus { background-color: #2174b9; }
 		&.btn-prioridad { background-color: #614893; }
 	}
+	&.active {
+		border-color: #871592;
+		background-color: #871592;
+		color: $light-color;
+	}
 }
 .btn-purple {
 	display: inline-block;
