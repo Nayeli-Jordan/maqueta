@@ -1,12 +1,11 @@
 <div id="qo_cotizaciones" class="qo-custom-fields">
     <div class="row margin-bottom-large">
         <p>Para imprimir todo correctamente activa -> <strong>Imprimir > Configuración > Gráficos de fondo</strong></p><br>
-        <p>* No olvides <strong>llenar la línea completa</strong>, de lo contrario no se mostrará ningún dato o marcará algún error.</p>
+        <p>* <strong>Llenar la línea completa</strong>, de lo contrario no se mostrará ningún dato o marcará algún error.</p>
         <p>* <strong>Selecciona tu plantilla</strong> antes de llenar la información ya que no se muestran los mismos campos en todas.</p>
-        <p>* Los <strong>Detalles</strong> sólo se muestran en la plantilla <em>Estilo de Descripción</em>.</p>
-        <p>* La <strong>Imagen destacada</strong> corresponde al <em>logo del cliente</em>.</p>
+        <p>* <strong>Imagen destacada</strong> => <em>logo del cliente</em>.</p>
         <br>
-        <p><strong>°Plantilla Predeterminada</strong> ==> 4 Líneas / 4 imágenes.</br><strong>°Plantilla Horizontal</strong> ==> 2 Líneas / 4 imágenes.</br><strong>°Plantilla Vertical</strong> ==> 2 Líneas / 4 imágenes.</br><strong>°Plantilla con Descripción</strong> ==> 1 Línea / 4 imágenes.</p>
+        <p><strong>°Plantilla Predeterminada</strong> => 4 Líneas / 4 imágenes.</br><strong>°Plantilla Horizontal</strong> => 2 Líneas / 4 imágenes.</br><strong>°Plantilla Vertical</strong> => 2 Líneas / 4 imágenes.</br><strong>°Plantilla con Descripción</strong> => 1 Línea / 4 imágenes / Detalles.</p>
     </div>
     <div class="row bg-gray margin-bottom-large">
         <label>¿Cual es el estatus?*</label>
@@ -38,10 +37,10 @@
         </div>
 	</div>
 	<div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo" value="<?php echo $modelo; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota" value="<?php echo $nota; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo" value="<?php echo $modelo; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota" value="<?php echo $nota; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas" value="<?php echo $piezas; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio" value="<?php echo $precio; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle"><?php echo $detalle; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -83,10 +82,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo2" value="<?php echo $modelo2; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota2" value="<?php echo $nota2; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas2" value="<?php echo $piezas2; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio2" value="<?php echo $precio2; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo2" value="<?php echo $modelo2; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota2" value="<?php echo $nota2; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas2" value="<?php echo $piezas2; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio2" value="<?php echo $precio2; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle2"><?php echo $detalle2; ?></textarea></div>
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
@@ -128,10 +127,10 @@
         </div>
     </div> 
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo3" value="<?php echo $modelo3; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota3" value="<?php echo $nota3; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo3" value="<?php echo $modelo3; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota3" value="<?php echo $nota3; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas3" value="<?php echo $piezas3; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio3" value="<?php echo $precio3; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle3"><?php echo $detalle3; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -173,10 +172,10 @@
         </div>
     </div> 
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo4" value="<?php echo $modelo4; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota4" value="<?php echo $nota4; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas4" value="<?php echo $piezas4; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio4" value="<?php echo $precio4; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo4" value="<?php echo $modelo4; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota4" value="<?php echo $nota4; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas4" value="<?php echo $piezas4; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio4" value="<?php echo $precio4; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle4"><?php echo $detalle4; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
@@ -216,10 +215,10 @@
         </div>
     </div> 
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo5" value="<?php echo $modelo5; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota5" value="<?php echo $nota5; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas5" value="<?php echo $piezas5; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio5" value="<?php echo $precio5; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo5" value="<?php echo $modelo5; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota5" value="<?php echo $nota5; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas5" value="<?php echo $piezas5; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio5" value="<?php echo $precio5; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle5"><?php echo $detalle5; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -261,10 +260,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo6" value="<?php echo $modelo6; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota6" value="<?php echo $nota6; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas6" value="<?php echo $piezas6; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio6" value="<?php echo $precio6; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo6" value="<?php echo $modelo6; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota6" value="<?php echo $nota6; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas6" value="<?php echo $piezas6; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio6" value="<?php echo $precio6; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle6"><?php echo $detalle6; ?></textarea></div>
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
@@ -306,10 +305,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo7" value="<?php echo $modelo7; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota7" value="<?php echo $nota7; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas7" value="<?php echo $piezas7; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio7" value="<?php echo $precio7; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo7" value="<?php echo $modelo7; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota7" value="<?php echo $nota7; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas7" value="<?php echo $piezas7; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio7" value="<?php echo $precio7; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle7"><?php echo $detalle7; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -351,10 +350,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo8" value="<?php echo $modelo8; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota8" value="<?php echo $nota8; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas8" value="<?php echo $piezas8; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio8" value="<?php echo $precio8; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo8" value="<?php echo $modelo8; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota8" value="<?php echo $nota8; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas8" value="<?php echo $piezas8; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio8" value="<?php echo $precio8; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle8"><?php echo $detalle8; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
@@ -394,10 +393,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo9" value="<?php echo $modelo9; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota9" value="<?php echo $nota9; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas9" value="<?php echo $piezas9; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio9" value="<?php echo $precio9; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo9" value="<?php echo $modelo9; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota9" value="<?php echo $nota9; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas9" value="<?php echo $piezas9; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio9" value="<?php echo $precio9; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle9"><?php echo $detalle9; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -439,10 +438,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo10" value="<?php echo $modelo10; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota10" value="<?php echo $nota10; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas10" value="<?php echo $piezas10; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio10" value="<?php echo $precio10; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo10" value="<?php echo $modelo10; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota10" value="<?php echo $nota10; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas10" value="<?php echo $piezas10; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio10" value="<?php echo $precio10; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle10"><?php echo $detalle10; ?></textarea></div>
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
@@ -484,10 +483,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo11" value="<?php echo $modelo11; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota11" value="<?php echo $nota11; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas11" value="<?php echo $piezas11; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio11" value="<?php echo $precio11; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo11" value="<?php echo $modelo11; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota11" value="<?php echo $nota11; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas11" value="<?php echo $piezas11; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio11" value="<?php echo $precio11; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle11"><?php echo $detalle11; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -529,10 +528,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo12" value="<?php echo $modelo12; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota12" value="<?php echo $nota12; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas12" value="<?php echo $piezas12; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio12" value="<?php echo $precio12; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo12" value="<?php echo $modelo12; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota12" value="<?php echo $nota12; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas12" value="<?php echo $piezas12; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio12" value="<?php echo $precio12; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle12"><?php echo $detalle12; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
@@ -572,10 +571,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo13" value="<?php echo $modelo13; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota13" value="<?php echo $nota13; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas13" value="<?php echo $piezas13; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio13" value="<?php echo $precio13; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo13" value="<?php echo $modelo13; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota13" value="<?php echo $nota13; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas13" value="<?php echo $piezas13; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio13" value="<?php echo $precio13; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle13"><?php echo $detalle13; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -617,10 +616,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo14" value="<?php echo $modelo14; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota14" value="<?php echo $nota14; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas14" value="<?php echo $piezas14; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio14" value="<?php echo $precio14; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo14" value="<?php echo $modelo14; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota14" value="<?php echo $nota14; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas14" value="<?php echo $piezas14; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio14" value="<?php echo $precio14; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle14"><?php echo $detalle14; ?></textarea></div>
         <div class="hide-on-templateDefault">
             <div class="col col-1_4">
@@ -662,10 +661,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo15" value="<?php echo $modelo15; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota15" value="<?php echo $nota15; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas15" value="<?php echo $piezas15; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio15" value="<?php echo $precio15; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo15" value="<?php echo $modelo15; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota15" value="<?php echo $nota15; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas15" value="<?php echo $piezas15; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio15" value="<?php echo $precio15; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle15"><?php echo $detalle15; ?></textarea></div>
         <div class="hide-on-templateHorizontal hide-on-templateVertical hide-on-templateDefault">
             <div class="col col-1_4">
@@ -707,10 +706,10 @@
         </div>
     </div>
     <div class="row margin-bottom">
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_modelo16" value="<?php echo $modelo16; ?>"></div>
-        <div class="col col-1_4"><input type="text" name="qo_cotizaciones_nota16" value="<?php echo $nota16; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" min="0" name="qo_cotizaciones_piezas16" value="<?php echo $piezas16; ?>"></div>
-        <div class="col col-1-2_4"><input type="number" step=".01" min="0" name="qo_cotizaciones_precio16" value="<?php echo $precio16; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Modelo" name="qo_cotizaciones_modelo16" value="<?php echo $modelo16; ?>"></div>
+        <div class="col col-1_4"><input type="text" placeholder="Nota" name="qo_cotizaciones_nota16" value="<?php echo $nota16; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" min="1" placeholder="No. Piezas*" name="qo_cotizaciones_piezas16" value="<?php echo $piezas16; ?>"></div>
+        <div class="col col-1-2_4"><input type="number" step=".01" min="0.01" placeholder="Precio*" name="qo_cotizaciones_precio16" value="<?php echo $precio16; ?>"></div>
         <div class="col col-1_4 col-detalle"><textarea name="qo_cotizaciones_detalle16"><?php echo $detalle16; ?></textarea></div>
         <div class="col col-1_4">
             <div class="input-image">
