@@ -28,9 +28,31 @@ function mc_event_object( $object ) {
 		if ( ! property_exists( $object, 'location' ) && is_numeric( $object->event_location ) && 0 != $object->event_location ) {
 			$object->location = mc_get_location( $object->event_location );
 		}
+		if ( ! property_exists( $object, 'uid' ) ) {
+			$guid = get_post_meta( $object->event_post, '_mc_guid', true );
+			if ( '' == $guid ) {
+				$guid = mc_create_guid( $object );
+			}
+			$object->uid = $guid;
+		}
 	}
 
 	return $object;
+}
+
+
+/**
+ * Create a GUID for an event.
+ *
+ * @param object $event Event object.
+ *
+ * @return string GUID
+ */
+function mc_create_guid( $event ) {
+	$guid = md5( $event->event_post . $event->event_id . $event->event_title );
+	update_post_meta( $event->event_post, '_mc_guid', $guid );
+
+	return $guid;
 }
 
 /**
@@ -189,44 +211,50 @@ function mc_get_all_events( $args ) {
 	// Events before today.
 	if ( $before > 0 ) {
 		$before  = $before + 15;
-		$events1 = $mcdb->get_results( 'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
-		FROM ' . my_calendar_event_table( $site ) . '
-		JOIN ' . my_calendar_table( $site ) . " AS e
-		ON (event_id=occur_event_id)
-		$join
-		JOIN " . my_calendar_categories_table( $site ) . " as c
-		ON (e.event_category=c.category_id)
-		WHERE $limit
-		AND DATE(occur_begin) < '$date'
-		$exclude_categories
-		ORDER BY occur_begin DESC LIMIT 0,$before" );
+		$events1 = $mcdb->get_results(
+			'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
+			FROM ' . my_calendar_event_table( $site ) . '
+			JOIN ' . my_calendar_table( $site ) . " AS e
+			ON (event_id=occur_event_id)
+			$join
+			JOIN " . my_calendar_categories_table( $site ) . " as c
+			ON (e.event_category=c.category_id)
+			WHERE $limit
+			AND DATE(occur_begin) < '$date'
+			$exclude_categories
+			ORDER BY occur_begin DESC LIMIT 0,$before"
+		);
 	}
 	// Events happening today.
 	if ( 'yes' == $today ) {
-		$events3 = $mcdb->get_results( 'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
-		FROM ' . my_calendar_event_table( $site ) . '
-		JOIN ' . my_calendar_table( $site ) . " AS e
-		ON (event_id=occur_event_id)
-		$join
-		JOIN " . my_calendar_categories_table( $site ) . " as c
-		ON (e.event_category=c.category_id)
-		WHERE $limit
-		$exclude_categories
-		AND ( ( DATE(occur_begin) < '$date' AND DATE(occur_end) > '$date' ) OR DATE(occur_begin) = '$date' )" );
+		$events3 = $mcdb->get_results(
+			'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
+			FROM ' . my_calendar_event_table( $site ) . '
+			JOIN ' . my_calendar_table( $site ) . " AS e
+			ON (event_id=occur_event_id)
+			$join
+			JOIN " . my_calendar_categories_table( $site ) . " as c
+			ON (e.event_category=c.category_id)
+			WHERE $limit
+			$exclude_categories
+			AND ( ( DATE(occur_begin) < '$date' AND DATE(occur_end) > '$date' ) OR DATE(occur_begin) = '$date' )"
+		);
 	}
 	// Upcoming Events.
 	if ( $after > 0 ) {
 		$after   = $after + 15;
-		$events2 = $mcdb->get_results( 'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
-		FROM ' . my_calendar_event_table( $site ) . '
-		JOIN ' . my_calendar_table( $site ) . " AS e
-		ON (event_id=occur_event_id)
-		$join
-		JOIN " . my_calendar_categories_table( $site ) . " as c
-		ON (e.event_category=c.category_id)
-		WHERE $limit
-		$exclude_categories
-		AND DATE(occur_begin) > '$date' ORDER BY occur_begin ASC LIMIT 0,$after" );
+		$events2 = $mcdb->get_results(
+			'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
+			FROM ' . my_calendar_event_table( $site ) . '
+			JOIN ' . my_calendar_table( $site ) . " AS e
+			ON (event_id=occur_event_id)
+			$join
+			JOIN " . my_calendar_categories_table( $site ) . " as c
+			ON (e.event_category=c.category_id)
+			WHERE $limit
+			$exclude_categories
+			AND DATE(occur_begin) > '$date' ORDER BY occur_begin ASC LIMIT 0,$after"
+		);
 	}
 
 	$arr_events = array();
@@ -246,7 +274,7 @@ function mc_get_all_events( $args ) {
 		} else {
 			$event->categories = $fetched[ $object_id ];
 		}
-		$arr_events[] = mc_event_object( $event );
+		$arr_events[ $key ] = mc_event_object( $event );
 	}
 
 	return $arr_events;
@@ -296,15 +324,28 @@ function mc_get_rss_events( $cat_id = false ) {
 		$cat = 'WHERE event_approved = 1 AND event_flagged <> 1';
 	}
 	$exclude_categories = mc_private_categories();
-	$limit              = apply_filters( 'mc_rss_feed_size', 30 );
+	$limit              = apply_filters( 'mc_rss_feed_date_range', 2 );
 
 	$events = $mcdb->get_results(
 		'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
 		FROM ' . my_calendar_event_table() . '
 		JOIN ' . my_calendar_table() . ' ON (event_id=occur_event_id)
 		JOIN ' . my_calendar_categories_table() . " AS c ON (event_category=category_id) $cat
+		AND event_added > NOW() - INTERVAL $limit DAY 
 		$exclude_categories
-		ORDER BY event_added DESC LIMIT 0,$limit" );
+		ORDER BY event_added DESC"
+	);
+
+	if ( empty( $events ) ) {
+		$events = $mcdb->get_results(
+			'SELECT *, UNIX_TIMESTAMP(occur_begin) AS ts_occur_begin, UNIX_TIMESTAMP(occur_end) AS ts_occur_end
+			FROM ' . my_calendar_event_table() . '
+			JOIN ' . my_calendar_table() . ' ON (event_id=occur_event_id)
+			JOIN ' . my_calendar_categories_table() . " AS c ON (event_category=category_id) $cat
+			$exclude_categories
+			ORDER BY event_added DESC LIMIT 0,30"
+		);
+	}
 	$groups = array();
 	$output = array();
 	foreach ( array_keys( $events ) as $key ) {
@@ -380,7 +421,7 @@ function mc_get_search_results( $search ) {
 		}
 	}
 
-	return $event_array;
+	return apply_filters( 'mc_searched_events', $event_array );
 }
 
 /**

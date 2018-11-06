@@ -15,8 +15,7 @@ var $=jQuery.noConflict();
 				}				
 				logoScroll();
 				colorMenu();
-			}			
-			isotopeQO();
+			}
 			isotopeMultipleQO();
 			if ($('.my-calendar-date-switcher').length > 0) {
 				$('.my-calendar-date-switcher input[type=submit]').val('Ir');
@@ -66,16 +65,20 @@ var $=jQuery.noConflict();
 			$('.js-header').removeClass('active');
 			$('html').removeClass('snow');	
 
-			var audio = document.getElementById("audio-scroll");
-			audio.volume = 0.1;
-			audio.play();
+			if( parseInt( isHome ) ){
+				var audio = document.getElementById("audio-scroll");
+				audio.volume = 0.1;
+				audio.play();
+			}
 		});
 
-		$("a.item-scroll, .redes a").hover(function() {  //#section-nosotros .col,.bg-arrow, .services-pager span, footer a
-			var audio = document.getElementById("audio-click");
-			audio.volume = 0.1;
-			audio.play();
-		});
+		if( parseInt( isHome ) ){
+			$("a.item-scroll, .redes a").hover(function() {  //#section-nosotros .col,.bg-arrow, .services-pager span, footer a
+				var audio = document.getElementById("audio-click");
+				audio.volume = 0.1;
+				audio.play();
+			});
+		}
 
 		$(".bg-arrow, .services-pager span").click(function() {
 			var audio = document.getElementById("audio-slider");

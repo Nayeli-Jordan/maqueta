@@ -5,7 +5,7 @@ Tags: calendar, dates, times, event, events, scheduling, schedule, event manager
 Requires at least: 4.4
 Tested up to: 4.9
 Requires PHP: 5.3
-Stable tag: 3.0.15
+Stable tag: 3.1.0
 Text domain: my-calendar
 License: GPLv2 or later
 
@@ -82,6 +82,42 @@ Translating my plug-ins is always appreciated. Visit <a href="https://translate.
 4. Visit My Calendar -> Help for assistance with shortcode options or widget configuration.
 
 == Changelog ==
+
+TODO: Support limiting views to multiple locations
+
+= 3.1.0 =
+
+* Add feature (by Josef Fällman): Print & export view for search results.
+* New filter: mcs_check_conflicts (impacts Pro only)
+* Bug fix: Fix issue causing duplication in some views.
+* Bug fix: Time format should be filtered in initial edit view.
+* Bug fix: Category relationships not retained when Group editing applied.
+* Bug fix: aria-describedby ID mismatch.
+
+= 3.0.19 =
+
+* Bug fix: Fatal error in export API when location object included.
+* BUg fix: my calendar categories queried private categories instead of public.
+
+= 3.0.18 =
+
+* Bug fix: Invalid setting in bottom nav defaults.
+* Bug fix: Generate feeds by date added rather than fixed number. If empty, get most recent regardless.
+* Bug fix: Legitimate HTML escaped in visual editor in group event editor.
+
+= 3.0.17 =
+
+* Bug fix: Group event editing was broken.
+* Bug fix: Eliminate four PHP notices in the Today's Events widget.
+* Added: Filter to control whether CSS should be loaded on archives.
+
+= 3.0.16 =
+
+* Changed display UID to avoid duplicate IDs when multiple calendars shown.
+* Add option to display heading in details pop-up.
+* Unify position and size of close button in Twentyeighteen mini calendar.
+* Eliminate multi category parameter from CSV output (doesn't support multidimensional data)
+* Add GUID to export data.
 
 = 3.0.15 =
 
@@ -286,4 +322,4 @@ The search feature in My Calendar is pretty basic; but [buying My Calendar Pro](
 
 == Upgrade Notice ==
 
-* 3.0.11 URGENT: Security fix - XSS scripting vulnerability resolved.
+* 3.1.0 Bug fixes; couple minor new features.

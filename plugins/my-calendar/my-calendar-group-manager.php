@@ -42,9 +42,7 @@ function my_calendar_group_edit() {
 				if ( isset( $_POST['apply'] ) && is_array( $_POST['apply'] ) ) {
 					$mc_output = mc_check_group_data( $action, $_POST );
 					foreach ( $_POST['apply'] as $event_id ) {
-						if ( ! is_int( $event_id ) ) {
-							continue;
-						}
+						$event_id = absint( $event_id );
 						$response = my_calendar_save_group( $action, $mc_output, $event_id );
 						echo $response;
 					}
@@ -147,6 +145,7 @@ function my_calendar_save_group( $action, $output, $event_id = false ) {
 	global $wpdb, $event_author;
 	$proceed = $output[0];
 	$message = '';
+
 	if ( 'edit' == $action && true == $proceed ) {
 		$event_author = (int) ( $_POST['event_author'] );
 		if ( mc_can_edit_event( $event_id ) ) {
@@ -405,7 +404,7 @@ function my_calendar_print_group_fields( $data, $mode, $event_id, $group_id = ''
 						}
 						?>
 						</label><br/>
-						<?php wp_editor( esc_attr( $description ), 'content', array( 'textarea_rows' => 10 ) ); ?>
+						<?php wp_editor( $description, 'content', array( 'textarea_rows' => 10 ) ); ?>
 					</div>
 					<?php
 				}
@@ -826,6 +825,7 @@ function mc_check_group_data( $action, $post ) {
 				}
 			} else {
 				$primary = $post['event_category'];
+				$cats    = array( $cats );
 			}
 		}
 
@@ -1016,15 +1016,17 @@ function mc_list_groups() {
 	<?php
 	$num_pages = ceil( $items / $items_per_page );
 	if ( $num_pages > 1 ) {
-		$page_links = paginate_links( array(
-			'base'      => add_query_arg( 'paged', '%#%' ),
-			'format'    => '',
-			'prev_text' => __( '&laquo; Previous<span class="screen-reader-text"> Events</span>', 'my-calendar' ),
-			'next_text' => __( 'Next<span class="screen-reader-text"> Events</span> &raquo;', 'my-calendar' ),
-			'total'     => $num_pages,
-			'current'   => $current,
-			'mid_size'  => 1,
-		) );
+		$page_links = paginate_links(
+			array(
+				'base'      => add_query_arg( 'paged', '%#%' ),
+				'format'    => '',
+				'prev_text' => __( '&laquo; Previous<span class="screen-reader-text"> Events</span>', 'my-calendar' ),
+				'next_text' => __( 'Next<span class="screen-reader-text"> Events</span> &raquo;', 'my-calendar' ),
+				'total'     => $num_pages,
+				'current'   => $current,
+				'mid_size'  => 1,
+			)
+		);
 		printf( "<div class='tablenav'><div class='tablenav-pages'>%s</div></div>", $page_links );
 	}
 	if ( ! empty( $events ) ) {

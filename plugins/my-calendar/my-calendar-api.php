@@ -24,7 +24,7 @@ function my_calendar_api() {
 			if ( $api_key ) {
 				$format = ( isset( $_REQUEST['my-calendar-api'] ) ) ? $_REQUEST['my-calendar-api'] : 'json';
 				$from   = ( isset( $_REQUEST['from'] ) ) ? $_REQUEST['from'] : date( 'Y-m-d', current_time( 'timestamp' ) );
-				$to     = ( isset( $_REQUEST['to'] ) ) ? $_REQUEST['to'] : date( 'Y-m-d', strtotime( current_time( 'timestamp' ) . apply_filters( 'mc_api_auto_date', '+ 7 days' ) ) );
+				$to     = ( isset( $_REQUEST['to'] ) ) ? $_REQUEST['to'] : date( 'Y-m-d', strtotime( apply_filters( 'mc_api_auto_date', '+ 7 days' ) ) );
 				// sanitization is handled elsewhere.
 				$category = ( isset( $_REQUEST['mcat'] ) ) ? $_REQUEST['mcat'] : '';
 				$ltype    = ( isset( $_REQUEST['ltype'] ) ) ? $_REQUEST['ltype'] : '';
@@ -97,6 +97,8 @@ function mc_api_format_csv( $data ) {
 	foreach ( $data as $key => $val ) {
 		foreach ( $val as $v ) {
 			$values = get_object_vars( $v );
+			unset( $values['categories'] );
+			unset( $values['location'] );
 			if ( ! $keyed ) {
 				$keys = array_keys( $values );
 				fputcsv( $stream, $keys );
@@ -445,8 +447,13 @@ function my_calendar_ical() {
 		'site'     => $site,
 	);
 
-	$args   = apply_filters( 'mc_ical_attributes', $args, $_GET );
-	$data   = my_calendar_events( $args );
+	$args = apply_filters( 'mc_ical_attributes', $args, $_GET );
+	// Load search result from $_SESSION array.
+	if ( isset( $_GET['searched'] ) && $_GET['searched'] && isset( $_SESSION['MC_SEARCH_RESULT'] ) ) {
+		$data = mc_get_searched_events();
+	} else {
+		$data = my_calendar_events( $args );
+	}
 	$events = mc_flatten_array( $data );
 
 	if ( is_array( $events ) && ! empty( $events ) ) {

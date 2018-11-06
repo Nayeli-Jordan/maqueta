@@ -14,9 +14,10 @@
 	}
 ?>">
 	<div class="shadow relative card-sistema">
+		<?php $linkCard = get_permalink(); ?>
 		<div class="card-head">
 			<div class="status shadow-small bg-<?php echo $estatus; ?>"><span class="icon-lock-open"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div>
-			<h2><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h2>												
+			<h2><a href="<?php echo $linkCard; ?>"><?php the_title(); ?></a></h2>												
 		</div>
 		<div class="bg-gradient-qo hr hr-3"></div>
 		<div class="card-body">			
@@ -80,7 +81,7 @@
 				if (($todayDate >= $activeAlertDate)){ ?>
 				    <div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
 				<?php } ?>		
-			<a href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
+			<a href="<?php echo $linkCard; ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
 		</div>							
 	</div>
 </div>	

@@ -323,28 +323,94 @@
 				</div>
 			</div>
 		<?php endif; ?>
+	</div>
+	<div id="section-send-brief" class="hide">
+		<?php
+			global $post;
+			$titleBrief 	 = $post->post_title;
+			$linkBrief 		 = get_permalink();
+
+			$responsableName = '';
+			$responsableMail = '';
+			$terms = get_the_terms($post->ID, 'responsable');
+			if ( is_array( $terms ) ) {
+				foreach($terms as $term){
+					$responsableName .= $term->name . " ";
+					$responsableMail .= $term->description . "; ";
+				}
+			}
+
+			$to 				= $responsableMail;
+			$from 				= 'nayeli@queonda.com.mx';
+			$subject 			= "Brief: " . $titleBrief;
+
+			$headers 			= "From:" . strip_tags($from) . "\r\n";
+			$headers 		   .= "Reply-To: " . strip_tags($from) . "\r\n";
+			$headers 		   .= "MIME-Version: 1.0\r\n";
+			$headers 		   .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+			$messageHeader 		= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
+			$messageHeader 	   .= '<div style="text-align: center; background-color: ##7b2183; margin-bottom: 20px;"><img style="display: inline-block; margin: auto;" src="' . THEMEPATH . 'images/email/qo-light.png"></div>';
+
+			$messageFooter 		= '<p>Revísalo en  <a href="' . $linkBrief . '">' . $linkBrief . '<a></p></br>';
+			$messageFooter 	   .= '<p><span style="text-transform: uppercase; font-weight: 600; color: ##7b2183;">Proyecto: </span>' . $proyecto . '</p>';
+			$messageFooter 	   .= '<p><span style="text-transform: uppercase; font-weight: 600; color: ##7b2183;">Fecha de entrega: </span>' . $fechaEntrega . '</p>';
+			$messageFooter 	   .= '<p><span style="text-transform: uppercase; font-weight: 600; color: ##7b2183;">Prioridad: </span>' . $prioridad . '</p>';
+			$messageFooter 	   .= '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el sitio de Que Onda - Brief</small></p></div>';
+			$messageFooter     .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="' . THEMEPATH . 'images/email/logo.png"></a></div>';
+			$messageFooter     .= '</body></html>';
+		?>
+		<div class="container container-large">
+			<div class="row">
+				<div class="col s12 m8 offset-m2 l6 offset-l3">
+					<form id="form-briefsNuevo" action=""  method="post" class="validation" data-parsley-bnuevo>
+						<input type="submit" name="submitBriefNuevo" class="btn" value="Nuevo" />
+					</form>
+					<form id="form-briefsActualizado" action=""  method="post" class="validation" data-parsley-bactualizado>
+						<input type="submit" name="submitBriefActualizado" class="btn" value="Actualización" />
+					</form>
+					<?php 
+					if(isset($_POST['submitBriefNuevo'])){
+						$messageNuevo 	= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: ##7b2183; text-transform: uppercase;">Nuevo Brief</h1>';
+						$messageNuevo  .= '<p>Se ha creado un nuevo Brief "' . $titleBrief . '"</p>';
+
+						$message = $messageHeader . $messageNuevo . $messageFooter;
+					    $mail_status = mail($to, utf8_decode($subject), utf8_decode($message),$headers);
+
+					    if ($mail_status) {
+						    echo "<p style='text-align: center;'>Tu mensaje ha sido enviado a " . $responsableName;
+					 	} else {
+					 		echo "<p style='text-align: center;'>Lo sentimos, hubo un error al enviar tu mensaje.<br>Intentalo de nuevo.</p>";
+					 	}
+					}
+					?>
+					<?php 
+					if(isset($_POST['submitBriefActualizado'])){
+						$messageActualizado = '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: ##7b2183; text-transform: uppercase;">Brief Actualizado</h1>';
+						$messageActualizado .= '<p>Se ha hactualizado el Brief "' . $titleBrief . '"</p>';
+
+						$message = $messageHeader . $messageActualizado . $messageFooter;
+					    $mail_status = mail($to, utf8_decode($subject), utf8_decode($message),$headers);
+
+					    if ($mail_status) {
+						    echo "<p style='text-align: center;'>Tu mensaje ha sido enviado a " . $responsableName;
+					 	} else {
+					 		echo "<p style='text-align: center;'>Lo sentimos, hubo un error al enviar tu mensaje.<br>Intentalo de nuevo.</p>";
+					 	}
+					}
+					?>				
+				</div>
+			</div>			
+		</div>
 	</div>	
 	<div class="content-fixed-buttons">
 		<a href="<?php echo SITEURL; ?>sistema" class="btn btn-purple shadow margin-left-right-xxsmall">Ver Brief´s</a>
 		<a href="<?php echo SITEURL; ?>my-calendar" class="btn btn-purple shadow margin-left-right-xxsmall">Ver calendario</a>
+		<a href="<?php echo the_permalink(); ?>" class="btn btn-purple shadow margin-left-right-xxsmall item-scroll hide" id="send-brief">Alerta</a>
+		<a href='mailto:<?php echo $responsableMail; ?>?subject=BRIEF: <?php the_title(); ?> | Nuevo!&body=Se ha creado un nuevo Brief "<?php the_title(); ?>". %0D%0ARevísalo en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>. %0D%0AFecha de entrega: <?php echo $fechaEntrega; ?>. %0D%0APrioridad: <?php echo $prioridad; ?>' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Nuevo</a>
 		<a href='mailto:
 		<?php 
-			$terms = get_the_terms($post->ID, 'responsable');
-			if ( is_array( $terms ) ) {
-				foreach($terms as $term){
-					echo $term->description . "; ";
-				}
-			}
-		?>
-		?subject=BRIEF: <?php the_title(); ?> | Nuevo!&body=Se ha creado un nuevo Brief "<?php the_title(); ?>". %0D%0ARevísalo en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>. %0D%0AFecha de entrega: <?php echo $fechaEntrega; ?>. %0D%0APrioridad: <?php echo $prioridad; ?>' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Nuevo</a>
-		<a href='mailto:
-		<?php 
-			$terms = get_the_terms($post->ID, 'responsable');
-			if ( is_array( $terms ) ) {
-				foreach($terms as $term){
-					echo $term->description . "; ";
-				}
-			}
+
 		?>
 		?subject=BRIEF: <?php the_title(); ?> | Actualización&body=Hay cambios en el Brief "<?php the_title(); ?>". %0D%0ARevísalos en <?php the_permalink(); ?>. %0D%0A%0D%0AProyecto: <?php echo $proyecto; ?>.' class="btn btn-purple shadow"><i class="icon-mail-alt"></i> Actualización</a>	
 	</div>

@@ -2474,6 +2474,34 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* line 26, ../sass/components/_forms.scss */
+#section-send-brief {
+  padding-top: 30px;
+  padding-bottom: 70px;
+  background-color: #e6e6e6;
+}
+/* line 30, ../sass/components/_forms.scss */
+#section-send-brief label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+/* line 34, ../sass/components/_forms.scss */
+#section-send-brief select {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  border: 0px;
+  background-color: #fff;
+}
+/* line 43, ../sass/components/_forms.scss */
+#section-send-brief input[type="submit"] {
+  float: right;
+  background-color: #7b2183;
+  border: 0px;
+}
+
 /* line 4, ../sass/components/_global.scss */
 html {
   max-width: 100vw;

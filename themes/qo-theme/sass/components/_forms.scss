@@ -22,3 +22,27 @@ input[type="submit"] {
     background-color: $primary-color;  
     cursor: pointer;
 }
+
+#section-send-brief {
+	padding-top: 30px;
+	padding-bottom: 70px;
+	background-color: #e6e6e6;
+	label {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+	select {
+		display: block;
+	    width: 100%;
+	    height: 30px;
+	    line-height: 30px;
+	    margin-bottom: 10px;
+	    border: 0px;
+	    background-color: $light-color;	
+	}
+	input[type="submit"]{
+		float: right;
+		background-color: $purple-color;
+		border: 0px;
+	}
+}

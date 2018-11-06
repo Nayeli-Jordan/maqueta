@@ -17,7 +17,7 @@
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/license/gpl-2.0.txt
  * Domain Path: lang
- * Version:     3.0.15
+ * Version:     3.1.0
  */
 
 /*
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 global $mc_version, $wpdb;
-$mc_version = '3.0.15';
+$mc_version = '3.1.0';
 
 define( 'MC_DEBUG', false );
 
@@ -147,6 +147,16 @@ function mc_custom_canonical() {
 	if ( isset( $_GET['mc_id'] ) ) {
 		add_action( 'wp_head', 'mc_canonical' );
 		remove_action( 'wp_head', 'rel_canonical' );
+	}
+}
+
+add_action( 'init', 'mc_start_session', 10 );
+/**
+ * Makes sure session is started to be able to save search results.
+ */
+function mc_start_session() {
+	if ( ! session_id() ) {
+		session_start();
 	}
 }
 
