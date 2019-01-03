@@ -34,7 +34,7 @@
 				update_post_meta($my_post_id,'sistema_estatus',$nuevoEstatus);
 
 				/* Send email */
-				$to 				= "pruebas@altoempleo.com.mx";		    
+				$to 				= "pruebas@altoempleo.com.mx";	/* to do emails */	    
 			    $subject 			= "Estatus Brief Actualizado | QO";
 
 				$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';

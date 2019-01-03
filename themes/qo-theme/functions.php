@@ -162,6 +162,8 @@ function qo_get_image_id($image_url) {
 
 //Hide item admin menu for certain user profile
 function qo_remove_menu_items() {
+    remove_menu_page('edit.php'); // Posts
+    remove_menu_page('edit-comments.php'); // Comments
     //Editor
     if( current_user_can( 'editor' ) ):
 
@@ -263,6 +265,7 @@ function display_sistema_atributos( $sistema ){
     $marca            	= esc_html( get_post_meta( $sistema->ID, 'sistema_marca', true ) );    
     $proyecto           = esc_html( get_post_meta( $sistema->ID, 'sistema_proyecto', true ) );    
     $tiempoCotizado    	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCotizado', true ) ); 
+    $fechaEntregaAlert  = esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntregaAlert', true ) );
     $fechaEntrega       = esc_html( get_post_meta( $sistema->ID, 'sistema_fechaEntrega', true ) );
     $prioridad    	= esc_html( get_post_meta( $sistema->ID, 'sistema_prioridad', true ) );
     $tiempoCreativo_di   	= esc_html( get_post_meta( $sistema->ID, 'sistema_tiempoCreativo_di', true ) );   
@@ -381,6 +384,9 @@ function sistema_save_metas( $idsistema, $sistema ){
         }
         if ( isset( $_POST['sistema_fechaEntrega'] ) ){
             update_post_meta( $idsistema, 'sistema_fechaEntrega', $_POST['sistema_fechaEntrega'] );
+        }
+        if ( isset( $_POST['sistema_fechaEntregaAlert'] ) ){
+            update_post_meta( $idsistema, 'sistema_fechaEntregaAlert', $_POST['sistema_fechaEntregaAlert'] );
         }
         if ( isset( $_POST['sistema_prioridad'] ) ){
             update_post_meta( $idsistema, 'sistema_prioridad', $_POST['sistema_prioridad'] );
@@ -1375,5 +1381,14 @@ function custom_redirect_tiempoBrief() {
     if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempoBrief'] ) ) {
         $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         wp_redirect($actual_link . '#notice-tiempo-cotizado');
+    }
+}
+
+
+add_action ('template_redirect', 'custom_redirect_emailBrief');
+function custom_redirect_emailBrief() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_emailBrief'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#notice-email-brief');
     }
 }

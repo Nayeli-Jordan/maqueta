@@ -22,6 +22,7 @@
 		margin: 10vh auto 0;		
 		background-color: $light-color;
 		border-radius: 20px;
+		&.modal-content-medium { max-width: 620px; }
 		@media #{$sm-and-down}{
 			width: 100vw;
 			height: 100vh;
@@ -48,6 +49,9 @@
     		border-radius: 20px;
 			overflow-y: auto;
 		    overflow-x: hidden;
+		    @media #{$medium-and-up} {
+				max-height: 80vh;
+		    }
 		}
 	}
 }

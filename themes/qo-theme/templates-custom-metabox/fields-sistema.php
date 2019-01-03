@@ -24,13 +24,20 @@
 		<th><label>Cliente</label></th>
 		<th><input type="text" name="sistema_cliente" value="<?php echo $cliente; ?>" required></th>
 		<th colspan="2" class="color-light">.</th>
+		<th><label>Fecha de Entrega</label></th>
+		<th><input type="date" name="sistema_fechaEntrega" value="<?php echo $fechaEntrega; ?>" required></th>		
 	</tr>
 	<tr>
 		<th><label>Marca</label></th>
-		<th><input type="text" name="sistema_marca" value="<?php echo $marca; ?>" required></th>
+		<th><input type="text" name="sistema_marca" value="<?php echo $marca; ?>"></th>
 		<th colspan="2" class="color-light">.</th>
-		<th><label>Fecha de Entrega</label></th>
-		<th><input type="date" name="sistema_fechaEntrega" value="<?php echo $fechaEntrega; ?>" required></th>
+		<th><label>Alerta Fecha de Entrega</label></th>
+		<th>
+			<select name="sistema_fechaEntregaAlert">
+                <option value=""></option>
+                <option value="Desactivar alerta" <?php selected($fechaEntregaAlert, 'Desactivar alerta'); ?>>Desactivar alerta</option>
+            </select>
+       	</th>
 	</tr>
 	<tr>
 		<th><label>Proyecto</label></th>

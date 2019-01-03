@@ -72,8 +72,8 @@
 			</div>
 
 			<?php 
-				$todayDate = date('Y-m-d');
-				$todayDate=date('Y-m-d', strtotime($todayDate));
+				$todayDate 	= date('Y-m-d');
+				//$todayDate	= date('Y-m-d', strtotime($todayDate));
 				if( $ent_fecha4_ext != "" ) : 
 					$limitFechaEntrega = $ent_fecha4_ext;
 				elseif( $ent_fecha3_ext != "" ) : 

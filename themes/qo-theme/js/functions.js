@@ -51,6 +51,11 @@ var $=jQuery.noConflict();
 				console.log('Estatus modificado');
 				$('#modal-notice-tiempo-cotizado').show();
 			}
+			/* Si se ha enviado el email (nuevo, actualizado) del brief */
+			if(window.location.href.indexOf("#notice-email-brief") > -1) {
+				console.log('Notificación enviada');
+				$('#modal-notice-email-brief').show();
+			}
 
 		});
  
