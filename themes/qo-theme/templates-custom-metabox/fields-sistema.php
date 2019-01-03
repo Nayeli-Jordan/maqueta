@@ -22,19 +22,19 @@
 	</tr>
 	<tr>
 		<th><label>Cliente</label></th>
-		<th><input type="text" name="sistema_cliente" value="<?php echo $cliente; ?>"></th>
+		<th><input type="text" name="sistema_cliente" value="<?php echo $cliente; ?>" required></th>
 		<th colspan="2" class="color-light">.</th>
 	</tr>
 	<tr>
 		<th><label>Marca</label></th>
-		<th><input type="text" name="sistema_marca" value="<?php echo $marca; ?>"></th>
+		<th><input type="text" name="sistema_marca" value="<?php echo $marca; ?>" required></th>
 		<th colspan="2" class="color-light">.</th>
 		<th><label>Fecha de Entrega</label></th>
-		<th><input type="date" name="sistema_fechaEntrega" value="<?php echo $fechaEntrega; ?>"></th>
+		<th><input type="date" name="sistema_fechaEntrega" value="<?php echo $fechaEntrega; ?>" required></th>
 	</tr>
 	<tr>
 		<th><label>Proyecto</label></th>
-		<th><input type="text" name="sistema_proyecto" value="<?php echo $proyecto; ?>"></th>
+		<th><input type="text" name="sistema_proyecto" value="<?php echo $proyecto; ?>" required></th>
 		<th><label class="text-center">Tiempo cotizado</label></th>
 		<th colspan="1"></th>
 		<th><label>Responsable</label></th>
@@ -47,7 +47,7 @@
 		<th colspan="1" class="color-light">.</th>
 		<th><label>Prioridad</label></th>
 		<th>
-            <select name="sistema_prioridad">
+            <select name="sistema_prioridad" required>
                 <option value="">---</option>
                 <option value="Baja" <?php selected($prioridad, 'Baja'); ?>>Baja</option>
                 <option value="Media" <?php selected($prioridad, 'Media'); ?>>Media</option>

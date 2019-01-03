@@ -176,8 +176,14 @@
 
 
 /* Sistema */
+.card-brief {
+	&.Cerrado {
+		.card-sistema .card-head h2 a, * { color: #575757; }
+		.status, .btn-primary-rounded { background-color: #a6a6a6!important; }
+	}
+}
 #container-brief {
-	margin-bottom: 60px;
+	margin-bottom: 90px;
 	@media #{$small-and-down} { margin-bottom: 100px; }
 	.col {		
 		min-height: 28px;
@@ -208,6 +214,7 @@
 		@media #{$medium-and-down} { margin-top: 20px; }
 	}
 	.body-brief { margin-bottom: 30px; }
+	&.estatusCerrado { opacity: 0.7; }
 }
 
 .etiqueta-requerimiento,
@@ -228,37 +235,44 @@
 	border-radius: 3px;
 }
 
+.card-sistema .card-head .status,
+.status-brief { 
+	position: absolute;
+	top: 4px; right: 20px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	color: $light-color;			
+	background-color: $purple-color;
+	border-radius: 50%;			
+	&.bg-Reabierto span:not(.etiqueta-text):before { content:'\f513'; }
+	&.bg-Enterado span:not(.etiqueta-text):before { content:'\f164'; }
+	&.bg-Trabajando span:not(.etiqueta-text):before { content:'\e800'; }
+	&.bg-Hecho span:not(.etiqueta-text):before { content:'\e805'; }
+	&.bg-Cerrado span:not(.etiqueta-text):before { content:'\f512'; }
+	span:not(.etiqueta-text) {
+		line-height: 30px;
+		font-size: 14px;
+	}
+	.etiqueta-text {
+		top: -28px;
+		right: -30px;
+		color: $dark-color;
+		background-color: $light-color;
+		z-index: 1;			
+	}
+	&:hover .etiqueta-text { display: inline-block; }
+}
+.status-brief {
+	top: 20px;
+	left: 40px;
+	cursor: pointer;
+	&.bg-Cerrado { background-color: #a6a6a6; }
+}
 .card-sistema {
 	border-radius: 5px 10px 10px 5px;
 	.card-head {
 		padding: 10px 20px;
-		.status { 
-			position: absolute;
-			top: 4px; right: 20px;
-			width: 30px;
-			height: 30px;
-			text-align: center;
-			color: $light-color;			
-			background-color: $purple-color;
-			border-radius: 50%;			
-			&.bg-Reabierto span:not(.etiqueta-text):before { content:'\f513'; }
-			&.bg-Enterado span:not(.etiqueta-text):before { content:'\f164'; }
-			&.bg-Trabajando span:not(.etiqueta-text):before { content:'\e800'; }
-			&.bg-Hecho span:not(.etiqueta-text):before { content:'\e805'; }
-			&.bg-Cerrado span:not(.etiqueta-text):before { content:'\f512'; }
-			span:not(.etiqueta-text) {
-				line-height: 30px;
-				font-size: 14px;
-			}
-			.etiqueta-text {
-				top: -28px;
-    			right: -30px;
-				color: $dark-color;
-				background-color: $light-color;
-				z-index: 1;			
-			}
-			&:hover .etiqueta-text { display: inline-block; }
-		}
 		h2 { 
 			margin-bottom: 0px;
 			max-width: calc(100% - 30px); 

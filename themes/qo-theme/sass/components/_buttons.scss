@@ -10,7 +10,7 @@
 }
 .content-fixed-buttons {
 	position: fixed;
-	bottom: 5px;
+	bottom: 15px;
 	width: 100%;	
 	text-align: center;
 	.btn { margin: 3px 5px;}
@@ -162,5 +162,15 @@ button { outline: none; }
 		width: 40px;
 	    height: 40px;
 	    line-height: 40px;
+	}
+}
+
+.btn-print-fixed {
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	 @media #{$sm-and-down} {
+		position: inherit;
+		margin-bottom: 20px;
 	}
 }

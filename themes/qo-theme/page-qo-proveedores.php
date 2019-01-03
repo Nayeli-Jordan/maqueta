@@ -1,8 +1,9 @@
 <?php get_header(); ?>
-	<header class="container container-large archive-header">
+	<header class="container container-large archive-header relative">
 		<a href="<?php echo SITEURL; ?>"><a href="<?php echo SITEURL; ?>"><div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div></a></a>
 		<div class="title-archive"><?php the_title(); ?></div>
-		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
+		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>
+		<div id="print-page" class="btn btn-purple shadow margin-left-right-xxsmall cursor-pointer btn-print-fixed">Imprimir</div>
 	</header>
 	<section class="[ container container-large ]">
 		<div class="table-proveedores shadow">

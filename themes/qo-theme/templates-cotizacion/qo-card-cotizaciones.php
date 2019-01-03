@@ -6,13 +6,15 @@
 					<p><?php echo get_the_date("y") . get_the_date("m") . $cotizacionNumber; ?></p>
 				</div>						
 			</div>
-			<div class="status shadow-small">									
-				<?php if( $estatus === "Facturada" ) : ?>
-					<span class="icon-money"></span><span class="etiqueta-text">Facturada</span>
-				<?php else : ?>
-					<span class="icon-clock"></span><span class="etiqueta-text">VoBo</span>	
-				<?php endif; ?>
-			</div>
+			<a href="<?php echo the_permalink(); ?>#estatus-cotizacion">
+				<div class="status shadow-small">
+					<?php if( $estatus === "Facturada" ) : ?>
+						<span class="icon-money"></span><span class="etiqueta-text">Facturada</span>
+					<?php else : ?>
+						<span class="icon-clock"></span><span class="etiqueta-text">VoBo</span>	
+					<?php endif; ?>
+				</div>
+			</a>
 			<a class="btn-show-cotizacion" href="<?php echo the_permalink(); ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div></a>
 			<div class="title-tiket bg-gradient-qo">
 				<a href="<?php the_permalink(); ?>" class="color-light">

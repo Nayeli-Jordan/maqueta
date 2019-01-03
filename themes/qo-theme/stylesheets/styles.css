@@ -1765,7 +1765,7 @@
 /* line 11, ../sass/components/_buttons.scss */
 .content-fixed-buttons {
   position: fixed;
-  bottom: 5px;
+  bottom: 15px;
   width: 100%;
   text-align: center;
 }
@@ -1992,6 +1992,20 @@ button {
   line-height: 40px;
 }
 
+/* line 168, ../sass/components/_buttons.scss */
+.btn-print-fixed {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+@media only screen and (max-width: 600px) {
+  /* line 168, ../sass/components/_buttons.scss */
+  .btn-print-fixed {
+    position: inherit;
+    margin-bottom: 20px;
+  }
+}
+
 /* line 2, ../sass/components/_calendar.scss */
 #qoCalendar .mc-export,
 #qoCalendar .mc-print,
@@ -2183,7 +2197,9 @@ button {
 }
 
 /* line 15, ../sass/components/_effects.scss */
-.shadow-small {
+.shadow-small, input:not([type="submit"]),
+select,
+textarea {
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -2449,43 +2465,83 @@ button {
 }
 /* line 4, ../sass/components/_forms.scss */
 input:not([type="submit"]),
+select,
 textarea {
   margin-bottom: 10px;
   padding: 0 10px;
   width: 100%;
+  height: 40px;
   max-width: 100%;
-  line-height: 30px;
+  line-height: 40px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0px;
   border: 0px;
   outline: none;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 16, ../sass/components/_forms.scss */
+/* line 20, ../sass/components/_forms.scss */
 textarea {
   height: 100px;
 }
 
-/* line 19, ../sass/components/_forms.scss */
+/* line 23, ../sass/components/_forms.scss */
 input[type="submit"] {
   display: block;
   color: #fff;
-  background-color: #de0d88;
+  line-height: 30px;
+  background-color: #7b2183;
+  border: 0;
   cursor: pointer;
 }
 
-/* line 26, ../sass/components/_forms.scss */
+/* line 31, ../sass/components/_forms.scss */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 36, ../sass/components/_forms.scss */
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c7c7c7;
+}
+
+/* line 39, ../sass/components/_forms.scss */
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c7c7c7;
+}
+
+/* line 42, ../sass/components/_forms.scss */
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c7c7c7;
+}
+
+/* line 45, ../sass/components/_forms.scss */
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #c7c7c7;
+}
+
+/* line 49, ../sass/components/_forms.scss */
+.parsley-required {
+  color: #7b2183;
+}
+
+/* line 51, ../sass/components/_forms.scss */
 #section-send-brief {
   padding-top: 30px;
   padding-bottom: 70px;
   background-color: #e6e6e6;
 }
-/* line 30, ../sass/components/_forms.scss */
+/* line 55, ../sass/components/_forms.scss */
 #section-send-brief label {
   display: inline-block;
   margin-bottom: 5px;
 }
-/* line 34, ../sass/components/_forms.scss */
+/* line 59, ../sass/components/_forms.scss */
 #section-send-brief select {
   display: block;
   width: 100%;
@@ -2495,7 +2551,7 @@ input[type="submit"] {
   border: 0px;
   background-color: #fff;
 }
-/* line 43, ../sass/components/_forms.scss */
+/* line 68, ../sass/components/_forms.scss */
 #section-send-brief input[type="submit"] {
   float: right;
   background-color: #7b2183;
@@ -4713,6 +4769,76 @@ video.responsive-video {
 /* line 379, ../sass/components/_media.scss */
 #section-trabajos .bg-image.width-larga {
   padding-bottom: 135%;
+}
+
+/* line 1, ../sass/components/_modal.scss */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1200;
+  transition: .5s ease-out;
+}
+/* line 10, ../sass/components/_modal.scss */
+.modal .fondo-modal {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(70, 64, 64, 0.62);
+}
+/* line 18, ../sass/components/_modal.scss */
+.modal .modal-content {
+  position: relative;
+  width: 80vw;
+  max-width: 370px;
+  margin: 10vh auto 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 600px) {
+  /* line 18, ../sass/components/_modal.scss */
+  .modal .modal-content {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto 0;
+    border-radius: 0px;
+  }
+}
+/* line 31, ../sass/components/_modal.scss */
+.modal .modal-content .close-modal, .modal .modal-content .close-notice {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  color: #7b2183;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 40px;
+  z-index: 2;
+  cursor: pointer;
+}
+/* line 43, ../sass/components/_modal.scss */
+.modal .modal-content .close-modal:hover, .modal .modal-content .close-notice:hover {
+  color: #7b2183;
+}
+/* line 45, ../sass/components/_modal.scss */
+.modal .modal-content .modal-body {
+  padding: 50px 30px 30px;
+  border-bottom: 30px solid #fff;
+  border-radius: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 56, ../sass/components/_modal.scss */
+.open-modal {
+  cursor: pointer;
 }
 
 /* line 4, ../sass/components/_position.scss */
@@ -9204,15 +9330,20 @@ small {
 }
 
 /* line 74, ../sass/components/_typography.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 76, ../sass/components/_typography.scss */
 .col-prod_serv {
   text-transform: capitalize;
 }
 
-/* line 78, ../sass/components/_typography.scss */
+/* line 80, ../sass/components/_typography.scss */
 .page-home p {
   font-size: 14px;
 }
-/* line 81, ../sass/components/_typography.scss */
+/* line 83, ../sass/components/_typography.scss */
 .page-home h2 {
   letter-spacing: 5px;
   text-align: center;
@@ -9448,35 +9579,44 @@ small {
 }
 
 /* Sistema */
-/* line 179, ../sass/components/_utilities.scss */
+/* line 181, ../sass/components/_utilities.scss */
+.card-brief.Cerrado .card-sistema .card-head h2 a, .card-brief.Cerrado * {
+  color: #575757;
+}
+/* line 182, ../sass/components/_utilities.scss */
+.card-brief.Cerrado .status, .card-brief.Cerrado .btn-primary-rounded {
+  background-color: #a6a6a6 !important;
+}
+
+/* line 185, ../sass/components/_utilities.scss */
 #container-brief {
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 @media only screen and (max-width: 430px) {
-  /* line 179, ../sass/components/_utilities.scss */
+  /* line 185, ../sass/components/_utilities.scss */
   #container-brief {
     margin-bottom: 100px;
   }
 }
-/* line 182, ../sass/components/_utilities.scss */
+/* line 188, ../sass/components/_utilities.scss */
 #container-brief .col {
   min-height: 28px;
   line-height: 26px;
   font-size: 14px;
   border: 1px solid #eee;
 }
-/* line 187, ../sass/components/_utilities.scss */
+/* line 193, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style) {
   font-weight: bold;
   color: #7b2183;
   font-size: 14px;
   line-height: 26px;
 }
-/* line 192, ../sass/components/_utilities.scss */
+/* line 198, ../sass/components/_utilities.scss */
 #container-brief .col p:not(.not-style).color-light {
   color: #fff;
 }
-/* line 194, ../sass/components/_utilities.scss */
+/* line 200, ../sass/components/_utilities.scss */
 #container-brief .col.header-area-brief {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -9485,7 +9625,7 @@ small {
   background-color: #7b2183;
 }
 @media only screen and (min-width: 993px) {
-  /* line 202, ../sass/components/_utilities.scss */
+  /* line 208, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     position: absolute;
     top: 0px;
@@ -9494,24 +9634,28 @@ small {
   }
 }
 @media only screen and (max-width: 992px) {
-  /* line 202, ../sass/components/_utilities.scss */
+  /* line 208, ../sass/components/_utilities.scss */
   #container-brief .brief-general-info {
     margin-top: 20px;
   }
 }
-/* line 210, ../sass/components/_utilities.scss */
+/* line 216, ../sass/components/_utilities.scss */
 #container-brief .body-brief {
   margin-bottom: 30px;
 }
+/* line 217, ../sass/components/_utilities.scss */
+#container-brief.estatusCerrado {
+  opacity: 0.7;
+}
 
-/* line 213, ../sass/components/_utilities.scss */
+/* line 220, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento,
 .etiqueta-prioridad {
   display: inline-block;
   float: right;
 }
 
-/* line 218, ../sass/components/_utilities.scss */
+/* line 225, ../sass/components/_utilities.scss */
 .etiqueta-requerimiento {
   margin-top: 6px;
   width: 15px;
@@ -9519,7 +9663,7 @@ small {
   border-radius: 50%;
 }
 
-/* line 224, ../sass/components/_utilities.scss */
+/* line 231, ../sass/components/_utilities.scss */
 .etiqueta-prioridad {
   margin-top: 8px;
   width: 30px;
@@ -9527,16 +9671,9 @@ small {
   border-radius: 3px;
 }
 
-/* line 231, ../sass/components/_utilities.scss */
-.card-sistema {
-  border-radius: 5px 10px 10px 5px;
-}
-/* line 233, ../sass/components/_utilities.scss */
-.card-sistema .card-head {
-  padding: 10px 20px;
-}
-/* line 235, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status {
+/* line 238, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status,
+.status-brief {
   position: absolute;
   top: 4px;
   right: 20px;
@@ -9547,44 +9684,72 @@ small {
   background-color: #7b2183;
   border-radius: 50%;
 }
-/* line 244, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before {
+/* line 248, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status.bg-Reabierto span:not(.etiqueta-text):before,
+.status-brief.bg-Reabierto span:not(.etiqueta-text):before {
   content: '\f513';
 }
-/* line 245, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before {
+/* line 249, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status.bg-Enterado span:not(.etiqueta-text):before,
+.status-brief.bg-Enterado span:not(.etiqueta-text):before {
   content: '\f164';
 }
-/* line 246, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before {
+/* line 250, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status.bg-Trabajando span:not(.etiqueta-text):before,
+.status-brief.bg-Trabajando span:not(.etiqueta-text):before {
   content: '\e800';
 }
-/* line 247, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before {
+/* line 251, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status.bg-Hecho span:not(.etiqueta-text):before,
+.status-brief.bg-Hecho span:not(.etiqueta-text):before {
   content: '\e805';
 }
-/* line 248, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before {
+/* line 252, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status.bg-Cerrado span:not(.etiqueta-text):before,
+.status-brief.bg-Cerrado span:not(.etiqueta-text):before {
   content: '\f512';
 }
-/* line 249, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status span:not(.etiqueta-text) {
+/* line 253, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status span:not(.etiqueta-text),
+.status-brief span:not(.etiqueta-text) {
   line-height: 30px;
   font-size: 14px;
 }
-/* line 253, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status .etiqueta-text {
+/* line 257, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status .etiqueta-text,
+.status-brief .etiqueta-text {
   top: -28px;
   right: -30px;
   color: #000;
   background-color: #fff;
   z-index: 1;
 }
-/* line 260, ../sass/components/_utilities.scss */
-.card-sistema .card-head .status:hover .etiqueta-text {
+/* line 264, ../sass/components/_utilities.scss */
+.card-sistema .card-head .status:hover .etiqueta-text,
+.status-brief:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 262, ../sass/components/_utilities.scss */
+
+/* line 266, ../sass/components/_utilities.scss */
+.status-brief {
+  top: 20px;
+  left: 40px;
+  cursor: pointer;
+}
+/* line 270, ../sass/components/_utilities.scss */
+.status-brief.bg-Cerrado {
+  background-color: #a6a6a6;
+}
+
+/* line 272, ../sass/components/_utilities.scss */
+.card-sistema {
+  border-radius: 5px 10px 10px 5px;
+}
+/* line 274, ../sass/components/_utilities.scss */
+.card-sistema .card-head {
+  padding: 10px 20px;
+}
+/* line 276, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 {
   margin-bottom: 0px;
   max-width: calc(100% - 30px);
@@ -9592,31 +9757,31 @@ small {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 268, ../sass/components/_utilities.scss */
+/* line 282, ../sass/components/_utilities.scss */
 .card-sistema .card-head h2 a {
   color: #7b2183;
 }
-/* line 271, ../sass/components/_utilities.scss */
+/* line 285, ../sass/components/_utilities.scss */
 .card-sistema .card-body {
   padding: 10px 20px;
   font-size: 14px;
 }
-/* line 274, ../sass/components/_utilities.scss */
+/* line 288, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad {
   display: block;
   margin-top: 0px;
 }
-/* line 277, ../sass/components/_utilities.scss */
+/* line 291, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad .etiqueta-text {
   right: -35px;
   top: -6px;
   z-index: 1;
 }
-/* line 282, ../sass/components/_utilities.scss */
+/* line 296, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-prioridad:hover .etiqueta-text {
   display: inline-block;
 }
-/* line 284, ../sass/components/_utilities.scss */
+/* line 298, ../sass/components/_utilities.scss */
 .card-sistema .card-body .etiqueta-requerimiento {
   position: relative;
   bottom: -6px;
@@ -9624,28 +9789,28 @@ small {
   margin: 4px;
   float: none;
 }
-/* line 291, ../sass/components/_utilities.scss */
+/* line 305, ../sass/components/_utilities.scss */
 .card-sistema .card-body span.font-strong {
   font-weight: bold;
 }
-/* line 292, ../sass/components/_utilities.scss */
+/* line 306, ../sass/components/_utilities.scss */
 .card-sistema .card-body .btn-primary-rounded {
   position: absolute;
   right: 20px;
   bottom: 10px;
 }
-/* line 297, ../sass/components/_utilities.scss */
+/* line 311, ../sass/components/_utilities.scss */
 .card-sistema .card-body .number-brief {
   float: right;
   font-size: 10px;
   font-weight: bold;
 }
-/* line 302, ../sass/components/_utilities.scss */
+/* line 316, ../sass/components/_utilities.scss */
 .card-sistema .card-body .content-info-brief {
   padding-right: 40px;
 }
 
-/* line 308, ../sass/components/_utilities.scss */
+/* line 322, ../sass/components/_utilities.scss */
 .etiqueta-text {
   display: none;
   position: relative;
@@ -9657,7 +9822,7 @@ small {
 }
 
 /* Ocultar detalles calendario */
-/* line 319, ../sass/components/_utilities.scss */
+/* line 333, ../sass/components/_utilities.scss */
 .my-calendar-table .details {
   display: none !important;
 }

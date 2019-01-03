@@ -10,7 +10,7 @@
 			<p>Proyecto: <?php the_title(); ?></p>
 		</div>
 	</div>	
-	<div class="status shadow-small">									
+	<div id="estatus-cotizacion" class="status shadow-small cursor-pointer open-modal">
 		<?php if( $estatus === "Facturada" ) : ?>
 			<span class="icon-money"></span><span class="etiqueta-text">Facturada</span>
 		<?php else : ?>

@@ -20,6 +20,38 @@ var $=jQuery.noConflict();
 			if ($('.my-calendar-date-switcher').length > 0) {
 				$('.my-calendar-date-switcher input[type=submit]').val('Ir');
 			}
+
+			/* Si se va a modificar el estatus de cotización  */
+			if(window.location.href.indexOf("#estatus-cotizacion") > -1) {
+				console.log('Modificar estatus');
+				$('#modal-estatus-cotizacion').show();
+			}
+			/* Si se ha modificado exitosamente el estatus de la cotización */
+			if(window.location.href.indexOf("#notice-estatus-cotizacion") > -1) {
+				console.log('Estatus modificado');
+				$('#modal-notice-estatus-cotizacion').show();
+			}
+			/* Si se va a modificar el estatus del brief  */
+			if(window.location.href.indexOf("#estatus-brief") > -1) {
+				console.log('Modificar estatus');
+				$('#modal-estatus-brief').show();
+			}
+			/* Si se ha modificado exitosamente el estatus del brief */
+			if(window.location.href.indexOf("#notice-estatus-brief") > -1) {
+				console.log('Estatus modificado');
+				$('#modal-notice-estatus-brief').show();
+			}
+			/* Si se va a modificar el tiempo cotizado del brief  */
+			if(window.location.href.indexOf("#tiempo-cotizado") > -1) {
+				console.log('Modificar estatus');
+				$('#modal-tiempo-cotizado').show();
+			}
+			/* Si se ha modificado exitosamente el tiempo cotizado del brief */
+			if(window.location.href.indexOf("#notice-tiempo-cotizado") > -1) {
+				console.log('Estatus modificado');
+				$('#modal-notice-tiempo-cotizado').show();
+			}
+
 		});
  
 		$(window).on('resize', function(){
@@ -114,6 +146,23 @@ var $=jQuery.noConflict();
 			$('.btns-group-mes').addClass('hide');
 			$('.btns-group-mes button.empty-value').click();		
 			$('.btns-group-mes-' + idButton).removeClass('hide');		
+		});
+
+		// Modal
+		$(".open-modal").click(function() {
+			var idModal = $(this).attr('id');
+			$('#modal-' + idModal).show();
+			$('body').addClass('overflow-hide');
+		});
+		$(".close-modal, .exit-modal").click(function() {
+			$('.modal').hide();
+			$('body').removeClass('overflow-hide');
+		});
+
+		/* Botón imprimir*/
+		$("#print-page").click(function() {
+			console.log('click');
+			window.print();
 		});
 		
 	});

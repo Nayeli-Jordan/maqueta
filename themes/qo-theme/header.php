@@ -66,6 +66,21 @@
 		<?php flush(); ?>
 	</head>
 	<body class="<?php if (is_home()) :?>page-home<?php endif; ?>">
+		<?php if (is_user_logged_in()) :
+			if (is_singular('qo_cotizaciones')) {
+				/* Modal Estatus cotizacion */
+				include (TEMPLATEPATH . '/templates-cotizacion/modal/estatus-cotizacion.php');
+				include (TEMPLATEPATH . '/templates-cotizacion/modal/notice-estatus-cotizacion.php');
+			}
+			if (is_singular('sistema')) {
+				/* Modal Estatus brief´s */
+				include (TEMPLATEPATH . '/templates-sistema/modal/estatus-brief.php');
+				include (TEMPLATEPATH . '/templates-sistema/modal/notice-estatus-brief.php');
+				/* Modal Tiempo cotizado brief´s */
+				include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-cotizado.php');
+				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-cotizado.php');
+			}
+		endif; ?>
 		<?php if (is_home() || is_front_page()) : ?>			
 			<header class="js-header">
 				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
@@ -90,7 +105,10 @@
 								}
 							}
 							echo $menu_list;
-						?>
+							if ( current_user_can( 'administrator' ) || current_user_can( 'editor' ) ) :
+								echo '<li itemprop="actionOption" ><a href="' . SITEURL . 'sistema" class="item-scroll"><div></div><span>Sistema</span></a></li>';
+							endif;
+						?>						
 					</ul>
 				</nav>
 			</header>

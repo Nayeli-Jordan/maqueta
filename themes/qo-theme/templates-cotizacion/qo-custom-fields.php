@@ -150,3 +150,7 @@
     $muestra16_3       = get_post_meta( $post_id, 'qo_cotizaciones_muestra16_3', true );
     $muestra16_4       = get_post_meta( $post_id, 'qo_cotizaciones_muestra16_4', true );
 ?>
+
+    <header class="container container-large archive-header">
+        <?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>       
+    </header>

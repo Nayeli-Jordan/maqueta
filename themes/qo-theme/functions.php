@@ -31,6 +31,7 @@ add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'masonry_js', JSPATH.'packery.pkgd.min.js', array(), '', true );
         wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.min.js', array(), '', true );
     }
+    wp_enqueue_script( 'qo_parsley', JSPATH.'parsley.min.js', array(), '1.0', true );
     wp_enqueue_script( 'isotope_js', JSPATH.'isotope.pkgd.min.js', array(), '', true );	
 	wp_enqueue_script( 'qo_functions', JSPATH.'functions.js', array(), '1.0', true );
  
@@ -77,6 +78,27 @@ function add_top_menu(){
 	register_nav_menu('qo_menu',__('QO menú'));
 }
 
+/* Send mail by SMTP */
+add_action( 'phpmailer_init', 'send_smtp_email' );
+function send_smtp_email( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = SMTP_AUTH;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->Username   = SMTP_USERNAME;
+    $phpmailer->Password   = SMTP_PASSWORD;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_FROMNAME;
+}
+
+if ( $GLOBALS['pagenow'] != 'wp-login.php' ) { /* Evitar errores con email recuperar contraseña */
+    /* $message wp_mail in html (not text/plain) */
+    function transforme_content_type(){
+        return "text/html";
+    }
+    add_filter( 'wp_mail_content_type','transforme_content_type' );    
+}
 
 /**
 * Configuraciones WP - QO posts
@@ -137,24 +159,6 @@ function qo_get_image_id($image_url) {
     $attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url )); 
         return $attachment[0]; 
 }
-
-/**
-* Configuraciones QO posts privacidad
-*/
-function force_type_private($post){
-    if ($post['post_type'] == 'qo_cotizaciones' || $post['post_type'] == 'sistema') {
-        if ($post['post_status'] != 'trash') $post['post_status'] = 'private';
-    }
-    return $post;
-}
-add_filter('wp_insert_post_data', 'force_type_private');
-
-// remove "Private: " from titles
-function remove_private_prefix($title) {
-    $title = str_replace('Privado: ', '', $title);
-    return $title;
-}
-add_filter('the_title', 'remove_private_prefix');
 
 //Hide item admin menu for certain user profile
 function qo_remove_menu_items() {
@@ -1347,4 +1351,29 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
             update_post_meta( $idqo_cotizaciones, 'qo_cotizaciones_iva_inc', $_POST['qo_cotizaciones_iva_inc'] );
         }
 	}
+}
+
+/* FORMS SISTEMA */
+add_action ('template_redirect', 'custom_redirect_estatusCotizacion');
+function custom_redirect_estatusCotizacion() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_estatusCotizacion'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#notice-estatus-cotizacion');
+    }
+}
+
+add_action ('template_redirect', 'custom_redirect_estatusBrief');
+function custom_redirect_estatusBrief() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_estatusBrief'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#notice-estatus-brief');
+    }
+}
+
+add_action ('template_redirect', 'custom_redirect_tiempoBrief');
+function custom_redirect_tiempoBrief() {
+    if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempoBrief'] ) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#notice-tiempo-cotizado');
+    }
 }

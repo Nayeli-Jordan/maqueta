@@ -1,4 +1,4 @@
-<div class="col s12 m6 l4 element-item margin-bottom-large <?php echo $estatus . ' ' . $prioridad . ' '; ?>
+<div class="col s12 m6 l4 element-item card-brief margin-bottom-large <?php echo $estatus . ' ' . $prioridad . ' '; ?>
 <?php 
 	$terms = get_the_terms( $post->id, 'responsable' );
 	if ( is_array( $terms ) ) {
@@ -16,8 +16,12 @@
 	<div class="shadow relative card-sistema">
 		<?php $linkCard = get_permalink(); ?>
 		<div class="card-head">
-			<div class="status shadow-small bg-<?php echo $estatus; ?>"><span class="icon-lock-open"></span><span class="etiqueta-text"><?php echo $estatus; ?></span></div>
-			<h2><a href="<?php echo $linkCard; ?>"><?php the_title(); ?></a></h2>												
+			<a href="<?php echo the_permalink(); ?>#estatus-brief">
+				<div class="status shadow-small bg-<?php echo $estatus; ?>">
+					<span class="icon-lock-open"></span><span class="etiqueta-text"><?php echo $estatus; ?></span>
+				</div>
+			</a>
+			<h2><a href="<?php echo $linkCard; ?>"><?php the_title(); ?></a></h2>
 		</div>
 		<div class="bg-gradient-qo hr hr-3"></div>
 		<div class="card-body">			
@@ -49,15 +53,20 @@
 				<p class="margin-top-xsmall"><span class="icon-calendar-inv"></span>Entrega: 
 				<?php 
 					if( $ent_fecha4_ext  != "" ) : 
-						echo $ent_fecha4_ext;
+						$ent_fecha4_extNew = date('d-m-Y', strtotime($ent_fecha4_ext));
+						echo $ent_fecha4_extNew;
 					elseif( $ent_fecha3_ext  != "" ) : 
-						echo $ent_fecha3_ext;
+						$ent_fecha3_extNew = date('d-m-Y', strtotime($ent_fecha3_ext));
+						echo $ent_fecha3_extNew;
 					elseif( $ent_fecha2_ext  != "" ) : 
-						echo $ent_fecha2_ext;
+						$ent_fecha2_extNew = date('d-m-Y', strtotime($ent_fecha2_ext));
+						echo $ent_fecha2_extNew;
 					elseif( $ent_fecha1_ext  != "" ) : 
-						echo $ent_fecha1_ext;
+						$ent_fecha1_extNew = date('d-m-Y', strtotime($ent_fecha1_ext));
+						echo $ent_fecha1_extNew;
 					elseif( $fechaEntrega != "" ) : 
-						echo $fechaEntrega;
+						$fechaEntregaNew = date('d-m-Y', strtotime($fechaEntrega));
+						echo $fechaEntregaNew;
 					endif;
 				?></p>				
 			</div>
@@ -76,9 +85,9 @@
 				elseif( $fechaEntrega != "" ) : 
 					$limitFechaEntrega = $fechaEntrega;
 				endif;
+				/* Actiavr alerta desde 3 días antes de la fecha límite*/
 				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . ' - 3 days'));
-				//echo "Hoy: " . $todayDate . "<br> Fecha Entrega: " . $limitFechaEntrega . "<br>  Fecha Alerta: " . $activeAlertDate;
-				if (($todayDate >= $activeAlertDate)){ ?>
+				if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado')){ ?>
 				    <div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
 				<?php } ?>		
 			<a href="<?php echo $linkCard; ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
