@@ -79,6 +79,8 @@
 				/* Modal Tiempo cotizado brief´s */
 				include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-cotizado.php');
 				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-cotizado.php');
+				/* Modal Tiempo creativo brief´s */
+				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-creativo.php');
 			}
 		endif; ?>
 		<?php if (is_home() || is_front_page()) : ?>			

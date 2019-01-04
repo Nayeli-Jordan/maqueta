@@ -51,6 +51,11 @@ var $=jQuery.noConflict();
 				console.log('Estatus modificado');
 				$('#modal-notice-tiempo-cotizado').show();
 			}
+			/* Si se ha modificado exitosamente el tiempo creativo del brief */
+			if(window.location.href.indexOf("#notice-tiempo-creativo") > -1) {
+				console.log('Estatus modificado');
+				$('#modal-notice-tiempo-creativo').show();
+			}
 			/* Si se ha enviado el email (nuevo, actualizado) del brief */
 			if(window.location.href.indexOf("#notice-email-brief") > -1) {
 				console.log('Notificación enviada');

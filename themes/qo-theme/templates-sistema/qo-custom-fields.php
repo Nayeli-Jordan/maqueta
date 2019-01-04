@@ -98,4 +98,7 @@
     $solic_hora4_ext   		= get_post_meta( $post_id, 'sistema_solic_hora4_ext', true );  
     $ent_fecha4_ext   		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );  
     $ent_hora4_ext   		= get_post_meta( $post_id, 'sistema_ent_hora4_ext', true ); 
+
+    setlocale(LC_ALL,"es_ES");
+    $fechaEntregaEsp = strftime("%d de %B del %Y", strtotime($fechaEntrega));
 ?>

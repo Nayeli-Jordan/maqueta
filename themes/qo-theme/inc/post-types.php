@@ -164,15 +164,15 @@ add_action('init', function(){
 	$labels = array(
 		'name'          => 'Brief´s',
 		'Singular_name' => 'Brief´s',
-		'add_new'       => 'Nuevo Brief´s',
-		'add_new_item'  => 'Nuevo Brief´s',
-		'edit_item'     => 'Editar Brief´s',
-		'new_item'      => 'Nuevo Brief´s',
+		'add_new'       => 'Nuevo Brief',
+		'add_new_item'  => 'Nuevo Brief',
+		'edit_item'     => 'Editar Brief',
+		'new_item'      => 'Nuevo Brief',
 		'all_items'     => 'Todo',
-		'view_item'     => 'Ver Brief´s',
-		'search_items'  => 'Buscar Brief´s',
-		'not_found'     => 'No hay Brief´s.',
-		'menu_name'     => 'Brief´s'
+		'view_item'     => 'Ver Brief',
+		'search_items'  => 'Buscar Brief',
+		'not_found'     => 'No hay Brief.',
+		'menu_name'     => 'Brief'
 	);
 
 	$args = array(

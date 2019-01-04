@@ -1383,6 +1383,13 @@ function custom_redirect_tiempoBrief() {
         wp_redirect($actual_link . '#notice-tiempo-cotizado');
     }
 }
+add_action ('template_redirect', 'custom_redirect_tiempoCreativoBrief');
+function custom_redirect_tiempoCreativoBrief() {
+    if ( ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo_diBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo_dvBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo_mktBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo_stmBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo1_extBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo2_extBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo3_extBrief'] )) || ('POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['edit_tiempo4_extBrief'] )) ) {
+        $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        wp_redirect($actual_link . '#notice-tiempo-creativo');
+    }
+}
 
 
 add_action ('template_redirect', 'custom_redirect_emailBrief');
