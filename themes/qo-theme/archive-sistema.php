@@ -14,7 +14,7 @@
 			            'post_type' 		=> 'sistema',
 			            'posts_per_page' 	=> -1,
 			            'orderby' 			=> 'date',
-			            'order' 			=> 'ASC',
+			            'order' 			=> 'DESC',
 						'tax_query' 		=> array(
 							array(
 								'taxonomy' 	=> 'estatus-brief',

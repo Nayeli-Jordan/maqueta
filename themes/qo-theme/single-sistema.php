@@ -139,13 +139,12 @@
 							<div class="col s12 sm6 l2"><?php echo $ancho3_dv; ?></div>
 							<div class="col s12 sm6 l2 bg-purple-xlight"><p>Alto (cm)</p></div>
 							<div class="col s12 sm6 l2"><?php echo $alto3_dv; ?></div>
-							<div id="tiempo-creativo_dv" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+							<div id="tiempo-creativo" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 							<div class="col s12 sm6 m6 l2 border-purple-light"><?php echo $tiempoCreativo_dv; ?></div>
 						</div>
 					</div>
 				</div>	
-			<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo_dv.php'); 
-			endif; ?>
+			<?php endif; ?>
 
 			<?php if (has_term('area-industrial', 'requerimiento')) : ?>
 				<div id="brief-di" class="body-brief">
@@ -204,13 +203,12 @@
 							<div class="col s12 sm6 m3 l2"><?php echo $ancho3_di; ?></div>
 							<div class="col s12 sm6 m3 l2 bg-purple-xlight"><p>Alto (cm)</p></div>
 							<div class="col s12 sm6 m3 l2"><?php echo $alto3_di; ?></div>
-							<div id="tiempo-creativo_di" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+							<div id="tiempo-creativo" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 							<div class="col s12 sm6 m6 l2 border-purple-light"><?php echo $tiempoCreativo_di; ?></div>
 						</div>
 					</div>
 				</div>	
-			<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo_di.php'); 
-			endif; ?>
+			<?php endif; ?>
 
 			<?php if (has_term('area-social-media', 'requerimiento')) : ?>
 				<div id="brief-mkt" class="body-brief">
@@ -234,13 +232,12 @@
 							<div class="col s12 sm6 m3 l2"><?php echo $noPersonas_mkt; ?></div>
 							<div class="col s12 m6 l4 clear hide-on-med-and-up bg-purple-xlight"><p>Descripción general del proyecto:</p></div>
 							<div class="col s12 clear"><?php echo $detalles_mkt; ?></div>
-							<div id="tiempo-creativo_mkt" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+							<div id="tiempo-creativo" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 							<div class="col s12 sm6 m6 l2 border-purple-light"><?php echo $tiempoCreativo_mkt; ?></div>
 						</div>
 					</div>
 				</div>	
-			<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo_mkt.php'); 
-			endif; ?>
+			<?php endif; ?>
 
 			<?php if (has_term('area-ui-ux', 'requerimiento')) : ?>
 				<div id="brief-stm" class="body-brief">
@@ -264,15 +261,17 @@
 							<div class="col s12 sm6 m3 l2"><?php echo $ftp_stm; ?></div>
 							<div class="col s12 m6 l4  clear hide-on-med-and-up bg-purple-xlight"><p>Descripción general del proyecto:</p></div>
 							<div class="col s12 clear"><?php echo $detalles_stm; ?></div>
-							<div id="tiempo-creativo_stm" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+							<div id="tiempo-creativo" class="col s12 sm6 m6 l2 offset-l8 clear bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 							<div class="col s12 sm6 m6 l2 border-purple-light"><?php echo $tiempoCreativo_stm; ?></div>
 						</div>
 					</div>
 				</div>	
-			<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo_stm.php'); 
-			endif; ?>
+			<?php endif; 
 
-			<?php if( $solicitud1_ext != "" || $solicitud2_ext != "" || $solicitud3_ext != "" || $solicitud4_ext != "" ) : ?>
+			/* Modal cambio Tiempo Creativo */
+			include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo.php'); 
+
+			if( $solicitud1_ext != "" || $solicitud2_ext != "" || $solicitud3_ext != "" || $solicitud4_ext != "" ) : ?>
 
 				<div id="brief-extra" class="body-brief">
 					<div class="row">				
