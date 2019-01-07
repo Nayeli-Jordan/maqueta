@@ -76,9 +76,11 @@
 				/* Modal Estatus brief´s */
 				include (TEMPLATEPATH . '/templates-sistema/modal/estatus-brief.php');
 				include (TEMPLATEPATH . '/templates-sistema/modal/notice-estatus-brief.php');
-				/* Modal Tiempo cotizado brief´s */
-				include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-cotizado.php');
-				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-cotizado.php');
+				if (current_user_can( 'administrator' )) {
+					/* Modal Tiempo cotizado brief´s */
+					include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-cotizado.php');
+					include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-cotizado.php');
+				}
 				/* Modal Tiempo creativo brief´s */
 				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-creativo.php');
 			}

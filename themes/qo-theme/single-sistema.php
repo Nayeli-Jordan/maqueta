@@ -44,7 +44,13 @@
 						}
 					?>
 					</div>
-					<div id="tiempo-cotizado" class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light open-modal"><p class="color-light text-center">Tiempo Cotizado</p></div>
+					<?php if (current_user_can( 'administrator' )): ?>
+						<div id="tiempo-cotizado" class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light open-modal">
+					<?php else: ?>
+						<div class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light">
+					<?php endif ?>
+							<p class="color-light text-center">Tiempo Cotizado</p>
+						</div>	
 					<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Requerimiento</p></div>
 					<div class="col s12 sm6 m4 l2">
 					<?php 
@@ -56,7 +62,13 @@
 						}
 					?>
 					</div>
-					<div id="tiempo-cotizado" class="col s12 sm6 m4 l2 hide-on-med-and-up bg-purple-light open-modal"><p class="color-light text-center">Tiempo Cotizado</p></div>
+					<?php if (current_user_can( 'administrator' )): ?>
+						<div id="tiempo-cotizado" class="col s12 sm6 m4 l2 hide-on-med-and-up bg-purple-light open-modal">
+					<?php else: ?>
+						<div class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light">
+					<?php endif ?>
+							<p class="color-light text-center">Tiempo Cotizado</p>
+						</div>	
 					<div class="col s12 sm6 m4 l2 border-purple-light"><?php echo $tiempoCotizado; ?></div>				
 				</div>
 				<div class="brief-general-info">

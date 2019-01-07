@@ -34,7 +34,7 @@
 				update_post_meta($my_post_id,'sistema_estatus',$nuevoEstatus);
 
 				/* Send email */
-				$to 				= "pruebas@altoempleo.com.mx";	/* to do emails */	    
+				$to 				= "pruebas@altoempleo.com.mx";	/* to do emails */
 			    $subject 			= "Estatus Brief Actualizado | QO";
 
 				$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
@@ -48,7 +48,7 @@
 				$message 	        .= '</body></html>';
 				
 				/* Evitar enviar mail si se guardo el mismo estatus */
-				if ($estatus != $nuevoEstatus) { 
+				if ($estatus != $nuevoEstatus && ($nuevoEstatus === 'Enterado' || $nuevoEstatus === 'Hecho')) { 
 					wp_mail($to, $subject, $message);
 				}
 			endif; ?>
