@@ -30,21 +30,19 @@
 				update_post_meta($my_post_id,'qo_cotizaciones_estatus',$nuevoEstatus);
 
 				/* Send email */
-				$to 				= "pruebas@altoempleo.com.mx";		    
-			    $subject 			= "Estatus Cotización Actualizado | QO";
+				$to 				= "verojacobo@altoempleo.com.mx, jeaninne@queonda.com.mx, pruebas@altoempleo.com.mx";		    
+			    $subject 			= "Cotización Facturada | QO";
 
 				$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
 				$message 		   .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="https://queonda.com.mx/sites/queonda/wp-content/themes/qo-theme/images/identidad/qo-logo-mail.png"></a></div>'; /* to do cambiar por sitio final */
-				$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #7b2183; text-transform: uppercase;">Estatus cotización QO</h1>';
-				$message 			.= '<p>Se ha modificado el estatus de una cotización.</p>';
-				$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #7b2183;">Cotización: </span>' . $titleCotizacion . '</p>';
-				$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #7b2183;">Estatus: </span>' . $nuevoEstatus . '</span></p>';
+				$message 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #7b2183; text-transform: uppercase;">Cotización QO</h1>';
+				$message 			.= '<p>Se ha modificado el estatus de la cotización <strong style="text-transform: uppercase; font-weight: 600; color: #7b2183;">' . $titleCotizacion . '</strong> a <span style="font-weight: 600; color: #7b2183;">Facturada</span>.</p>';
 				$message 			.= '<p><span style="text-transform: uppercase; font-weight: 600; color: #7b2183;">URL: </span>' . $permalink . '</p>';
 				$message 			.= '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el sitio de ¿Qué Onda?</small></p></div>';
 				$message 	        .= '</body></html>';
 				
 				/* Evitar enviar mail si se guardo el mismo estatus */
-				if ($estatus != $nuevoEstatus) { 
+				if ($estatus != $nuevoEstatus && $nuevoEstatus === 'Facturada') { 
 					wp_mail($to, $subject, $message);
 				}
 			endif; ?>

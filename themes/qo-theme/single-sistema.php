@@ -281,7 +281,7 @@
 						<?php if( $solicitud1_ext != "" ) : ?>
 							<div class="row">
 								<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #1</p></div>
-								<div id="tiempo-creativo1_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+								<div id="tiempo-creativo_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 								<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo1_ext; ?></div>
 								<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 								<div class="col s12 m7 l4"><?php echo $solicitud1_ext; ?></div>
@@ -292,12 +292,11 @@
 								<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 								<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha1_ext . ' ' . $ent_hora1_ext; ?></div>
 							</div>
-						<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo1_ext.php'); 
-						endif; ?>
+						<?php endif; ?>
 						<?php if( $solicitud2_ext != "" ) : ?>
 							<div class="row">
 								<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #2</p></div>
-								<div id="tiempo-creativo2_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+								<div id="tiempo-creativo_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 								<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo2_ext; ?></div>
 								<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 								<div class="col s12 m7 l4"><?php echo $solicitud2_ext; ?></div>
@@ -308,12 +307,11 @@
 								<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 								<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha2_ext . ' ' . $ent_hora2_ext; ?></div>
 							</div>
-						<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo2_ext.php'); 
-						endif; ?>
+						<?php endif; ?>
 						<?php if( $solicitud3_ext != "" ) : ?>
 							<div class="row">
 								<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #3</p></div>
-								<div id="tiempo-creativo3_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+								<div id="tiempo-creativo_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 								<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo3_ext; ?></div>
 								<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 								<div class="col s12 m7 l4"><?php echo $solicitud3_ext; ?></div>
@@ -324,12 +322,11 @@
 								<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 								<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha3_ext . ' ' . $ent_hora3_ext; ?></div>
 							</div>
-						<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo3_ext.php'); 
-						endif; ?>
+						<?php endif; ?>
 						<?php if( $solicitud4_ext != "" ) : ?>
 							<div class="row">
 								<div class="col s12 m5 l6 uppercase bg-purple-clare"><p class="color-light">Actualización #4</p></div>
-								<div id="tiempo-creativo4_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
+								<div id="tiempo-creativo_ext" class="col s12 sm6 m4 l3 uppercase bg-purple-light open-modal"><p class="color-light">Tiempo Creativo</p></div>
 								<div class="col s12 sm6 m3 l3 border-purple-light"><?php echo $tiempoCreativo4_ext; ?></div>
 								<div class="col s12 m5 l2 bg-purple-xlight"><p>Solicitud</p></div>
 								<div class="col s12 m7 l4"><?php echo $solicitud4_ext; ?></div>
@@ -340,8 +337,10 @@
 								<div class="col s12 m5 hide-on-large-and-up bg-purple-xlight"><p>Fecha de ENTREGA</p></div>
 								<div class="col s12 m7 hide-on-large-and-up"><?php echo $ent_fecha4_ext . ' ' . $ent_hora4_ext; ?></div>
 							</div>
-						<?php include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo4_ext.php'); 
-						endif; ?>
+						<?php endif; 
+
+						/* Modal tiempo creativo actualizaciones */
+						include (TEMPLATEPATH . '/templates-sistema/modal/tiempo-creativo_ext.php'); ?>
 					</div>
 				</div>
 			<?php endif; ?>
