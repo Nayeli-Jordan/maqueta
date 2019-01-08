@@ -85,8 +85,21 @@
 				elseif( $fechaEntrega != "" ) : 
 					$limitFechaEntrega = $fechaEntrega;
 				endif;
-				/* Actiavr alerta desde 3 días antes de la fecha límite*/
-				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . ' - 3 days'));
+
+				/* Activar alerta antes de la fecha límite*/
+				$daysAlertBefore = 0;
+				if ($fechaEntregaAlert === '1 día antes') {
+					$daysAlertBefore = 1;
+				} elseif ($fechaEntregaAlert === '2 días antes') {
+					$daysAlertBefore = 2;
+				} elseif ($fechaEntregaAlert === '3 días antes') {
+					$daysAlertBefore = 3;
+				} if ($fechaEntregaAlert === '1 semana antes') {
+					$daysAlertBefore = 7;
+				}
+
+				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . '-' . $daysAlertBefore . ' days'));
+				/*echo $fechaEntregaAlert . '<br>' . $daysAlertBefore . '<br>' . $activeAlertDate . '<br>' . $todayDate;*/
 				if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado')){ ?>
 				    <div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
 				<?php } ?>		

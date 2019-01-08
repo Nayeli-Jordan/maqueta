@@ -5,15 +5,15 @@
 
 	$msgHeader 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
 	$msgHeader 		   .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="https://queonda.com.mx/sites/queonda/wp-content/themes/qo-theme/images/identidad/qo-logo-mail.png"></a></div>'; /* to do cambiar por sitio final */
-	$msgHeader 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #7b2183; text-transform: uppercase;">Alerta Brief QO</h1>';
-	$msgHeader 			.= '<p style="margin-bottom: 20px;">La fecha de entrega del brief es cercana. Si el proyecto ya se ha cerrado o la fecha de entrega se ha modificado no olvides actualizarlo desde el administrador.</p>';
+	$msgHeader 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #7b2183; text-transform: uppercase;">Brief´s Activos QO</h1>';
+	$msgHeader 			.= '<p style="margin-bottom: 20px;">Este es un aviso semanal con el listado de los brief´s de Que Onda que se encuentran activos.</p>';
 
 	$msgFooter 			 = '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el sitio de ¿Qué Onda?</small></p></div>';
 	$msgFooter 	        .= '</body></html>';
 ?>
 	<header class="container container-large archive-header">
 		<a href="<?php echo SITEURL; ?>"><div class="bg-image bg-contain bg-qo-logo inline-block" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png)"></div></a>
-		<div class="title-archive">Alerta entrega Brief´s</div>
+		<div class="title-archive">Brief´s Activos</div>
 		<?php include (TEMPLATEPATH . '/templates-qo/nav-qo.php'); ?>		
 	</header>
 	<section class="[ container container-large ] margin-bottom-60">
@@ -31,15 +31,23 @@
 							'terms'	 	=> 'archivada',
 							'operator'	=> 'NOT IN',
 						)
+					),
+					'meta_query'		=> array(
+						array(
+							'key'		=> 'sistema_estatus',
+							'value'		=> 'Cerrado',
+							'compare'	=> '!='
+						)
 					)
 		        );
 		        $loop = new WP_Query( $args );
 		        if ( $loop->have_posts() ) {
+		        	$body = '';
 		            while ( $loop->have_posts() ) : $loop->the_post(); 
 
 						$custom_fields 			= get_post_custom();
 						$post_id 				= get_the_ID();
-
+			    		$permalink 				= get_permalink();
 					    $title 	            	= $post->post_title;	    
 					    $estatus            	= get_post_meta( $post_id, 'sistema_estatus', true );	    
 					    $cliente            	= get_post_meta( $post_id, 'sistema_cliente', true );  
@@ -65,56 +73,32 @@
 						elseif( $fechaEntrega != "" ) : 
 							$limitFechaEntrega = $fechaEntrega;
 						endif;
+						setlocale(LC_ALL,"es_ES");
+						$limitFechaEntrega = strftime("%d de %B del %Y", strtotime($limitFechaEntrega));
 
-						/* Activar alerta antes de la fecha límite*/
-						$daysAlertBefore = 0;
-						if ($fechaEntregaAlert === '1 día antes') {
-							$daysAlertBefore = 1;
-						} elseif ($fechaEntregaAlert === '2 días antes') {
-							$daysAlertBefore = 2;
-						} elseif ($fechaEntregaAlert === '3 días antes') {
-							$daysAlertBefore = 3;
-						} if ($fechaEntregaAlert === '1 semana antes') {
-							$daysAlertBefore = 7;
-						}
-						 
-						$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . '-' . $daysAlertBefore . ' days'));
-						if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado' && $fechaEntregaAlert != 'Desactivar alerta')){ 
-							setlocale(LC_ALL,"es_ES");
-							$limitFechaEntrega = strftime("%d de %B del %Y", strtotime($limitFechaEntrega));
-							$responsableName 	= '';
-							$responsableMail 	= '';
-							$terms = get_the_terms($post->ID, 'responsable');
-							if ( is_array( $terms ) ) {
-								foreach($terms as $term){
-									$responsableName .= $term->name . " (" . $term->description . ") ";
-									$responsableMail .= $term->description . ", ";
-								}
-							}
-
-		        			$body = '';
-							$body .= '<div style="margin-bottom: 20px;">';
-							$body .= '<p><strong style="color: #7b2183;">Brief: </strong>' . $title . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Responsable: </strong>' . $responsableName . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Cliente: </strong>' . $cliente . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Proyecto: </strong>' . $proyecto . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Estatus: </strong>' . $estatus . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Prioridad: </strong>' . $prioridad . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Entrega: </strong>' . $limitFechaEntrega . '</p>';
-							$body .= '</div>';
-
-							if ($responsableMail != '') {
-								$to 	 = $responsableMail . "jeaninne@queonda.com.mx, pruebas@altoempleo.com.mx";
-								$message = $msgHeader . $body . $msgFooter;
-								echo $message;								
-								wp_mail($to, $subject, $message);
+						$responsableName 	= '';
+						$terms = get_the_terms($post->ID, 'responsable');
+						if ( is_array( $terms ) ) {
+							foreach($terms as $term){
+								$responsableName .= $term->name . " (" . $term->description . ") ";
 							}
 						}
+
+						$body .= '<div style="margin-bottom: 40px;">';
+						$body .= '<p><strong style="color: #7b2183;">Brief: </strong>' . $title . ' - ' . $permalink . '</p>';
+						$body .= '<p><strong style="color: #7b2183;">Cliente: </strong>' . $cliente . ' | <strong style="color: #7b2183;">Proyecto: </strong>' . $proyecto . '</p>';
+						$body .= '<p><strong style="color: #7b2183;">Estatus: </strong>' . $estatus . ' | <strong style="color: #7b2183;">Prioridad: </strong>' . $prioridad . ' | <strong style="color: #7b2183;">Entrega: </strong>' . $limitFechaEntrega . '</p>';
+						$body .= '<p><strong style="color: #7b2183;">Responsable: </strong>' . $responsableName . '</p>';
+						$body .= '</div>';
 
 	    			endwhile;
 		        } 
 		        wp_reset_postdata();
-		    ?>
+
+			$to 	 = "jeaninne@queonda.com.mx, verojacobo@altoempleo.com.mx, nayeli@queonda.com.mx";
+			$message = $msgHeader . $body . $msgFooter;
+			echo $message;								
+			wp_mail($to, $subject, $message); ?>
 		</div>
 	</section>
 	<div class="content-fixed-buttons">

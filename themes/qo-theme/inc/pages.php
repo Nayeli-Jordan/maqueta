@@ -39,6 +39,17 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	if( ! get_page_by_path('reporte-briefs') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Reporte Brief´s',
+			'post_name'   => 'reporte-briefs',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 	if( ! get_page_by_path('my-calendar') ){
 		$page = array(
 			'post_author' => 1,

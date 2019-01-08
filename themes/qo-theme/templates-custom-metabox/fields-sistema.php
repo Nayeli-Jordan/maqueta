@@ -34,8 +34,11 @@
 		<th><label>Alerta Fecha de Entrega</label></th>
 		<th>
 			<select name="sistema_fechaEntregaAlert">
-                <option value=""></option>
                 <option value="Desactivar alerta" <?php selected($fechaEntregaAlert, 'Desactivar alerta'); ?>>Desactivar alerta</option>
+                <option value="1 día antes" <?php selected($fechaEntregaAlert, '1 día antes'); ?>>1 día antes</option>
+                <option value="2 días antes" <?php selected($fechaEntregaAlert, '2 días antes'); ?>>2 días antes</option>
+                <option value="3 días antes" <?php selected($fechaEntregaAlert, '3 días antes'); ?>>3 días antes</option>
+                <option value="1 semana antes" <?php selected($fechaEntregaAlert, '1 semana antes'); ?>>1 semana antes</option>
             </select>
        	</th>
 	</tr>

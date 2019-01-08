@@ -37,6 +37,7 @@
 					    $proyecto           	= get_post_meta( $post_id, 'sistema_proyecto', true );     
 					    $tiempoCotizado    		= get_post_meta( $post_id, 'sistema_tiempoCotizado', true ); 
 					    $fechaEntrega    		= get_post_meta( $post_id, 'sistema_fechaEntrega', true ); 
+					    $fechaEntregaAlert		= get_post_meta( $post_id, 'sistema_fechaEntregaAlert', true ); 
 		    			$prioridad    			= get_post_meta( $post_id, 'sistema_prioridad', true );
 		    			$ent_fecha1_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha1_ext', true );
 		    			$ent_fecha2_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha2_ext', true );
