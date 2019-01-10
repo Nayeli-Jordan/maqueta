@@ -104,7 +104,7 @@
 
 							if ($estatus === 'Hecho') { /* Envia alerta sólo a admin para que la cierre */
 								$msgHeaderAdmin			= '<p style="margin-bottom: 20px;">La fecha de entrega es cercana pero la tarea ya ha sido marcado como <strong style="color: #7b2183;">HECHA</strong>, asegurate de que la tarea esté terminada y marcala con estatus "Cerrado" para dejar de recibir esta alerta.</p>';
-								$to 	 = "pruebas@altoempleo.com.mx";/*jeaninne@queonda.com.mx, */
+								$to 	 = "jeaninne@queonda.com.mx";
 								$message = $msgHeader . $msgHeaderAdmin . $body . $msgFooter;
 								echo $msgHeaderAdmin . $body;								
 								wp_mail($to, $subject, $message);

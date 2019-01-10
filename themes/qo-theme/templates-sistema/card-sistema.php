@@ -100,8 +100,10 @@
 
 				$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . '-' . $daysAlertBefore . ' days'));
 				/*echo $fechaEntregaAlert . '<br>' . $daysAlertBefore . '<br>' . $activeAlertDate . '<br>' . $todayDate;*/
-				if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado')){ ?>
+				if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado' && $fechaEntregaAlert != 'Desactivar alerta')){ ?>
 				    <div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
+				<?php } elseif ($limitFechaEntrega <= $todayDate && $estatus != 'Cerrado') {  ?>
+					<div id="btn-entrega-proxima" class="shadow btn-primary-rounded"><span class="icon-clock"></span><span class="etiqueta-text">Entrega Cercana</span></div>
 				<?php } ?>		
 			<a href="<?php echo $linkCard; ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
 		</div>							
