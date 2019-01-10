@@ -80,7 +80,9 @@
 						}
 						 
 						$activeAlertDate = date('Y-m-d', strtotime($limitFechaEntrega . '-' . $daysAlertBefore . ' days'));
-						if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado' && $fechaEntregaAlert != 'Desactivar alerta')){ 
+						/* Activar alerta si pasaron 3 días de la entrega */
+						$activeAlertLate = date('Y-m-d', strtotime($limitFechaEntrega . '+ 3 days'));
+						if (($todayDate >= $activeAlertDate && $estatus != 'Cerrado' && $fechaEntregaAlert != 'Desactivar alerta') || ($activeAlertLate <= $todayDate && $estatus != 'Cerrado')){ 
 							setlocale(LC_ALL,"es_ES");
 							$limitFechaEntrega = strftime("%d de %B del %Y", strtotime($limitFechaEntrega));
 							$responsableName 	= '';
@@ -103,13 +105,13 @@
 							$body .= '</div>';
 
 							if ($estatus === 'Hecho') { /* Envia alerta sólo a admin para que la cierre */
-								$msgHeaderAdmin			= '<p style="margin-bottom: 20px;">La fecha de entrega es cercana pero la tarea ya ha sido marcado como <strong style="color: #7b2183;">HECHA</strong>, asegurate de que la tarea esté terminada y marcala con estatus "Cerrado" para dejar de recibir esta alerta.</p>';
+								$msgHeaderAdmin			= '<p style="margin-bottom: 20px;">La tarea ya ha sido marcado como <strong style="color: #7b2183;">HECHA</strong>, asegurate de que esté terminada y marcala con estatus "Cerrado" para dejar de recibir esta alerta.</p>';
 								$to 	 = "jeaninne@queonda.com.mx";
 								$message = $msgHeader . $msgHeaderAdmin . $body . $msgFooter;
 								echo $msgHeaderAdmin . $body;								
 								wp_mail($to, $subject, $message);
 							} else { /* Envia alerta responsable para hacerla */
-								$msgHeaderResponsable	= '<p style="margin-bottom: 20px;">La fecha de entrega del brief es cercana, si finalizaste con esta tarea no olvides marcarla con el estatus "Hecho" para que el administrador pueda cerrarla.</p>';
+								$msgHeaderResponsable	= '<p style="margin-bottom: 20px;">Mantente al tanto de la fecha de entrega, si finalizaste con esta tarea no olvides marcarla con el estatus "Hecho" para que el administrador pueda cerrarla.</p>';
 								$to 	 = $responsableMail;
 								$message = $msgHeader . $msgHeaderResponsable . $body . $msgFooter;
 								echo $msgHeaderResponsable . $body;								
