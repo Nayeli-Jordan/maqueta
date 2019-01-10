@@ -6,7 +6,6 @@
 	$msgHeader 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
 	$msgHeader 		   .= '<div style="text-align: center; margin-bottom: 20px;"><a style="color: #000; text-align: center; display: block;" href="' . SITEURL . '"><img style="display: inline-block; margin: auto;" src="https://queonda.com.mx/sites/queonda/wp-content/themes/qo-theme/images/identidad/qo-logo-mail.png"></a></div>'; /* to do cambiar por sitio final */
 	$msgHeader 		   .= '<h1 style="display: block; margin-bottom: 20px; text-align: center;  font-size: 20px; font-weight: 700; color: #7b2183; text-transform: uppercase;">Alerta Brief QO</h1>';
-	$msgHeader 			.= '<p style="margin-bottom: 20px;">La fecha de entrega del brief es cercana. Si el proyecto ya se ha cerrado o la fecha de entrega se ha modificado no olvides actualizarlo desde el administrador.</p>';
 
 	$msgFooter 			 = '<div style="text-align: center; margin-bottom: 10px; margin-top: 20px;"><p><small>Este email fue enviado desde el sitio de ¿Qué Onda?</small></p></div>';
 	$msgFooter 	        .= '</body></html>';
@@ -53,6 +52,8 @@
 		    			$ent_fecha3_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha3_ext', true );
 		    			$ent_fecha4_ext    		= get_post_meta( $post_id, 'sistema_ent_fecha4_ext', true );
 
+			    		$permalink 				= get_permalink();
+
 	    				$todayDate 	= date('Y-m-d');
 						if( $ent_fecha4_ext != "" ) : 
 							$limitFechaEntrega = $ent_fecha4_ext;
@@ -94,19 +95,24 @@
 
 		        			$body = '';
 							$body .= '<div style="margin-bottom: 20px;">';
-							$body .= '<p><strong style="color: #7b2183;">Brief: </strong>' . $title . '</p>';
+							$body .= '<p><strong style="color: #7b2183;">Brief: </strong>' . $title . ' - ' . $permalink . '</p>';
 							$body .= '<p><strong style="color: #7b2183;">Responsable: </strong>' . $responsableName . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Cliente: </strong>' . $cliente . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Proyecto: </strong>' . $proyecto . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Estatus: </strong>' . $estatus . '</p>';
-							$body .= '<p><strong style="color: #7b2183;">Prioridad: </strong>' . $prioridad . '</p>';
+							$body .= '<p><strong style="color: #7b2183;">Cliente: </strong>' . $cliente . ' | <strong style="color: #7b2183;">Proyecto: </strong>' . $proyecto . '</p>';
+							$body .= '<p><strong style="color: #7b2183;">Estatus: </strong>' . $estatus . ' | <strong style="color: #7b2183;">Prioridad: </strong>' . $prioridad . '</p>';
 							$body .= '<p><strong style="color: #7b2183;">Entrega: </strong>' . $limitFechaEntrega . '</p>';
 							$body .= '</div>';
 
-							if ($responsableMail != '') {
-								$to 	 = $responsableMail . "jeaninne@queonda.com.mx, pruebas@altoempleo.com.mx";
-								$message = $msgHeader . $body . $msgFooter;
-								echo $message;								
+							if ($estatus === 'Hecho') { /* Envia alerta sólo a admin para que la cierre */
+								$msgHeaderAdmin			= '<p style="margin-bottom: 20px;">La fecha de entrega es cercana pero la tarea ya ha sido marcado como <strong style="color: #7b2183;">HECHA</strong>, asegurate de que la tarea esté terminada y marcala con estatus "Cerrado" para dejar de recibir esta alerta.</p>';
+								$to 	 = "pruebas@altoempleo.com.mx";/*jeaninne@queonda.com.mx, */
+								$message = $msgHeader . $msgHeaderAdmin . $body . $msgFooter;
+								echo $msgHeaderAdmin . $body;								
+								wp_mail($to, $subject, $message);
+							} else { /* Envia alerta responsable para hacerla */
+								$msgHeaderResponsable	= '<p style="margin-bottom: 20px;">La fecha de entrega del brief es cercana, si finalizaste con esta tarea no olvides marcarla con el estatus "Hecho" para que el administrador pueda cerrarla.</p>';
+								$to 	 = $responsableMail;
+								$message = $msgHeader . $msgHeaderResponsable . $body . $msgFooter;
+								echo $msgHeaderResponsable . $body;								
 								wp_mail($to, $subject, $message);
 							}
 						}

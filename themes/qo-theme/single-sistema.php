@@ -48,7 +48,7 @@
 						<div id="tiempo-cotizado" class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light open-modal">
 					<?php else: ?>
 						<div class="col s12 sm6 m4 l2 hide-on-sm-and-down bg-purple-light">
-					<?php endif ?>
+					<?php endif; ?>
 							<p class="color-light text-center">Tiempo Cotizado</p>
 						</div>	
 					<div class="col s12 sm6 m4 l2 clear bg-purple-xlight"><p>Requerimiento</p></div>

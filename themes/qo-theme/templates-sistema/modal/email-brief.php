@@ -35,7 +35,7 @@
 	                <option value="Brief Nuevo">Brief Nuevo</option>
 	                <option value="Brief Actualizado">Brief Actualizado</option>
 	            </select>
-	            <label>Notas extra*</label>
+	            <label>Notas extra</label>
 		        <textarea name="sistema_emailNotas" id="sistema_emailNotas" placeholder="Información extra"></textarea>
 				<input type="submit" id="qo_briefEmail_submit" name="qo_briefEmail_submit" class="width-100p" value="Enviar correo"/>
 				<input type="hidden" name="edit_emailBrief" value="post" />
@@ -45,7 +45,7 @@
 			    $emailNotas 	= $_POST['sistema_emailNotas'];
 
 				/* Send email */
-				$to 		 = $responsableMail . "pruebas@altoempleo.com.mx";
+				$to 		 = $responsableMail;
 				if ($sistema_emailTipo === 'Brief Nuevo') {
 			    	$subject 	= "BRIEF: " . $titleBrief . " | Nuevo";
 			    	$titleEmail = "Nuevo Brief QO";
