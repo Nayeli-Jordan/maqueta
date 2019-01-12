@@ -37,26 +37,6 @@ header.js-header {
 						box-shadow: 0 3px 10px 0 rgba(255,255,255,0.30);
 						z-index: 1;
 						transition: .3s ease-out;
-						&:before, &:after{
-							content: '';
-							display: block;
-							left: 5px;
-							position: relative;
-							width: 5px;
-							height: 5px;
-							background-color: #484848;
-							border-radius: 50%;
-							box-shadow: 0 3px 10px 0 rgba(255,255,255,0.30);
-						}
-						&:before { 
-							top: -18px;
-						}
-						&:after {
-							bottom: -21px;
-						}
-						@media #{$sm-and-down} { 
-						  display: none;
-						}
 					}
 					span {
 						position: absolute;
@@ -138,6 +118,7 @@ header.js-header {
 }
 @media #{$medium-and-up} {
 	.page-home .icon-cancel, .page-home .icon-menu { display: none!important; }
+	.page-home .icon-close.icon-cancel { display: block!important; }
 }
 .page-home .icon-menu {
 	position: fixed;

@@ -108,4 +108,4 @@
 			<a href="<?php echo $linkCard; ?>"><div class="shadow btn-primary-rounded"><span class="icon-eye"></span></div></a>
 		</div>							
 	</div>
-</div>	
+</div>

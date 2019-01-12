@@ -30,6 +30,12 @@ add_action( 'wp_enqueue_scripts', function(){
         wp_enqueue_script( 'imagesloaded_js', JSPATH.'imagesloaded.pkgd.min.js', array(), '', true );
         wp_enqueue_script( 'masonry_js', JSPATH.'packery.pkgd.min.js', array(), '', true );
         wp_enqueue_script( 'cycle_js', JSPATH.'jquery.cycle2.min.js', array(), '', true );
+        /* Proyectos */
+        /* Morphin button */
+        /*wp_enqueue_script( 'modernizr_js', JSPATH.'modernizr.custom.js', array(), '', true );
+        wp_enqueue_script( 'classie_js', JSPATH.'classie.js', array(), '', true );
+        wp_enqueue_script( 'uiMB_fixed_js', JSPATH.'uiMorphingButton_fixed.js', array(), '', true );
+        wp_enqueue_script( 'uiMB_inflow_js', JSPATH.'uiMorphingButton_inflow.js', array(), '', true );*/
     }
     wp_enqueue_script( 'qo_parsley', JSPATH.'parsley.min.js', array(), '1.0', true );
     wp_enqueue_script( 'isotope_js', JSPATH.'isotope.pkgd.min.js', array(), '', true );	

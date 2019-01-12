@@ -49,7 +49,7 @@
 
 		<!-- Google font(s) -->
 		<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"> -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|PT+Sans:700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Sans:700i" rel="stylesheet">
 
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection, print" />
@@ -63,6 +63,7 @@
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
+		<script src="<?php echo THEMEPATH; ?>js/modernizr.custom.js"></script>
 		<?php flush(); ?>
 	</head>
 	<body class="<?php if (is_home()) :?>page-home<?php endif; ?>">

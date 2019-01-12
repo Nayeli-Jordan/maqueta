@@ -10,11 +10,12 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			if( parseInt( isHome ) ){
-				if ($('.grid-item').length > 0) {
-					imageMasonry();
-				}				
+				proyectoSize();
 				logoScroll();
 				colorMenu();
+				setTimeout( function(){
+			    	imageMasonry();
+			   	}, 300);				
 			}
 			isotopeMultipleQO();
 			if ($('.my-calendar-date-switcher').length > 0) {
@@ -66,14 +67,15 @@ var $=jQuery.noConflict();
  
 		$(window).on('resize', function(){
 			if( parseInt( isHome ) ){
-				if ($('.grid-item').length > 0) {
-					imageMasonry();
-				}
+				proyectoSize();
 				// Eliminar overflow hidden si menú móvil se quedo abierto
 				if ($('.js-header.active').length > 0) {
 					$('.js-header').removeClass('active');
 					$('html').removeClass('snow');	
 				}
+				setTimeout( function(){
+			    	imageMasonry();
+			   	}, 300);
 			}
 		});
  
@@ -259,4 +261,18 @@ function colorMenu() {
 	}else{
 		$('.qo-nav').removeClass('nav-clare');
 	}
+}
+
+/*Obtener ancho proyecto*/
+function proyectoSize() {
+	var widthColProject 		= widthProyecto() - 24;
+	var heightColProjectCorta 	= widthColProject / 2;
+	var heightColProjectLarga 	= widthColProject * 1.35;
+	$('#section-trabajos .col .morph-button, #section-trabajos .col .morph-button .morph-content').css('width', widthColProject);
+	/* Altura según ancho */
+	$('#section-trabajos .col .morph-button.size_corta, #section-trabajos .col .morph-button.size_corta .morph-content').css('height', heightColProjectCorta);
+	$('#section-trabajos .col .morph-button.size_larga, #section-trabajos .col .morph-button.size_larga .morph-content').css('height', heightColProjectLarga);
+}
+function widthProyecto() {
+	return $('#section-trabajos .col:first-child').outerWidth();
 }

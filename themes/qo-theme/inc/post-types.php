@@ -100,16 +100,16 @@ add_action('init', function(){
 	register_post_type( 'clientes', $args );	
 
 	$labels = array(
-		'name'          => 'Trabajo',
-		'singular_name' => 'Trabajo',
-		'add_new'       => 'Nuevo Trabajo',
-		'add_new_item'  => 'Nuevo Trabajo',
-		'edit_item'     => 'Editar Trabajo',
-		'new_item'      => 'Nuevo Trabajo',
-		'all_items'     => 'Trabajo',
-		'view_item'     => 'Ver Trabajo',
-		'search_items'  => 'Buscar Trabajo',
-		'not_found'     => 'No hay Trabajo.',
+		'name'          => 'Proyecto',
+		'singular_name' => 'Proyecto',
+		'add_new'       => 'Nuevo Proyecto',
+		'add_new_item'  => 'Nuevo Proyecto',
+		'edit_item'     => 'Editar Proyecto',
+		'new_item'      => 'Nuevo Proyecto',
+		'all_items'     => 'Proyecto',
+		'view_item'     => 'Ver Proyecto',
+		'search_items'  => 'Buscar Proyecto',
+		'not_found'     => 'No hay Proyecto.',
 		'menu_name'     => 'Proyectos'
 	);
 

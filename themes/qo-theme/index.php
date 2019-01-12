@@ -23,12 +23,10 @@
 		<section id="section-nosotros" class="container text-center padding-top-bottom-50">
 			<div class="row relative">
 				<div class="bg-image bg-contain bg-puntos margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/puntos.png);"></div>
-				<div class="bg-image bg-contain absolute top-15p width-40p padding-bottom-40p moveB z-index--1" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
-				<div class="bg-image bg-contain absolute top--10p right-0 width-30p padding-bottom-30p moveA z-index--1" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 				<?php
 			        $args = array(
 			            'post_type' 		=> 'nosotros',
-			            'posts_per_page' 	=> 3,
+			            'posts_per_page' 	=> 1,
 			            'orderby' 			=> 'date',
 			            'order' 			=> 'ASC'
 			            );
@@ -37,14 +35,9 @@
 			        if ( $loop->have_posts() ) {
 			            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
-							<div class="col s12 m4 padding-left-right-30">
-								<div class="bg-image bg-contain bg-icon-nosotros margin-bottom-large" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
-								<h3 class="tile-qo <?php if( $i === 3 ) : ?>title-qo-small<?php endif; ?>"><?php the_title(); ?></h3>
-								<div class="relative fz-small">
+							<div class="col s12 l10 offset-l1">
+								<div class="box-opacity">
 									<?php the_content(); ?>
-									<?php if( $i !== 3 ) : ?>
-										<div class="bg-image bg-contain bg-line-dotted margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/line-nosotros1.png);"></div>
-									<?php endif; ?>
 								</div>
 							</div>
 			            <?php $i ++;  endwhile;
@@ -73,13 +66,11 @@
 						<div>
 							<div class="content-card">
 								<div class="content-card-image">
-									<div class="fondo-bg-image"></div>
 									<div class="bg-image" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>									
 								</div>
 								<div class="content-card-body">
 									<h3><?php the_title(); ?></h3>
-									<div class="hr bg-gradient-qo"></div>
-									<?php the_content(); ?>										
+									<div class="hr bg-gradient-qo"></div>					
 								</div>					
 							</div>
 						</div>
@@ -91,10 +82,6 @@
 		<div class="services-pager"></div>
 	    <div id="prev-service" class="bg-image bg-contain bg-arrow" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/atras.png);"></div>
 	    <div id="next-service" class="bg-image bg-contain bg-arrow" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/delante.png);"></div>
-	    <div class="bg-image bg-contain absolute top-10p right-10p width-25p padding-bottom-25p rotate-60 moveSpeed" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
-	    <div class="bg-image bg-contain absolute top-25p left-0 width-20p padding-bottom-20p rotate-140 moveA" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-rosa.png);"></div>
-	    <div class="bg-image bg-contain absolute bottom-15p right-0 width-35p padding-bottom-45p rotate-120 moveB" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
-	    <div class="bg-image bg-contain absolute bottom-5p left-5p width-30p padding-bottom-30p rotate-270 moveSpeed" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/bola-azul.png);"></div>
 	</section>
 	<div class="relative z-index-100">
 		<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo.png);"></div>
@@ -125,8 +112,40 @@
 			</div>
 		</section>
 		<section id="section-trabajos" class="container">
-			<h2 class="color-light">Trabajos</h2>
+			<h2 class="color-light">Proyectos</h2>
 			<div class="row grid-images">
+				<?php
+			        $args = array(
+			            'post_type' 		=> 'proyectos',
+			            'posts_per_page' 	=> -1,
+			            'orderby' 			=> 'date',
+			            'order' 			=> 'ASC'
+			            );
+			        $loop = new WP_Query( $args );
+			        $i = 1;
+			        if ( $loop->have_posts() ) {
+			            while ( $loop->have_posts() ) : $loop->the_post(); 
+			            	// Get ancho taxonomy
+							$terms_proyecto = get_the_term_list( $post->ID, 'dimensiones', '', ', ', '' ) ; ?>		
+							<div class="col s12 sm6 l4 grid-item">
+								<div class="morph-button morph-button-modal morph-button-modal-<?php echo $i; ?> morph-button-fixed size_<?php echo strip_tags($terms_proyecto); ?>">
+									<button type="button" class="bg-image " style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);"></button>
+									<div class="morph-content">
+										<div>
+											<div class="content-style-form content-style-form-1">
+												<span class="icon-close icon-cancel"></span>
+												<div><?php the_title(); ?></div>
+											</div>
+										</div>
+									</div>
+								</div><!-- morph-button -->
+							</div>
+			            <?php $i ++;  endwhile;
+			        } 
+			        wp_reset_postdata();
+			    ?>
+		   	</div> 
+			<div class="row grid-images hide">
 			<?php
 		        $args = array(
 		            'post_type' 		=> 'proyectos',
