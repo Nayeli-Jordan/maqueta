@@ -4,10 +4,10 @@ header.js-header {
 		width: 45px;
 		min-height: 100vh;
 		z-index: 200;
-		animation: animatedNav 1.5s linear; 
-		-ms-animation: animatedNav 1.5s linear;
-		-moz-animation: animatedNav 1.5s linear;
-		-webkit-animation: animatedNav 1.5s linear;		
+		animation: animatedNav .5s linear; 
+		-ms-animation: animatedNav .5s linear;
+		-moz-animation: animatedNav .5s linear;
+		-webkit-animation: animatedNav .5s linear;		
 		ul {
 			position: absolute;
 			top: calc(50% - 155px); //Height ul

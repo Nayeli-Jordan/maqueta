@@ -2019,7 +2019,7 @@ button {
   padding: 0 1em;
   border: none;
   cursor: pointer;
-  /* z-index: 1000; */
+  z-index: 1000;
   width: 100%;
   height: 100%;
   -webkit-transition: opacity 0.1s 0.5s;
@@ -2044,7 +2044,7 @@ button {
   position: fixed;
   z-index: 900;
   opacity: 0;
-  background-color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), transparent);
   -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
   transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
 }
@@ -2061,32 +2061,43 @@ button {
   position: absolute;
   right: 20px;
   top: 20px;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   text-align: center;
-  line-height: 26px;
+  line-height: 31px;
   border: 2px solid #000;
   border-radius: 50%;
   cursor: pointer;
 }
-/* line 230, ../sass/components/_buttons.scss */
+@media only screen and (max-width: 600px) {
+  /* line 215, ../sass/components/_buttons.scss */
+  .morph-button .morph-content > div .icon-cancel {
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+  }
+}
+/* line 237, ../sass/components/_buttons.scss */
 .morph-button.open > button {
   opacity: 0.7;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 235, ../sass/components/_buttons.scss */
+/* line 242, ../sass/components/_buttons.scss */
 .morph-button.open .morph-content {
   opacity: 1;
-  top: 10vh !important;
-  left: 10vw !important;
-  width: 80vw !important;
-  height: 80vh !important;
+  top: 0vh !important;
+  left: 0vw !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
   -webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, opacity 0.1s;
   transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, opacity 0.1s;
 }
 @media only screen and (max-width: 600px) {
-  /* line 235, ../sass/components/_buttons.scss */
+  /* line 242, ../sass/components/_buttons.scss */
   .morph-button.open .morph-content {
     top: 0px !important;
     left: 0px !important;
@@ -2096,7 +2107,7 @@ button {
     overflow-y: scroll;
   }
 }
-/* line 251, ../sass/components/_buttons.scss */
+/* line 259, ../sass/components/_buttons.scss */
 .morph-button.open .morph-content > div {
   visibility: visible;
   height: auto;
@@ -2104,20 +2115,20 @@ button {
   -webkit-transition: opacity 0.3s 0.5s;
   transition: opacity 0.3s 0.5s;
 }
-/* line 259, ../sass/components/_buttons.scss */
+/* line 267, ../sass/components/_buttons.scss */
 .morph-button.open::before {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 265, ../sass/components/_buttons.scss */
+/* line 273, ../sass/components/_buttons.scss */
 .morph-button.active::before {
   z-index: 1800;
 }
-/* line 266, ../sass/components/_buttons.scss */
+/* line 274, ../sass/components/_buttons.scss */
 .morph-button.active .morph-content {
   z-index: 1900;
 }
-/* line 270, ../sass/components/_buttons.scss */
+/* line 278, ../sass/components/_buttons.scss */
 .morph-button::before {
   position: fixed;
   top: 0;
@@ -2134,7 +2145,7 @@ button {
 }
 
 /* Let's add some nice easing for all cases */
-/* line 286, ../sass/components/_buttons.scss */
+/* line 294, ../sass/components/_buttons.scss */
 .morph-button .morph-content,
 .morph-button.open .morph-content {
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
@@ -2142,21 +2153,21 @@ button {
 }
 
 /* Helper classes */
-/* line 293, ../sass/components/_buttons.scss */
+/* line 301, ../sass/components/_buttons.scss */
 .noscroll {
   overflow: hidden;
 }
 
-/* line 294, ../sass/components/_buttons.scss */
+/* line 302, ../sass/components/_buttons.scss */
 .no-js .morph-button {
   margin: 10px 0;
   float: none;
 }
-/* line 297, ../sass/components/_buttons.scss */
+/* line 305, ../sass/components/_buttons.scss */
 .no-js .morph-button > button {
   display: none;
 }
-/* line 298, ../sass/components/_buttons.scss */
+/* line 306, ../sass/components/_buttons.scss */
 .no-js .morph-button, .no-js .morph-button .morph-content, .no-js .morph-button .morph-content > div {
   position: relative;
   width: auto;
@@ -2169,24 +2180,24 @@ button {
   transform: none;
   pointer-events: auto;
 }
-/* line 311, ../sass/components/_buttons.scss */
+/* line 319, ../sass/components/_buttons.scss */
 .no-js .morph-button .icon-close, .no-js .morph-button .morph-content .icon-close, .no-js .morph-button .morph-content > div .icon-close {
   display: none;
 }
 
-/* line 317, ../sass/components/_buttons.scss */
+/* line 325, ../sass/components/_buttons.scss */
 .no-transition {
   -webkit-transition: none !important;
   transition: none !important;
 }
 
 /* Button project large */
-/* line 323, ../sass/components/_buttons.scss */
+/* line 331, ../sass/components/_buttons.scss */
 #section-trabajos .grid-images {
   overflow: hidden;
 }
 
-/* line 324, ../sass/components/_buttons.scss */
+/* line 332, ../sass/components/_buttons.scss */
 .change-width {
   z-index: 1000;
   cursor: pointer;
@@ -2196,27 +2207,27 @@ button {
   right: 12px;
   left: 12px;
 }
-/* line 332, ../sass/components/_buttons.scss */
+/* line 340, ../sass/components/_buttons.scss */
 .change-width > div {
   width: 100%;
 }
-/* line 335, ../sass/components/_buttons.scss */
+/* line 343, ../sass/components/_buttons.scss */
 .change-width:hover > div {
   opacity: 1;
 }
-/* line 336, ../sass/components/_buttons.scss */
+/* line 344, ../sass/components/_buttons.scss */
 .change-width.hide + .morph-button > button {
   z-index: 1000;
 }
 @media only screen and (max-width: 600px) {
-  /* line 324, ../sass/components/_buttons.scss */
+  /* line 332, ../sass/components/_buttons.scss */
   .change-width {
     display: none;
   }
 }
 
 /* Hover */
-/* line 343, ../sass/components/_buttons.scss */
+/* line 351, ../sass/components/_buttons.scss */
 .morph-button > button div,
 .change-width > div {
   height: 100%;
@@ -2229,7 +2240,7 @@ button {
   transition: opacity 0.5s;
 }
 
-/* line 354, ../sass/components/_buttons.scss */
+/* line 362, ../sass/components/_buttons.scss */
 .morph-button > button:hover div,
 .change-width:hover > div {
   opacity: 1;
@@ -5009,9 +5020,64 @@ video.responsive-video {
   }
 }
 
-/* line 60, ../sass/components/_modal.scss */
+/* line 58, ../sass/components/_modal.scss */
 .open-modal {
   cursor: pointer;
+}
+
+/* Proyectos Morphing Modal */
+/* line 62, ../sass/components/_modal.scss */
+.projectVideo .projectVideo_header {
+  position: absolute;
+  right: 50%;
+  width: 100%;
+  max-width: 1050px;
+  z-index: 1;
+  color: #7b2183;
+  padding: 20px 30px 0;
+  text-shadow: 1px 1px 3px #9e9e9e40;
+  transform: translateX(50%);
+}
+@media only screen and (max-width: 600px) {
+  /* line 62, ../sass/components/_modal.scss */
+  .projectVideo .projectVideo_header {
+    padding: 10px 20px 0;
+  }
+}
+/* line 73, ../sass/components/_modal.scss */
+.projectVideo .projectVideo_header span {
+  border-color: #7b2183 !important;
+  box-shadow: 0 3px 10px 0 rgba(158, 158, 158, 0.25);
+}
+/* line 76, ../sass/components/_modal.scss */
+.projectVideo .projectVideo_header span:hover {
+  box-shadow: 0 3px 10px 0 rgba(158, 158, 158, 0.5);
+}
+/* line 78, ../sass/components/_modal.scss */
+.projectVideo .projectVideo_header div {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 600px) {
+  /* line 78, ../sass/components/_modal.scss */
+  .projectVideo .projectVideo_header div {
+    font-size: 14px;
+  }
+}
+/* line 86, ../sass/components/_modal.scss */
+.projectVideo video {
+  display: block;
+  max-height: 80vh;
+  max-width: 1050px;
+  margin: auto;
+}
+@media only screen and (max-width: 992px) {
+  /* line 86, ../sass/components/_modal.scss */
+  .projectVideo video {
+    max-height: 100vh;
+  }
 }
 
 /* line 4, ../sass/components/_position.scss */
@@ -10024,10 +10090,10 @@ small {
     width: 45px;
     min-height: 100vh;
     z-index: 200;
-    animation: animatedNav 1.5s linear;
-    -ms-animation: animatedNav 1.5s linear;
-    -moz-animation: animatedNav 1.5s linear;
-    -webkit-animation: animatedNav 1.5s linear;
+    animation: animatedNav .5s linear;
+    -ms-animation: animatedNav .5s linear;
+    -moz-animation: animatedNav .5s linear;
+    -webkit-animation: animatedNav .5s linear;
   }
   /* line 11, ../sass/components/_header.scss */
   header.js-header ul {

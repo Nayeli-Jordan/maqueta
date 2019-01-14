@@ -179,9 +179,7 @@ var $=jQuery.noConflict();
 
 		/* Width col project */
 		$(".change-width").click(function() {
-			//buttonMenuScroll();
 			var idProject = $(this).attr('id');
-			console.log(idProject);
 			var colProject = ".col_" + idProject;
 			$(colProject).addClass('m12 l6').removeClass('m6 l4');
 			$(colProject + ' .change-width').addClass('hide');
@@ -189,6 +187,20 @@ var $=jQuery.noConflict();
 			setTimeout( function(){
 		    	imageMasonry();
 		   	}, 100);
+		});
+
+		/* PROYECT */
+		/* Video Play */
+		$(".view-project").click(function() {
+			var idProject = $(this).parent().parent( ".project-item" ).attr('id');
+			var videoProject = "video_" + idProject;
+			document.getElementById(videoProject).play();
+		});
+		/* Video Pause */
+		$(".projectVideo .icon-cancel").click(function() {
+			var idProject = $(this).parent().parent().parent().parent().parent( ".project-item" ).attr('id');
+			var videoProject = "video_" + idProject;
+			document.getElementById(videoProject).pause();
 		});
 		
 	});

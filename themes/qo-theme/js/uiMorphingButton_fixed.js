@@ -82,6 +82,7 @@
 			classie.addClass( this.el, 'active' );
 			this.options.onBeforeOpen();
 			$('html').addClass('overflow-hide'); /* Bloquear scroll */
+			$('header.js-header, .logo-fixed').addClass('hide'); /* Ocultar menú */
 		}
 
 		this.isAnimating = true;
@@ -106,6 +107,7 @@
 					classie.removeClass( self.el, 'active' );
 					self.options.onAfterClose();
 					$('html').removeClass('overflow-hide'); /* Desbloquear scroll */
+					$('header.js-header, .logo-fixed').removeClass('hide'); /* Mostrar menú */
 				}
 				else {
 					self.options.onAfterOpen();
