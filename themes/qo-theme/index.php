@@ -124,12 +124,21 @@
 			        $loop = new WP_Query( $args );
 			        $i = 1;
 			        if ( $loop->have_posts() ) {
-			            while ( $loop->have_posts() ) : $loop->the_post(); 
+			            while ( $loop->have_posts() ) : $loop->the_post();
+	    					$post_id        = get_the_ID();
 			            	// Get ancho taxonomy
 							$terms_proyecto = get_the_term_list( $post->ID, 'dimensiones', '', ', ', '' ) ; ?>		
-							<div class="col s12 sm6 l4 grid-item">
+							<div class="col s12 m6 l4 grid-item col_<?php echo $post_id; ?>">
+								<!-- Cambiar tamaño de post a m12 l6 (más grande) antes de abrir modal (morphing)
+									Comentar si se quiere eliminar está acción y habilitar z-index: 1000 para button morphing 
+								-->
+								<div id="<?php echo $post_id; ?>" class="change-width">
+									<div><i class="content-center icon-resize-full"></i></div>
+								</div>
 								<div class="morph-button morph-button-modal morph-button-modal-<?php echo $i; ?> morph-button-fixed size_<?php echo strip_tags($terms_proyecto); ?>">
-									<button type="button" class="bg-image " style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);"></button>
+									<button type="button" class="bg-image " style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);">
+										<div><i class="icon-eye content-center"></i></div>
+									</button>
 									<div class="morph-content">
 										<div>
 											<div class="content-style-form content-style-form-1">

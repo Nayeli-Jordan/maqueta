@@ -176,6 +176,20 @@ var $=jQuery.noConflict();
 			console.log('click');
 			window.print();
 		});
+
+		/* Width col project */
+		$(".change-width").click(function() {
+			//buttonMenuScroll();
+			var idProject = $(this).attr('id');
+			console.log(idProject);
+			var colProject = ".col_" + idProject;
+			$(colProject).addClass('m12 l6').removeClass('m6 l4');
+			$(colProject + ' .change-width').addClass('hide');
+			proyectoSize();
+			setTimeout( function(){
+		    	imageMasonry();
+		   	}, 100);
+		});
 		
 	});
 })(jQuery);
@@ -265,14 +279,26 @@ function colorMenu() {
 
 /*Obtener ancho proyecto*/
 function proyectoSize() {
-	var widthColProject 		= widthProyecto() - 24;
-	var heightColProjectCorta 	= widthColProject / 2;
-	var heightColProjectLarga 	= widthColProject * 1.35;
-	$('#section-trabajos .col .morph-button, #section-trabajos .col .morph-button .morph-content').css('width', widthColProject);
+	var widthColProjectM6 		= widthProyectoM6() - 24;
+	var widthColProjectM12 		= widthProyectoM12() - 24;
+
+	var heightColProjectCortaM6 	= widthColProjectM6 / 2;
+	var heightColProjectLargaM6 	= widthColProjectM6 * 1.35;
+
+	var heightColProjectCortaM12 	= widthColProjectM12 / 2;
+	var heightColProjectLargaM12 	= widthColProjectM12 * 1.35;
+
+	$('.col.m6 .morph-button, .col.m6 .morph-button .morph-content').css('width', widthColProjectM6);
+	$('.col.m12 .morph-button, .col.m12 .morph-button .morph-content').css('width', widthColProjectM12);
 	/* Altura según ancho */
-	$('#section-trabajos .col .morph-button.size_corta, #section-trabajos .col .morph-button.size_corta .morph-content').css('height', heightColProjectCorta);
-	$('#section-trabajos .col .morph-button.size_larga, #section-trabajos .col .morph-button.size_larga .morph-content').css('height', heightColProjectLarga);
+	$('.col.m6 .morph-button.size_corta, .col.m6 .morph-button.size_corta .morph-content').css('height', heightColProjectCortaM6);
+	$('.col.m6 .morph-button.size_larga, .col.m6 .morph-button.size_larga .morph-content').css('height', heightColProjectLargaM6);
+	$('.col.m12 .morph-button.size_corta, .col.m12 .morph-button.size_corta .morph-content').css('height', heightColProjectCortaM12);
+	$('.col.m12 .morph-button.size_larga, .col.m12 .morph-button.size_larga .morph-content').css('height', heightColProjectLargaM12);
 }
-function widthProyecto() {
-	return $('#section-trabajos .col:first-child').outerWidth();
+function widthProyectoM6() {
+	return $('#section-trabajos .col.m6').outerWidth();
+}
+function widthProyectoM12() {
+	return $('#section-trabajos .col.m12').outerWidth();
 }

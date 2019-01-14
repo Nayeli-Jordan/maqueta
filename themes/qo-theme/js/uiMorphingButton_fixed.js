@@ -81,6 +81,7 @@
 			// add class active (solves z-index problem when more than one button is in the page)
 			classie.addClass( this.el, 'active' );
 			this.options.onBeforeOpen();
+			$('html').addClass('overflow-hide'); /* Bloquear scroll */
 		}
 
 		this.isAnimating = true;
@@ -104,6 +105,7 @@
 					// remove class active (after closing)
 					classie.removeClass( self.el, 'active' );
 					self.options.onAfterClose();
+					$('html').removeClass('overflow-hide'); /* Desbloquear scroll */
 				}
 				else {
 					self.options.onAfterOpen();
