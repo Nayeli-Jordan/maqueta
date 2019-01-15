@@ -125,7 +125,7 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 6,
-		'supports'           => array( 'title', 'thumbnail', 'editor' ),
+		'supports'           => array( 'title', 'thumbnail' ),
 		'menu_icon' 		 => 'dashicons-admin-customizer'
 	);
 	register_post_type( 'proyectos', $args );	

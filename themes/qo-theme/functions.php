@@ -1365,6 +1365,129 @@ function qo_cotizaciones_save_metas( $idqo_cotizaciones, $qo_cotizaciones ){
 	}
 }
 
+/* Proyectos */
+add_action( 'add_meta_boxes', 'proyectos_custom_metabox' );
+function proyectos_custom_metabox(){
+    add_meta_box( 'proyectos_meta', 'Elementos del proyecto', 'display_proyectos_atributos', 'proyectos', 'advanced', 'default');
+}
+
+function display_proyectos_atributos( $proyectos ){
+    $item1      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item1', true ) );
+    $item2      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item2', true ) );
+    $item3      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item3', true ) );
+    $item4      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item4', true ) );
+    $item5      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item5', true ) );
+    $item6      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item6', true ) );
+    $item7      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item7', true ) );
+    $item8      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item8', true ) );
+    $item9      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item9', true ) );
+    $item10     = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item10', true ) );
+    $itemType1  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType1', true ) );
+    $itemType2  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType2', true ) );
+    $itemType3  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType3', true ) );
+    $itemType4  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType4', true ) );
+    $itemType5  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType5', true ) );
+    $itemType6  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType6', true ) );
+    $itemType7  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType7', true ) );
+    $itemType8  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType8', true ) );
+    $itemType9  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType9', true ) );
+    $itemType10 = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType10', true ) );
+?>
+    <table class="qo-custom-fields" style="width: 100%;">
+        <?php $count = 1;
+        while ( $count < 11) { 
+            $item = ${'item' . $count};
+            $itemType = ${'itemType' . $count}; ?>
+            <tr>
+                <th>
+                    <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" required> -->
+                    <div class="input-image">
+                        <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>">
+                            <option value="" <?php selected($itemType, ''); ?>></option>
+                            <option value="Imagen" id="Imagen" <?php selected($itemType, 'Imagen'); ?>>Imagen</option>
+                            <option value="Video" id="Video" <?php selected($itemType, 'Video'); ?>>Video</option>
+                        </select>                        
+                        <input type="text" name="proyectos_item<?php echo $count; ?>" id="proyectos_item<?php echo $count; ?>" class="meta-image" placeholder="Archivo" value="<?php echo $item; ?>">
+                        <input type="button" class="button image-upload" value="Seleccionar">
+                    </div>
+                    <div class="image-preview">
+                        <img src="<?php echo $item; ?>">
+                    </div>
+                </th>
+            </tr>
+        <?php $count++;
+        } ?>
+    </table>
+<?php }
+
+add_action( 'save_post', 'proyectos_save_metas', 10, 2 );
+function proyectos_save_metas( $idproyectos, $proyectos ){
+    //Comprobamos que es del tipo que nos interesa
+    if ( $proyectos->post_type == 'proyectos' ){
+    //Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['proyectos_item1'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item1', $_POST['proyectos_item1'] );
+        }
+        if ( isset( $_POST['proyectos_item2'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item2', $_POST['proyectos_item2'] );
+        }
+        if ( isset( $_POST['proyectos_item3'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item3', $_POST['proyectos_item3'] );
+        }
+        if ( isset( $_POST['proyectos_item4'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item4', $_POST['proyectos_item4'] );
+        }
+        if ( isset( $_POST['proyectos_item5'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item5', $_POST['proyectos_item5'] );
+        }
+        if ( isset( $_POST['proyectos_item6'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item6', $_POST['proyectos_item6'] );
+        }
+        if ( isset( $_POST['proyectos_item7'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item7', $_POST['proyectos_item7'] );
+        }
+        if ( isset( $_POST['proyectos_item8'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item8', $_POST['proyectos_item8'] );
+        }
+        if ( isset( $_POST['proyectos_item9'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item9', $_POST['proyectos_item9'] );
+        }
+        if ( isset( $_POST['proyectos_item10'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_item10', $_POST['proyectos_item10'] );
+        }
+        if ( isset( $_POST['proyectos_itemType1'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType1', $_POST['proyectos_itemType1'] );
+        }
+        if ( isset( $_POST['proyectos_itemType2'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType2', $_POST['proyectos_itemType2'] );
+        }
+        if ( isset( $_POST['proyectos_itemType3'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType3', $_POST['proyectos_itemType3'] );
+        }
+        if ( isset( $_POST['proyectos_itemType4'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType4', $_POST['proyectos_itemType4'] );
+        }
+        if ( isset( $_POST['proyectos_itemType5'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType5', $_POST['proyectos_itemType5'] );
+        }
+        if ( isset( $_POST['proyectos_itemType6'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType6', $_POST['proyectos_itemType6'] );
+        }
+        if ( isset( $_POST['proyectos_itemType7'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType7', $_POST['proyectos_itemType7'] );
+        }
+        if ( isset( $_POST['proyectos_itemType8'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType8', $_POST['proyectos_itemType8'] );
+        }
+        if ( isset( $_POST['proyectos_itemType9'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType9', $_POST['proyectos_itemType9'] );
+        }
+        if ( isset( $_POST['proyectos_itemType10'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_itemType10', $_POST['proyectos_itemType10'] );
+        }
+    }
+}
+
 /* FORMS SISTEMA */
 add_action ('template_redirect', 'custom_redirect_estatusCotizacion');
 function custom_redirect_estatusCotizacion() {
