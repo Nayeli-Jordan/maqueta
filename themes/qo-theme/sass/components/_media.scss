@@ -342,11 +342,3 @@ video.responsive-video {
 		max-height: 190px;
 	}
 }
-
-#section-trabajos {
-	.bg-image {
-		width: 100%;
-		&.width-corta { padding-bottom: 50%; }
-		&.width-larga { padding-bottom: 135%; }
-	}
-}

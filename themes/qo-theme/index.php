@@ -114,46 +114,52 @@
 		<section id="section-trabajos" class="container">
 			<h2 class="color-light">Proyectos</h2>
 			<div class="row grid-images">
-				<?php
-			        $args = array(
-			            'post_type' 		=> 'proyectos',
-			            'posts_per_page' 	=> -1,
-			            'orderby' 			=> 'date',
-			            'order' 			=> 'ASC'
-			            );
-			        $loop = new WP_Query( $args );
-			        $i = 1;
-			        if ( $loop->have_posts() ) {
-			            while ( $loop->have_posts() ) : $loop->the_post();
-	    					$post_id        = get_the_ID();
-			            	// Get ancho taxonomy
-							$terms_proyecto = get_the_term_list( $post->ID, 'dimensiones', '', ', ', '' ) ; ?>		
-							<div id="project_<?php echo $post_id; ?>" class="col s12 m6 l4 grid-item project-item col_<?php echo $post_id; ?>">
-								<!-- Cambiar tamaño de post a m12 l6 (más grande) antes de abrir modal (morphing)
-									Comentar si se quiere eliminar está acción y habilitar z-index: 1000 para button morphing 
-								-->
-								<!-- <div id="<?php echo $post_id; ?>" class="change-width">
-									<div><i class="content-center icon-resize-full"></i></div>
-								</div> -->
-								<div class="morph-button morph-button-modal morph-button-modal-<?php echo $i; ?> morph-button-fixed size_<?php echo strip_tags($terms_proyecto); ?>">
-									<button type="button" class="bg-image view-project" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);">
-										<div><i class="icon-eye content-center"></i></div>
-									</button>
-									<div class="morph-content">
-										<div class="projectVideo content-center">
-											<div class="projectVideo_header">
-												<span class="icon-close icon-cancel"></span>
-												<div><?php the_title(); ?></div>
-											</div>	
-											<video id="video_project_<?php echo $post_id; ?>" src="<?php echo THEMEPATH; ?>videos/prueba.mp4" class="width-100p" controls></video>
-										</div>
+			<?php
+		        $args = array(
+		            'post_type' 		=> 'proyectos',
+		            'posts_per_page' 	=> -1,
+		            'orderby' 			=> 'date',
+		            'order' 			=> 'ASC'
+		            );
+		        $loop = new WP_Query( $args );
+		        $i = 1;
+		        if ( $loop->have_posts() ) {
+		            while ( $loop->have_posts() ) : $loop->the_post();
+    					$post_id        = get_the_ID();
+		            	// Get ancho taxonomy
+						$terms_proyecto = get_the_term_list( $post->ID, 'dimensiones', '', ', ', '' ) ; ?>		
+						<div id="project_<?php echo $post_id; ?>" class="col s12 m6 l4 grid-item project-item col_<?php echo $post_id; ?>">
+							<div class="morph-button morph-button-modal morph-button-modal-<?php echo $i; ?> morph-button-fixed size_<?php echo strip_tags($terms_proyecto); ?>">
+								<button type="button" class="bg-image view-project" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>);">
+									<div><i class="icon-eye content-center"></i></div>
+								</button>
+								<div class="morph-content">
+									<div>
+										<div class="projectHeader">
+											<span class="icon-close icon-cancel"></span>
+											<div><?php the_title(); ?></div>
+										</div>									
+										<div class="projectContent content-center">
+											<div class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-next="#next-item_<?php echo $post_id; ?>" data-cycle-prev="#prev-item_<?php echo $post_id; ?>" data-cycle-pager=".<?php echo $post_id; ?>-pager">
+												<div>
+													<div class="bg-image bg-contain" style="background-image: url(http://localhost:8888/queonda/wp-content/uploads/2018/08/captural-1.png);"></div>
+												</div>
+												<div>
+													<video id="video_project_<?php echo $post_id; ?>" src="<?php echo THEMEPATH; ?>videos/prueba.mp4" class="width-100p" controls></video>
+												</div>
+											</div>
+											<div id="prev-item_<?php echo $post_id; ?>" class="bg-image bg-contain bg-arrow prev-itemProject" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/atras.png);"></div>
+											<div id="next-item_<?php echo $post_id; ?>" class="bg-image bg-contain bg-arrow next-itemProject" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/delante.png);"></div>
+										</div>	
+										<div class="<?php echo $post_id; ?>-pager projectPager"></div>
 									</div>
 								</div>
 							</div>
-			            <?php $i ++;  endwhile;
-			        } 
-			        wp_reset_postdata();
-			    ?>
+						</div>
+		            <?php $i ++;  endwhile;
+		        } 
+		        wp_reset_postdata();
+		    ?>
 		   	</div> 
 			<div class="row grid-images hide">
 			<?php
