@@ -116,13 +116,13 @@ var $=jQuery.noConflict();
 			}
 		});
 
-		if( parseInt( isHome ) ){
+		/*if( parseInt( isHome ) ){
 			$("a.item-scroll, .redes a").hover(function() {  //#section-nosotros .col,.bg-arrow, .services-pager span, footer a
 				var audio = document.getElementById("audio-click");
 				audio.volume = 0.1;
 				audio.play();
 			});
-		}
+		}*/
 
 		$(".bg-arrow, .services-pager span").click(function() {
 			var audio = document.getElementById("audio-slider");
@@ -181,19 +181,22 @@ var $=jQuery.noConflict();
 		$(".next-itemProject, .prev-itemProject").click(function() {
 			/* Si hay o no hay video */
 			if ($('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').length > 0){
+				$("video")[0].pause(); /*Detener video si se reproduco en el slide anterior*/
 				console.log('Hay video');
 				var idVideo = $('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').attr('id');
 				document.getElementById(idVideo).play();
 			} else {
 				console.log('Sin video');
 				/* Si hay un video corriendo lo pausa */
-				$("video")[0].pause();
+				$("video").each(function () { this.pause() });
 			}
 		});
 		$(".morph-button .icon-close").click(function(){
 			/* Si hay un video corriendo lo pausa y regresa al inicio */
-			$("video")[0].pause();
-			$("video")[0].currentTime = 0;
+			console.log('Detener videos');
+			/* En lugar de $("video")[0].pause(); para aplicar a todas las etiquetas de video */
+			$("video").each(function () { this.pause() });
+			$("video").each(function () { this.currentTime = 0 });
 		});
 		$(".view-project").click(function() {
 			/* Si hay o no hay video */
