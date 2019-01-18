@@ -1393,7 +1393,7 @@ function display_proyectos_atributos( $proyectos ){
     $itemType9  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType9', true ) );
     $itemType10 = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType10', true ) );
 ?>
-    <table class="qo-custom-fields" style="width: 100%;">
+    <table id="table-proyecto" class="qo-custom-fields" style="width: 100%;">
         <?php $count = 1;
         while ( $count < 11) { 
             $item = ${'item' . $count};
@@ -1401,13 +1401,13 @@ function display_proyectos_atributos( $proyectos ){
             <tr>
                 <th>
                     <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" required> -->
-                    <div class="input-image">
-                        <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>">
+                    <div id="itemProject<?php echo $count; ?>" class="input-image">
+                        <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>" class="typeItemProyect">
                             <option value="" <?php selected($itemType, ''); ?>></option>
                             <option value="Imagen" id="Imagen" <?php selected($itemType, 'Imagen'); ?>>Imagen</option>
                             <option value="Video" id="Video" <?php selected($itemType, 'Video'); ?>>Video</option>
                         </select>                        
-                        <input type="text" name="proyectos_item<?php echo $count; ?>" id="proyectos_item<?php echo $count; ?>" class="meta-image" placeholder="Archivo" value="<?php echo $item; ?>">
+                        <input type="text" name="proyectos_item<?php echo $count; ?>" id="proyectos_item<?php echo $count; ?>" class="meta-image" placeholder="URL Archivo" value="<?php echo $item; ?>">
                         <input type="button" class="button image-upload" value="Seleccionar">
                     </div>
                     <div class="image-preview">

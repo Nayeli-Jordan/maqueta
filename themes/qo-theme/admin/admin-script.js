@@ -61,4 +61,18 @@ jQuery(document).ready(function ($) {
     $('#new-calendar').css("display", "none");
   }
 
+  if ($('#table-proyecto').length > 0){
+    $('.typeItemProyect').on('change', function(){
+      var idItemProyect     = $(this).parent().attr('id');
+      console.log(idItemProyect);
+      if ($('#' + idItemProyect + ' .typeItemProyect option:selected').val() == 'Imagen' ){
+        //$('#' + idItemProyect + ' .image-upload').removeClass('hide');
+        $('#' + idItemProyect + ' + .image-preview').removeClass('opacity-0');
+      } else {
+        //$('#' + idItemProyect + ' .image-upload').addClass('hide');
+        $('#' + idItemProyect + ' + .image-preview').addClass('opacity-0');
+      }
+    }); 
+  }
+
 });

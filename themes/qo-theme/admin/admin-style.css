@@ -1,3 +1,5 @@
+.hide { display: none!important; }
+.opacity-0 { opacity: 0; }
 .qo-custom-fields label {
 	display: block;
 	font-size: 14px;
