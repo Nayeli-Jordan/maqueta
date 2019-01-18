@@ -163,7 +163,7 @@
 											<div><?php the_title(); ?></div>
 										</div>									
 										<div class="projectContent content-center">
-											<div class="cycle-slideshow" data-cycle-fx="carousel" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-next="#next-item_<?php echo $post_id; ?>" data-cycle-prev="#prev-item_<?php echo $post_id; ?>" data-cycle-pager=".<?php echo $post_id; ?>-pager">
+											<div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="0" data-cycle-slides="> div" data-cycle-next="#next-item_<?php echo $post_id; ?>" data-cycle-prev="#prev-item_<?php echo $post_id; ?>" data-cycle-pager=".<?php echo $post_id; ?>-pager">
 												<?php $count = 1; 
 												$totalItems = 0; /* Obtener total de slides */
 												while ( $count < 11) {
@@ -172,9 +172,9 @@
 													if ($item != '') { ?>
 														<div>
 															<?php if ($itemType === 'Imagen'): ?>
-																<div class="bg-image bg-contain" style="background-image: url(<?php echo $item; ?>);"></div>
+																<div class="slideImage bg-image bg-contain" style="background-image: url(<?php echo $item; ?>);"></div>
 															<?php else: ?>
-																<video src="<?php echo $item; ?>" class="width-100p" controls></video>	<!-- id="video_project_<?php echo $post_id; ?>" -->
+																<video id="video_project_<?php echo $post_id . '_' . $count; ?>" src="<?php echo $item; ?>" class="slideVideo width-100p" controls></video>
 															<?php endif ?>
 														</div>
 													<?php $totalItems++;

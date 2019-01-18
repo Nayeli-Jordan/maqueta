@@ -178,18 +178,33 @@ var $=jQuery.noConflict();
 		});
 
 		/* PROYECT */
-		/* Video Play */
-		/*$(".view-project").click(function() {
-			var idProject = $(this).parent().parent( ".project-item" ).attr('id');
-			var videoProject = "video_" + idProject;
-			document.getElementById(videoProject).play();
-		});*/
-		/* Video Pause */
-		/*$(".projectVideo .icon-cancel").click(function() {
-			var idProject = $(this).parent().parent().parent().parent().parent( ".project-item" ).attr('id');
-			var videoProject = "video_" + idProject;
-			document.getElementById(videoProject).pause();
-		});*/
+		$(".next-itemProject, .prev-itemProject").click(function() {
+			/* Si hay o no hay video */
+			if ($('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').length > 0){
+				console.log('Hay video');
+				var idVideo = $('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').attr('id');
+				document.getElementById(idVideo).play();
+			} else {
+				console.log('Sin video');
+				/* Si hay un video corriendo lo pausa */
+				$("video")[0].pause();
+			}
+		});
+		$(".morph-button .icon-close").click(function(){
+			/* Si hay un video corriendo lo pausa y regresa al inicio */
+			$("video")[0].pause();
+			$("video")[0].currentTime = 0;
+		});
+		$(".view-project").click(function() {
+			/* Si hay o no hay video */
+			setTimeout( function(){ /* Dar tiempo de que se active el modal (.morph-button.open) */
+				if ($('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').length > 0){
+					console.log('Hay video');
+					var idVideo = $('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').attr('id');
+					document.getElementById(idVideo).play();
+				}
+		   	}, 300);
+		});
 		
 	});
 })(jQuery);
