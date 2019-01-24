@@ -177,7 +177,7 @@ var $=jQuery.noConflict();
 			window.print();
 		});
 
-		/* PROYECT */
+		/* Video PROYECT */
 		$(".next-itemProject, .prev-itemProject").click(function() {
 			/* Si hay o no hay video */
 			if ($('#section-trabajos .morph-button.open .cycle-slide-active .slideVideo').length > 0){

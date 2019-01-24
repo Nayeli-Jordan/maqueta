@@ -30,7 +30,7 @@
 				update_post_meta($my_post_id,'qo_cotizaciones_estatus',$nuevoEstatus);
 
 				/* Send email */
-				$to 				= "verojacobo@altoempleo.com.mx, jeaninne@queonda.com.mx, pruebas@altoempleo.com.mx";		    
+				$to 				= "verojacobo@altoempleo.com.mx, jeaninne@queonda.com.mx";		    
 			    $subject 			= "Cotización Facturada | QO";
 
 				$message 			= '<html style="font-family: Arial, sans-serif; font-size: 14px;"><body>';
