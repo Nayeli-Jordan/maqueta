@@ -67,7 +67,7 @@
         </th>
 	</tr>	
 </table>
-<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table id="area-industrial" class="qo-custom-fields  table-sistema table-area <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?> hide">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO INDUSTRIAL / DATOS Y APOYO</h2></th>			
@@ -171,7 +171,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table id="area-creativa" class="qo-custom-fields  table-sistema table-area <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?> hide">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>DISEÑO VISUAL / DATOS Y APOYO</h2></th>			
@@ -264,7 +264,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table id="area-social-media" class="qo-custom-fields  table-sistema table-area <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?> hide">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>MARKETING / DATOS Y APOYO</h2></th>			
@@ -320,7 +320,7 @@
 		</tr>
 	</tbody>
 </table>
-<table class="qo-custom-fields  table-sistema <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?>">
+<table id="area-ux-ui" class="qo-custom-fields  table-sistema table-area <?php if( current_user_can('editor') ) :  ?>user-editor<?php endif; ?> hide">
 	<thead>
 		<tr>
 			<th colspan="6"><h2>SISTEMAS / DATOS Y APOYO</h2></th>			

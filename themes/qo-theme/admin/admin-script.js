@@ -75,4 +75,57 @@ jQuery(document).ready(function ($) {
     }); 
   }
 
+  if ($('#requerimientodiv').length > 0){
+    /* ready */
+    if($('#in-requerimiento-25').is(':checked')){/* ÁREA CREATIVA */
+      $('#area-creativa').removeClass('hide');
+    } else {
+      $('#area-creativa').addClass('hide');
+    }
+    if($('#in-requerimiento-27').is(':checked')){/* ÁREA CREATIVA */
+      $('#area-industrial').removeClass('hide');
+    } else {
+      $('#area-industrial').addClass('hide');
+    }
+    if($('#in-requerimiento-28').is(':checked')){/* ÁREA CREATIVA */
+      $('#area-social-media').removeClass('hide');
+    } else {
+      $('#area-social-media').addClass('hide');
+    }
+    if($('#in-requerimiento-26').is(':checked')){/* ÁREA CREATIVA */
+      $('#area-ux-ui').removeClass('hide');
+    } else {
+      $('#area-ux-ui').addClass('hide');
+    }
+
+    $('#in-requerimiento-25').click(function() { /* ÁREA CREATIVA */
+      if($(this).is(':checked')){
+        $('#area-creativa').removeClass('hide');
+      } else {
+        $('#area-creativa').addClass('hide');
+      }
+    });
+    $('#in-requerimiento-27').click(function() { /* ÁREA CREATIVA */
+      if($(this).is(':checked')){
+        $('#area-industrial').removeClass('hide');
+      } else {
+        $('#area-industrial').addClass('hide');
+      }
+    });
+    $('#in-requerimiento-28').click(function() { /* ÁREA CREATIVA */
+      if($(this).is(':checked')){
+        $('#area-social-media').removeClass('hide');
+      } else {
+        $('#area-social-media').addClass('hide');
+      }
+    });
+    $('#in-requerimiento-26').click(function() { /* ÁREA CREATIVA */
+      if($(this).is(':checked')){
+        $('#area-ux-ui').removeClass('hide');
+      } else {
+        $('#area-ux-ui').addClass('hide');
+      }
+    });
+  }
+
 });
