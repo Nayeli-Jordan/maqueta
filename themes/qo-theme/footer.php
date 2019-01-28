@@ -1,4 +1,6 @@
 		<?php if (is_home() || is_front_page()) :?>
+				<div class="relative">
+					<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo-footer.png);"></div>
 					<?php include (TEMPLATEPATH . '/templates-qo/template-footer.php'); ?>
 				</div><!-- end content bg-colores-qo -->
 			</div><!-- end main-body -->

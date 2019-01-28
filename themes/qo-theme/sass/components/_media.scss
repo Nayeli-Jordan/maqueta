@@ -101,13 +101,10 @@ video.responsive-video {
 	background-size: 100%;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	animation: animatedBackground 35s linear infinite;
-	-ms-animation: animatedBackground 35s linear infinite;
-	-moz-animation: animatedBackground 35s linear infinite;
-	-webkit-animation: animatedBackground 35s linear infinite;
-}
-.page-home .bg-textura {
-	bottom: -500px;
+	animation: animatedBackground 50s linear infinite;
+	-ms-animation: animatedBackground 50s linear infinite;
+	-moz-animation: animatedBackground 50s linear infinite;
+	-webkit-animation: animatedBackground 50s linear infinite;
 }
 
 //Bg colores qo
@@ -126,17 +123,47 @@ video.responsive-video {
 	.bg-image {
 		display: inline-block;
 		width: 100px;
-		height: 25px;
+		height:45px;
 		max-width: 100%;
-		margin: 0 2px 25px;
+		margin: 0 15px 25px;
     	box-sizing: border-box;
 	}
 }
 
 // Slider 
+#section-nosotros .cycle-slideshow {
+	.bg-image {
+		width: 100%;
+		height: 320px;
+	}
+	& + p {
+	    text-align: center;
+		font-size: 40px;
+	    line-height: 52px;
+	    z-index: 100;
+		@extend .content-center;
+	}
+}
+
 #section-servicios {
-	@media #{$medium-and-up} {
-		max-width: 650px;
+	margin-top: 0px;
+	.bg-textura { bottom: -150px; }
+	.cycle-slideshow {
+		.cycle-slide {
+			width: 100%;
+			text-align: center;
+		}
+		.bg-image {
+		    width: 200px;
+		    height: 200px;
+		    max-width: 100%;
+		    margin: auto;
+		    border-radius: 50%;
+		}
+		h4 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 	}
 }
 #slider-servicios {

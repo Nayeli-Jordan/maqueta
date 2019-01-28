@@ -12,6 +12,7 @@
 .margin-bottom 				{ margin-bottom: $box-space; }
 .margin-bottom-large		{ margin-bottom: ($box-space/4)*5; }
 .margin-bottom-xlarge 		{ margin-bottom: ($box-space/4)*6; }
+.margin-bottom-50	 		{ margin-bottom: 50px!important; }
 .margin-bottom-60	 		{ margin-bottom: 60px!important; }
 
 .margin-right-xxsmall		{ margin-right: ($box-space/4); }
@@ -38,12 +39,15 @@
 .padding-top 				{ padding-top: $box-space; }
 .padding-top-large			{ padding-top: ($box-space/4)*5; }
 .padding-top-xlarge 		{ padding-top: ($box-space/4)*6; }
+.padding-top-50 			{ padding-top: 50px; }
+.padding-top-80 			{ padding-top: 80px; }
 
 .padding-bottom-xsmall		{ padding-bottom: ($box-space/4)*2; }
 .padding-bottom-small 		{ padding-bottom: ($box-space/4)*3; }
 .padding-bottom 			{ padding-bottom: $box-space; }
 .padding-bottom-large		{ padding-bottom: ($box-space/4)*5; }
 .padding-bottom-xlarge 		{ padding-bottom: ($box-space/4)*6; }
+.padding-bottom-50 			{ padding-bottom: 50px; }
 //  Padding bottom 1% to 100%
 $i: 1;
 @while $i <= $size-percent {
