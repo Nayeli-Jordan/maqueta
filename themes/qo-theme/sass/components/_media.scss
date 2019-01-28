@@ -70,6 +70,18 @@ video.responsive-video {
 	}
 }
 
+#content-btn-down {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	.bg-down {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+}
+
 //Nosotros
 .bg-icon-nosotros {
 	width: 70px;

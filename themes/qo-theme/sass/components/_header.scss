@@ -3,7 +3,7 @@ header.js-header {
 		position: fixed;
 		width: 45px;
 		min-height: 100vh;
-		z-index: 200;
+		z-index: 1900;
 		animation: animatedNav .5s linear; 
 		-ms-animation: animatedNav .5s linear;
 		-moz-animation: animatedNav .5s linear;
@@ -44,24 +44,16 @@ header.js-header {
 						left: 30px;
 						padding: 10px 10px 10px 15px;
 						font-size: 20px;
-						color: #565656;
-    					background-color: rgba(236, 234, 234, 0.5);
-    					box-shadow: 0 3px 10px 0 rgba(0,0,0,0.25);
+						color: #3c3c3c;
 						transition: .2s ease-in;
 						opacity: 0;
 					}
 					&:hover {
-						div {
-							border-radius: 0px;
-							transform:rotate(45deg);			
-							&:before, &:after {
-								display: none;
-							}
-						}
+						div { background-color: #321135; }
 						span {
 							left: 38px;
-							
 							opacity: 1;
+							color: #321135;
 						}
 					}
 				}

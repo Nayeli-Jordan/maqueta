@@ -15,11 +15,14 @@
 				<i class="icon-menu btn-header-open"></i>
 				<div id="header-logo-qo" class="bg-logo bg-image bg-contain margin-auto" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/qo-logo.png);"></div>
 				<div class="bg-logo-secondary bg-image bg-contain" style="background-image: url(<?php echo THEMEPATH; ?>images/identidad/logo.png);"></div>
+				<div id="content-btn-down" class="text-center">
+					<div id="nosotros2" class="bg-image bg-contain bg-down item-scroll" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/down.png);"></div>
+				</div>
 			</div>			
 		</section>		
 	</div>
 	<section id="section-nosotros">
-		<div class="row relative">
+		<div id="section-nosotros2" class="row relative">
 			<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> div">
 				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/nosotros1.png);"></div>
 				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/nosotros1.png);"></div>
@@ -33,7 +36,7 @@
 		<div class="container relative">
 			<div class="row">
 				<div class="col s12 sm6 l3">
-					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4500" data-cycle-slides="> div">
+					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
 							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
 							<h4>Print</h4>

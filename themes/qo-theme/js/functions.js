@@ -95,14 +95,14 @@ var $=jQuery.noConflict();
 		});
 
 		//Scroll menú
-		$("a.item-scroll").click(function() {
+		$("a.item-scroll, .bg-down").click(function() {
 			//buttonMenuScroll();
 			var idOption = $(this).attr('id'); //Opción del menú
 			// console.log(idOption);
 			var idSection = "#section-" + idOption; //Sección a la que se dirigirá
 			// console.log(idSection); 
 			$('html, body').animate({		
-				scrollTop: $(idSection).offset().top - 80
+				scrollTop: $(idSection).offset().top // - 50
 			}, 1000);
 			$('.js-header').removeClass('active');
 			$('html').removeClass('snow');	
