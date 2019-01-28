@@ -12,7 +12,6 @@ var $=jQuery.noConflict();
 			if( parseInt( isHome ) ){
 				proyectoSize();
 				logoScroll();
-				colorMenu();
 				setTimeout( function(){
 			    	imageMasonry();
 			   	}, 300);				
@@ -82,7 +81,6 @@ var $=jQuery.noConflict();
 		$(document).scroll(function() {
 			if( parseInt( isHome ) ){
 				logoScroll();
-				colorMenu();
 			}
 		});
 
@@ -266,32 +264,18 @@ function isotopeMultipleQO(){
 
 function logoScroll() {
 	// get the position logo
-	var initPositionLogo = $('#header-logo-qo').offset();
-	var finalPositionLogo = initPositionLogo.top + 180;
+	var finalPositionLogo = $('#section-nosotros').offset();
+	var finalPositionLogo = finalPositionLogo.top - 50;
 	//console.log(finalPositionLogo);
 
 	var y = $(this).scrollTop();
 	//If the current Y is bigger than the element.
 	if(y >= finalPositionLogo){
 		$('.bg-logo-secondary').addClass('logo-fixed');
+		$('header.js-header').removeClass('hide');
 	}else{
 		$('.bg-logo-secondary').removeClass('logo-fixed');
-	}
-}
-
-// Cambiar tonos menú desktop en bg-colores-qo
-function colorMenu() {
-	// get the position logo
-	var positionBg = $('.bg-colores-qo').offset();
-	var finalPositionBg = positionBg.top - 200;
-	//console.log(finalPositionBg);
-
-	var y = $(this).scrollTop();
-	//If the current Y is bigger than the element.
-	if(y >= finalPositionBg){
-		$('.qo-nav').addClass('nav-clare');
-	}else{
-		$('.qo-nav').removeClass('nav-clare');
+		$('header.js-header').addClass('hide');
 	}
 }
 

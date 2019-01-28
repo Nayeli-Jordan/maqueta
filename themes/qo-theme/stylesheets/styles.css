@@ -4341,13 +4341,13 @@ video.responsive-video {
 /* line 46, ../sass/components/_media.scss */
 .bg-logo-secondary {
   position: fixed;
-  top: -50px;
-  left: 50%;
+  top: 30px;
+  left: -100px;
   width: 50px;
   height: 30px;
   opacity: 0;
   z-index: 200;
-  transition: .1s ease-out;
+  transition: .3s ease-out;
 }
 /* line 55, ../sass/components/_media.scss */
 .bg-logo-secondary.logo-fixed {
@@ -10241,14 +10241,6 @@ small {
     left: 38px;
     opacity: 1;
   }
-  /* line 70, ../sass/components/_header.scss */
-  header.js-header ul.nav-clare div, header.js-header ul.nav-clare div:before, header.js-header ul.nav-clare div:after {
-    background-color: #ffffff;
-  }
-  /* line 73, ../sass/components/_header.scss */
-  header.js-header ul.nav-clare span {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
 }
 @media only screen and (max-width: 600px) {
   /* line 1, ../sass/components/_header.scss */
@@ -10261,53 +10253,53 @@ small {
     background-color: #fff;
     box-shadow: 3px 1px 20px 0 rgba(0, 0, 0, 0.25);
     z-index: 201;
-    transition: .6s ease-out;
+    transition: .3s ease-out;
   }
-  /* line 89, ../sass/components/_header.scss */
+  /* line 81, ../sass/components/_header.scss */
   header.js-header.active {
     bottom: 0px;
   }
-  /* line 92, ../sass/components/_header.scss */
+  /* line 84, ../sass/components/_header.scss */
   header.js-header .icon-cancel {
     position: absolute;
     bottom: 25px;
     right: 30px;
     font-size: 25px;
   }
-  /* line 98, ../sass/components/_header.scss */
+  /* line 90, ../sass/components/_header.scss */
   header.js-header ul {
     margin: 0px;
   }
-  /* line 101, ../sass/components/_header.scss */
+  /* line 93, ../sass/components/_header.scss */
   header.js-header ul li a {
     display: block;
     padding: 0 20px;
     font-size: 16px;
     line-height: 40px;
   }
-  /* line 106, ../sass/components/_header.scss */
+  /* line 98, ../sass/components/_header.scss */
   header.js-header ul li a:hover {
     background-color: #7b2183;
     color: #fff;
   }
 }
-/* line 115, ../sass/components/_header.scss */
+/* line 107, ../sass/components/_header.scss */
 header.js-header.header-cotizacion {
   margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 601px) {
-  /* line 120, ../sass/components/_header.scss */
+  /* line 112, ../sass/components/_header.scss */
   .page-home .icon-cancel, .page-home .icon-menu {
     display: none !important;
   }
 
-  /* line 121, ../sass/components/_header.scss */
+  /* line 113, ../sass/components/_header.scss */
   .page-home .icon-close.icon-cancel {
     display: block !important;
   }
 }
-/* line 123, ../sass/components/_header.scss */
+/* line 115, ../sass/components/_header.scss */
 .page-home .icon-menu {
   position: fixed;
   bottom: 20px;
@@ -10318,17 +10310,17 @@ header.js-header.header-cotizacion {
 }
 
 @media only screen and (max-width: 430px) {
-  /* line 135, ../sass/components/_header.scss */
+  /* line 127, ../sass/components/_header.scss */
   #section-initial #header-logo-qo.bg-image {
     height: 90px;
   }
 }
 @media only screen and (max-width: 600px) {
-  /* line 138, ../sass/components/_header.scss */
+  /* line 130, ../sass/components/_header.scss */
   #section-initial .container {
     padding: 30px 0;
   }
-  /* line 140, ../sass/components/_header.scss */
+  /* line 132, ../sass/components/_header.scss */
   #section-initial .container #header-logo-qo.bg-image {
     margin: auto;
     height: 120px;
@@ -10336,11 +10328,11 @@ header.js-header.header-cotizacion {
   }
 }
 @media only screen and (min-width: 601px) {
-  /* line 148, ../sass/components/_header.scss */
+  /* line 140, ../sass/components/_header.scss */
   #section-initial .container {
     min-height: 100vh;
   }
-  /* line 150, ../sass/components/_header.scss */
+  /* line 142, ../sass/components/_header.scss */
   #section-initial .container #header-logo-qo.bg-image {
     margin: 0px;
     position: absolute;
@@ -10353,13 +10345,13 @@ header.js-header.header-cotizacion {
   }
 }
 
-/* line 158, ../sass/components/_header.scss */
+/* line 150, ../sass/components/_header.scss */
 .archive-header {
   margin-bottom: 20px;
   padding-top: 20px;
   text-align: center;
 }
-/* line 162, ../sass/components/_header.scss */
+/* line 154, ../sass/components/_header.scss */
 .archive-header .title-archive {
   font-size: 40px;
   line-height: 60px;
@@ -10367,20 +10359,20 @@ header.js-header.header-cotizacion {
   color: #7b2183;
 }
 @media only screen and (max-width: 430px) {
-  /* line 162, ../sass/components/_header.scss */
+  /* line 154, ../sass/components/_header.scss */
   .archive-header .title-archive {
     font-size: 22px;
     line-height: 26px;
   }
 }
-/* line 173, ../sass/components/_header.scss */
+/* line 165, ../sass/components/_header.scss */
 .archive-header .btn-nav {
   position: absolute;
   top: 20px;
   font-size: 20px;
   cursor: pointer;
 }
-/* line 179, ../sass/components/_header.scss */
+/* line 171, ../sass/components/_header.scss */
 .archive-header nav {
   position: fixed;
   top: 0px;
@@ -10394,28 +10386,28 @@ header.js-header.header-cotizacion {
   transition: .3s ease-out;
 }
 @media only screen and (max-width: 430px) {
-  /* line 179, ../sass/components/_header.scss */
+  /* line 171, ../sass/components/_header.scss */
   .archive-header nav {
     width: 100%;
     left: -100%;
   }
 }
-/* line 194, ../sass/components/_header.scss */
+/* line 186, ../sass/components/_header.scss */
 .archive-header nav .icon-cancel {
   position: absolute;
   right: 20px;
   font-size: 20px;
   cursor: pointer;
 }
-/* line 200, ../sass/components/_header.scss */
+/* line 192, ../sass/components/_header.scss */
 .archive-header nav ul {
   margin: 30px 0px 0px;
 }
-/* line 202, ../sass/components/_header.scss */
+/* line 194, ../sass/components/_header.scss */
 .archive-header nav ul li {
   display: block;
 }
-/* line 204, ../sass/components/_header.scss */
+/* line 196, ../sass/components/_header.scss */
 .archive-header nav ul li a {
   display: block;
   padding: 0 20px;
@@ -10423,12 +10415,12 @@ header.js-header.header-cotizacion {
   line-height: 40px;
   transition: .1s ease-out;
 }
-/* line 210, ../sass/components/_header.scss */
+/* line 202, ../sass/components/_header.scss */
 .archive-header nav ul li a:hover {
   background-color: #7b2183;
   color: #fff;
 }
-/* line 217, ../sass/components/_header.scss */
+/* line 209, ../sass/components/_header.scss */
 .archive-header nav.active {
   left: 0px;
 }
