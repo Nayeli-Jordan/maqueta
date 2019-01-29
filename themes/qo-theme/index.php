@@ -48,7 +48,7 @@
 					</div>
 				</div>
 				<div class="col s12 sm6 l3">
-					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4500" data-cycle-slides="> div">
+					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
 							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
 							<h4>Social Media</h4>
@@ -60,7 +60,7 @@
 					</div>
 				</div>
 				<div class="col s12 sm6 l3">
-					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4500" data-cycle-slides="> div">
+					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
 							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
 							<h4>Diseño</h4>
@@ -72,7 +72,7 @@
 					</div>
 				</div>
 				<div class="col s12 sm6 l3">
-					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4500" data-cycle-slides="> div">
+					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
 							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
 							<h4>Desarrollo web</h4>
@@ -87,9 +87,10 @@
 		</div>
 	</section>
 	<div class="relative z-index-100">
-		<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo-clientes.png);"></div>
-		<section id="section-clientes" class="container relative text-center">
-			<p class="color-light uppercase margin-bottom-small">No hay mejor publicidad que un cliente satisfecho</p>
+		<div class="bg-image bg-absolute bg-colores-qo hide-on-med-and-up" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo.png);"></div>
+		<div class="bg-image bg-absolute bg-colores-qo hide-on-sm-and-down" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo-clientes.png);"></div>
+		<section id="section-clientes" class="container relative text-center padding-bottom-xlarge">
+			<p class="color-light uppercase margin-bottom-50">No hay mejor publicidad que un cliente satisfecho</p>
 			<div class="row">
 			<?php
 		        $args = array(
@@ -103,7 +104,7 @@
 		        if ( $loop->have_posts() ) {
 		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
 
-		            	<div class="bg-image bg-contain" style="background-image: url(<?php the_post_thumbnail_url('medium'); ?>);"></div>
+		            	<span><img src="<?php the_post_thumbnail_url('medium'); ?>"></span>
 		            	<?php if ($i === 5 || $i === 10 || $i === 15 ) : ?>
 		            		<div class="clearfix-l-and-up"></div>
 		            	<?php endif ?>		

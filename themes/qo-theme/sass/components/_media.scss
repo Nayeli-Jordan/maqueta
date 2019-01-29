@@ -130,15 +130,22 @@ video.responsive-video {
 
 //Section clientes
 #section-clientes {
-	padding-top: 150px;
-	@media #{$extra-large-and-up} { padding-top: 200px; }
-	.bg-image {
+	padding-top: 110px;
+	@media #{$medium-and-up} { padding-top: 200px; }
+	@media #{$extra-large-and-up} { padding-top: 250px; }
+	span {
 		display: inline-block;
-		width: 100px;
-		height:45px;
-		max-width: 100%;
-		margin: 0 15px 25px;
-    	box-sizing: border-box;
+		vertical-align: middle;
+		width: 19%;
+		padding: 0 5px;
+		margin-bottom: 25px;
+		@media #{$medium-and-down}{ width: 24%; }
+		@media #{$sm-and-down}{ width: 48%; }
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 100%;
+		}
 	}
 }
 
@@ -159,7 +166,7 @@ video.responsive-video {
 
 #section-servicios {
 	margin-top: 0px;
-	.bg-textura { bottom: -150px; }
+	.bg-textura { bottom: -200px; }
 	.cycle-slideshow {
 		.cycle-slide {
 			width: 100%;
