@@ -1,6 +1,12 @@
 .hide { display: none!important; }
 .opacity-0 { opacity: 0; }
+.text-left { text-align: left; }
+.uppercase { text-transform: uppercase; }
+.width-50p { width: 50% }
+
+table.qo-custom-fields { width: 100%; }
 .qo-custom-fields label {
+	text-align: left;
 	display: block;
 	font-size: 14px;
 }

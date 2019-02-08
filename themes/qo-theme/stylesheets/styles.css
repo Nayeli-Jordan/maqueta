@@ -4434,10 +4434,10 @@ video.responsive-video {
   background-size: 100%;
   background-position: 0px 0px;
   background-repeat: repeat-y;
-  animation: animatedBackground 50s linear infinite;
-  -ms-animation: animatedBackground 50s linear infinite;
-  -moz-animation: animatedBackground 50s linear infinite;
-  -webkit-animation: animatedBackground 50s linear infinite;
+  animation: animatedBackground 70s linear infinite;
+  -ms-animation: animatedBackground 70s linear infinite;
+  -moz-animation: animatedBackground 70s linear infinite;
+  -webkit-animation: animatedBackground 70s linear infinite;
 }
 
 /* line 123, ../sass/components/_media.scss */
@@ -4521,23 +4521,30 @@ video.responsive-video {
 }
 /* line 175, ../sass/components/_media.scss */
 #section-servicios .cycle-slideshow .bg-image {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   max-width: 100%;
   margin: auto;
   border-radius: 50%;
 }
-/* line 182, ../sass/components/_media.scss */
+@media only screen and (min-width: 431px) and (max-width: 600px) {
+  /* line 175, ../sass/components/_media.scss */
+  #section-servicios .cycle-slideshow .bg-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* line 186, ../sass/components/_media.scss */
 #section-servicios .cycle-slideshow h4 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* line 189, ../sass/components/_media.scss */
+/* line 193, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) {
   width: 100%;
 }
-/* line 191, ../sass/components/_media.scss */
+/* line 195, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card {
   position: relative;
   margin: auto;
@@ -4546,16 +4553,16 @@ video.responsive-video {
   text-align: center;
 }
 @media only screen and (max-width: 430px) {
-  /* line 191, ../sass/components/_media.scss */
+  /* line 195, ../sass/components/_media.scss */
   #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card {
     width: 100%;
   }
 }
-/* line 200, ../sass/components/_media.scss */
+/* line 204, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-image {
   position: relative;
 }
-/* line 202, ../sass/components/_media.scss */
+/* line 206, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-image .fondo-bg-image {
   position: absolute;
   bottom: 0px;
@@ -4563,7 +4570,7 @@ video.responsive-video {
   padding-bottom: calc(50%);
   background-color: #fff;
 }
-/* line 209, ../sass/components/_media.scss */
+/* line 213, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-image .bg-image {
   position: relative;
   width: 100%;
@@ -4574,25 +4581,25 @@ video.responsive-video {
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.14), -2px -3px 10px 0px rgba(84, 84, 84, 0.1);
 }
 @media only screen and (max-width: 600px) {
-  /* line 209, ../sass/components/_media.scss */
+  /* line 213, ../sass/components/_media.scss */
   #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-image .bg-image {
     padding-bottom: calc(100% - 40px);
     border-width: 20px;
   }
 }
-/* line 223, ../sass/components/_media.scss */
+/* line 227, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-body {
   position: relative;
   margin-top: 35px;
 }
-/* line 226, ../sass/components/_media.scss */
+/* line 230, ../sass/components/_media.scss */
 #slider-servicios div.cycle-slide:not(.bg-arrow) .content-card .content-card-body .hr {
   margin: 10px auto 10px auto;
   height: 2px;
   width: 100px;
 }
 
-/* line 236, ../sass/components/_media.scss */
+/* line 240, ../sass/components/_media.scss */
 .bg-arrow {
   display: block;
   position: absolute;
@@ -4602,27 +4609,27 @@ video.responsive-video {
   cursor: pointer;
   z-index: 100;
 }
-/* line 244, ../sass/components/_media.scss */
+/* line 248, ../sass/components/_media.scss */
 .bg-arrow:hover {
   filter: brightness(0.4);
   -webkit-filter: brightness(0.4);
 }
 @media only screen and (max-width: 430px) {
-  /* line 236, ../sass/components/_media.scss */
+  /* line 240, ../sass/components/_media.scss */
   .bg-arrow {
     display: none;
   }
 }
-/* line 251, ../sass/components/_media.scss */
+/* line 255, ../sass/components/_media.scss */
 .bg-arrow#prev-service {
   left: -10px;
 }
-/* line 254, ../sass/components/_media.scss */
+/* line 258, ../sass/components/_media.scss */
 .bg-arrow#next-service {
   right: -10px;
 }
 
-/* line 258, ../sass/components/_media.scss */
+/* line 262, ../sass/components/_media.scss */
 .services-pager {
   position: absolute;
   width: 100%;
@@ -4631,12 +4638,12 @@ video.responsive-video {
   /* z-index: 101; */
 }
 @media only screen and (max-width: 430px) {
-  /* line 258, ../sass/components/_media.scss */
+  /* line 262, ../sass/components/_media.scss */
   .services-pager {
     bottom: -90px;
   }
 }
-/* line 265, ../sass/components/_media.scss */
+/* line 269, ../sass/components/_media.scss */
 .services-pager span {
   padding: 0 7px;
   font-size: 55px;
@@ -4645,45 +4652,45 @@ video.responsive-video {
   cursor: pointer;
 }
 @media only screen and (max-width: 430px) {
-  /* line 265, ../sass/components/_media.scss */
+  /* line 269, ../sass/components/_media.scss */
   .services-pager span {
     font-size: 90px;
     padding: 0 3px;
   }
 }
-/* line 275, ../sass/components/_media.scss */
+/* line 279, ../sass/components/_media.scss */
 .services-pager span.cycle-pager-active {
   color: #6e6e6e;
 }
-/* line 278, ../sass/components/_media.scss */
+/* line 282, ../sass/components/_media.scss */
 .services-pager span:hover {
   color: #d6bdbd;
 }
 
-/* line 288, ../sass/components/_media.scss */
+/* line 292, ../sass/components/_media.scss */
 .content-cotizacion .img-qo-logo {
   width: 200px;
 }
-/* line 289, ../sass/components/_media.scss */
+/* line 293, ../sass/components/_media.scss */
 .content-cotizacion .img-client {
   display: block;
   margin-bottom: 20px;
   max-width: 200px;
   max-height: 100px;
 }
-/* line 296, ../sass/components/_media.scss */
+/* line 300, ../sass/components/_media.scss */
 .content-cotizacion .footer-cotizacion .bg-qo-logo {
   width: 50px;
   height: 30px;
   margin: 0 auto 10px;
   padding-bottom: 0px;
 }
-/* line 304, ../sass/components/_media.scss */
+/* line 308, ../sass/components/_media.scss */
 .content-cotizacion.contentVertical .img-client {
   margin: 0 auto 20px auto !important;
 }
 
-/* line 313, ../sass/components/_media.scss */
+/* line 317, ../sass/components/_media.scss */
 .content-muestra div,
 .content-img-Horizontal div,
 .content-img-Vertical div {
@@ -4692,7 +4699,7 @@ video.responsive-video {
   vertical-align: middle;
   box-sizing: border-box;
 }
-/* line 318, ../sass/components/_media.scss */
+/* line 322, ../sass/components/_media.scss */
 .content-muestra div p,
 .content-img-Horizontal div p,
 .content-img-Vertical div p {
@@ -4701,7 +4708,7 @@ video.responsive-video {
   font-size: 11px;
   overflow: hidden;
 }
-/* line 325, ../sass/components/_media.scss */
+/* line 329, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(1),
 .content-img-Horizontal div:first-child:nth-last-child(1),
 .content-img-Vertical div:first-child:nth-last-child(1) {
@@ -4709,11 +4716,11 @@ video.responsive-video {
   padding: 0px;
 }
 
-/* line 333, ../sass/components/_media.scss */
+/* line 337, ../sass/components/_media.scss */
 .content-muestra div p {
   max-height: 40px;
 }
-/* line 337, ../sass/components/_media.scss */
+/* line 341, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(2),
 .content-muestra div:first-child:nth-last-child(2) ~ div,
 .content-muestra div:nth-last-child(3),
@@ -4722,7 +4729,7 @@ video.responsive-video {
 .content-muestra div:first-child:nth-last-child(4) ~ div {
   margin-bottom: 10px;
 }
-/* line 344, ../sass/components/_media.scss */
+/* line 348, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(2) img,
 .content-muestra div:first-child:nth-last-child(2) ~ div img,
 .content-muestra div:nth-last-child(3) img,
@@ -4731,13 +4738,13 @@ video.responsive-video {
 .content-muestra div:first-child:nth-last-child(4) ~ div img {
   max-height: 180px;
 }
-/* line 348, ../sass/components/_media.scss */
+/* line 352, ../sass/components/_media.scss */
 .content-muestra div:first-child:nth-last-child(2),
 .content-muestra div:first-child:nth-last-child(2) ~ div {
   width: 100%;
   padding: 0px;
 }
-/* line 353, ../sass/components/_media.scss */
+/* line 357, ../sass/components/_media.scss */
 .content-muestra div:nth-last-child(3),
 .content-muestra div:nth-last-child(3) ~ div,
 .content-muestra div:first-child:nth-last-child(4),
@@ -4745,30 +4752,30 @@ video.responsive-video {
   width: calc(50% - 10px);
 }
 
-/* line 362, ../sass/components/_media.scss */
+/* line 366, ../sass/components/_media.scss */
 .content-img-Horizontal div:first-child:nth-last-child(2),
 .content-img-Horizontal div:first-child:nth-last-child(2) ~ div {
   max-width: calc(50% - 10px);
 }
-/* line 366, ../sass/components/_media.scss */
+/* line 370, ../sass/components/_media.scss */
 .content-img-Horizontal div:nth-last-child(3),
 .content-img-Horizontal div:nth-last-child(3) ~ div {
   max-width: calc(33.33% - 10px);
 }
-/* line 370, ../sass/components/_media.scss */
+/* line 374, ../sass/components/_media.scss */
 .content-img-Horizontal div:first-child:nth-last-child(4),
 .content-img-Horizontal div:first-child:nth-last-child(4) ~ div {
   max-width: calc(25% - 10px);
 }
 
-/* line 377, ../sass/components/_media.scss */
+/* line 381, ../sass/components/_media.scss */
 .content-img-Vertical div:first-child:nth-last-child(2),
 .content-img-Vertical div:first-child:nth-last-child(2) ~ div {
   max-width: 100%;
   max-height: 190px;
   padding: 0px;
 }
-/* line 383, ../sass/components/_media.scss */
+/* line 387, ../sass/components/_media.scss */
 .content-img-Vertical div:nth-last-child(3),
 .content-img-Vertical div:nth-last-child(3) ~ div,
 .content-img-Vertical div:first-child:nth-last-child(4),

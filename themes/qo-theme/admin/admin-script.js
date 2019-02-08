@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
     $('#new-calendar').css("display", "none");
   }
 
-  if ($('#table-proyecto').length > 0){
+  if ($('#elementosProyecto').length > 0){
     $('.typeItemProyect').on('change', function(){
       var idItemProyect     = $(this).parent().attr('id');
       console.log(idItemProyect);

@@ -113,10 +113,10 @@ video.responsive-video {
 	background-size: 100%;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	animation: animatedBackground 50s linear infinite;
-	-ms-animation: animatedBackground 50s linear infinite;
-	-moz-animation: animatedBackground 50s linear infinite;
-	-webkit-animation: animatedBackground 50s linear infinite;
+	animation: animatedBackground 70s linear infinite;
+	-ms-animation: animatedBackground 70s linear infinite;
+	-moz-animation: animatedBackground 70s linear infinite;
+	-webkit-animation: animatedBackground 70s linear infinite;
 }
 
 //Bg colores qo
@@ -173,11 +173,15 @@ video.responsive-video {
 			text-align: center;
 		}
 		.bg-image {
-		    width: 200px;
-		    height: 200px;
+		    width: 180px;
+		    height: 180px;
 		    max-width: 100%;
 		    margin: auto;
 		    border-radius: 50%;
+		    @media #{$sm-only} {
+			    width: 150px;
+			    height: 150px;
+		    }
 		}
 		h4 {
 			margin-top: 20px;

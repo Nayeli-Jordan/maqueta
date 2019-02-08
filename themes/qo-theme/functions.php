@@ -1372,6 +1372,17 @@ function proyectos_custom_metabox(){
 }
 
 function display_proyectos_atributos( $proyectos ){
+    $tipo           = esc_html( get_post_meta( $proyectos->ID, 'proyectos_tipo', true ) );
+    $ancho          = esc_html( get_post_meta( $proyectos->ID, 'proyectos_ancho', true ) );
+    $visualizacion  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_visualizacion', true ) );
+    /*Imagen*/
+    $imagenTipo     = esc_html( get_post_meta( $proyectos->ID, 'proyectos_imagenTipo', true ) );
+    $imagenElementos= esc_html( get_post_meta( $proyectos->ID, 'proyectos_imagenElementos', true ) );
+    /*Video*/
+    $videoElementos= esc_html( get_post_meta( $proyectos->ID, 'proyectos_videoElementos', true ) );
+    /*Sitio web*/
+    $urlSitioWeb    = esc_html( get_post_meta( $proyectos->ID, 'proyectos_urlSitioWeb', true ) );
+
     $item1      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item1', true ) );
     $item2      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item2', true ) );
     $item3      = esc_html( get_post_meta( $proyectos->ID, 'proyectos_item3', true ) );
@@ -1393,13 +1404,88 @@ function display_proyectos_atributos( $proyectos ){
     $itemType9  = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType9', true ) );
     $itemType10 = esc_html( get_post_meta( $proyectos->ID, 'proyectos_itemType10', true ) );
 ?>
-    <table id="table-proyecto" class="qo-custom-fields" style="width: 100%;">
+    <table class="qo-custom-fields">
+        <tr><th colspan="2"><label>VISUALIZACIÓN INICIAL</label><br></th></tr>
+        <tr>
+            <th class="width-50p">
+                <label for="proyectos_tipo">Tipo de proyecto</label>
+                <select id="proyectos_tipo" name="proyectos_tipo" required>
+                    <option value="Imagen" <?php selected($tipo, 'Imagen'); ?>>Imagen</option>
+                    <option value="Video" <?php selected($tipo, 'Video'); ?>>Video</option>
+                    <option value="Sitio Web" <?php selected($tipo, 'Sitio Web'); ?>>Sitio Web</option>
+                </select>               
+            </th>
+            <th class="width-50p">
+                <label for="proyectos_ancho">Ancho</label>
+                <select id="proyectos_ancho" name="proyectos_ancho" required>
+                    <?php $count = 10;
+                    while ( $count <= 100) { ?>
+                        <option value="<?php echo $count; ?>" <?php selected($ancho, $count); ?>><?php echo $count; ?>%</option>
+                    <?php $count= $count + 10;
+                    } ?>
+                </select>               
+            </th>
+        </tr>
+        <tr>            
+            <th colspan="2" class="text-left">
+                <div class="input-image">                      
+                    <input type="text" name="proyectos_visualizacion" id="proyectos_visualizacion" class="meta-image" placeholder="URL imagen/video principal" value="<?php echo $visualizacion; ?>">
+                    <input type="button" class="button image-upload" value="Seleccionar">
+                </div>
+                <div class="image-preview">
+                    <img src="<?php echo $visualizacion; ?>">
+                </div>
+            </th>
+        </tr>
+    </table>
+    <table id="tipoProyecto_imagen" class="qo-custom-fields">
+        <tr><th colspan="2"><br><label class="uppercase">Proyecto de imagen</label><br></th></tr>
+        <tr>
+            <th class="width-50p">
+                <label for="proyectos_imagenTipo">¿Cómo se presentará?</label>
+                <select id="proyectos_imagenTipo" name="proyectos_imagenTipo" required>
+                    <option value="Estatica" <?php selected($imagenTipo, 'Estatica'); ?>>Imagen estática</option>
+                    <option value="Parallax" <?php selected($imagenTipo, 'Parallax'); ?>>Parallax</option>
+                </select>               
+            </th>
+            <th class="width-50p">
+                <label for="proyectos_imagenElementos">¿Muestra más elementos?</label>
+                <select id="proyectos_imagenElementos" name="proyectos_imagenElementos" required>
+                    <option value="No" <?php selected($tipo, 'No'); ?>>No</option>
+                    <option value="Si" <?php selected($tipo, 'Si'); ?>>Sí</option>
+                </select>               
+            </th>
+        </tr>
+    </table>
+    <table id="tipoProyecto_video" class="qo-custom-fields">
+        <tr><th colspan="2"><br><label class="uppercase">Proyecto de video</label><br></th></tr>
+        <tr>
+            <th class="width-50p">
+                <label for="proyectos_videoElementos">¿Muestra más elementos?</label>
+                <select id="proyectos_videoElementos" name="proyectos_videoElementos" required>
+                    <option value="No" <?php selected($tipo, 'No'); ?>>No</option>
+                    <option value="Si" <?php selected($tipo, 'Si'); ?>>Sí</option>
+                </select>               
+            </th>
+        </tr>
+    </table>
+    <table id="tipoProyecto_sitioWeb" class="qo-custom-fields">
+        <tr><th colspan="2"><br><label class="uppercase">Proyecto de Sitio web</label><br></th></tr>
+        <tr>
+            <th>
+                <label for="proyectos_urlSitioWeb">URL Externo</label>
+                <input type="text" name="proyectos_urlSitioWeb" id="proyectos_urlSitioWeb" value="<?php echo $urlSitioWeb; ?>">
+            </th>
+        </tr>
+    </table>
+    <table id="elementosProyecto" class="qo-custom-fields">
+        <tr><th colspan="2"><br><label class="uppercase">ELEMENTOS MODAL PROYECTO</label><br></th></tr>
         <?php $count = 1;
         while ( $count < 11) { 
             $item = ${'item' . $count};
             $itemType = ${'itemType' . $count}; ?>
             <tr>
-                <th>
+                <th  class="text-left">
                     <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" required> -->
                     <div id="itemProject<?php echo $count; ?>" class="input-image">
                         <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>" class="typeItemProyect">
@@ -1425,6 +1511,27 @@ function proyectos_save_metas( $idproyectos, $proyectos ){
     //Comprobamos que es del tipo que nos interesa
     if ( $proyectos->post_type == 'proyectos' ){
     //Guardamos los datos que vienen en el POST
+        if ( isset( $_POST['proyectos_tipo'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_tipo', $_POST['proyectos_tipo'] );
+        }
+        if ( isset( $_POST['proyectos_ancho'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_ancho', $_POST['proyectos_ancho'] );
+        }
+        if ( isset( $_POST['proyectos_visualizacion'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_visualizacion', $_POST['proyectos_visualizacion'] );
+        }
+        if ( isset( $_POST['proyectos_imagenTipo'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_imagenTipo', $_POST['proyectos_imagenTipo'] );
+        }
+        if ( isset( $_POST['proyectos_imagenElementos'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_imagenElementos', $_POST['proyectos_imagenElementos'] );
+        }
+        if ( isset( $_POST['proyectos_videoElementos'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_videoElementos', $_POST['proyectos_videoElementos'] );
+        }
+        if ( isset( $_POST['proyectos_urlSitioWeb'] ) ){
+            update_post_meta( $idproyectos, 'proyectos_urlSitioWeb', $_POST['proyectos_urlSitioWeb'] );
+        }
         if ( isset( $_POST['proyectos_item1'] ) ){
             update_post_meta( $idproyectos, 'proyectos_item1', $_POST['proyectos_item1'] );
         }
