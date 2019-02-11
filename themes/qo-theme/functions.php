@@ -1429,7 +1429,7 @@ function display_proyectos_atributos( $proyectos ){
         <tr>            
             <th colspan="2" class="text-left">
                 <div class="input-image">                      
-                    <input type="text" name="proyectos_visualizacion" id="proyectos_visualizacion" class="meta-image" placeholder="URL imagen/video principal" value="<?php echo $visualizacion; ?>">
+                    <input type="text" name="proyectos_visualizacion" id="proyectos_visualizacion" class="meta-image" placeholder="URL imagen/video principal" value="<?php echo $visualizacion; ?>" required>
                     <input type="button" class="button image-upload" value="Seleccionar">
                 </div>
                 <div class="image-preview">
@@ -1438,38 +1438,38 @@ function display_proyectos_atributos( $proyectos ){
             </th>
         </tr>
     </table>
-    <table id="tipoProyecto_imagen" class="qo-custom-fields">
+    <table id="tipoProyecto_imagen" class="qo-custom-fields hide">
         <tr><th colspan="2"><br><label class="uppercase">Proyecto de imagen</label><br></th></tr>
         <tr>
             <th class="width-50p">
                 <label for="proyectos_imagenTipo">¿Cómo se presentará?</label>
-                <select id="proyectos_imagenTipo" name="proyectos_imagenTipo" required>
+                <select id="proyectos_imagenTipo" name="proyectos_imagenTipo" >
                     <option value="Estatica" <?php selected($imagenTipo, 'Estatica'); ?>>Imagen estática</option>
                     <option value="Parallax" <?php selected($imagenTipo, 'Parallax'); ?>>Parallax</option>
                 </select>               
             </th>
             <th class="width-50p">
                 <label for="proyectos_imagenElementos">¿Muestra más elementos?</label>
-                <select id="proyectos_imagenElementos" name="proyectos_imagenElementos" required>
-                    <option value="No" <?php selected($tipo, 'No'); ?>>No</option>
-                    <option value="Si" <?php selected($tipo, 'Si'); ?>>Sí</option>
+                <select id="proyectos_imagenElementos" name="proyectos_imagenElementos">
+                    <option value="No" <?php selected($imagenElementos, 'No'); ?>>No</option>
+                    <option value="Si" <?php selected($imagenElementos, 'Si'); ?>>Sí</option>
                 </select>               
             </th>
         </tr>
     </table>
-    <table id="tipoProyecto_video" class="qo-custom-fields">
+    <table id="tipoProyecto_video" class="qo-custom-fields hide">
         <tr><th colspan="2"><br><label class="uppercase">Proyecto de video</label><br></th></tr>
         <tr>
             <th class="width-50p">
                 <label for="proyectos_videoElementos">¿Muestra más elementos?</label>
-                <select id="proyectos_videoElementos" name="proyectos_videoElementos" required>
-                    <option value="No" <?php selected($tipo, 'No'); ?>>No</option>
-                    <option value="Si" <?php selected($tipo, 'Si'); ?>>Sí</option>
+                <select id="proyectos_videoElementos" name="proyectos_videoElementos">
+                    <option value="No" <?php selected($videoElementos, 'No'); ?>>No</option>
+                    <option value="Si" <?php selected($videoElementos, 'Si'); ?>>Sí</option>
                 </select>               
             </th>
         </tr>
     </table>
-    <table id="tipoProyecto_sitioWeb" class="qo-custom-fields">
+    <table id="tipoProyecto_sitioWeb" class="qo-custom-fields hide">
         <tr><th colspan="2"><br><label class="uppercase">Proyecto de Sitio web</label><br></th></tr>
         <tr>
             <th>
@@ -1478,7 +1478,7 @@ function display_proyectos_atributos( $proyectos ){
             </th>
         </tr>
     </table>
-    <table id="elementosProyecto" class="qo-custom-fields">
+    <table id="elementosProyecto" class="qo-custom-fields hide">
         <tr><th colspan="2"><br><label class="uppercase">ELEMENTOS MODAL PROYECTO</label><br></th></tr>
         <?php $count = 1;
         while ( $count < 11) { 
@@ -1486,7 +1486,7 @@ function display_proyectos_atributos( $proyectos ){
             $itemType = ${'itemType' . $count}; ?>
             <tr>
                 <th  class="text-left">
-                    <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" required> -->
+                    <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" > -->
                     <div id="itemProject<?php echo $count; ?>" class="input-image">
                         <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>" class="typeItemProyect">
                             <option value="" <?php selected($itemType, ''); ?>></option>
@@ -1532,65 +1532,15 @@ function proyectos_save_metas( $idproyectos, $proyectos ){
         if ( isset( $_POST['proyectos_urlSitioWeb'] ) ){
             update_post_meta( $idproyectos, 'proyectos_urlSitioWeb', $_POST['proyectos_urlSitioWeb'] );
         }
-        if ( isset( $_POST['proyectos_item1'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item1', $_POST['proyectos_item1'] );
-        }
-        if ( isset( $_POST['proyectos_item2'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item2', $_POST['proyectos_item2'] );
-        }
-        if ( isset( $_POST['proyectos_item3'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item3', $_POST['proyectos_item3'] );
-        }
-        if ( isset( $_POST['proyectos_item4'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item4', $_POST['proyectos_item4'] );
-        }
-        if ( isset( $_POST['proyectos_item5'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item5', $_POST['proyectos_item5'] );
-        }
-        if ( isset( $_POST['proyectos_item6'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item6', $_POST['proyectos_item6'] );
-        }
-        if ( isset( $_POST['proyectos_item7'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item7', $_POST['proyectos_item7'] );
-        }
-        if ( isset( $_POST['proyectos_item8'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item8', $_POST['proyectos_item8'] );
-        }
-        if ( isset( $_POST['proyectos_item9'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item9', $_POST['proyectos_item9'] );
-        }
-        if ( isset( $_POST['proyectos_item10'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_item10', $_POST['proyectos_item10'] );
-        }
-        if ( isset( $_POST['proyectos_itemType1'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType1', $_POST['proyectos_itemType1'] );
-        }
-        if ( isset( $_POST['proyectos_itemType2'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType2', $_POST['proyectos_itemType2'] );
-        }
-        if ( isset( $_POST['proyectos_itemType3'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType3', $_POST['proyectos_itemType3'] );
-        }
-        if ( isset( $_POST['proyectos_itemType4'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType4', $_POST['proyectos_itemType4'] );
-        }
-        if ( isset( $_POST['proyectos_itemType5'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType5', $_POST['proyectos_itemType5'] );
-        }
-        if ( isset( $_POST['proyectos_itemType6'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType6', $_POST['proyectos_itemType6'] );
-        }
-        if ( isset( $_POST['proyectos_itemType7'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType7', $_POST['proyectos_itemType7'] );
-        }
-        if ( isset( $_POST['proyectos_itemType8'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType8', $_POST['proyectos_itemType8'] );
-        }
-        if ( isset( $_POST['proyectos_itemType9'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType9', $_POST['proyectos_itemType9'] );
-        }
-        if ( isset( $_POST['proyectos_itemType10'] ) ){
-            update_post_meta( $idproyectos, 'proyectos_itemType10', $_POST['proyectos_itemType10'] );
+        $count = 1;
+        while ( $count < 11) {
+            if ( isset( $_POST['proyectos_item' . $count] ) ){
+                update_post_meta( $idproductGt, 'proyectos_item' . $count, $_POST['proyectos_item' . $count] );
+            } 
+            if ( isset( $_POST['proyectos_itemType' . $count] ) ){
+                update_post_meta( $idproductGt, 'proyectos_itemType' . $count, $_POST['proyectos_itemType' . $count] );
+            }               
+            $count++;
         }
     }
 }

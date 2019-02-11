@@ -281,16 +281,17 @@ function logoScroll() {
 
 /*Obtener ancho proyecto*/
 function proyectoSize() {
-	var widthColProject 		= widthProyecto() - 24;
+	var widthColProject 		= widthProyecto() - 10;
 
 	var heightColProjectCorta 	= widthColProject / 2;
 	var heightColProjectLarga 	= widthColProject * 1.35;
 
-	$('.project-item .morph-button, .project-item .morph-button .morph-content').css('width', widthColProject);
-	/* Altura según ancho */
+	//$('.project-item .morph-button, .project-item .morph-button .morph-content').css('width', widthColProject);
+	/* Altura según ancho */ /*to do: obtener altura de imagen por elemento y aplicarla a modal content*/
 	$('.project-item .morph-button.size_corta, .project-item .morph-button.size_corta .morph-content').css('height', heightColProjectCorta);
 	$('.project-item .morph-button.size_larga, .project-item .morph-button.size_larga .morph-content').css('height', heightColProjectLarga);
 }
 function widthProyecto() {
+	/*Esto lo esta aplicando sólo por el primer elemento para todos*/
 	return $('#section-trabajos .project-item').outerWidth();
 }

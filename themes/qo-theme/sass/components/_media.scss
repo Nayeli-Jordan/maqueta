@@ -392,3 +392,27 @@ video.responsive-video {
 		max-height: 190px;
 	}
 }
+
+
+/* PROYECTOS */
+/* GRID ITEM */
+#section-trabajos {
+  .grid-item {
+    padding: 5px;
+    @media #{$small-and-down} {
+    	width: 100%;
+    }
+  }
+}
+
+/* Parallax */
+.parallax {
+  height: 220px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: calc(100% - 25%);
+  @media #{$large-and-up} { background-size: calc(100% - 15%); }
+  @media #{$extra-large-and-up} { background-size: calc(100% - 10%); }
+}
+.buttonParrallax { height: 220px!important; }

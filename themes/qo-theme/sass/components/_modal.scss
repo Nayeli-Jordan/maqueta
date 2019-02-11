@@ -62,10 +62,10 @@
 .morph-button {
 	position: relative;
 	display: block;
-	margin: 0 auto 20px;
+	margin: 0;
 	& > button {
 		position: relative;
-		padding: 0 1em;
+		padding: 0;
 		border: none;
 		cursor: pointer;
 		z-index: 1000;
@@ -73,10 +73,11 @@
 		height: 100%;
 		-webkit-transition: opacity 0.1s 0.5s;
 		transition: opacity 0.1s 0.5s;
+		img { @extend .responsive-img; }
 		div {    
-		    position: relative;
-		    left: -13.33px;
-			width: calc(100% + 26.66px);
+		    position: absolute;
+		    top: 0px;
+			width: 100%;
 		}
 		&.size_corta { padding-bottom: 50%; }
 		&.size_larga { padding-bottom: 135%; }
@@ -303,8 +304,8 @@
 }
 
 /* Hover */
-.morph-button > button div,
-.change-width > div {
+.morph-button > button div:not(.parallax),
+.change-width > div:not(.parallax) {
 	height: 100%;
 	text-align: center;
 	color: #fff;
@@ -314,7 +315,7 @@
 	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
-.morph-button > button:hover div,
-.change-width:hover > div{
+.morph-button > button:hover div:not(.parallax),
+.change-width:hover > div:not(.parallax){
 	opacity: 1;
 }

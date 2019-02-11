@@ -128,4 +128,65 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  /* Proyectos */
+  /* Tipo de poryecto */
+  /*READY*/
+  if ($('#proyectos_tipo option:selected').val() == 'Imagen' ){
+    $('#tipoProyecto_imagen').removeClass('hide');
+    $('#tipoProyecto_video, #tipoProyecto_sitioWeb').addClass('hide');
+    if ($('#proyectos_imagenElementos option:selected').val() == 'Si' ){
+      $('#elementosProyecto').removeClass('hide');
+    }    
+  } else if ($('#proyectos_tipo option:selected').val() == 'Video' ) {
+    $('#tipoProyecto_video').removeClass('hide');
+    $('#tipoProyecto_imagen, #tipoProyecto_sitioWeb').addClass('hide');
+    if ($('#proyectos_videoElementos option:selected').val() == 'Si' ){
+      $('#elementosProyecto').removeClass('hide');
+    }  
+  } else if ($('#proyectos_tipo option:selected').val() == 'Sitio Web' ) {
+    $('#tipoProyecto_sitioWeb').removeClass('hide');
+    $('#tipoProyecto_imagen, #tipoProyecto_video').addClass('hide');
+  } 
+
+  /*On change*/ 
+  if ($('#proyectos_tipo').length > 0) {
+    $('#proyectos_tipo').on('change', function(){
+      $('#elementosProyecto').addClass('hide'); /* Ocultar elementos modal */
+      $('#proyectos_imagenElementos option[value = "No"], #proyectos_videoElementos option[value = "No"]').prop('selected', true);
+      if ($('#proyectos_tipo option:selected').val() == 'Imagen' ){
+        $('#tipoProyecto_imagen').removeClass('hide');
+        $('#tipoProyecto_video, #tipoProyecto_sitioWeb').addClass('hide');
+      } else if ($('#proyectos_tipo option:selected').val() == 'Video' ) {
+        $('#tipoProyecto_video').removeClass('hide');
+        $('#tipoProyecto_imagen, #tipoProyecto_sitioWeb').addClass('hide');
+      } else if ($('#proyectos_tipo option:selected').val() == 'Sitio Web' ) {
+        $('#tipoProyecto_sitioWeb').removeClass('hide');
+        $('#tipoProyecto_imagen, #tipoProyecto_video').addClass('hide');
+      }
+    }); 
+
+    /*Elementos modal*/
+    $('#proyectos_imagenElementos').on('change', function(){
+      if ($('#proyectos_imagenElementos option:selected').val() == 'Si' ){
+        $('#elementosProyecto').removeClass('hide');
+      } else {
+        $('#elementosProyecto').addClass('hide');
+      }
+    }); 
+    $('#proyectos_videoElementos').on('change', function(){
+      if ($('#proyectos_videoElementos option:selected').val() == 'Si' ){
+        $('#elementosProyecto').removeClass('hide');
+      } else {
+        $('#elementosProyecto').addClass('hide');
+      }
+    }); 
+
+    /*Parallax*/
+    $('#proyectos_imagenTipo').on('change', function(){
+      if ($('#proyectos_imagenTipo option:selected').val() == 'Parallax' ){
+        $('#proyectos_ancho option[value = "100"]').prop('selected', true);
+      }
+    }); 
+  }
+
 });

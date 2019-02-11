@@ -341,3 +341,18 @@
 
 /* Ocultar detalles calendario */
 .my-calendar-table .details { display: none!important; }
+
+/* Proyectos */
+.enlaceSitioWeb {
+	position: absolute;
+    top: 5px; bottom: 10px;
+    right: 5px; left: 5px;
+	text-align: center;
+	color: #fff;
+	font-size: 50px;
+	background-color: rgba(36, 36, 36, 0.3);
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	&:hover { opacity: 1; }
+}
