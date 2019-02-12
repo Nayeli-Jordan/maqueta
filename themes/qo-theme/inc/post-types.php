@@ -4,38 +4,7 @@
 
 
 
-add_action('init', function(){
-
-	$labels = array(
-		'name'          => 'Nosotros',
-		'singular_name' => 'Nosotros',
-		'add_new'       => 'Nuevo Nosotros',
-		'add_new_item'  => 'Nuevo Nosotros',
-		'edit_item'     => 'Editar Nosotros',
-		'new_item'      => 'Nuevo Nosotros',
-		'all_items'     => 'Nosotros',
-		'view_item'     => 'Ver Nosotros',
-		'search_items'  => 'Buscar Nosotros',
-		'not_found'     => 'No hay Nosotros.',
-		'menu_name'     => 'Nosotros'
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_in_menu'       => 'edit.php?post_type=page',
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'nosotros' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => 6,
-		'supports'           => array( 'title', 'thumbnail', 'editor' ),
-		'menu_icon' 		 => 'dashicons-groups'
-	);
-	register_post_type( 'nosotros', $args );		
+add_action('init', function(){	
 
 	$labels = array(
 		'name'          => 'Cliente',
@@ -98,37 +67,6 @@ add_action('init', function(){
 		'menu_icon' 		 => 'dashicons-admin-customizer'
 	);
 	register_post_type( 'proyectos', $args );	
-
-	$labels = array(
-		'name'          => 'Reconocimiento',
-		'singular_name' => 'Reconocimiento',
-		'add_new'       => 'Nuevo Reconocimiento',
-		'add_new_item'  => 'Nuevo Reconocimiento',
-		'edit_item'     => 'Editar Reconocimiento',
-		'new_item'      => 'Nuevo Reconocimiento',
-		'all_items'     => 'Reconocimiento',
-		'view_item'     => 'Ver Reconocimiento',
-		'search_items'  => 'Buscar Reconocimiento',
-		'not_found'     => 'No hay Reconocimiento.',
-		'menu_name'     => 'Reconocimientos'
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_ui'            => 'edit.php?post_type=page',
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'reconocimientos' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => 6,
-		'supports'           => array( 'title', 'thumbnail', 'editor' ),
-		'menu_icon' 		 => 'dashicons-awards'
-	);
-	register_post_type( 'reconocimientos', $args );	
 
 	$labels = array(
 		'name'          => 'Brief´s',

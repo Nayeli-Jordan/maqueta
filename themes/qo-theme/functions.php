@@ -1413,7 +1413,7 @@ function display_proyectos_atributos( $proyectos ){
                     <option value="Imagen" <?php selected($tipo, 'Imagen'); ?>>Imagen</option>
                     <option value="Video" <?php selected($tipo, 'Video'); ?>>Video</option>
                     <option value="Sitio Web" <?php selected($tipo, 'Sitio Web'); ?>>Sitio Web</option>
-                </select>               
+                </select>
             </th>
             <th class="width-50p">
                 <label for="proyectos_ancho">Ancho</label>

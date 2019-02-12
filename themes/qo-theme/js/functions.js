@@ -193,8 +193,8 @@ var $=jQuery.noConflict();
 			/* Si hay un video corriendo lo pausa y regresa al inicio */
 			console.log('Detener videos');
 			/* En lugar de $("video")[0].pause(); para aplicar a todas las etiquetas de video */
-			$("video").each(function () { this.pause() });
-			$("video").each(function () { this.currentTime = 0 });
+			$("video:not(.videoMuestra)").each(function () { this.pause() });
+			$("video:not(.videoMuestra)").each(function () { this.currentTime = 0 });
 		});
 		$(".view-project").click(function() {
 			/* Si hay o no hay video */

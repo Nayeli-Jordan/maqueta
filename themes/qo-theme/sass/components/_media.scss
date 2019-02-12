@@ -54,7 +54,7 @@ video.responsive-video {
 	transition: .3s ease-out;
 	&.logo-fixed {
 	    position: fixed;
-	    top: 30px;
+	    top: 20px;
 	    left: 15px;
 	    opacity: 1;
 	    @media #{$sm-and-down} { display: none; }
@@ -109,14 +109,11 @@ video.responsive-video {
 		margin: 30px auto;
 	}
 }
-.bg-textura {	
-	background-size: 100%;
-	background-position: 0px 0px;
-	background-repeat: repeat-y;
-	animation: animatedBackground 70s linear infinite;
-	-ms-animation: animatedBackground 70s linear infinite;
-	-moz-animation: animatedBackground 70s linear infinite;
-	-webkit-animation: animatedBackground 70s linear infinite;
+.bg-textura {
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 //Bg colores qo
@@ -397,14 +394,18 @@ video.responsive-video {
 /* PROYECTOS */
 /* GRID ITEM */
 #section-trabajos {
-	padding: 3px 0;
-  .grid-item {
-    padding: 3px 3px 3px 3px;
-    & > img { margin-bottom: -5px; }
-    @media #{$small-and-down} {
-    	width: 100%;
-    }
-  }
+	padding: 3px 3px;
+	.grid-images {
+		max-width: 1201px;
+		margin: auto;
+	}
+	.grid-item {
+		padding: 3px 3px 3px 3px;
+		& > img { margin-bottom: -5px; }
+		@media #{$small-and-down} {
+			width: 100%;
+		}
+	}
 }
 
 /* Parallax */
