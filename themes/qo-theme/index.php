@@ -175,13 +175,14 @@
 								<div id="project_<?php echo $post_id; ?>" class="grid-item project-item width-<?php echo $ancho; ?>p">
 									<div class="morph-button morph-button-modal morph-button-modal-<?php echo $i; ?> morph-button-fixed">
 										<button type="button" class="bg-image view-project <?php if ($imagenTipo === 'Parallax') { echo 'buttonParrallax'; } ?>">
-									    	<?php if ($imagenTipo === 'Parallax') { ?>
-												<div class="parallax" style="background-image: url(<?php echo $visualizacion; ?>);"></div>
-
-												<!-- Agregar video que abre modal pendiente  -->
-												
-									    	<?php } else { ?>
-									    		<img src="<?php echo $visualizacion; ?>">
+									    	<?php if ($tipo === 'Imagen') { 
+									    		if ($imagenTipo === 'Parallax') { ?>
+													<div class="parallax" style="background-image: url(<?php echo $visualizacion; ?>);"></div>
+									    		<?php } else { ?>
+									    			<img src="<?php echo $visualizacion; ?>">
+									    		<?php } ?>
+									    	<?php } else { /*If is video con modal*/ ?>
+									    		<video src="<?php echo $visualizacion; ?>" class=" width-100p" controls></video>
 									    	<?php } ?>
 											<div><i class="icon-eye content-center"></i></div>
 										</button>
@@ -215,17 +216,11 @@
 															<?php $totalItems++;
 															}
 															$count++;
-		                								}
-		                								/* Cuando no hay imagenes o videos del proyecto se muestra la imagen destacada con zoom */
-		                								if ($totalItems < 1) { ?>
-		                									<div>
-		                										<div class="bg-image bg-contain" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
-		                									</div>
-		                								<?php } ?>
+		                								} ?>
 													</div>
 													<?php if ($totalItems > 1) { ?> 
 														<div id="prev-item_<?php echo $post_id; ?>" class="bg-image bg-contain bg-arrow prev-itemProject" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/atras.png);"></div>
-														<div id="next-item_<?php echo $post_id; ?>" class="bg-image bg-contain bg-arrow next-itemProject" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/delante.png);"></div>												
+														<div id="next-item_<?php echo $post_id; ?>" class="bg-image bg-contain bg-arrow next-itemProject" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/delante.png);"></div>	
 													<?php } ?>
 												</div>
 												<?php if ($totalItems > 1) { ?>
@@ -236,13 +231,18 @@
 									</div>
 								</div>					    		
 					    	<?php else: 
-					    		if ($tipo === 'Imagen') { ?>
-					    			<div class="grid-item width-<?php echo $ancho; ?>p">
-								    	<img class="responsive-img" src="<?php echo $visualizacion; ?>">
-								    </div>
+					    		if ($tipo === 'Imagen') {
+					    			if ($imagenTipo === 'Parallax') { ?>
+					    				<div class="grid-item width-<?php echo $ancho; ?>p">
+											<div class="parallax" style="background-image: url(<?php echo $visualizacion; ?>);"></div>
+										</div>
+						    		<?php } else { ?>
+						    			<div class="grid-item width-<?php echo $ancho; ?>p">
+									    	<img class="responsive-img" src="<?php echo $visualizacion; ?>">
+									    </div>
+						    		<?php } ?>
 					    		<?php } else { /*If is video*/ ?>
 									<div class="grid-item width-<?php echo $ancho; ?>p">
-								    	<img class="responsive-img" src="<?php echo $visualizacion; ?>">
 								    	<video src="<?php echo $visualizacion; ?>" class=" width-100p" controls></video>
 								    </div>
 					    		<?php } 

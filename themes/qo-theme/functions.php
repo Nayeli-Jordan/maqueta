@@ -1486,7 +1486,6 @@ function display_proyectos_atributos( $proyectos ){
             $itemType = ${'itemType' . $count}; ?>
             <tr>
                 <th  class="text-left">
-                    <!-- <input type="text" name="proyectos_item<?php echo $count; ?>" value="<?php echo $item; ?>" > -->
                     <div id="itemProject<?php echo $count; ?>" class="input-image">
                         <select name="proyectos_itemType<?php echo $count; ?>" id="proyectos_itemType<?php echo $count; ?>" class="typeItemProyect">
                             <option value="" <?php selected($itemType, ''); ?>></option>
@@ -1535,10 +1534,10 @@ function proyectos_save_metas( $idproyectos, $proyectos ){
         $count = 1;
         while ( $count < 11) {
             if ( isset( $_POST['proyectos_item' . $count] ) ){
-                update_post_meta( $idproductGt, 'proyectos_item' . $count, $_POST['proyectos_item' . $count] );
+                update_post_meta( $idproyectos, 'proyectos_item' . $count, $_POST['proyectos_item' . $count] );
             } 
             if ( isset( $_POST['proyectos_itemType' . $count] ) ){
-                update_post_meta( $idproductGt, 'proyectos_itemType' . $count, $_POST['proyectos_itemType' . $count] );
+                update_post_meta( $idproyectos, 'proyectos_itemType' . $count, $_POST['proyectos_itemType' . $count] );
             }               
             $count++;
         }
