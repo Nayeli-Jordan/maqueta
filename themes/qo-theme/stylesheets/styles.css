@@ -5014,7 +5014,7 @@ video.responsive-video {
 }
 /* line 138, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide {
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 130px);
   text-align: center;
 }
@@ -5024,22 +5024,17 @@ video.responsive-video {
   max-width: 1050px;
   margin: auto;
 }
-/* line 148, ../sass/components/_modal.scss */
-.morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide .bg-image {
-  height: 100%;
-  width: 100%;
-}
-/* line 154, ../sass/components/_modal.scss */
+/* line 153, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectContent .prev-itemProject,
 .morph-button .morph-content > div .projectContent .next-itemProject {
   display: block !important;
   width: 55px !important;
 }
-/* line 159, ../sass/components/_modal.scss */
+/* line 158, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectContent .next-itemProject {
   right: 0px;
 }
-/* line 163, ../sass/components/_modal.scss */
+/* line 162, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectPager {
   position: absolute;
   bottom: 0px;
@@ -5047,43 +5042,43 @@ video.responsive-video {
   text-align: center;
   cursor: pointer;
 }
-/* line 169, ../sass/components/_modal.scss */
+/* line 168, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectPager span {
   margin: 0 10px;
   color: #a9a9a9;
   font-size: 60px;
   line-height: 22px;
 }
-/* line 174, ../sass/components/_modal.scss */
+/* line 173, ../sass/components/_modal.scss */
 .morph-button .morph-content > div .projectPager span.cycle-pager-active {
   color: #fff;
 }
 @media only screen and (max-width: 600px) {
-  /* line 178, ../sass/components/_modal.scss */
+  /* line 177, ../sass/components/_modal.scss */
   .morph-button .morph-content > div .projectHeader {
     position: absolute;
   }
-  /* line 181, ../sass/components/_modal.scss */
+  /* line 180, ../sass/components/_modal.scss */
   .morph-button .morph-content > div .projectContent {
     top: 0px;
     transform: translateX(-50%);
   }
-  /* line 184, ../sass/components/_modal.scss */
+  /* line 183, ../sass/components/_modal.scss */
   .morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide {
     height: 100vh;
   }
-  /* line 188, ../sass/components/_modal.scss */
+  /* line 187, ../sass/components/_modal.scss */
   .morph-button .morph-content > div .projectPager {
     display: none;
   }
 }
-/* line 193, ../sass/components/_modal.scss */
+/* line 192, ../sass/components/_modal.scss */
 .morph-button.open > button {
   opacity: 0.7;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
 }
-/* line 198, ../sass/components/_modal.scss */
+/* line 197, ../sass/components/_modal.scss */
 .morph-button.open .morph-content {
   opacity: 1;
   top: 0vh !important;
@@ -5095,7 +5090,7 @@ video.responsive-video {
   transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, opacity 0.1s;
 }
 @media only screen and (max-width: 600px) {
-  /* line 198, ../sass/components/_modal.scss */
+  /* line 197, ../sass/components/_modal.scss */
   .morph-button.open .morph-content {
     top: 0px !important;
     left: 0px !important;
@@ -5105,7 +5100,7 @@ video.responsive-video {
     overflow-y: scroll;
   }
 }
-/* line 215, ../sass/components/_modal.scss */
+/* line 214, ../sass/components/_modal.scss */
 .morph-button.open .morph-content > div {
   visibility: visible;
   height: auto;
@@ -5113,20 +5108,20 @@ video.responsive-video {
   -webkit-transition: opacity 0.3s 0.5s;
   transition: opacity 0.3s 0.5s;
 }
-/* line 223, ../sass/components/_modal.scss */
+/* line 222, ../sass/components/_modal.scss */
 .morph-button.open::before {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 229, ../sass/components/_modal.scss */
+/* line 228, ../sass/components/_modal.scss */
 .morph-button.active::before {
   z-index: 1800;
 }
-/* line 230, ../sass/components/_modal.scss */
+/* line 229, ../sass/components/_modal.scss */
 .morph-button.active .morph-content {
   z-index: 1900;
 }
-/* line 234, ../sass/components/_modal.scss */
+/* line 233, ../sass/components/_modal.scss */
 .morph-button::before {
   position: fixed;
   top: 0;
@@ -5143,7 +5138,7 @@ video.responsive-video {
 }
 
 /* Let's add some nice easing for all cases */
-/* line 250, ../sass/components/_modal.scss */
+/* line 249, ../sass/components/_modal.scss */
 .morph-button .morph-content,
 .morph-button.open .morph-content {
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
@@ -5151,21 +5146,21 @@ video.responsive-video {
 }
 
 /* Helper classes */
-/* line 257, ../sass/components/_modal.scss */
+/* line 256, ../sass/components/_modal.scss */
 .noscroll {
   overflow: hidden;
 }
 
-/* line 258, ../sass/components/_modal.scss */
+/* line 257, ../sass/components/_modal.scss */
 .no-js .morph-button {
   margin: 10px 0;
   float: none;
 }
-/* line 261, ../sass/components/_modal.scss */
+/* line 260, ../sass/components/_modal.scss */
 .no-js .morph-button > button {
   display: none;
 }
-/* line 262, ../sass/components/_modal.scss */
+/* line 261, ../sass/components/_modal.scss */
 .no-js .morph-button, .no-js .morph-button .morph-content, .no-js .morph-button .morph-content > div {
   position: relative;
   width: auto;
@@ -5178,24 +5173,24 @@ video.responsive-video {
   transform: none;
   pointer-events: auto;
 }
-/* line 275, ../sass/components/_modal.scss */
+/* line 274, ../sass/components/_modal.scss */
 .no-js .morph-button .icon-close, .no-js .morph-button .morph-content .icon-close, .no-js .morph-button .morph-content > div .icon-close {
   display: none;
 }
 
-/* line 281, ../sass/components/_modal.scss */
+/* line 280, ../sass/components/_modal.scss */
 .no-transition {
   -webkit-transition: none !important;
   transition: none !important;
 }
 
 /* Button project large */
-/* line 287, ../sass/components/_modal.scss */
+/* line 286, ../sass/components/_modal.scss */
 #section-trabajos .grid-images {
   overflow: hidden;
 }
 
-/* line 288, ../sass/components/_modal.scss */
+/* line 287, ../sass/components/_modal.scss */
 .change-width {
   z-index: 1000;
   cursor: pointer;
@@ -5205,27 +5200,27 @@ video.responsive-video {
   right: 12px;
   left: 12px;
 }
-/* line 296, ../sass/components/_modal.scss */
+/* line 295, ../sass/components/_modal.scss */
 .change-width > div {
   width: 100%;
 }
-/* line 299, ../sass/components/_modal.scss */
+/* line 298, ../sass/components/_modal.scss */
 .change-width:hover > div {
   opacity: 1;
 }
-/* line 300, ../sass/components/_modal.scss */
+/* line 299, ../sass/components/_modal.scss */
 .change-width.hide + .morph-button > button {
   z-index: 1000;
 }
 @media only screen and (max-width: 600px) {
-  /* line 288, ../sass/components/_modal.scss */
+  /* line 287, ../sass/components/_modal.scss */
   .change-width {
     display: none;
   }
 }
 
 /* Hover */
-/* line 307, ../sass/components/_modal.scss */
+/* line 306, ../sass/components/_modal.scss */
 .morph-button > button div:not(.parallax),
 .change-width > div:not(.parallax) {
   height: 100%;
@@ -5238,7 +5233,7 @@ video.responsive-video {
   transition: opacity 0.5s;
 }
 
-/* line 318, ../sass/components/_modal.scss */
+/* line 317, ../sass/components/_modal.scss */
 .morph-button > button:hover div:not(.parallax),
 .change-width:hover > div:not(.parallax) {
   opacity: 1;
@@ -9558,7 +9553,7 @@ video.responsive-video {
 }
 
 /* line 113, ../sass/components/_position.scss */
-.content-center, #section-nosotros .cycle-slideshow + p, .morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide video, .content-cotizacion .row .col .opt-cotizacion div {
+.morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide img, .content-center, #section-nosotros .cycle-slideshow + p, .morph-button .morph-content > div .projectContent .cycle-slideshow .cycle-slide video, .content-cotizacion .row .col .opt-cotizacion div {
   position: absolute;
   top: 50%;
   left: 50%;
