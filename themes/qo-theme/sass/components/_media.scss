@@ -397,8 +397,9 @@ video.responsive-video {
 /* PROYECTOS */
 /* GRID ITEM */
 #section-trabajos {
+	padding: 3px 0;
   .grid-item {
-    padding: 5px;
+    padding: 3px 3px 3px 3px;
     @media #{$small-and-down} {
     	width: 100%;
     }

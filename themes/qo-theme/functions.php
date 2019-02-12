@@ -1418,10 +1418,10 @@ function display_proyectos_atributos( $proyectos ){
             <th class="width-50p">
                 <label for="proyectos_ancho">Ancho</label>
                 <select id="proyectos_ancho" name="proyectos_ancho" required>
-                    <?php $count = 10;
+                    <?php $count = 5;
                     while ( $count <= 100) { ?>
                         <option value="<?php echo $count; ?>" <?php selected($ancho, $count); ?>><?php echo $count; ?>%</option>
-                    <?php $count= $count + 10;
+                    <?php $count= $count + 5;
                     } ?>
                 </select>               
             </th>

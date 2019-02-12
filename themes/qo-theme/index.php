@@ -116,7 +116,7 @@
 			</div>
 		</section>
 	</div>
-	<section id="section-trabajos" class="bg-light relative padding-top">
+	<section id="section-trabajos" class="bg-light relative">
 		<div class="container">
 			<div class="grid-images">
 			<?php

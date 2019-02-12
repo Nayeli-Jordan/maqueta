@@ -35,38 +35,7 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'thumbnail', 'editor' ),
 		'menu_icon' 		 => 'dashicons-groups'
 	);
-	register_post_type( 'nosotros', $args );	
-
-	$labels = array(
-		'name'          => 'Servicio',
-		'singular_name' => 'Servicio',
-		'add_new'       => 'Nuevo servicio',
-		'add_new_item'  => 'Nuevo servicio',
-		'edit_item'     => 'Editar servicio',
-		'new_item'      => 'Nuevo servicio',
-		'all_items'     => 'Servicio',
-		'view_item'     => 'Ver servicio',
-		'search_items'  => 'Buscar servicio',
-		'not_found'     => 'No hay servicio.',
-		'menu_name'     => 'Servicios'
-	);
-
-	$args = array(
-		'labels'             => $labels,
-		'public'             => true,
-		'publicly_queryable' => true,
-		'show_ui'            => true,
-		'show_ui'            => 'edit.php?post_type=page',
-		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'servicios' ),
-		'capability_type'    => 'post',
-		'has_archive'        => true,
-		'hierarchical'       => false,
-		'menu_position'      => 6,
-		'supports'           => array( 'title', 'thumbnail', 'editor' ),
-		'menu_icon' 		 => 'dashicons-art'
-	);
-	register_post_type( 'servicios', $args );	
+	register_post_type( 'nosotros', $args );		
 
 	$labels = array(
 		'name'          => 'Cliente',
@@ -125,7 +94,7 @@ add_action('init', function(){
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 6,
-		'supports'           => array( 'title', 'thumbnail' ),
+		'supports'           => array( 'title' ),
 		'menu_icon' 		 => 'dashicons-admin-customizer'
 	);
 	register_post_type( 'proyectos', $args );	
