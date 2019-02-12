@@ -10,7 +10,7 @@ var $=jQuery.noConflict();
 
 		$(document).ready(function() {
 			if( parseInt( isHome ) ){
-				proyectoSize();
+				widthProyecto();
 				logoScroll();
 				setTimeout( function(){
 			    	imageMasonry();
@@ -66,7 +66,7 @@ var $=jQuery.noConflict();
  
 		$(window).on('resize', function(){
 			if( parseInt( isHome ) ){
-				proyectoSize();
+				widthProyecto();
 				// Eliminar overflow hidden si menú móvil se quedo abierto
 				if ($('.js-header.active').length > 0) {
 					$('.js-header').removeClass('active');
@@ -280,18 +280,15 @@ function logoScroll() {
 }
 
 /*Obtener ancho proyecto*/
-function proyectoSize() {
-	var widthColProject 		= widthProyecto() - 10;
 
-	var heightColProjectCorta 	= widthColProject / 2;
-	var heightColProjectLarga 	= widthColProject * 1.35;
-
-	//$('.project-item .morph-button, .project-item .morph-button .morph-content').css('width', widthColProject);
-	/* Altura según ancho */ /*to do: obtener altura de imagen por elemento y aplicarla a modal content*/
-	$('.project-item .morph-button.size_corta, .project-item .morph-button.size_corta .morph-content').css('height', heightColProjectCorta);
-	$('.project-item .morph-button.size_larga, .project-item .morph-button.size_larga .morph-content').css('height', heightColProjectLarga);
-}
 function widthProyecto() {
-	/*Esto lo esta aplicando sólo por el primer elemento para todos*/
-	return $('#section-trabajos .project-item').outerWidth();
+    var count = 5;
+    while (count <= 100) {
+        window['widthProyecto' + count] = $('#section-trabajos .project-item.width-' + count + 'p').outerWidth() - 6;/* Menos padding */
+        window['heightProyecto' + count] = $('#section-trabajos .project-item.width-' + count + 'p').outerHeight() - 12;
+        
+        $('#section-trabajos .project-item.width-' + count + 'p .morph-content').width(window['widthProyecto' + count]).height(window['heightProyecto' + count]);
+        //console.log(window['widthProyecto' + count]);
+        count = count + 5;
+    }
 }
