@@ -400,6 +400,7 @@ video.responsive-video {
 	padding: 3px 0;
   .grid-item {
     padding: 3px 3px 3px 3px;
+    & > img { margin-bottom: -5px; }
     @media #{$small-and-down} {
     	width: 100%;
     }
@@ -409,11 +410,14 @@ video.responsive-video {
 /* Parallax */
 .parallax {
   height: 220px;
+  background-color: #e5e5e5;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: calc(100% - 25%);
+  background-size: cover;
+  @media #{$large-and-up} { height: 270px; }
+  /* background-size: calc(100% - 25%);
   @media #{$large-and-up} { background-size: calc(100% - 15%); }
-  @media #{$extra-large-and-up} { background-size: calc(100% - 10%); }
+  @media #{$extra-large-and-up} { background-size: calc(100% - 10%); } */
 }
 .buttonParrallax { height: 220px!important; }

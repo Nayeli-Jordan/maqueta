@@ -4794,6 +4794,10 @@ video.responsive-video {
 #section-trabajos .grid-item {
   padding: 3px 3px 3px 3px;
 }
+/* line 403, ../sass/components/_media.scss */
+#section-trabajos .grid-item > img {
+  margin-bottom: -5px;
+}
 @media only screen and (max-width: 430px) {
   /* line 401, ../sass/components/_media.scss */
   #section-trabajos .grid-item {
@@ -4802,28 +4806,26 @@ video.responsive-video {
 }
 
 /* Parallax */
-/* line 410, ../sass/components/_media.scss */
+/* line 411, ../sass/components/_media.scss */
 .parallax {
   height: 220px;
+  background-color: #e5e5e5;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: calc(100% - 25%);
+  background-size: cover;
+  /* background-size: calc(100% - 25%);
+  @media only screen and (min-width : 993px) { background-size: calc(100% - 15%); }
+  @media only screen and (min-width : 1200px) { background-size: calc(100% - 10%); } */
 }
 @media only screen and (min-width: 993px) {
-  /* line 410, ../sass/components/_media.scss */
+  /* line 411, ../sass/components/_media.scss */
   .parallax {
-    background-size: calc(100% - 15%);
-  }
-}
-@media only screen and (min-width: 1200px) {
-  /* line 410, ../sass/components/_media.scss */
-  .parallax {
-    background-size: calc(100% - 10%);
+    height: 270px;
   }
 }
 
-/* line 419, ../sass/components/_media.scss */
+/* line 423, ../sass/components/_media.scss */
 .buttonParrallax {
   height: 220px !important;
 }
