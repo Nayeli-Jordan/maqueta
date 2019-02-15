@@ -1584,3 +1584,26 @@ function custom_redirect_emailBrief() {
         wp_redirect($actual_link . '#notice-email-brief');
     }
 }
+
+
+/*
+** Vacantes
+*/
+add_filter( 'manage_qo_clientes_posts_columns', 'set_custom_edit_qo_clientes_columns' );
+function set_custom_edit_qo_clientes_columns($columns) {
+    $columns['qo_email'] = __( 'Email', 'qo' );
+    return $columns;
+}
+
+add_action( 'manage_qo_clientes_posts_custom_column' , 'custom_qo_clientes_column', 10, 2 );
+function custom_qo_clientes_column( $column, $post_id ) {
+    switch ( $column ) {
+        case 'qo_email' :
+            $email  = get_post_meta( $post_id, 'qo_clientes_email', true );
+            if( $email != "")
+                echo $email;
+            else
+                echo "-";
+            break;
+    }
+}
