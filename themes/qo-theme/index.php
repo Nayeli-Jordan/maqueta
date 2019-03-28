@@ -24,9 +24,9 @@
 	<section id="section-nosotros">
 		<div id="section-nosotros2" class="row relative">
 			<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> div">
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/nosotros1.png);"></div>
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/nosotros1.png);"></div>
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/nosotros1.png);"></div>
+				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide1.jpg);"></div>
+				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide2.png);"></div>
+				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide3.png);"></div>
 			</div>
 			<p><span class="color-primary">Diseñamos</span> una experiencia única <br class="hide-on-med-and-down">para cada consumidor</p>
 		</div>
@@ -38,11 +38,11 @@
 				<div class="col s12 sm6 l3">
 					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/print.jpg);"></div>
 							<h4>Print</h4>
 						</div>
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/programacion.jpg);"></div>
 							<h4>Programación</h4>
 						</div>
 					</div>
@@ -50,11 +50,11 @@
 				<div class="col s12 sm6 l3">
 					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
-							<h4>Social Media</h4>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/logo.jpg);"></div>
+							<h4>Diseño</h4>
 						</div>
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/fotografia.jpg);"></div>
 							<h4>Fotografía</h4>
 						</div>
 					</div>
@@ -62,24 +62,24 @@
 				<div class="col s12 sm6 l3">
 					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
-							<h4>Diseño</h4>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/social-media.png);"></div>
+							<h4>Social Media</h4>
 						</div>
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
-							<h4>Publicidad</h4>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/motion-graphic.jpg);"></div>
+							<h4>Motion Graphics</h4>
 						</div>
 					</div>
 				</div>
 				<div class="col s12 sm6 l3">
 					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/desarrolloweb.png);"></div>
 							<h4>Desarrollo web</h4>
 						</div>
 						<div>
-							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/servicio.jpg);"></div>
-							<h4>Motion Graphics</h4>
+							<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/servicios/qo.jpg);"></div>
+							<h4>Publicidad</h4>
 						</div>
 					</div>
 				</div>

@@ -14,7 +14,10 @@ var $=jQuery.noConflict();
 				logoScroll();
 				setTimeout( function(){
 			    	imageMasonry();
-			   	}, 300);				
+			   	}, 500);
+			   	setTimeout( function(){
+			    	imageMasonry();
+			   	}, 1500);				
 			}
 			isotopeMultipleQO();
 			if ($('.my-calendar-date-switcher').length > 0) {
@@ -74,13 +77,17 @@ var $=jQuery.noConflict();
 				}
 				setTimeout( function(){
 			    	imageMasonry();
-			   	}, 300);
+			   	}, 500);
+			   	setTimeout( function(){
+			    	imageMasonry();
+			   	}, 1500);
 			}
 		});
  
 		$(document).scroll(function() {
 			if( parseInt( isHome ) ){
 				logoScroll();
+				imageMasonry();
 			}
 		});
 

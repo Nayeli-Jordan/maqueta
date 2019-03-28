@@ -9,7 +9,7 @@
 		<a href="https://twitter.com/qocreatividad?lang=es" target="_blank">
 			<i class="icon-twitter"></i>
 		</a>
-		<a href="https://www.youtube.com/channel/UCBl0suaE32Me0OSssTpRQ8A" target="_blank">
+		<a href="https://www.youtube.com/channel/UCkl4d4v9_CoJLBVf-iZsXEg?view_as=subscriber" target="_blank">
 			<i class="icon-youtube-play"></i>
 		</a>
 		<a href="https://www.linkedin.com/company/qu%C3%A9-onda-innovaci%C3%B3n-creativa/?originalSubdomain=mx" target="_blank">
