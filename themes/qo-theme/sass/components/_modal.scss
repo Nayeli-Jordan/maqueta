@@ -156,8 +156,14 @@
 					display: block!important;
 					width: 55px!important;
 				}
+				.prev-itemProject {
+					@media #{$medium-and-up}{ left: 5%; }
+					@media #{$large-and-up}{ left: 10%; }
+				}
 				.next-itemProject {
-					right: 0px;
+					right: 0px; 
+					@media #{$medium-and-up}{ right: 5%; }
+					@media #{$large-and-up}{ right: 10%; }
 				}				
 			}
 			.projectPager {

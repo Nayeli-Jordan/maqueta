@@ -124,6 +124,7 @@ video.responsive-video {
 //Bg colores qo
 .bg-colores-qo {
 	background-position-y: 0;
+	@media #{$extra-large-and-up} { background-position: bottom; }
 }
 
 #page-404 .bg-colores-qo {
@@ -134,7 +135,10 @@ video.responsive-video {
 #section-clientes {
 	padding-top: 110px;
 	@media #{$medium-and-up} { padding-top: 200px; }
-	@media #{$extra-large-and-up} { padding-top: 250px; }
+	@media #{$extra-large-and-up} {  
+		padding-top: 100px; 
+		padding-bottom: 80px; 
+	}
 	span {
 		display: inline-block;
 		vertical-align: middle;

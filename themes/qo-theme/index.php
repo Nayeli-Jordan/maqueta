@@ -181,7 +181,11 @@
 								    			<img src="<?php echo $visualizacion; ?>">
 								    		<?php } ?>
 								    	<?php } else { /*If is video con modal*/ ?>
-								    		<video src="<?php echo $visualizacion; ?>" class="videoMuestra width-100p"  autoplay muted loop></video>
+								    		<?php if ( wp_is_mobile() && has_post_thumbnail()) { ?>
+												<img class="responsive-img" src="<?php the_post_thumbnail_url('large'); ?>">
+											<?php } else { ?>
+												<video src="<?php echo $visualizacion; ?>" class="videoMuestra width-100p 1" autoplay muted loop></video>
+											<?php } ?>
 								    	<?php } ?>
 										<div><i class="icon-resize-full content-center"></i></div>
 									</button>
@@ -235,7 +239,11 @@
 					    		<?php } ?>
 				    		<?php } else { /*If is video*/ ?>
 								<div class="grid-item width-<?php echo $ancho; ?>p">
-							    	<video src="<?php echo $visualizacion; ?>" class="videoMuestra width-100p" autoplay muted loop></video>
+									<?php if ( wp_is_mobile() && has_post_thumbnail()) { ?>
+										<img class="responsive-img" src="<?php the_post_thumbnail_url('large'); ?>">
+									<?php } else { ?>
+										<video src="<?php echo $visualizacion; ?>" class="videoMuestra width-100p 1" autoplay muted loop></video>
+									<?php } ?>
 							    </div>
 				    		<?php } 
 				    	endif; /*Si hay o no elementos en modal*/ 

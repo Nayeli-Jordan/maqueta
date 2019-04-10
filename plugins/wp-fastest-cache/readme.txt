@@ -1,10 +1,10 @@
 === WP Fastest Cache ===
 Contributors: emrevona
 Donate link: http://profiles.wordpress.org/emrevona/
-Tags: cache, performance, wp-cache, total cache, super cache
+Tags: cache, caching, performance, wp-cache, total cache, super cache, cdn
 Requires at least: 3.3
-Tested up to: 4.9
-Stable tag: 0.8.8.6
+Tested up to: 5.1
+Stable tag: 0.8.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -102,6 +102,53 @@ Wpfc does not support Wordpress Multisite yet.
 18. Database Cleanup
 
 == Changelog ==
+
+= 0.8.9.2 =
+* to clear cache of author page after update/insert post
+* to fix PHP Notice: Undefined offset: -1 in  wp-fastest-cache/inc/js-utilities.php  on line 47.
+* to fix PHP Fatal error: Function name must be a string in /public_html/wp-content/plugins/wp-fastest-cache/inc/preload.php on line 316
+* to support MultiSite (Beta) [<a target="_blank" href="https://www.wpfastestcache.com/blog/multi-site/">Details</a>]
+* to enable gzip for x-font/ttf
+* to prevent replace urls with cdn-url if the url has already been replaced with cdn.shortpixel.ai
+
+
+= 0.8.9.1 =
+* to disable webp image extension if cloudflare subscription is free
+* to fix cache deletion security issue of WP-PostRatings (CVE-2019-6726 by Sebastian Neef)
+* to add do_action("wpfc_is_cacheable_action") the plugins to be able to detect that a page has been cached or not
+* <strong>[FEATURE]</strong> exclude woocommerce_items_in_cart cookie [<a target="_blank" href="https://www.wpfastestcache.com/tutorial/woocommerce-settings/#cart-widget">Details</a>]
+
+= 0.8.9.0 =
+* to replace lazy load blank.gif with cdn-url
+* to exclude wishlist url of YITH WooCommerce Wishlist
+* refactoring of is_amp()
+* to add webm extension for cdn
+* refactoring of current_url()
+
+= 0.8.8.9 =
+* to fix url with replacing cdn-url on data-product_variations attribute
+* to increase browser cache time from 3 months to 4 months
+* to fix bug on language dropdown [<a target="_blank" href="https://wordpress.org/support/topic/bug-with-language-setting/">Details</a>]
+* to increase the value of Cloudflare Browser Cache Expiration to 6 months
+* to exclude Twitterbot user-agent
+* to fix PHP Warning: file_exists(): open_basedir restriction in effect
+
+= 0.8.8.8 =
+* to move "cache timeout" to under "delete cache" tab [<a target="_blank" href="https://www.wpfastestcache.com/features/cache-timeout-page/">Details</a>]
+* to prevent clearing cache after Ninja Form is submitted
+* <strong>[FEATURE]</strong> Preload for custom post types
+* to fix PHP Fatal error: Call to undefined function add_settings_error()
+
+= 0.8.8.7 =
+* to fix error which is Undefined index: SERVER_PORT
+* to prevent running preload when cache is disabled
+* to change saving options and notice system
+* to replace image urls of woocommerce variable with cdn-url
+* to fix url() problem for data:font/opentype
+* to add add_action('wp') for detection current page type
+* to support non-latin characters for clearing category cache
+* to show cache if the url contains “fbclid” (Facebook Click Identifier)
+* to show cache if the url contains “gclid” (Google Click Identifier)
 
 = 0.8.8.6 =
 * to show single clear cache button for the pages
