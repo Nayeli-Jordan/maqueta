@@ -1,4 +1,4 @@
-		<?php if (is_home() || is_front_page()) :?>
+		<?php if (is_home() || is_front_page() || is_page('aviso-de-privacidad')) :?>
 				<div class="relative">
 					<div class="bg-image bg-absolute bg-colores-qo" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/colores-qo-footer.png);"></div>
 					<?php include (TEMPLATEPATH . '/templates-qo/template-footer.php'); ?>

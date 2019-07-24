@@ -34,6 +34,7 @@
 	<section id="section-servicios" class="relative padding-top-80 padding-bottom-50">
 		<div class="bg-image bg-absolute bg-textura" style="background-image: url(<?php echo THEMEPATH; ?>images/fondos/textura.png);"></div>
 		<div class="container relative">
+			<h2 class="fz-medium font-default">Servicios</h2>
 			<div class="row">
 				<div class="col s12 sm6 l3">
 					<div class="cycle-slideshow" data-cycle-fx="flipHorz" data-cycle-timeout="4000" data-cycle-slides="> div">
@@ -102,9 +103,9 @@
 		        $loop = new WP_Query( $args );
 		        $i = 1;
 		        if ( $loop->have_posts() ) {
-		            while ( $loop->have_posts() ) : $loop->the_post(); ?>		
+		            while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-		            	<span><img src="<?php the_post_thumbnail_url('medium'); ?>"></span>
+		            	<span><em class="hide">Logo del cliente <?php echo the_title(); ?></em><img src="<?php the_post_thumbnail_url('medium'); ?>"></span>
 		            	<?php if ($i === 5 || $i === 10 || $i === 15 ) : ?>
 		            		<div class="clearfix-l-and-up"></div>
 		            	<?php endif ?>		
@@ -117,6 +118,7 @@
 		</section>
 	</div>
 	<section id="section-trabajos" class="bg-light relative">
+		<h2 class="fz-medium font-default margin-top-xlarge">Proyectos</h2>
 		<div class="grid-images">
 		<?php
 	        $args = array(

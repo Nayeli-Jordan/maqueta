@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<!-- Importante agregar el prefijo para cuando dice que og no se está usando -->
 <html prefix="og: http://ogp.me/ns#" class="<?php if (is_singular('qo_cotizaciones')) :?> single-cotizacion <?php elseif (is_page('qo-clientes')) :?> page-clientes <?php elseif (is_page('qo-proveedores')) :?> page-proveedores <?php endif; ?>">
 	<head>
 		<meta charset="utf-8">
 		<title><?php bloginfo('name'); ?></title>
-		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
-		<meta name="keywords" content="">
+		<meta name="keywords" content="paginas web, marketing digital, comercio electronico, agencia de publicidad, identidad corporativa, diseño de paginas web, diseño de logo, Marketing Online, agencia digital, UX">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
 		<!-- Meta robots -->
 		<?php if (is_home() || is_404()): ?>
 			<meta name="robots" content="index, follow" />
@@ -19,7 +16,6 @@
 			<meta name="robots" content="noindex" />
 			<meta name="googlebot" content="noindex">
 		<?php endif ?>
-
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="<?php echo THEMEPATH; ?>favicon/favicon-32x32.png" sizes="32x32" />
@@ -39,34 +35,45 @@
 		<meta property="fb:app_id" content="" />
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:site" content="@" />
-
 		<!-- Google+ -->
 		<link rel="publisher" href="https://plus.google.com/+">
-
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
-
 		<!-- Google font(s) -->
-		<!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|PT+Sans:700i" rel="stylesheet">
-
 		<!--Import materialize.css-->
 		<link type="text/css" rel="stylesheet" href="<?php echo THEMEPATH; ?>stylesheets/styles.css" media="screen,projection, print" />
-
 		<!-- Canonical URL -->
 		<link rel="canonical" href="<?php echo site_url(); ?>" />
-
 		<!-- Sitemap Google Verify -->
 		<meta name="google-site-verification" content="It5oQOBZoAwIBDAboPgUlYvsPEfL5Q9nDWi5XF6SaVs" />
-
 		<!-- Noscript -->
 		<noscript>Tu navegador no soporta JavaScript!</noscript>
 		<?php wp_head(); ?>
 		<script src="<?php echo THEMEPATH; ?>js/modernizr.custom.js"></script>
+		
+		<!-- Facebook Pixel Code -->
+		<script>
+		  !function(f,b,e,v,n,t,s)
+		  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		  n.queue=[];t=b.createElement(e);t.async=!0;
+		  t.src=v;s=b.getElementsByTagName(e)[0];
+		  s.parentNode.insertBefore(t,s)}(window, document,'script',
+		  'https://connect.facebook.net/en_US/fbevents.js');
+		  fbq('init', '2404641336266856');
+		  fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		  src="https://www.facebook.com/tr?id=2404641336266856&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- End Facebook Pixel Code -->
+
 		<?php flush(); ?>
 	</head>
-	<body class="<?php if (is_home()) :?>page-home<?php endif; ?>">
+	<body class="<?php if (is_home() || is_front_page() || is_page('aviso-de-privacidad')) :?>page-home<?php endif; ?>">
 		<?php if (is_user_logged_in()) :
 			if (is_singular('qo_cotizaciones')) {
 				/* Modal Estatus cotizacion */
@@ -86,7 +93,7 @@
 				include (TEMPLATEPATH . '/templates-sistema/modal/notice-tiempo-creativo.php');
 			}
 		endif; ?>
-		<?php if (is_home() || is_front_page()) : ?>			
+		<?php if (is_home() || is_front_page() || is_page('aviso-de-privacidad')) : ?>			
 			<header class="js-header">
 				<h1 class="hide"><?php bloginfo('name'); ?></h1>	
 				<nav>
