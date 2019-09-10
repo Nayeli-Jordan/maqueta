@@ -23,12 +23,10 @@
 	</div>
 	<section id="section-nosotros">
 		<div id="section-nosotros2" class="row relative">
-			<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> div">
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide1.jpg);"></div>
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide2.png);"></div>
-				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide3.png);"></div>
+			<div class="cycle-slideshow bg-light" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> div">
+				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide-qo1.jpg);"></div>
+				<div class="bg-image" style="background-image: url(<?php echo THEMEPATH; ?>images/nosotros/slide-qo2.jpg);"></div>
 			</div>
-			<p><span class="color-primary">Diseñamos</span> una experiencia única <br class="hide-on-med-and-down">para cada consumidor</p>
 		</div>
 	</section>
 	<section id="section-servicios" class="relative padding-top-80 padding-bottom-50">
